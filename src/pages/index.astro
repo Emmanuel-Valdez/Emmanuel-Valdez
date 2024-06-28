@@ -5,11 +5,17 @@ import LinkedInIcon from '../icons/LinkedInIcon.astro';
 import GitHubIcon from '../icons/GitHubIcon.astro';
 import MailIcon from '../icons/MailIcon.astro';
 import SocialPill from '../components/SocialPill.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import BriefCaseIcon from '../icons/BriefCaseIcon.astro';
 ---
 
-<Layout title="Portfolio de Emmanuel Valdez - Desarrollador y Programador Backend" description='Contrata a Emmanuel Valdez para desarrollar tu app'>
+<Layout
+  title="Portfolio de Emmanuel Valdez - Desarrollador y Programador Backend"
+  description="Contrata a Emmanuel Valdez para desarrollar tu app"
+>
   <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44|">
+    <SectionContainer class="py-44 pb-24">
       <img
         class="rounded-full size-12 mb-4"
         src="./2024.png"
@@ -37,7 +43,9 @@ import SocialPill from '../components/SocialPill.astro';
         >
       </h2>
       <nav class="flex gap-x-2 mt-8">
-        <SocialPill href="https://www.linkedin.com/in/emmanuel-alejandro-valdez-montigel-0b0a97252/">
+        <SocialPill
+          href="https://www.linkedin.com/in/emmanuel-alejandro-valdez-montigel-0b0a97252/"
+        >
           <LinkedInIcon class="size-6" />
           LinkedIn
         </SocialPill>
@@ -49,8 +57,13 @@ import SocialPill from '../components/SocialPill.astro';
           <MailIcon class="size-6" />
           evaldez.mza@gmail.com
         </SocialPill>
-       
       </nav>
-    </section>
+    </SectionContainer>
+    <SectionContainer id="experience">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefCaseIcon class="size-7"/>
+        Experiencia Laboral</h2>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>
