@@ -1,0 +1,83 @@
+---
+import NodeJSIcon from '../icons/techIcons/NodeJS.astro';
+import TailwindIcon from '../icons/techIcons/Tailwind.astro';
+import CSharpIcon from '../icons/techIcons/CSharp.astro';
+import ExpressIcon from '../icons/techIcons/Express.astro';
+import MySQLIcon from '../icons/techIcons/MySQL.astro';
+import HTMLIcon from '../icons/techIcons/HTML.astro';
+import CSSIcon from '../icons/techIcons/CSS.astro';
+const TAGS = {
+  NodeJS: {
+    name: 'Node.js',
+    class: 'bg-black text-white',
+    icon: NodeJSIcon,
+  },
+  Tailwind: {
+    name: 'Tailwind',
+    class: 'bg-black text-white',
+    icon: TailwindIcon,
+  },
+  CSharp: {
+    name: 'Csharp',
+    class: 'bg-black text-white',
+    icon: CSharpIcon,
+  },
+  Express: {
+    name: 'Express',
+    class: 'bg-black text-white',
+    icon: ExpressIcon,
+  },
+  MySQL: {
+    name: 'MySQL',
+    class: 'bg-black text-white',
+    icon: MySQLIcon,
+  },
+  HTML: {
+    name: 'HTML',
+    class: 'bg-black text-white',
+    icon: HTMLIcon,
+  },
+  CSS: {
+    name: 'CSS',
+    class: 'bg-black text-white',
+    icon: CSSIcon,
+  },
+};
+const PROJECTS = [
+  {
+    title: 'Funko shop',
+    description:
+      'una tienda virtual de funkos creado con NodeJs-Express para las operaciones CRUD del server-database asñdkfnañsnfañwehfnqoñwehfnqwñoeif hnqwoñifeh qwñofrihnw qeorfihnqweoti nq3weotn wqeiothn wqoeihtnqñweoi htnqw3eoñ thqwero hqweotfhnqweñoi thnqweñot qnwñot hqnweñoithn qewñoi hn',
+    link: 'https://fullstackproject-backend.vercel.app/',
+    github: 'https://github.com/Emmanuel-Valdez/fullstackproject-backend',
+    image: '/projects/funko_shopWeb.webp',
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.NodeJS, TAGS.Express, TAGS.MySQL],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-4 flex-row ">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}

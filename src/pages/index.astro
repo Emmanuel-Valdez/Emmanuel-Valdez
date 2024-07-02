@@ -8,29 +8,33 @@ import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import BriefCaseIcon from '../icons/BriefCaseIcon.astro';
+import CodeIcon from '../icons/Code.astro';
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout
   title="Portfolio de Emmanuel Valdez - Desarrollador y Programador Backend"
   description="Contrata a Emmanuel Valdez para desarrollar tu app"
 >
-  <main>
-    <SectionContainer class="py-44 pb-24">
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
       <img
         class="rounded-full size-12 mb-4"
         src="./2024.png"
         alt="EValdezFoto"
       />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-        Emmanuel Valdez
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hola! soy Emmanuel Valdez
         <a
-          href="https://www.linkedin.com/in/emmanuel-alejandro-valdez-montigel-0b0a97252/"
+          href="https://www.linkedin.com/in/evaldez-dev/"
           class="flex justify-center items-center"
         >
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-2xl text-wrap">
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[500px]">
         <span>+3 años de experiencias.</span>
         <span class="text-blue-200/90"
           >Desarrollador Backend y creador de soluciones eficientes para tus
@@ -42,28 +46,36 @@ import BriefCaseIcon from '../icons/BriefCaseIcon.astro';
           Especializado en crear aplicaciones a medida.</span
         >
       </h2>
-      <nav class="flex gap-x-2 mt-8">
+      <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill
-          href="https://www.linkedin.com/in/emmanuel-alejandro-valdez-montigel-0b0a97252/"
+          href="https://www.linkedin.com/in/evaldez-dev/"
         >
-          <LinkedInIcon class="size-6" />
+          <LinkedInIcon class="size-4 md:size-6" />
           LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/Emmanuel-Valdez">
-          <GitHubIcon class="size-6" />
+          <GitHubIcon class="size-4 md:size-6" />
           GitHub
         </SocialPill>
         <SocialPill href="mailto:evaldez.mza@gmail.com">
-          <MailIcon class="size-6" />
+          <MailIcon class="size-4 md:size-6" />
           evaldez.mza@gmail.com
         </SocialPill>
       </nav>
     </SectionContainer>
     <SectionContainer id="experience">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <BriefCaseIcon class="size-7"/>
-        Experiencia Laboral</h2>
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefCaseIcon class="size-7" />
+        Experiencia Laboral
+      </h2>
       <Experience />
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>
