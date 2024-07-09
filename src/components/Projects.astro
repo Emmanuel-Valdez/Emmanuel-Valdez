@@ -6,6 +6,8 @@ import ExpressIcon from '../icons/techIcons/Express.astro';
 import MySQLIcon from '../icons/techIcons/MySQL.astro';
 import HTMLIcon from '../icons/techIcons/HTML.astro';
 import CSSIcon from '../icons/techIcons/CSS.astro';
+import JavaScriptIcon from '../icons/techIcons/JavaScript.astro'
+import GitHubIcon from '@/icons/techIcons/GitHub.astro';
 const TAGS = {
   NodeJS: {
     name: 'Node.js',
@@ -42,6 +44,16 @@ const TAGS = {
     class: 'bg-black text-white',
     icon: CSSIcon,
   },
+  JavaScript:{
+    name:'JavaScript',
+    class: 'bg-black text-white',
+    icon: JavaScriptIcon,
+  },
+  GitHub:{
+    name:'GitHub',
+    class: 'bg-black text-white',
+    icon: GitHubIcon,
+  }
 };
 const PROJECTS = [
   {
@@ -51,7 +63,7 @@ const PROJECTS = [
     link: 'https://fullstackproject-backend.vercel.app/',
     github: 'https://github.com/Emmanuel-Valdez/fullstackproject-backend',
     image: '/projects/funko_shopWeb.webp',
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.NodeJS, TAGS.Express, TAGS.MySQL],
+    tags: [TAGS.HTML, TAGS.CSS,TAGS.JavaScript, TAGS.NodeJS, TAGS.Express, TAGS.MySQL, TAGS.GitHub],
   },
 ];
 ---

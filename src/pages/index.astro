@@ -10,6 +10,7 @@ import SectionContainer from '../components/SectionContainer.astro';
 import BriefCaseIcon from '../icons/BriefCaseIcon.astro';
 import CodeIcon from '../icons/Code.astro';
 import Projects from '../components/Projects.astro';
+import UserIcon from '../icons/User.astro'
 ---
 
 <Layout
@@ -63,6 +64,7 @@ import Projects from '../components/Projects.astro';
         </SocialPill>
       </nav>
     </SectionContainer>
+
     <SectionContainer id="experience">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <BriefCaseIcon class="size-7" />
@@ -70,12 +72,21 @@ import Projects from '../components/Projects.astro';
       </h2>
       <Experience />
     </SectionContainer>
+
     <SectionContainer id="projects">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <CodeIcon class="size-7" />
         Proyectos
       </h2>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="about">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <UserIcon class="size-7" />
+       Sobre mi
+      </h2>
+     
     </SectionContainer>
   </main>
 </Layout>
