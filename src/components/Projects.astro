@@ -8,6 +8,10 @@ import HTMLIcon from '../icons/techIcons/HTML.astro';
 import CSSIcon from '../icons/techIcons/CSS.astro';
 import JavaScriptIcon from '../icons/techIcons/JavaScript.astro'
 import GitHubIcon from '@/icons/techIcons/GitHub.astro';
+import LinkButton from './LinkButton.astro';
+import WebIcon from '@/icons/Web.astro';
+import MSSQLIcon from '@/icons/techIcons/MSSQL.astro'
+
 const TAGS = {
   NodeJS: {
     name: 'Node.js',
@@ -20,7 +24,7 @@ const TAGS = {
     icon: TailwindIcon,
   },
   CSharp: {
-    name: 'Csharp',
+    name: 'C#',
     class: 'bg-black text-white',
     icon: CSharpIcon,
   },
@@ -53,7 +57,12 @@ const TAGS = {
     name:'GitHub',
     class: 'bg-black text-white',
     icon: GitHubIcon,
-  }
+  },
+  MSSQL:{
+    name:'MS SQL',
+    class: 'bg-black text-white',
+    icon: MSSQLIcon,
+  },
 };
 const PROJECTS = [
   {
@@ -64,20 +73,29 @@ const PROJECTS = [
     github: 'https://github.com/Emmanuel-Valdez/fullstackproject-backend',
     image: '/projects/funko_shopWeb.webp',
     tags: [TAGS.HTML, TAGS.CSS,TAGS.JavaScript, TAGS.NodeJS, TAGS.Express, TAGS.MySQL, TAGS.GitHub],
+  },{
+    title: 'Project2',
+    description:
+    'Calculadora de costos de produccion de un proceso random',
+    link:'',
+    github:'',
+    image: '/projects/project2.png',
+    tags: [TAGS.CSharp, TAGS.MSSQL]
+
   },
 ];
 ---
-
+<section class="flex flex-col gap-y-16">
 {
-  PROJECTS.map(({ title, description, tags, image }) => (
+  PROJECTS.map(({ title, description, tags, image,link, github }) => (
     <article>
       <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-4 flex-row ">
+      <ul class="flex gap-x-4 flex-row mb-2">
         {tags.map((tag) => (
           <li>
             <span
-              class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2`}
+              class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2 border border-white/10`}
             >
               <tag.icon class="size-4" />
               {tag.name}
@@ -90,6 +108,20 @@ const PROJECTS = [
         src={image}
         alt={`Captura de pantalla del proyecto ${image}`}
       />
+      <footer class="flex gap-x-4 justify-end mt-4">
+        {github && (
+        <LinkButton href={github}>
+        <GitHubIcon class="size-6 mr-2"/>
+         Ver código fuente
+        </LinkButton>
+        )}
+        <LinkButton href={link}>
+        <WebIcon class="size-6 mr-2"/>
+        Ir al sitio web
+        </LinkButton>
+
+      </footer>
     </article>
   ))
 }
+</section>

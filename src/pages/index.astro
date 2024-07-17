@@ -1,16 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import LinkedInIcon from '../icons/LinkedInIcon.astro';
-import GitHubIcon from '../icons/GitHubIcon.astro';
-import MailIcon from '../icons/MailIcon.astro';
-import SocialPill from '../components/SocialPill.astro';
-import Experience from '../components/Experience.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import BriefCaseIcon from '../icons/BriefCaseIcon.astro';
-import CodeIcon from '../icons/Code.astro';
-import Projects from '../components/Projects.astro';
-import UserIcon from '../icons/User.astro'
+import Layout from '@/layouts/Layout.astro';
+
+import Badge from '@/components/Badge.astro';
+import LinkedInIcon from '@/icons/LinkedInIcon.astro';
+import GitHubIcon from '@/icons/GitHubIcon.astro';
+import MailIcon from '@/icons/MailIcon.astro';
+import SocialPill from '@/components/SocialPill.astro';
+import Experience from '@/components/Experience.astro';
+import SectionContainer from '@/components/SectionContainer.astro';
+import BriefCaseIcon from '@/icons/BriefCaseIcon.astro';
+import CodeIcon from '@/icons/Code.astro';
+import Projects from '@/components/Projects.astro';
+import UserIcon from '@/icons/User.astro';
+import AboutMe from '@/components/AboutMe.astro';
 ---
 
 <Layout
@@ -30,7 +32,7 @@ import UserIcon from '../icons/User.astro'
         Hola! soy Emmanuel Valdez
         <a
           href="https://www.linkedin.com/in/evaldez-dev/"
-          class="flex justify-center items-center"
+          class="flex justify-center items-center hover:scale-105 transition"
         >
           <Badge>Disponible para trabajar</Badge>
         </a>
@@ -48,9 +50,7 @@ import UserIcon from '../icons/User.astro'
         >
       </h2>
       <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialPill
-          href="https://www.linkedin.com/in/evaldez-dev/"
-        >
+        <SocialPill href="https://www.linkedin.com/in/evaldez-dev/">
           <LinkedInIcon class="size-4 md:size-6" />
           LinkedIn
         </SocialPill>
@@ -84,9 +84,9 @@ import UserIcon from '../icons/User.astro'
     <SectionContainer id="about">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <UserIcon class="size-7" />
-       Sobre mi
+        Sobre mi
       </h2>
-     
+      <AboutMe />
     </SectionContainer>
   </main>
 </Layout>
