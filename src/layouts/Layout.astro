@@ -36,11 +36,16 @@ import Footer from '../components/Footer.astro';
   :root {
     color-scheme: light dark;
   }
-
+  
   html {
     font-family: 'Onest Variable', system-ui, sans-serif; 
     scroll-behavior: smooth;
+   
   }
+  html, body {
+    overflow-x: hidden; /* Oculta el scroll lateral */
+    width: 100%; /* Asegura que el ancho sea el 100% */
+}
   body {
     background: #050505;
     display: flex;
@@ -51,6 +56,8 @@ import Footer from '../components/Footer.astro';
   @media(prefers-reduced-motion:reduce){
     html{
       scroll-behavior: auto;
+     
+      
     }
   }
 </style>
