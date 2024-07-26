@@ -28,7 +28,8 @@ const { title, description, link, date, company } = Astro.props;
 </p>
 {
   link && (
-    <LinkButton href={link}>
+    <LinkButton href={link} target="_blank"
+    rel="noopener noreferrer">
       Saber más... <IconArrow />
     </LinkButton>
   )
