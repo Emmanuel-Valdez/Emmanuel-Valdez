@@ -142,32 +142,32 @@ const screenshots = [
   description="Caso de estudio de Ukiyo Designs, sistema e-commerce y gestión de precios construido con ASP.NET Core 8 MVC, Entity Framework Core, SQL Server, Identity, Stripe y localización ES/EN."
   image="/projects/ukiyo/store-home.jpg"
 >
-  <main id="main-content" class="px-4 pt-28">
-    <article class="mx-auto w-full max-w-5xl pb-24">
+  <main id="main-content" class="px-4 pt-24 sm:px-6 sm:pt-28">
+    <article class="mx-auto w-full max-w-5xl pb-16 md:pb-24">
       <a href="/#projects" class="text-sm font-medium text-sky-200 transition hover:text-white">
         Volver a proyectos
       </a>
 
-      <header class="relative mt-8 overflow-hidden rounded-[2rem] border border-sky-300/20 bg-slate-950/80 p-6 shadow-2xl shadow-sky-950/30 md:p-10">
+      <header class="relative mt-8 overflow-hidden rounded-3xl border border-sky-300/20 bg-slate-950/80 p-5 shadow-2xl shadow-sky-950/30 md:rounded-[2rem] md:p-10">
         <div class="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-sky-300 to-transparent" aria-hidden="true"></div>
         <div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.26em] text-sky-200/80">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.26em]">
               Caso de estudio · ASP.NET Core + SQL Server
             </p>
             <h1 class="mt-4 text-balance text-4xl font-black tracking-tight text-white md:text-6xl">
               Ukiyo Designs
             </h1>
-            <p class="mt-5 max-w-2xl text-pretty text-lg leading-8 text-gray-300">
+            <p class="mt-5 max-w-2xl text-pretty text-base leading-7 text-gray-300 sm:text-lg sm:leading-8">
               Sistema e-commerce y de gestión para un negocio familiar que fabrica mochilas, bolsos e indumentaria. El objetivo fue convertir un flujo de costos basado en Excel en una aplicación web con base de datos, roles, pagos y cálculo administrativo de precios.
             </p>
 
-            <div class="mt-7 flex flex-wrap gap-3">
-              <LinkButton href="https://ukiyo.bsite.net/">
+            <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <LinkButton href="https://ukiyo.bsite.net/" class="justify-center sm:justify-start">
                 <WebIcon class="size-5" />
                 Demo
               </LinkButton>
-              <LinkButton href="https://github.com/Emmanuel-Valdez/Ukiyo">
+              <LinkButton href="https://github.com/Emmanuel-Valdez/Ukiyo" class="justify-center sm:justify-start">
                 <GitHubIcon class="size-5" />
                 Código
               </LinkButton>
@@ -178,7 +178,7 @@ const screenshots = [
             <img
               src="/projects/ukiyo/store-home.jpg"
               alt="Captura real de Ukiyo Designs con catálogo de productos"
-              class="h-full min-h-72 w-full object-cover object-top"
+              class="h-full min-h-56 w-full object-cover object-top sm:min-h-72"
             />
           </div>
         </div>
@@ -195,7 +195,7 @@ const screenshots = [
 
       <section class="mt-14 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-sky-200/80">Contexto</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Contexto</p>
           <h2 class="mt-3 text-3xl font-bold text-white">De planilla a sistema de negocio</h2>
         </div>
         <div class="space-y-5 text-pretty leading-7 text-gray-300">
@@ -237,7 +237,7 @@ const screenshots = [
       <section class="mt-14 rounded-3xl border border-sky-300/20 bg-slate-950/70 p-6 md:p-8">
         <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-sky-200/80">Arquitectura</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Arquitectura</p>
             <h2 class="mt-3 text-3xl font-bold text-white">Un sistema web con lógica de negocio centralizada</h2>
             <p class="mt-5 text-pretty leading-7 text-gray-300">
               Ukiyo separa el uso público y administrativo, pero ambos flujos pasan por la misma aplicación ASP.NET Core MVC. El backend aplica reglas de negocio, Entity Framework Core conecta con SQL Server y los servicios externos cubren pago, autenticación social y localización.
@@ -291,7 +291,7 @@ const screenshots = [
       <section class="mt-8 rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
         <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-sky-200/80">Stack por capas</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Stack por capas</p>
             <h2 class="mt-3 text-3xl font-bold text-white">Qué responsabilidad cumple cada parte</h2>
           </div>
           <p class="max-w-sm text-sm leading-6 text-gray-400">
@@ -319,7 +319,7 @@ const screenshots = [
       <section class="mt-14 rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
         <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-sky-200/80">Calculadora administrativa</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Calculadora administrativa</p>
             <h2 class="mt-3 text-3xl font-bold text-white">Reglas de precio basadas en costos reales</h2>
           </div>
           <p class="max-w-sm text-sm text-gray-400">
@@ -338,7 +338,7 @@ const screenshots = [
 
       <section class="mt-14 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
         <div class="rounded-3xl border border-white/10 bg-slate-950/70 p-6 md:p-8">
-          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-sky-200/80">Backend</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Backend</p>
           <h2 class="mt-3 text-3xl font-bold text-white">Decisiones técnicas relevantes</h2>
           <ul class="mt-6 space-y-4 text-gray-300">
             {backendHighlights.map((item) => (
@@ -363,7 +363,7 @@ const screenshots = [
       </section>
 
       <section class="mt-14 rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
-        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-sky-200/80">Impacto</p>
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Impacto</p>
         <h2 class="mt-3 text-3xl font-bold text-white">Qué demuestra este proyecto</h2>
         <p class="mt-5 max-w-3xl text-pretty leading-7 text-gray-300">
           Ukiyo muestra capacidad para transformar un problema de negocio en software funcional: modelar datos, implementar reglas, conectar servicios externos y construir una interfaz usable para clientes y administración. Es un proyecto fullstack, pero el valor principal está en el backend, la base de datos y la lógica de negocio.
@@ -373,7 +373,7 @@ const screenshots = [
       <section class="mt-14">
         <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-sky-200/80">Media real</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Media real</p>
             <h2 class="mt-3 text-3xl font-bold text-white">Capturas del producto funcionando</h2>
           </div>
           <p class="max-w-md text-sm leading-6 text-gray-400">
