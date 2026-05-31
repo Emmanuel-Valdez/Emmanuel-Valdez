@@ -4,6 +4,8 @@ import GitHubIcon from '@/icons/GitHubIcon.astro';
 import MailIcon from '@/icons/MailIcon.astro';
 import SocialPill from '@/components/SocialPill.astro';
 import Avatar from '@/components/Avatar.astro';
+
+const STACK = ['.NET 8', 'C#', 'SQL Server', 'Node.js', 'Docker learning', 'Linux learning', 'Cloud foundations'];
 ---
 
 <div class="max-w-xl">
@@ -13,27 +15,28 @@ import Avatar from '@/components/Avatar.astro';
   <h1
     class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
   >
-    ¡Hola! Soy Emmanuel Valdez Montigel
-    <a
-      href="https://www.linkedin.com/in/evalmondev/"
-      class="flex justify-center items-center hover:scale-105 transition"
-    >
-    </a>
+    Backend Developer · .NET · C# · SQL
   </h1>
-  <h2 class="text-xl lg:text-2xl text-wrap max-w-[500px]">
-    <span>+4 años de programación .NET & Node.js con foco en e-commerce y sistemas de gestión</span>
+  <h2 class="text-xl lg:text-2xl text-wrap max-w-[560px]">
+    <span>
+      Hola, soy Emmanuel Valdez Montigel. Construyo sistemas de e-commerce y
+      gestión con foco en lógica de negocio, bases de datos y procesos reales.
+    </span>
     <span class="text-blue-200/90">
-      
-       Construyo sistemas que escalan desde el modelo de datos hasta el deploy
-       
-       </span
-    >
-    <span class="text-red-200/90"> De Mendoza, Argentina.</span><span
-      class="opacity-85"
-    >
-      </span
-    >
+      Actualmente profundizando Docker, Linux y fundamentos de arquitectura
+      cloud.
+    </span>
+    <span class="text-red-200/90"> De Mendoza, Argentina.</span>
   </h2>
+  <ul class="mt-6 flex flex-wrap gap-2" aria-label="Stack principal y aprendizaje actual">
+    {
+      STACK.map((item) => (
+        <li class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-gray-200">
+          {item}
+        </li>
+      ))
+    }
+  </ul>
   <nav class="flex gap-4 mt-8 flex-wrap">
     <SocialPill href="https://www.linkedin.com/in/evalmondev/">
       <LinkedInIcon class="size-4 md:size-6" />

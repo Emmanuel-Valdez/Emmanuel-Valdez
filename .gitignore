@@ -27,6 +27,8 @@ pnpm-debug.log*
 .opencode/
 .opencode-context/
 .agents/
+PORTFOLIO_REVIEW_ES.md
+PORTFOLIO_ROADMAP_ES.md
 skills-lock.json
 opencode.json
 opencode.jsonc

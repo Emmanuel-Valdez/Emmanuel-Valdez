@@ -43,9 +43,24 @@ const TAGS = {
 const PROJECTS = [
   {
     title: 'Ukiyo Designs',
+    eyebrow: 'Proyecto destacado · solución real para e-commerce',
     description:
-      'Tienda Virtual en .NET 8 y SQL Server, integra gestión avanzada de productos, usuarios, favoritos, ventas, roles y órdenes. Además, incorpora calculadora de costos que optimiza la fijación de precios desde las materias primas hasta costos fijos y porcentuales, permitiendo ajustes de ganancias para precios mayoristas y sugerencias de precios minoristas estratégicas',
+      'Sistema ASP.NET Core MVC para un emprendimiento familiar que fabrica mochilas, bolsos e indumentaria. Reemplaza un Excel de costos que había creado previamente y centraliza tienda, productos, usuarios, roles, órdenes, favoritos y cálculo de precios.',
+    stack: [
+      'ASP.NET Core 8 MVC',
+      'Entity Framework Core',
+      'SQL Server',
+      'Identity + Facebook OAuth',
+      'Stripe',
+      'ES/EN localization',
+    ],
+    highlights: [
+      'Calculadora administrativa con telas, herrajes, packaging, costos fijos, costos porcentuales y márgenes de ganancia.',
+      'Precios mayoristas basados en costos reales y precio minorista sugerido para apoyar decisiones comerciales.',
+      'Soporte multi-compañía, Identity, Facebook OAuth, Stripe, localización ES/EN y SQL views/triggers para cálculos.',
+    ],
     link: 'https://ukiyo.bsite.net/',
+    github: 'https://github.com/Emmanuel-Valdez/Ukiyo',
     image: '/projects/UkiyoDesigns.webp',
     imageAlt: 'Captura del panel y tienda virtual Ukiyo Designs',
     tags: [TAGS.CSharp, TAGS.GitHub, TAGS.MSSQL],
@@ -53,7 +68,7 @@ const PROJECTS = [
   {
     title: 'Proyecto final C# QUARK Academy',
     description:
-      'Calculadora de costos de tienda de ropa. C# utilizando windows forms, incluye un historial de cotizacion, restricciones de stock y manejo de errores',
+      'Calculadora de costos para tienda de ropa creada en C# con Windows Forms. Incluye historial de cotización, restricciones de stock y manejo de errores.',
     link: '',
     github: 'https://github.com/Emmanuel-Valdez/ProyectoCQuarq',
     image: '/projects/CotizadorTiendaRopa.webp',
@@ -63,7 +78,7 @@ const PROJECTS = [
   {
     title: 'Funko shop',
     description:
-      'Tienda virtual de funkos creada con NodeJs-Express para las operaciones CRUD del servidor-base de datos, proyecto con carrito de compras, paginación y autenticación',
+      'Tienda virtual de funkos creada con Node.js, Express y MySQL. Incluye operaciones CRUD, carrito de compras, paginación y autenticación.',
     link: 'https://fullstackproject-backend.vercel.app/',
     github: 'https://github.com/Emmanuel-Valdez/fullstackproject-backend',
     image: '/projects/funko_shopWeb.webp',
@@ -76,7 +91,7 @@ const PROJECTS = [
 <div class="flex flex-col gap-y-16">
   {
     PROJECTS.map(
-      ({ image, imageAlt, title, description, tags, link, github }) => (
+      ({ image, imageAlt, title, eyebrow, description, stack, highlights, tags, link, github }) => (
         <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
           <div class="w-full md:w-1/2">
             <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -90,6 +105,11 @@ const PROJECTS = [
           </div>
 
           <div class="w-full md:w-1/2 md:max-w-lg ">
+            {eyebrow && (
+              <p class="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-sky-200/80">
+                {eyebrow}
+              </p>
+            )}
             <h3 class="text-2xl font-bold text-gray-100">{title}</h3>
             <div class="flex flex-wrap mt-2">
               <ul class="flex flex-row mb-2 gap-x-2">
@@ -106,6 +126,25 @@ const PROJECTS = [
               </ul>
 
               <div class="mt-2 text-gray-400 ">{description}</div>
+              {stack && (
+                <ul class="mt-4 flex flex-wrap gap-2" aria-label={`Stack técnico de ${title}`}>
+                  {stack.map((item) => (
+                    <li class="rounded-full border border-sky-300/20 bg-sky-300/10 px-2.5 py-1 text-xs font-medium text-sky-100">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {highlights && (
+                <ul class="mt-4 space-y-2 text-sm text-gray-300">
+                  {highlights.map((highlight) => (
+                    <li class="flex gap-x-2">
+                      <span class="mt-2 size-1.5 shrink-0 rounded-full bg-sky-300" aria-hidden="true" />
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
               <footer class="flex items-end justify-start mt-4 gap-x-4">
                 {github && (
                   <LinkButton href={github}>
