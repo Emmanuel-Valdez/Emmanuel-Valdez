@@ -39,7 +39,7 @@ const problemItems = [
 const solutionItems = [
   'Tienda pública para explorar productos, buscar, guardar favoritos y comprar.',
   'Panel administrativo para productos, empresas, roles, órdenes y datos de cálculo.',
-  'Calculadora de precios con telas, herrajes, packaging, costos fijos, costos porcentuales y márgenes.',
+  'Calculadora de precios con telas, herrajes, packaging, costos fijos, costos porcentuales, márgenes y dashboard de precios finales.',
   'Integración con Identity, Facebook OAuth, Stripe y localización en español/inglés.',
 ];
 
@@ -89,12 +89,45 @@ const calculationInputs = [
   'Márgenes para precio mayorista justo y precio minorista sugerido.',
 ];
 
+const finalPriceFeatures = [
+  'Compara precio actual minorista y mayorista contra precios calculados desde costos reales.',
+  'Marca diferencias entre valores vigentes y precios sugeridos para saber qué productos necesitan revisión.',
+  'Permite ajustar variables de ganancia, filtrar disponibilidad, controlar columnas y exportar información a PDF.',
+  'Mantiene la decisión comercial final en manos del administrador antes de actualizar precios publicados.',
+];
+
 const backendHighlights = [
   'Modelo multi-compañía para separar operaciones y usuarios asociados a empresas.',
   'Roles diferenciados para clientes, compañías, empleados y administradores.',
-  'SQL views para centralizar cálculos de costos y precios.',
-  'SQL triggers para mantener totales actualizados a nivel de unidad y producto.',
-  'Datos demo y flujos de reparación inicial para filas necesarias de la calculadora.',
+  'SQL views específicas para costos fijos mensuales, costos porcentuales, costos por producto y precios finales.',
+  'SQL triggers para mantener totales actualizados cuando cambian cantidades o precios de telas, herrajes y packaging.',
+  'Migraciones EF Core, seed data y reparación inicial de filas necesarias para la calculadora.',
+];
+
+const dataModelGroups = [
+  {
+    title: 'Comercio',
+    items: ['Product', 'Category', 'ProductImage', 'ShoppingCart'],
+  },
+  {
+    title: 'Órdenes y usuarios',
+    items: ['OrderHeader', 'OrderDetail', 'ApplicationUser', 'Company'],
+  },
+  {
+    title: 'Calculadora',
+    items: ['Fabric', 'GarmentHardware', 'Packaging', 'FixedCost', 'PercentageCost', 'PercentageProfit'],
+  },
+  {
+    title: 'SQL Views',
+    items: ['FixedCostMonthlyView', 'TotalPercentageCostView', 'CostByProductView', 'FinalPriceView'],
+  },
+];
+
+const readinessItems = [
+  'Pruebas manuales completas antes de preparar la demo del portfolio.',
+  'Validación de checkout guards, acceso a órdenes, disponibilidad de productos y flujos login/carrito.',
+  'Revisión de soft-delete de compañías, deletes de calculadora y metadata de localización.',
+  'Backlog técnico honesto: tests automatizados, Docker, fake email sender, Serilog y middleware centralizado de excepciones.',
 ];
 
 const screenshots = [
@@ -126,13 +159,13 @@ const screenshots = [
     src: '/projects/ukiyo/final-prices.png',
     alt: 'Pantalla de precios finales en Ukiyo Designs',
     title: 'Precios finales',
-    description: 'Comparación entre precio final, minorista calculado y mayorista sugerido.',
+    description: 'Dashboard con variables de ganancia, costos, precios actuales, valores calculados y productos disponibles.',
   },
   {
     src: '/projects/ukiyo/orders-admin.png',
     alt: 'Panel de gestión de órdenes en Ukiyo Designs',
     title: 'Órdenes',
-    description: 'Gestión administrativa de pedidos y seguimiento operativo.',
+    description: 'Listado administrativo con clientes demo, estados, totales, filtros, exportación y acceso al detalle.',
   },
 ];
 ---
@@ -334,6 +367,48 @@ const screenshots = [
             </div>
           ))}
         </div>
+
+        <div class="mt-8 rounded-2xl border border-sky-300/20 bg-sky-950/20 p-5">
+          <h3 class="text-xl font-bold text-white">Dashboard de precios finales</h3>
+          <p class="mt-3 text-pretty text-sm leading-6 text-gray-300">
+            La lista de precios finales funciona como control operativo: permite revisar costos, márgenes y precios publicados antes de aplicar cambios comerciales.
+          </p>
+          <ul class="mt-5 grid gap-3 text-sm text-gray-300 md:grid-cols-2">
+            {finalPriceFeatures.map((item) => (
+              <li class="flex gap-3">
+                <span class="mt-2 size-1.5 shrink-0 rounded-full bg-sky-300" aria-hidden="true"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section class="mt-14 rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Modelo de datos</p>
+            <h2 class="mt-3 text-3xl font-bold text-white">Entidades pensadas para e-commerce y pricing</h2>
+          </div>
+          <p class="max-w-sm text-sm leading-6 text-gray-400">
+            El dominio separa catálogo, usuarios, compañías, órdenes y cálculo de costos para mantener clara la lógica de negocio.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {dataModelGroups.map((group) => (
+            <article class="rounded-2xl border border-white/10 bg-slate-950/70 p-5">
+              <h3 class="text-lg font-bold text-white">{group.title}</h3>
+              <ul class="mt-4 space-y-2 text-sm text-gray-300">
+                {group.items.map((item) => (
+                  <li class="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 font-mono text-xs text-gray-300">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section class="mt-14 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
@@ -368,6 +443,14 @@ const screenshots = [
         <p class="mt-5 max-w-3xl text-pretty leading-7 text-gray-300">
           Ukiyo muestra capacidad para transformar un problema de negocio en software funcional: modelar datos, implementar reglas, conectar servicios externos y construir una interfaz usable para clientes y administración. Es un proyecto fullstack, pero el valor principal está en el backend, la base de datos y la lógica de negocio.
         </p>
+        <ul class="mt-6 grid gap-3 text-sm text-gray-300 md:grid-cols-2">
+          {readinessItems.map((item) => (
+            <li class="flex gap-3 rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-sky-300" aria-hidden="true"></span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section class="mt-14">
