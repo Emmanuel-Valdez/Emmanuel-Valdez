@@ -86,66 +86,103 @@ const PROJECTS = [
     tags: [TAGS.NodeJS, TAGS.Express, TAGS.MySQL, TAGS.GitHub],
   },
 ];
+
+const [FEATURED_PROJECT, ...SUPPORTING_PROJECTS] = PROJECTS;
+const FEATURED_STACK = FEATURED_PROJECT.stack ?? [];
+const FEATURED_HIGHLIGHTS = FEATURED_PROJECT.highlights ?? [];
 ---
 
-<div class="flex flex-col gap-y-16">
-  {
-    PROJECTS.map(
-      ({ image, imageAlt, title, eyebrow, description, stack, highlights, tags, link, github }) => (
-        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-          <div class="w-full md:w-1/2">
-            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+<div class="flex flex-col gap-y-12">
+  <article class="group relative overflow-hidden rounded-3xl border border-sky-300/20 bg-slate-950/80 shadow-2xl shadow-sky-950/30">
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-300/80 to-transparent" aria-hidden="true"></div>
+    <div class="grid gap-8 p-5 md:grid-cols-[1.05fr_0.95fr] md:p-7 lg:p-8">
+      <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-black/30">
+        <img
+          alt={FEATURED_PROJECT.imageAlt}
+          class="h-full min-h-72 w-full object-cover object-top transition duration-500 md:group-hover:scale-[1.03]"
+          loading="lazy"
+          src={FEATURED_PROJECT.image}
+        />
+      </div>
+
+      <div class="flex flex-col justify-center">
+        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-sky-200/80">
+          {FEATURED_PROJECT.eyebrow}
+        </p>
+        <h3 class="text-3xl font-bold text-white md:text-4xl">
+          {FEATURED_PROJECT.title}
+        </h3>
+        <p class="mt-4 text-pretty text-gray-300">
+          {FEATURED_PROJECT.description}
+        </p>
+
+        <ul class="mt-5 flex flex-wrap gap-2" aria-label={`Stack técnico de ${FEATURED_PROJECT.title}`}>
+          {FEATURED_STACK.map((item) => (
+            <li class="rounded-full border border-sky-300/20 bg-sky-300/10 px-2.5 py-1 text-xs font-medium text-sky-100">
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <ul class="mt-5 space-y-3 text-sm text-gray-200">
+          {FEATURED_HIGHLIGHTS.map((highlight) => (
+            <li class="flex gap-x-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-sky-300" aria-hidden="true" />
+              <span>{highlight}</span>
+            </li>
+          ))}
+        </ul>
+
+        <footer class="mt-6 flex flex-wrap items-center gap-4">
+          {FEATURED_PROJECT.github && (
+            <LinkButton href={FEATURED_PROJECT.github}>
+              <GitHubIcon class="size-5" />
+              Code
+            </LinkButton>
+          )}
+          {FEATURED_PROJECT.link && (
+            <LinkButton href={FEATURED_PROJECT.link}>
+              <WebIcon class="size-5" />
+              Preview
+            </LinkButton>
+          )}
+        </footer>
+      </div>
+    </div>
+  </article>
+
+  <div>
+    <p class="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-gray-400">
+      Proyectos de soporte
+    </p>
+    <div class="grid gap-6 md:grid-cols-2">
+      {
+        SUPPORTING_PROJECTS.map(({ image, imageAlt, title, description, tags, link, github }) => (
+          <article class="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition duration-300 hover:border-sky-300/30 hover:bg-white/[0.06]">
+            <div class="overflow-hidden border-b border-white/10">
               <img
                 alt={imageAlt}
-                class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                class="h-48 w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
                 loading="lazy"
                 src={image}
               />
             </div>
-          </div>
 
-          <div class="w-full md:w-1/2 md:max-w-lg ">
-            {eyebrow && (
-              <p class="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-sky-200/80">
-                {eyebrow}
-              </p>
-            )}
-            <h3 class="text-2xl font-bold text-gray-100">{title}</h3>
-            <div class="flex flex-wrap mt-2">
-              <ul class="flex flex-row mb-2 gap-x-2">
+            <div class="p-5">
+              <h3 class="text-xl font-bold text-gray-100">{title}</h3>
+              <ul class="mt-3 flex flex-wrap gap-2">
                 {tags.map((tag) => (
                   <li>
-                    <span
-                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-                    >
-                      <tag.icon class="size-4 " />
+                    <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} px-2 py-1`}>
+                      <tag.icon class="size-4" />
                       {tag.name}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <div class="mt-2 text-gray-400 ">{description}</div>
-              {stack && (
-                <ul class="mt-4 flex flex-wrap gap-2" aria-label={`Stack técnico de ${title}`}>
-                  {stack.map((item) => (
-                    <li class="rounded-full border border-sky-300/20 bg-sky-300/10 px-2.5 py-1 text-xs font-medium text-sky-100">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              )}
-              {highlights && (
-                <ul class="mt-4 space-y-2 text-sm text-gray-300">
-                  {highlights.map((highlight) => (
-                    <li class="flex gap-x-2">
-                      <span class="mt-2 size-1.5 shrink-0 rounded-full bg-sky-300" aria-hidden="true" />
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-              <footer class="flex items-end justify-start mt-4 gap-x-4">
+              <p class="mt-4 text-sm text-gray-400">{description}</p>
+              <footer class="mt-5 flex flex-wrap items-center gap-3">
                 {github && (
                   <LinkButton href={github}>
                     <GitHubIcon class="size-5" />
@@ -160,9 +197,9 @@ const PROJECTS = [
                 )}
               </footer>
             </div>
-          </div>
-        </article>
-      )
-    )
-  }
+          </article>
+        ))
+      }
+    </div>
+  </div>
 </div>
