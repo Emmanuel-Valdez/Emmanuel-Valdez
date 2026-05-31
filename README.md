@@ -20,7 +20,7 @@ Primary focus areas:
 - E-commerce and business management systems.
 - Data modeling, business logic, pricing workflows, and operational processes.
 - Fullstack implementation when needed to deliver usable products.
-- Ongoing growth in Docker, Linux, and cloud architecture foundations.
+- Current cloud architecture training with practical Linux server setup and Docker deployment preparation.
 
 ## Featured Project: Ukiyo Designs
 
@@ -210,8 +210,8 @@ Planned improvements that strengthen the backend/fullstack portfolio signal:
 - Add a dedicated Ukiyo case study page.
 - Add updated screenshots, GIFs, or short videos for Ukiyo workflows.
 - Add a simple architecture diagram for Ukiyo.
-- Document Docker and Docker Compose learning through a practical project or demo.
-- Document Linux and cloud architecture learning milestones.
+- Document a Docker-based deployment once a project is running on the Oracle Linux server.
+- Add notes about the cloud architecture course and infrastructure decisions when there is concrete deployment evidence.
 - Add an English version of the portfolio after the Spanish content is stable.
 - Improve visual polish without shifting the positioning toward pure frontend.
 
