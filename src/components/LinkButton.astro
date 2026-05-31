@@ -1,23 +1,23 @@
 ---
-const { href } = Astro.props;
+const {
+  href,
+  class: className,
+  target,
+  rel,
+  ...rest
+} = Astro.props;
 
+const isExternalLink = typeof href === 'string' && /^https?:\/\//.test(href);
+const finalTarget = target ?? (isExternalLink ? '_blank' : undefined);
+const finalRel = rel ?? (finalTarget === '_blank' ? 'noopener noreferrer' : undefined);
 ---
 
 <a
+  {...rest}
   href={href}
-  class="gap-x-1 inline-flex items-center px-4 py-2 text-sm font-medium  bg-white border  rounded-lg transition   focus:z-10 focus:ring-4 focus:outline-none 
-  focus:text-blue-700 
-  
-  
-  bg-gray-900 
-  text-gray-400 
-  border-gray-600 
-  hover:text-white 
-  hover:bg-gray-700 
-  focus:ring-gray-700"
-  target="_blank"
-  rel="noopener noreferrer"
-
-  >
+  class={`gap-x-1 inline-flex items-center px-4 py-2 text-sm font-medium border rounded-lg transition focus:z-10 focus:ring-4 focus:outline-none focus:text-blue-700 bg-gray-900 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700 ${className ?? ''}`}
+  target={finalTarget}
+  rel={finalRel}
+>
   <slot />
 </a>

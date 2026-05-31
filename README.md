@@ -1,54 +1,101 @@
-# Astro Starter Kit: Basics
+# Emmanuel Valdez Portfolio
 
-```sh
-npm create astro@latest -- --template basics
-```
+Personal developer portfolio for Emmanuel Valdez Montigel, built with Astro and Tailwind CSS.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+The current public UI content is Spanish. Code, comments, repository documentation, and implementation notes should stay in English until an on-demand Spanish-English translation feature is added.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Tech Stack
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- Astro
+- Tailwind CSS
+- TypeScript
+- `@fontsource-variable/onest`
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## Project Structure
 
 ```text
 /
 ├── public/
+│   ├── media/
+│   ├── projects/
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   ├── icons/
 │   ├── layouts/
-│   │   └── Layout.astro
 │   └── pages/
-│       └── index.astro
+├── astro.config.mjs
+├── tailwind.config.mjs
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Main Files
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- `src/pages/index.astro`: single portfolio page route.
+- `src/layouts/Layout.astro`: HTML shell, metadata, font loading, global styles, header, and footer.
+- `src/components/Hero.astro`: intro section and social links.
+- `src/components/Experience.astro`: experience section.
+- `src/components/Projects.astro`: project data and project cards.
+- `src/components/AboutMe.astro`: personal profile section.
+- `src/components/Contact.astro`: contact and CV download section.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Local Development
 
-## 🧞 Commands
+Install dependencies:
 
-All commands are run from the root of the project, from a terminal:
+```sh
+npm install
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Start the development server:
 
-## 👀 Want to learn more?
+```sh
+npm run dev
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Build the production site:
+
+```sh
+npm run build
+```
+
+Preview the production build locally:
+
+```sh
+npm run preview
+```
+
+## Deployment
+
+The primary deployment target is Netlify:
+
+```text
+https://evalmondev.netlify.app
+```
+
+The project also has a Vercel deployment, but Netlify is the preferred production target for now because the provided domain is simpler.
+
+Netlify should run the configured build command:
+
+```sh
+npm run build
+```
+
+The build command runs `astro check` before `astro build`, so type/configuration errors should fail the deployment before publishing. The publish directory is `dist/`.
+
+## SEO Configuration
+
+`Layout.astro` uses the `site` value from `astro.config.mjs` to generate canonical and social image URLs. The current primary production URL is configured as:
+
+```js
+export default defineConfig({
+  site: 'https://evalmondev.netlify.app',
+  integrations: [tailwind()],
+});
+```
+
+## Repository Notes
+
+- Do not commit local assistant context files.
+- Keep generated build output out of Git.
+- Keep visible Spanish UI copy unchanged until the translation feature is implemented.

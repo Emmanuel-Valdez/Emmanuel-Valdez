@@ -22,3 +22,11 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# OpenCode / local assistant context
+.opencode/
+.opencode-context/
+.agents/
+skills-lock.json
+opencode.json
+opencode.jsonc
