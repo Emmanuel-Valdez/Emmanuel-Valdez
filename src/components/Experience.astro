@@ -1,28 +1,26 @@
 ---
 import ExperienceItem from './ExperienceItem.astro';
 
-const EXPERIENCE = [
-  {
-    date: '2020 - Actualmente...',
-    title: 'Operación e-commerce, datos y mejora de procesos',
-    company: 'Ukiyo Mochilas y algo más',
-    description:
-      'Trabajo sobre la operación real de un negocio de productos físicos: catálogo, stock, publicaciones, ventas, pedidos, atención al cliente, logística y datos comerciales. Esa experiencia fue la base para diseñar Ukiyo como sistema propio de e-commerce, costos, precios y gestión administrativa.',
-    highlights: [
-      'Administración de plataformas e-commerce, incluyendo catálogo, stock, publicaciones, ventas y migración desde Tienda Nube hacia Tienda Negocio.',
-      'Seguimiento de pedidos, coordinación logística y revisión de información comercial para tomar mejores decisiones operativas.',
-      'Identificación de procesos repetitivos y criterios de precios que luego se transformaron en módulos dentro del sistema Ukiyo.',
-      'Contexto real para modelar productos, usuarios, órdenes, empresas, costos y reglas de negocio en una aplicación ASP.NET Core + SQL Server.',
-    ],
-    tags: ['E-commerce', 'Procesos de negocio', 'Datos comerciales', 'Pricing', 'SQL Server'],
-    link: 'https://ukiyo.tiendanegocio.com/',
-  },
-];
+interface Props {
+  items: readonly {
+    date: string;
+    title: string;
+    company: string;
+    description: string;
+    highlights: readonly string[];
+    tags: readonly string[];
+    tagsAriaLabel: string;
+    link: string;
+    linkLabel: string;
+  }[];
+}
+
+const { items } = Astro.props;
 ---
 
 <ol class="relative border-s border-gray-200 ml-3">
   {
-    EXPERIENCE.map((experience) => (
+    items.map((experience) => (
       <li class="mb-10 ms-4">
         <ExperienceItem {...experience} />
       </li>

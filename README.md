@@ -127,6 +127,10 @@ The admin price calculator considers:
 ## Main Files
 
 - `src/pages/index.astro`: single portfolio page route.
+- `src/pages/en/index.astro`: English portfolio page route.
+- `src/pages/proyectos/ukiyo.astro`: Spanish Ukiyo case study route.
+- `src/pages/en/projects/ukiyo.astro`: English Ukiyo case study route.
+- `src/data/i18n.ts`: Spanish and English visible copy, localized routes, and CV links.
 - `src/layouts/Layout.astro`: HTML shell, metadata, font loading, global styles, header, and footer.
 - `src/components/Hero.astro`: backend-focused intro, stack chips, and social links.
 - `src/components/Experience.astro`: experience section.
@@ -212,7 +216,7 @@ Planned improvements that strengthen the backend/fullstack portfolio signal:
 - Add a simple architecture diagram for Ukiyo.
 - Document a Docker-based deployment once a project is running on the Oracle Linux server.
 - Add notes about the cloud architecture course and infrastructure decisions when there is concrete deployment evidence.
-- Add an English version of the portfolio after the Spanish content is stable.
+- Keep the Spanish and English versions synchronized as the portfolio evolves.
 - Improve visual polish without shifting the positioning toward pure frontend.
 
 ## Repository Notes
@@ -221,3 +225,11 @@ Planned improvements that strengthen the backend/fullstack portfolio signal:
 - Keep generated build output out of Git.
 - Keep visible Spanish UI copy unchanged until the translation feature is implemented.
 - Keep secrets out of the repository. Use environment variables or ignored local files for credentials.
+
+## License and Usage
+
+This repository is public so the portfolio can be reviewed as part of Emmanuel Valdez's professional work.
+
+All personal content, CV files, images, screenshots, branding, written copy, and personal information are not licensed for reuse, redistribution, or commercial use. Unless explicitly stated otherwise, all rights are reserved.
+
+If a separate software license is added in the future, it will apply only to the code covered by that license and not to personal assets, CV files, project media, or portfolio content.

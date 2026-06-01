@@ -3,21 +3,29 @@ interface Props {
   title: string;
   description: string;
   image?: string;
+  locale?: 'es' | 'en';
+  alternatePath?: string;
 }
 
-const { title, description, image = '/2024.webp' } = Astro.props;
+const { title, description, image = '/2024.webp', locale = 'es', alternatePath } = Astro.props;
 const canonicalUrl = Astro.site
   ? new URL(Astro.url.pathname, Astro.site).toString()
   : undefined;
+const alternateUrl = Astro.site && alternatePath ? new URL(alternatePath, Astro.site).toString() : undefined;
 const socialImageUrl = Astro.site ? new URL(image, Astro.site).toString() : undefined;
+const ogLocale = locale === 'es' ? 'es_AR' : 'en_US';
+const alternateOgLocale = locale === 'es' ? 'en_US' : 'es_AR';
 import '@fontsource-variable/onest';
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { common } from '@/data/i18n';
+
+const copy = common[locale];
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -26,9 +34,15 @@ import Footer from '../components/Footer.astro';
     <meta name="author" content="Emmanuel Valdez" />
     <meta name="theme-color" content="#020617" />
     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    {alternateUrl && <link rel="alternate" hreflang={locale === 'es' ? 'en' : 'es'} href={alternateUrl} />}
+    {canonicalUrl && <link rel="alternate" hreflang={locale} href={canonicalUrl} />}
+    {locale === 'es' && canonicalUrl && <link rel="alternate" hreflang="x-default" href={canonicalUrl} />}
+    {locale === 'en' && alternateUrl && <link rel="alternate" hreflang="x-default" href={alternateUrl} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={alternateOgLocale} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
@@ -40,15 +54,15 @@ import Footer from '../components/Footer.astro';
     <title>{title}</title>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+    <a class="skip-link" href="#main-content">{copy.skipLink}</a>
     <div
       aria-hidden="true"
       class="absolute top-0 z-[-2] h-screen w-full bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(12,19,198,0.3),rgba(255,255,255,0))]"
     >
     </div>
-    <Header />
+    <Header locale={locale} alternatePath={alternatePath} />
     <slot />
-    <Footer />
+    <Footer locale={locale} />
   </body>
 </html>
 <style is:global>

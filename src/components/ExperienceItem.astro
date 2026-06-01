@@ -5,13 +5,25 @@ import IconArrow from '../icons/Arrow.astro';
 interface Props {
   title: string;
   description: string;
-  highlights?: string[];
-  tags?: string[];
+  highlights?: readonly string[];
+  tags?: readonly string[];
+  tagsAriaLabel?: string;
   link?: string;
+  linkLabel?: string;
   date: string;
   company?: string;
 }
-const { title, description, highlights = [], tags = [], link, date, company } = Astro.props;
+const {
+  title,
+  description,
+  highlights = [],
+  tags = [],
+  tagsAriaLabel = 'Experience areas',
+  link,
+  linkLabel = 'View',
+  date,
+  company,
+} = Astro.props;
 ---
 
 <div
@@ -32,7 +44,7 @@ const { title, description, highlights = [], tags = [], link, date, company } = 
 
   {
     tags.length > 0 && (
-      <ul class="mt-5 flex flex-wrap gap-2" aria-label="Áreas de experiencia">
+      <ul class="mt-5 flex flex-wrap gap-2" aria-label={tagsAriaLabel}>
         {tags.map((tag) => (
           <li class="rounded-full border border-sky-300/20 bg-sky-300/10 px-3 py-1 text-xs font-medium text-sky-100">
             {tag}
@@ -59,7 +71,7 @@ const { title, description, highlights = [], tags = [], link, date, company } = 
     link && (
       <div class="mt-6">
         <LinkButton href={link}>
-          Ver tienda actual <IconArrow />
+          {linkLabel} <IconArrow />
         </LinkButton>
       </div>
     )

@@ -3,182 +3,36 @@ import Layout from '@/layouts/Layout.astro';
 import LinkButton from '@/components/LinkButton.astro';
 import GitHubIcon from '@/icons/techIcons/GitHub.astro';
 import WebIcon from '@/icons/Web.astro';
+import { routes, type Locale, ukiyoContent } from '@/data/i18n';
 
-const stack = [
-  'ASP.NET Core 8 MVC',
-  'Entity Framework Core',
-  'SQL Server',
-  'ASP.NET Core Identity',
-  'Facebook OAuth',
-  'Stripe',
-  'Localización ES/EN',
-  'DotNetEnv',
-];
-
-const metrics = [
-  {
-    label: 'Negocio real',
-    value: 'E-commerce + gestión',
-  },
-  {
-    label: 'Modelo de precios',
-    value: 'Mayorista y minorista',
-  },
-  {
-    label: 'Usuarios',
-    value: 'Customer, Company, Employee, Admin',
-  },
-];
-
-const problemItems = [
-  'El cálculo de precios dependía de un Excel creado previamente para costos, sueldos, impuestos, ganancia y precio final.',
-  'La información del negocio estaba separada entre archivos, procesos manuales y decisiones administrativas.',
-  'El negocio necesitaba vender productos, gestionar usuarios y mantener criterios consistentes para precios mayoristas y minoristas.',
-];
-
-const solutionItems = [
-  'Tienda pública para explorar productos, buscar, guardar favoritos y comprar.',
-  'Panel administrativo para productos, empresas, roles, órdenes y datos de cálculo.',
-  'Calculadora de precios con telas, herrajes, packaging, costos fijos, costos porcentuales, márgenes y dashboard de precios finales.',
-  'Integración con Identity, Facebook OAuth, Stripe y localización en español/inglés.',
-];
-
-const architectureFlows = [
-  {
-    title: 'Flujo público',
-    description:
-      'Los clientes navegan el catálogo, revisan detalles, agregan productos al carrito y avanzan hacia el pago. ASP.NET Core MVC coordina las vistas, la lógica de compra y las integraciones externas.',
-  },
-  {
-    title: 'Flujo administrativo',
-    description:
-      'El panel admin concentra productos, usuarios, compañías, órdenes y datos de cálculo. La lógica de negocio vive en el backend y se apoya en SQL Server para persistencia y cálculos consistentes.',
-  },
-  {
-    title: 'Base de datos y cálculos',
-    description:
-      'SQL Server guarda catálogo, usuarios, empresas, órdenes, costos y precios. Las views y triggers ayudan a centralizar totales y mantener sincronizados los valores usados por la calculadora.',
-  },
-];
-
-const stackLayers = [
-  {
-    layer: 'Interfaz',
-    items: ['Tienda pública', 'Panel administrativo', 'Localización ES/EN'],
-  },
-  {
-    layer: 'Aplicación',
-    items: ['ASP.NET Core 8 MVC', 'Identity y roles', 'Reglas de precios'],
-  },
-  {
-    layer: 'Datos',
-    items: ['Entity Framework Core', 'SQL Server', 'Views y triggers'],
-  },
-  {
-    layer: 'Servicios externos',
-    items: ['Stripe', 'Facebook OAuth', 'DotNetEnv para secretos locales'],
-  },
-];
-
-const calculationInputs = [
-  'Telas y materiales principales.',
-  'Herrajes: botones, cierres, hebillas y componentes por prenda/producto.',
-  'Packaging por categoría.',
-  'Costos fijos: impuestos, alquiler, servicios, herramientas y gastos operativos.',
-  'Costos porcentuales: comisiones de plataforma, pasarelas de pago y otros cargos variables.',
-  'Márgenes para precio mayorista justo y precio minorista sugerido.',
-];
-
-const finalPriceFeatures = [
-  'Compara precio actual minorista y mayorista contra precios calculados desde costos reales.',
-  'Marca diferencias entre valores vigentes y precios sugeridos para saber qué productos necesitan revisión.',
-  'Permite ajustar variables de ganancia, filtrar disponibilidad, controlar columnas y exportar información a PDF.',
-  'Mantiene la decisión comercial final en manos del administrador antes de actualizar precios publicados.',
-];
-
-const backendHighlights = [
-  'Modelo multi-compañía para separar operaciones y usuarios asociados a empresas.',
-  'Roles diferenciados para clientes, compañías, empleados y administradores.',
-  'SQL views específicas para costos fijos mensuales, costos porcentuales, costos por producto y precios finales.',
-  'SQL triggers para mantener totales actualizados cuando cambian cantidades o precios de telas, herrajes y packaging.',
-  'Migraciones EF Core, seed data y reparación inicial de filas necesarias para la calculadora.',
-];
-
-const dataModelGroups = [
-  {
-    title: 'Comercio',
-    items: ['Product', 'Category', 'ProductImage', 'ShoppingCart'],
-  },
-  {
-    title: 'Órdenes y usuarios',
-    items: ['OrderHeader', 'OrderDetail', 'ApplicationUser', 'Company'],
-  },
-  {
-    title: 'Calculadora',
-    items: ['Fabric', 'GarmentHardware', 'Packaging', 'FixedCost', 'PercentageCost', 'PercentageProfit'],
-  },
-  {
-    title: 'SQL Views',
-    items: ['FixedCostMonthlyView', 'TotalPercentageCostView', 'CostByProductView', 'FinalPriceView'],
-  },
-];
-
-const readinessItems = [
-  'Pruebas manuales completas antes de preparar la demo del portfolio.',
-  'Validación de checkout guards, acceso a órdenes, disponibilidad de productos y flujos login/carrito.',
-  'Revisión de soft-delete de compañías, deletes de calculadora y metadata de localización.',
-  'Backlog técnico honesto: tests automatizados, Docker, fake email sender, Serilog y middleware centralizado de excepciones.',
-];
-
-const screenshots = [
-  {
-    src: '/projects/ukiyo/store-home.jpg',
-    alt: 'Tienda pública de Ukiyo Designs con catálogo de productos',
-    title: 'Tienda pública',
-    description: 'Catálogo visible para clientes con búsqueda, navegación, favoritos y acceso al carrito.',
-  },
-  {
-    src: '/projects/ukiyo/product-detail.jpg',
-    alt: 'Detalle de producto en Ukiyo Designs',
-    title: 'Detalle de producto',
-    description: 'Vista de compra con información del producto, precio y flujo hacia carrito.',
-  },
-  {
-    src: '/projects/ukiyo/admin-products.png',
-    alt: 'Panel administrativo de productos en Ukiyo Designs',
-    title: 'Gestión de productos',
-    description: 'Administración del catálogo, categorías, imágenes y datos comerciales.',
-  },
-  {
-    src: '/projects/ukiyo/cost-by-product.png',
-    alt: 'Tabla de costos por producto en Ukiyo Designs',
-    title: 'Costos por producto',
-    description: 'Desglose de costos fijos, packaging, herrajes, telas y total por producto.',
-  },
-  {
-    src: '/projects/ukiyo/final-prices.png',
-    alt: 'Pantalla de precios finales en Ukiyo Designs',
-    title: 'Precios finales',
-    description: 'Dashboard con variables de ganancia, costos, precios actuales, valores calculados y productos disponibles.',
-  },
-  {
-    src: '/projects/ukiyo/orders-admin.png',
-    alt: 'Panel de gestión de órdenes en Ukiyo Designs',
-    title: 'Órdenes',
-    description: 'Listado administrativo con clientes demo, estados, totales, filtros, exportación y acceso al detalle.',
-  },
-];
+const locale = (Astro.props.locale ?? 'es') as Locale;
+const content = ukiyoContent[locale];
+const alternatePath = locale === 'es' ? routes.en.ukiyo : routes.es.ukiyo;
+const stack = content.backend.stack;
+const metrics = content.metrics;
+const problemItems = content.problemItems;
+const solutionItems = content.solutionItems;
+const architectureFlows = content.architecture.flows;
+const stackLayers = content.stackLayers.items;
+const calculationInputs = content.calculator.inputs;
+const finalPriceFeatures = content.calculator.finalFeatures;
+const backendHighlights = content.backend.highlights;
+const dataModelGroups = content.dataModel.groups;
+const readinessItems = content.impact.items;
+const screenshots = content.media.screenshots;
 ---
 
 <Layout
-  title="Caso de estudio Ukiyo Designs - ASP.NET Core, SQL Server y e-commerce"
-  description="Caso de estudio de Ukiyo Designs, sistema e-commerce y gestión de precios construido con ASP.NET Core 8 MVC, Entity Framework Core, SQL Server, Identity, Stripe y localización ES/EN."
-  image="/projects/ukiyo/store-home.jpg"
+  title={content.meta.title}
+  description={content.meta.description}
+  image={content.meta.image}
+  locale={locale}
+  alternatePath={alternatePath}
 >
   <main id="main-content" class="px-4 pt-20 sm:px-6 sm:pt-28">
     <article class="mx-auto w-full max-w-5xl pb-14 md:pb-24">
-      <a href="/#projects" class="text-sm font-medium text-sky-200 transition hover:text-white">
-        Volver a proyectos
+      <a href={content.backHref} class="text-sm font-medium text-sky-200 transition hover:text-white">
+        {content.backLabel}
       </a>
 
       <header class="relative mt-6 overflow-hidden rounded-3xl border border-sky-300/20 bg-slate-950/80 p-4 shadow-2xl shadow-sky-950/30 sm:mt-8 sm:p-6 md:rounded-[2rem] md:p-10">
@@ -186,23 +40,23 @@ const screenshots = [
         <div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
             <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.26em]">
-              Caso de estudio · ASP.NET Core + SQL Server
+              {content.eyebrow}
             </p>
             <h1 class="mt-3 text-balance text-3xl font-black tracking-tight text-white sm:mt-4 sm:text-4xl md:text-6xl">
-              Ukiyo Designs
+              {content.title}
             </h1>
             <p class="mt-4 max-w-2xl text-pretty text-sm leading-7 text-gray-300 sm:mt-5 sm:text-lg sm:leading-8">
-              Sistema e-commerce y de gestión para un negocio familiar que fabrica mochilas, bolsos e indumentaria. El objetivo fue convertir un flujo de costos basado en Excel en una aplicación web con base de datos, roles, pagos y cálculo administrativo de precios.
+              {content.intro}
             </p>
 
             <div class="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:flex-wrap">
               <LinkButton href="https://ukiyo.bsite.net/" class="justify-center sm:justify-start">
                 <WebIcon class="size-5" />
-                Demo
+                {content.buttons.demo}
               </LinkButton>
               <LinkButton href="https://github.com/Emmanuel-Valdez/Ukiyo" class="justify-center sm:justify-start">
                 <GitHubIcon class="size-5" />
-                Código
+                {content.buttons.code}
               </LinkButton>
             </div>
           </div>
@@ -210,14 +64,14 @@ const screenshots = [
           <div class="overflow-hidden rounded-2xl border border-white/10 bg-black/30">
             <img
               src="/projects/ukiyo/store-home.jpg"
-              alt="Captura real de Ukiyo Designs con catálogo de productos"
+              alt={content.heroImageAlt}
               class="h-full min-h-48 w-full object-cover object-top sm:min-h-72"
             />
           </div>
         </div>
       </header>
 
-      <section class="mt-6 grid gap-3 sm:mt-8 sm:gap-4 md:grid-cols-3" aria-label="Resumen del proyecto">
+      <section class="mt-6 grid gap-3 sm:mt-8 sm:gap-4 md:grid-cols-3" aria-label={content.metricsAriaLabel}>
         {metrics.map((metric) => (
           <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:p-5">
             <p class="text-sm text-gray-400">{metric.label}</p>
@@ -228,22 +82,17 @@ const screenshots = [
 
       <section class="mt-10 grid gap-5 sm:mt-14 sm:gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Contexto</p>
-          <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">De planilla a sistema de negocio</h2>
+          <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">{content.context.eyebrow}</p>
+          <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">{content.context.title}</h2>
         </div>
         <div class="space-y-4 text-pretty text-sm leading-7 text-gray-300 sm:space-y-5 sm:text-base">
-          <p>
-            Ukiyo Designs nace de una necesidad concreta: vender productos fabricados por el negocio y calcular precios con una lógica más confiable que una planilla. El sistema mantiene la parte comercial visible para clientes y agrega una capa administrativa para gestionar operaciones internas.
-          </p>
-          <p>
-            El proyecto demuestra trabajo backend aplicado a reglas reales: costos variables, costos fijos, impuestos, márgenes, roles, pagos, autenticación y persistencia en SQL Server.
-          </p>
+          {content.context.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
         </div>
       </section>
 
       <section class="mt-10 grid gap-4 sm:mt-14 sm:gap-6 md:grid-cols-2">
         <div class="rounded-3xl border border-red-300/10 bg-red-950/10 p-5 sm:p-6">
-          <h2 class="text-2xl font-bold text-white">Problema</h2>
+          <h2 class="text-2xl font-bold text-white">{content.problemTitle}</h2>
           <ul class="mt-4 space-y-3 text-sm leading-6 text-gray-300 sm:mt-5 sm:space-y-4 sm:text-base">
             {problemItems.map((item) => (
               <li class="flex gap-3">
@@ -255,7 +104,7 @@ const screenshots = [
         </div>
 
         <div class="rounded-3xl border border-sky-300/20 bg-sky-950/20 p-5 sm:p-6">
-          <h2 class="text-2xl font-bold text-white">Solución</h2>
+          <h2 class="text-2xl font-bold text-white">{content.solutionTitle}</h2>
           <ul class="mt-4 space-y-3 text-sm leading-6 text-gray-300 sm:mt-5 sm:space-y-4 sm:text-base">
             {solutionItems.map((item) => (
               <li class="flex gap-3">
@@ -270,43 +119,24 @@ const screenshots = [
       <section class="mt-10 rounded-3xl border border-sky-300/20 bg-slate-950/70 p-5 sm:mt-14 sm:p-6 md:p-8">
         <div class="grid gap-6 sm:gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Arquitectura</p>
-            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">Un sistema web con lógica de negocio centralizada</h2>
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">{content.architecture.eyebrow}</p>
+            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">{content.architecture.title}</h2>
             <p class="mt-4 text-pretty text-sm leading-7 text-gray-300 sm:mt-5 sm:text-base">
-              Ukiyo separa el uso público y administrativo, pero ambos flujos pasan por la misma aplicación ASP.NET Core MVC. El backend aplica reglas de negocio, Entity Framework Core conecta con SQL Server y los servicios externos cubren pago, autenticación social y localización.
+              {content.architecture.description}
             </p>
           </div>
 
           <div class="rounded-2xl border border-white/10 bg-black/30 p-4 sm:p-5">
-            <ol class="space-y-3 sm:space-y-4" aria-label="Flujo técnico de Ukiyo Designs">
-              <li class="flex gap-4">
-                <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-sky-300/30 bg-sky-300/10 text-sm font-bold text-sky-100">1</span>
-                <div>
-                  <h3 class="font-bold text-white">Cliente / Admin</h3>
-                  <p class="mt-1 text-sm leading-6 text-gray-400">Tienda pública, carrito, órdenes y panel administrativo.</p>
-                </div>
-              </li>
-              <li class="flex gap-4">
-                <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-sky-300/30 bg-sky-300/10 text-sm font-bold text-sky-100">2</span>
-                <div>
-                  <h3 class="font-bold text-white">ASP.NET Core MVC</h3>
-                  <p class="mt-1 text-sm leading-6 text-gray-400">Controladores, vistas, autenticación, roles y reglas de negocio.</p>
-                </div>
-              </li>
-              <li class="flex gap-4">
-                <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-sky-300/30 bg-sky-300/10 text-sm font-bold text-sky-100">3</span>
-                <div>
-                  <h3 class="font-bold text-white">Entity Framework Core</h3>
-                  <p class="mt-1 text-sm leading-6 text-gray-400">Mapeo entre entidades del dominio y persistencia relacional.</p>
-                </div>
-              </li>
-              <li class="flex gap-4">
-                <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-sky-300/30 bg-sky-300/10 text-sm font-bold text-sky-100">4</span>
-                <div>
-                  <h3 class="font-bold text-white">SQL Server</h3>
-                  <p class="mt-1 text-sm leading-6 text-gray-400">Catálogo, usuarios, empresas, órdenes, costos, precios, views y triggers.</p>
-                </div>
-              </li>
+            <ol class="space-y-3 sm:space-y-4" aria-label={content.architecture.flowAriaLabel}>
+              {content.architecture.steps.map((step, index) => (
+                <li class="flex gap-4">
+                  <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-sky-300/30 bg-sky-300/10 text-sm font-bold text-sky-100">{index + 1}</span>
+                  <div>
+                    <h3 class="font-bold text-white">{step.title}</h3>
+                    <p class="mt-1 text-sm leading-6 text-gray-400">{step.description}</p>
+                  </div>
+                </li>
+              ))}
             </ol>
           </div>
         </div>
@@ -324,11 +154,11 @@ const screenshots = [
       <section class="mt-6 rounded-3xl border border-white/10 bg-white/[0.03] p-5 sm:mt-8 sm:p-6 md:p-8">
         <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Stack por capas</p>
-            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">Qué responsabilidad cumple cada parte</h2>
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">{content.stackLayers.eyebrow}</p>
+            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">{content.stackLayers.title}</h2>
           </div>
           <p class="max-w-sm text-sm leading-6 text-gray-400">
-            La arquitectura prioriza una aplicación monolítica clara: UI, reglas, datos e integraciones en capas fáciles de explicar y mantener.
+            {content.stackLayers.description}
           </p>
         </div>
 
@@ -352,11 +182,11 @@ const screenshots = [
       <section class="mt-10 rounded-3xl border border-white/10 bg-white/[0.03] p-5 sm:mt-14 sm:p-6 md:p-8">
         <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Calculadora administrativa</p>
-            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">Reglas de precio basadas en costos reales</h2>
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">{content.calculator.eyebrow}</p>
+            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">{content.calculator.title}</h2>
           </div>
           <p class="max-w-sm text-sm text-gray-400">
-            El precio minorista final queda a criterio administrativo, pero el sistema entrega una base objetiva para decidir.
+            {content.calculator.description}
           </p>
         </div>
 
@@ -369,9 +199,9 @@ const screenshots = [
         </div>
 
         <div class="mt-6 rounded-2xl border border-sky-300/20 bg-sky-950/20 p-4 sm:mt-8 sm:p-5">
-          <h3 class="text-xl font-bold text-white">Dashboard de precios finales</h3>
+          <h3 class="text-xl font-bold text-white">{content.calculator.finalTitle}</h3>
           <p class="mt-3 text-pretty text-sm leading-6 text-gray-300">
-            La lista de precios finales funciona como control operativo: permite revisar costos, márgenes y precios publicados antes de aplicar cambios comerciales.
+            {content.calculator.finalDescription}
           </p>
           <ul class="mt-5 grid gap-3 text-sm text-gray-300 md:grid-cols-2">
             {finalPriceFeatures.map((item) => (
@@ -387,11 +217,11 @@ const screenshots = [
       <section class="mt-10 rounded-3xl border border-white/10 bg-white/[0.03] p-5 sm:mt-14 sm:p-6 md:p-8">
         <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Modelo de datos</p>
-            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">Entidades pensadas para e-commerce y pricing</h2>
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">{content.dataModel.eyebrow}</p>
+            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">{content.dataModel.title}</h2>
           </div>
           <p class="max-w-sm text-sm leading-6 text-gray-400">
-            El dominio separa catálogo, usuarios, compañías, órdenes y cálculo de costos para mantener clara la lógica de negocio.
+            {content.dataModel.description}
           </p>
         </div>
 
@@ -413,8 +243,8 @@ const screenshots = [
 
       <section class="mt-10 grid gap-4 sm:mt-14 sm:gap-8 lg:grid-cols-[1fr_0.9fr]">
         <div class="rounded-3xl border border-white/10 bg-slate-950/70 p-5 sm:p-6 md:p-8">
-          <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Backend</p>
-          <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">Decisiones técnicas relevantes</h2>
+          <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">{content.backend.eyebrow}</p>
+          <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">{content.backend.title}</h2>
           <ul class="mt-5 space-y-3 text-sm leading-6 text-gray-300 sm:mt-6 sm:space-y-4 sm:text-base">
             {backendHighlights.map((item) => (
               <li class="flex gap-3">
@@ -426,8 +256,8 @@ const screenshots = [
         </div>
 
         <aside class="rounded-3xl border border-sky-300/20 bg-gradient-to-b from-sky-950/40 to-slate-950 p-5 sm:p-6 md:p-8">
-          <h2 class="text-2xl font-bold text-white">Stack</h2>
-          <ul class="mt-5 flex flex-wrap gap-2" aria-label="Stack técnico de Ukiyo Designs">
+          <h2 class="text-2xl font-bold text-white">{content.backend.stackTitle}</h2>
+          <ul class="mt-5 flex flex-wrap gap-2" aria-label={content.backend.stackAriaLabel}>
             {stack.map((item) => (
               <li class="rounded-full border border-sky-300/20 bg-sky-300/10 px-3 py-1.5 text-xs font-medium text-sky-100 sm:text-sm">
                 {item}
@@ -438,10 +268,10 @@ const screenshots = [
       </section>
 
       <section class="mt-10 rounded-3xl border border-white/10 bg-white/[0.03] p-5 sm:mt-14 sm:p-6 md:p-8">
-        <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Impacto</p>
-        <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">Qué demuestra este proyecto</h2>
+        <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">{content.impact.eyebrow}</p>
+        <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">{content.impact.title}</h2>
         <p class="mt-4 max-w-3xl text-pretty text-sm leading-7 text-gray-300 sm:mt-5 sm:text-base">
-          Ukiyo muestra capacidad para transformar un problema de negocio en software funcional: modelar datos, implementar reglas, conectar servicios externos y construir una interfaz usable para clientes y administración. Es un proyecto fullstack, pero el valor principal está en el backend, la base de datos y la lógica de negocio.
+          {content.impact.description}
         </p>
         <ul class="mt-5 grid gap-3 text-sm leading-6 text-gray-300 sm:mt-6 md:grid-cols-2">
           {readinessItems.map((item) => (
@@ -456,11 +286,11 @@ const screenshots = [
       <section class="mt-10 sm:mt-14">
         <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Media real</p>
-            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">Capturas del producto funcionando</h2>
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">{content.media.eyebrow}</p>
+            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">{content.media.title}</h2>
           </div>
           <p class="max-w-md text-sm leading-6 text-gray-400">
-            Capturas tomadas desde la app publicada con una cuenta demo, mostrando tanto el flujo público como pantallas administrativas.
+            {content.media.description}
           </p>
         </div>
 

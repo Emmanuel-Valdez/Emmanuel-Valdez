@@ -12,14 +12,14 @@ import Contact from '@/components/Contact.astro';
 import Hero from '@/components/Hero.astro';
 import { homeContent, routes } from '@/data/i18n';
 
-const content = homeContent.es;
+const content = homeContent.en;
 ---
 
 <Layout
   title={content.meta.title}
   description={content.meta.description}
-  locale="es"
-  alternatePath={routes.en.home}
+  locale="en"
+  alternatePath={routes.es.home}
 >
   <main id="main-content" class="px-4">
     <SectionContainer class="py-20 pb-32">
@@ -55,9 +55,8 @@ const content = homeContent.es;
         <CoffeeIcon class="size-7" />
         {content.sections.contact}
       </h2>
-      
+
       <Contact content={content.contact}/>
-      
     </SectionContainer>
   </main>
 </Layout>

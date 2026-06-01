@@ -2,13 +2,24 @@
 import LinkButton from '@/components/LinkButton.astro';
 import DownloadIcon from '@/icons/Download.astro';
 import MailIcon from '@/icons/MailIcon.astro';
+
+interface Props {
+  content: {
+    text: string;
+    cvLabel: string;
+    cv: {
+      href: string;
+      download: string;
+    };
+  };
+}
+
+const { content } = Astro.props;
 ---
 
 <div>
   <p class="my-10">
-    Disponible para oportunidades Backend .NET, Full Stack .NET o desarrollo de
-    sistemas internos/e-commerce. Si mi perfil encaja con tu equipo o proyecto,
-    podés escribirme por email o descargar mi CV.
+    {content.text}
   </p>
   <div class="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
     <LinkButton href="mailto:evalmon.dev@gmail.com" class="justify-center sm:justify-start">
@@ -16,8 +27,8 @@ import MailIcon from '@/icons/MailIcon.astro';
       evalmon.dev@gmail.com
     </LinkButton>
 
-    <LinkButton download="Emmanuel-Valdez-CV.pdf" href="/media/evalmondev.pdf" class="justify-center sm:justify-start"
-      ><DownloadIcon class="size-4 md:size-6" />Descargar CV
+    <LinkButton download={content.cv.download} href={content.cv.href} class="justify-center sm:justify-start"
+      ><DownloadIcon class="size-4 md:size-6" />{content.cvLabel}
     </LinkButton>
   </div>
 </div>

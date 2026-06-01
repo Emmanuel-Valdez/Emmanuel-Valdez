@@ -40,52 +40,37 @@ const TAGS = {
     icon: MSSQLIcon,
   },
 };
-const PROJECTS = [
-  {
-    title: 'Ukiyo Designs',
-    eyebrow: 'Proyecto destacado · solución real para e-commerce',
-    description:
-      'Sistema ASP.NET Core MVC para un emprendimiento familiar que fabrica mochilas, bolsos e indumentaria. Reemplaza un Excel de costos que había creado previamente y centraliza tienda, productos, usuarios, roles, órdenes, favoritos y cálculo de precios.',
-    stack: [
-      'ASP.NET Core 8 MVC',
-      'Entity Framework Core',
-      'SQL Server',
-      'Identity + Facebook OAuth',
-      'Stripe',
-      'ES/EN localization',
-    ],
-    highlights: [
-      'Calculadora administrativa con telas, herrajes, packaging, costos fijos, costos porcentuales y márgenes de ganancia.',
-      'Dashboard de precios finales con comparación entre precios actuales, costos calculados, márgenes, filtros y exportación.',
-      'Soporte multi-compañía, Identity, Facebook OAuth, Stripe, localización ES/EN y SQL views/triggers para cálculos.',
-    ],
-    link: 'https://ukiyo.bsite.net/',
-    github: 'https://github.com/Emmanuel-Valdez/Ukiyo',
-    image: '/projects/ukiyo/store-home.jpg',
-    imageAlt: 'Captura real de la tienda virtual Ukiyo Designs con catálogo de productos',
-    tags: [TAGS.CSharp, TAGS.GitHub, TAGS.MSSQL],
-  },
-  {
-    title: 'Proyecto final C# QUARK Academy',
-    description:
-      'Calculadora de costos para tienda de ropa creada en C# con Windows Forms. Incluye historial de cotización, restricciones de stock y manejo de errores.',
-    link: '',
-    github: 'https://github.com/Emmanuel-Valdez/ProyectoCQuarq',
-    image: '/projects/CotizadorTiendaRopa.webp',
-    imageAlt: 'Captura de la calculadora de costos para tienda de ropa en C#',
-    tags: [TAGS.CSharp, TAGS.GitHub],
-  },
-  {
-    title: 'Funko shop',
-    description:
-      'Tienda virtual de funkos creada con Node.js, Express y MySQL. Incluye operaciones CRUD, carrito de compras, paginación y autenticación.',
-    link: 'https://fullstackproject-backend.vercel.app/',
-    github: 'https://github.com/Emmanuel-Valdez/fullstackproject-backend',
-    image: '/projects/funko_shopWeb.webp',
-    imageAlt: 'Captura de la tienda virtual Funko shop',
-    tags: [TAGS.NodeJS, TAGS.Express, TAGS.MySQL, TAGS.GitHub],
-  },
-];
+type TagKey = keyof typeof TAGS;
+
+interface Project {
+  title: string;
+  eyebrow?: string;
+  description: string;
+  stack?: readonly string[];
+  highlights?: readonly string[];
+  link: string;
+  github: string;
+  image: string;
+  imageAlt: string;
+  tags: readonly TagKey[];
+}
+
+interface Props {
+  content: {
+    featuredStudyLabel: string;
+    featuredStudyHref: string;
+    supportingLabel: string;
+    stackAriaPrefix: string;
+    buttons: {
+      code: string;
+      preview: string;
+    };
+    items: readonly Project[];
+  };
+}
+
+const { content } = Astro.props;
+const PROJECTS = content.items;
 
 const [FEATURED_PROJECT, ...SUPPORTING_PROJECTS] = PROJECTS;
 const FEATURED_STACK = FEATURED_PROJECT.stack ?? [];
@@ -116,7 +101,7 @@ const FEATURED_HIGHLIGHTS = FEATURED_PROJECT.highlights ?? [];
           {FEATURED_PROJECT.description}
         </p>
 
-        <ul class="mt-5 flex flex-wrap gap-2" aria-label={`Stack técnico de ${FEATURED_PROJECT.title}`}>
+        <ul class="mt-5 flex flex-wrap gap-2" aria-label={`${content.stackAriaPrefix} ${FEATURED_PROJECT.title}`}>
           {FEATURED_STACK.map((item) => (
             <li class="rounded-full border border-sky-300/20 bg-sky-300/10 px-2.5 py-1 text-xs font-medium text-sky-100">
               {item}
@@ -137,17 +122,17 @@ const FEATURED_HIGHLIGHTS = FEATURED_PROJECT.highlights ?? [];
           {FEATURED_PROJECT.github && (
             <LinkButton href={FEATURED_PROJECT.github}>
               <GitHubIcon class="size-5" />
-              Code
+              {content.buttons.code}
             </LinkButton>
           )}
           {FEATURED_PROJECT.link && (
             <LinkButton href={FEATURED_PROJECT.link}>
               <WebIcon class="size-5" />
-              Preview
+              {content.buttons.preview}
             </LinkButton>
           )}
-          <LinkButton href="/proyectos/ukiyo/">
-            Ver caso de estudio
+          <LinkButton href={content.featuredStudyHref}>
+            {content.featuredStudyLabel}
           </LinkButton>
         </footer>
       </div>
@@ -156,7 +141,7 @@ const FEATURED_HIGHLIGHTS = FEATURED_PROJECT.highlights ?? [];
 
   <div>
     <p class="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-gray-400">
-      Proyectos de soporte
+      {content.supportingLabel}
     </p>
     <div class="grid gap-6 md:grid-cols-2">
       {
@@ -174,14 +159,17 @@ const FEATURED_HIGHLIGHTS = FEATURED_PROJECT.highlights ?? [];
             <div class="p-5">
               <h3 class="text-xl font-bold text-gray-100">{title}</h3>
               <ul class="mt-3 flex flex-wrap gap-2">
-                {tags.map((tag) => (
+                {tags.map((tagKey) => {
+                  const tag = TAGS[tagKey];
+                  return (
                   <li>
                     <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} px-2 py-1`}>
                       <tag.icon class="size-4" />
                       {tag.name}
                     </span>
                   </li>
-                ))}
+                  );
+                })}
               </ul>
 
               <p class="mt-4 text-sm text-gray-400">{description}</p>
@@ -189,13 +177,13 @@ const FEATURED_HIGHLIGHTS = FEATURED_PROJECT.highlights ?? [];
                 {github && (
                   <LinkButton href={github}>
                     <GitHubIcon class="size-5" />
-                    Code
+                    {content.buttons.code}
                   </LinkButton>
                 )}
                 {link && (
                   <LinkButton href={link}>
                     <WebIcon class="size-5" />
-                    Preview
+                    {content.buttons.preview}
                   </LinkButton>
                 )}
               </footer>

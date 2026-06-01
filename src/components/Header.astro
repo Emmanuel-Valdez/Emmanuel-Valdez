@@ -1,21 +1,42 @@
+---
+import { common, routes, type Locale } from '@/data/i18n';
+
+interface Props {
+  locale?: Locale;
+  alternatePath?: string;
+}
+
+const { locale = 'es', alternatePath } = Astro.props;
+const copy = common[locale];
+const homeHref = routes[locale].home;
+const languageHref = alternatePath ?? copy.language.alternateHref;
+---
+
 <header
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    aria-label="Navegación principal"
+    aria-label={copy.headerAriaLabel}
     class="border border-black rounded-full px-2 py-1 items-center bg-black/50 backdrop-blur-2xl flex flex-row text-xs sm:px-3 sm:text-base"
   >
-    <a class="whitespace-nowrap hover:bg-white/10 hover:text-indigo-300 rounded-full px-2 transition" href="/#experience"
-      >Experiencia</a
+    <a class="whitespace-nowrap hover:bg-white/10 hover:text-indigo-300 rounded-full px-2 transition" href={`${homeHref}#experience`}
+      >{copy.nav.experience}</a
     >
-    <a class="whitespace-nowrap hover:bg-white/10 hover:text-indigo-300 rounded-full px-2 transition" href="/#projects"
-      >Proyectos</a
+    <a class="whitespace-nowrap hover:bg-white/10 hover:text-indigo-300 rounded-full px-2 transition" href={`${homeHref}#projects`}
+      >{copy.nav.projects}</a
     >
-    <a class="whitespace-nowrap hover:bg-white/10 hover:text-indigo-300 rounded-full px-2 transition" href="/#about"
-      >Sobre mí</a
+    <a class="whitespace-nowrap hover:bg-white/10 hover:text-indigo-300 rounded-full px-2 transition" href={`${homeHref}#about`}
+      >{copy.nav.about}</a
     >
-    <a class="whitespace-nowrap hover:bg-white/10 hover:text-indigo-300 rounded-full px-2 transition" href="/#contact"
-      >Contacto</a
+    <a class="whitespace-nowrap hover:bg-white/10 hover:text-indigo-300 rounded-full px-2 transition" href={`${homeHref}#contact`}
+      >{copy.nav.contact}</a
+    >
+    <a
+      aria-label={`${copy.language.label}: ${copy.language.alternate}`}
+      class="ml-1 whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-2 font-semibold text-sky-100 transition hover:bg-white/10 hover:text-white"
+      href={languageHref}
+      hreflang={locale === 'es' ? 'en' : 'es'}
+      >{copy.language.alternate}</a
     >
   </nav>
 </header>

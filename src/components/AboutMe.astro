@@ -1,42 +1,36 @@
 ---
-const focusAreas = [
-  {
-    title: 'Backend y datos',
-    description: '.NET, C#, SQL Server, reglas de negocio, roles, cálculos y persistencia relacional.',
-  },
-  {
-    title: 'Procesos reales',
-    description: 'E-commerce, costos, precios, inventario, órdenes, usuarios y decisiones administrativas.',
-  },
-  {
-    title: 'Infraestructura en progreso',
-    description: 'Arquitectura cloud, Linux y Docker para preparar despliegues más controlados y mantenibles.',
-  },
-];
+interface Props {
+  content: {
+    focusAreas: readonly {
+      title: string;
+      description: string;
+    }[];
+    intro: string;
+    strong: string;
+    paragraphs: readonly string[];
+    closing: string;
+    imageAlt: string;
+  };
+}
+
+const { content } = Astro.props;
+const [introBeforeStrong, introAfterStrong] = content.intro.split(content.strong);
 ---
 
 <section class="grid gap-8 md:grid-cols-[1fr_auto] md:items-start">
   <div class="order-2 md:order-1">
     <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
       <p class="text-pretty text-lg font-semibold leading-8 text-white">
-        Soy Emmanuel Valdez. Me enfoco en <strong class="text-yellow-300">backend con .NET, C# y SQL</strong>, especialmente en aplicaciones donde los datos, la lógica de negocio y los procesos operativos son el centro del producto.
+        {introBeforeStrong}<strong class="text-yellow-300">{content.strong}</strong>{introAfterStrong}
       </p>
 
       <div class="mt-5 space-y-4 text-pretty text-sm leading-7 text-gray-300 sm:text-base">
-        <p>
-          Vengo de una base técnica en producción industrial y automatización, por eso tiendo a mirar el software como una herramienta para ordenar flujos reales: costos, inventario, ventas, logística, usuarios y decisiones administrativas.
-        </p>
-        <p>
-          Esa mirada se refleja en Ukiyo, un sistema e-commerce y de gestión construido con ASP.NET Core, SQL Server, roles, pagos y una calculadora de precios que transforma una planilla de costos en un flujo administrable desde una aplicación web.
-        </p>
-        <p>
-          Actualmente estoy profundizando arquitectura cloud, Linux y Docker para llevar este tipo de sistemas a despliegues más controlados. No busco presentar infraestructura como experiencia productiva exagerada, sino como una dirección técnica concreta y en desarrollo.
-        </p>
+        {content.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
       </div>
     </div>
 
     <div class="mt-4 grid gap-3 sm:grid-cols-3">
-      {focusAreas.map((area) => (
+      {content.focusAreas.map((area) => (
         <article class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
           <h3 class="text-sm font-bold text-white">{area.title}</h3>
           <p class="mt-2 text-sm leading-6 text-gray-400">{area.description}</p>
@@ -45,16 +39,16 @@ const focusAreas = [
     </div>
 
     <p class="mt-5 text-pretty text-sm leading-7 text-gray-400 sm:text-base">
-      También fui maestro particular y ayudante de cátedra en matemáticas, física e inglés. Esa experiencia fortaleció mi forma de explicar problemas complejos, documentar decisiones y colaborar con otras personas.
+      {content.closing}
     </p>
   </div>
 
   <div class="order-1 mx-auto md:order-2 md:mx-0">
     <div class="rounded-full border border-sky-300/20 bg-sky-300/10 p-2 shadow-2xl shadow-sky-950/30">
       <img
-        src="/me5.webp"
-        class="size-44 rounded-full object-cover sm:size-56 md:size-64"
-        alt="Retrato de Emmanuel Valdez"
+        src="/Emma.png"
+        class="size-44 rounded-full object-cover object-center sm:size-56 md:size-64"
+        alt={content.imageAlt}
       />
     </div>
   </div>

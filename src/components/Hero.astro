@@ -5,7 +5,19 @@ import MailIcon from '@/icons/MailIcon.astro';
 import SocialPill from '@/components/SocialPill.astro';
 import Avatar from '@/components/Avatar.astro';
 
-const STACK = ['.NET 8', 'C#', 'SQL Server', 'Node.js', 'Linux', 'Docker', 'Cloud architecture'];
+interface Props {
+  content: {
+    title: string;
+    lines: readonly {
+      text: string;
+      class?: string;
+    }[];
+    stackAriaLabel: string;
+    stack: readonly string[];
+  };
+}
+
+const { content } = Astro.props;
 ---
 
 <div class="max-w-xl">
@@ -15,23 +27,14 @@ const STACK = ['.NET 8', 'C#', 'SQL Server', 'Node.js', 'Linux', 'Docker', 'Clou
   <h1
     class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
   >
-    Backend .NET Developer enfocado en e-commerce y sistemas de gestión
+    {content.title}
   </h1>
   <h2 class="text-xl lg:text-2xl text-wrap max-w-[560px]">
-    <span>
-      Hola, soy Emmanuel Valdez. Desarrollo aplicaciones con C#, SQL Server
-      y lógica de negocio para procesos reales de venta, gestión y operación.
-    </span>
-    <span class="text-blue-200/90">
-      Tengo experiencia práctica administrando e-commerce y construyendo Ukiyo, un
-      sistema propio con ASP.NET Core, roles, pagos y calculadora de precios.
-    </span>
-    <span class="text-gray-300/90"> Actualmente profundizo Linux, Docker y arquitectura cloud.</span>
-    <span class="text-red-200/90"> De Mendoza, Argentina.</span>
+    {content.lines.map((line) => <span class={line.class}>{line.text}</span>)}
   </h2>
-  <ul class="mt-6 flex flex-wrap gap-2" aria-label="Stack principal y aprendizaje actual">
+  <ul class="mt-6 flex flex-wrap gap-2" aria-label={content.stackAriaLabel}>
     {
-      STACK.map((item) => (
+      content.stack.map((item) => (
         <li class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-gray-200">
           {item}
         </li>
