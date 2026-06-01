@@ -89,7 +89,7 @@ export const homeContent = {
           class: 'text-blue-200/90',
         },
         {
-          text: ' Estoy preparando el siguiente paso técnico hacia despliegues con Linux, Docker y cloud.',
+          text: ' Estoy enfocando el portfolio en evidencia ya disponible: Ukiyo, SQL Server, roles, pagos y lógica de negocio.',
           class: 'text-gray-300/90',
         },
         {
@@ -98,7 +98,7 @@ export const homeContent = {
         },
       ],
       stackAriaLabel: 'Stack principal y aprendizaje actual',
-      stack: ['.NET 8', 'C#', 'SQL Server', 'Node.js', 'Linux', 'Docker', 'Cloud architecture'],
+      stack: ['.NET 8', 'C#', 'ASP.NET Core MVC', 'Entity Framework Core', 'SQL Server', 'Node.js'],
       availabilityLabel: 'Disponible para trabajar',
       ctas: {
         ariaLabel: 'Acciones principales',
@@ -196,8 +196,8 @@ export const homeContent = {
           description: 'E-commerce, costos, precios, inventario, órdenes, usuarios y decisiones administrativas.',
         },
         {
-          title: 'Infraestructura en progreso',
-          description: 'Arquitectura cloud, Linux y Docker para preparar despliegues más controlados y mantenibles.',
+          title: 'Dirección técnica',
+          description: 'Arquitectura, mantenibilidad y sistemas backend con reglas de negocio claras.',
         },
       ],
       intro:
@@ -206,7 +206,7 @@ export const homeContent = {
       paragraphs: [
         'Vengo de una base técnica en producción industrial y automatización, por eso tiendo a pensar el software como una herramienta para ordenar procesos reales: costos, inventario, ventas, logística, usuarios y decisiones administrativas.',
         'Esa mirada se refleja en Ukiyo, un sistema e-commerce y administrativo construido con ASP.NET Core y SQL Server. El proyecto me permitió trabajar con autenticación, roles, pagos, modelos relacionales, reglas de precio y pantallas administrativas conectadas a necesidades concretas del negocio.',
-        'Actualmente profundizo Linux, Docker y arquitectura cloud como siguiente paso para llevar este tipo de sistemas hacia despliegues más controlados y mantenibles.',
+        'Actualmente estoy consolidando el portfolio alrededor de evidencia verificable: sistemas de negocio, datos relacionales, autenticación, roles, pagos y reglas backend aplicadas.',
       ],
       closing:
         'También fui maestro particular y ayudante de cátedra en matemáticas, física e inglés. Esa experiencia fortaleció mi forma de explicar problemas complejos, documentar decisiones y colaborar con otras personas.',
@@ -242,7 +242,7 @@ export const homeContent = {
           class: 'text-blue-200/90',
         },
         {
-          text: ' I am preparing the next technical step toward deployments with Linux, Docker, and cloud.',
+          text: ' I am keeping the portfolio focused on evidence already available: Ukiyo, SQL Server, roles, payments, and business logic.',
           class: 'text-gray-300/90',
         },
         {
@@ -251,7 +251,7 @@ export const homeContent = {
         },
       ],
       stackAriaLabel: 'Main stack and current learning path',
-      stack: ['.NET 8', 'C#', 'SQL Server', 'Node.js', 'Linux', 'Docker', 'Cloud architecture'],
+      stack: ['.NET 8', 'C#', 'ASP.NET Core MVC', 'Entity Framework Core', 'SQL Server', 'Node.js'],
       availabilityLabel: 'Available for work',
       ctas: {
         ariaLabel: 'Primary actions',
@@ -349,8 +349,8 @@ export const homeContent = {
           description: 'E-commerce, costs, prices, inventory, orders, users, and administrative decisions.',
         },
         {
-          title: 'Infrastructure in progress',
-          description: 'Cloud architecture, Linux, and Docker to prepare more controlled and maintainable deployments.',
+          title: 'Technical direction',
+          description: 'Architecture, maintainability, and backend systems with clear business rules.',
         },
       ],
       intro:
@@ -359,7 +359,7 @@ export const homeContent = {
       paragraphs: [
         'I come from a technical background in industrial production and automation, so I tend to think of software as a tool for organizing real processes: costs, inventory, sales, logistics, users, and administrative decisions.',
         'That perspective is reflected in Ukiyo, an e-commerce and admin system built with ASP.NET Core and SQL Server. The project let me work with authentication, roles, payments, relational models, pricing rules, and admin screens connected to concrete business needs.',
-        'I am currently deepening Linux, Docker, and cloud architecture as the next step toward more controlled and maintainable deployments.',
+        'I am currently consolidating the portfolio around verifiable evidence: business systems, relational data, authentication, roles, payments, and applied backend rules.',
       ],
       closing:
         'I also worked as a private teacher and teaching assistant in math, physics, and English. That experience strengthened how I explain complex problems, document decisions, and collaborate with other people.',
@@ -541,8 +541,8 @@ export const ukiyoContent = {
         'Pruebas manuales completas antes de preparar la demo del portfolio.',
         'Validación de checkout guards, acceso a órdenes, disponibilidad de productos y flujos login/carrito.',
         'Revisión de soft-delete de compañías, deletes de calculadora y metadata de localización.',
-        'Roadmap de portfolio: priorizar proyectos antes que experiencia, sumar métricas técnicas visibles, bloque rápido para reclutadores y aclaración del alcance de la demo/admin.',
-        'Roadmap técnico final antes de presentarlo como experiencia de infraestructura: tests automatizados, Docker, deploy en Linux/cloud, fake email sender, Serilog y middleware centralizado de excepciones.',
+        'Evidencia visible del alcance del sistema: tienda pública, panel administrativo, roles, pagos, órdenes, pricing y persistencia relacional.',
+        'Mejoras técnicas pendientes documentadas internamente, sin presentarlas como experiencia hasta implementarlas y validarlas.',
       ],
     },
     media: {
@@ -756,8 +756,8 @@ export const ukiyoContent = {
         'Complete manual testing before preparing the portfolio demo.',
         'Validation of checkout guards, order access, product availability, and login/cart flows.',
         'Review of company soft-delete, calculator deletes, and localization metadata.',
-        'Portfolio roadmap: prioritize projects before experience, add visible technical metrics, a quick recruiter block, and a clear note about demo/admin scope.',
-        'Final technical roadmap before presenting it as infrastructure experience: automated tests, Docker, Linux/cloud deployment, fake email sender, Serilog, and centralized exception middleware.',
+        'Visible evidence of the system scope: public store, admin panel, roles, payments, orders, pricing, and relational persistence.',
+        'Pending technical improvements are documented internally and not presented as experience until implemented and validated.',
       ],
     },
     media: {
