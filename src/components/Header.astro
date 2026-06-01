@@ -10,6 +10,8 @@ const { locale = 'es', alternatePath } = Astro.props;
 const copy = common[locale];
 const homeHref = routes[locale].home;
 const languageHref = alternatePath ?? copy.language.alternateHref;
+const spanishHref = locale === 'es' ? Astro.url.pathname : languageHref;
+const englishHref = locale === 'en' ? Astro.url.pathname : languageHref;
 ---
 
 <header
@@ -31,12 +33,23 @@ const languageHref = alternatePath ?? copy.language.alternateHref;
     <a class="whitespace-nowrap hover:bg-white/10 hover:text-indigo-300 rounded-full px-2 transition" href={`${homeHref}#contact`}
       >{copy.nav.contact}</a
     >
-    <a
-      aria-label={`${copy.language.label}: ${copy.language.alternate}`}
-      class="ml-1 whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-2 font-semibold text-sky-100 transition hover:bg-white/10 hover:text-white"
-      href={languageHref}
-      hreflang={locale === 'es' ? 'en' : 'es'}
-      >{copy.language.alternate}</a
+    <div
+      aria-label={copy.language.label}
+      class="ml-1 inline-flex items-center rounded-full border border-white/10 bg-white/5 p-0.5 text-[0.68rem] font-semibold sm:text-xs"
+      role="group"
     >
+      <a
+        aria-current={locale === 'es' ? 'page' : undefined}
+        class={`rounded-full px-2 py-0.5 transition ${locale === 'es' ? 'bg-sky-300 text-slate-950 shadow-sm shadow-sky-950/40' : 'text-sky-100 hover:bg-white/10 hover:text-white'}`}
+        href={spanishHref}
+        hreflang="es"
+      >ES</a>
+      <a
+        aria-current={locale === 'en' ? 'page' : undefined}
+        class={`rounded-full px-2 py-0.5 transition ${locale === 'en' ? 'bg-sky-300 text-slate-950 shadow-sm shadow-sky-950/40' : 'text-sky-100 hover:bg-white/10 hover:text-white'}`}
+        href={englishHref}
+        hreflang="en"
+      >EN</a>
+    </div>
   </nav>
 </header>

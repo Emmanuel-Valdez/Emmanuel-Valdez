@@ -14,6 +14,7 @@ interface Props {
     }[];
     stackAriaLabel: string;
     stack: readonly string[];
+    availabilityLabel: string;
   };
 }
 
@@ -22,7 +23,7 @@ const { content } = Astro.props;
 
 <div class="max-w-xl">
   <div class="flex gap-4 mb-4">
-    <Avatar />
+    <Avatar availabilityLabel={content.availabilityLabel} />
   </div>
   <h1
     class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"

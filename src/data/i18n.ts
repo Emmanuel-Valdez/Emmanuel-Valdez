@@ -99,6 +99,7 @@ export const homeContent = {
       ],
       stackAriaLabel: 'Stack principal y aprendizaje actual',
       stack: ['.NET 8', 'C#', 'SQL Server', 'Node.js', 'Linux', 'Docker', 'Cloud architecture'],
+      availabilityLabel: 'Disponible para trabajar',
     },
     experience: [
       {
@@ -241,6 +242,7 @@ export const homeContent = {
       ],
       stackAriaLabel: 'Main stack and current learning path',
       stack: ['.NET 8', 'C#', 'SQL Server', 'Node.js', 'Linux', 'Docker', 'Cloud architecture'],
+      availabilityLabel: 'Available for work',
     },
     experience: [
       {
@@ -410,6 +412,19 @@ export const ukiyoContent = {
         { title: 'Entity Framework Core', description: 'Mapeo entre entidades del dominio y persistencia relacional.' },
         { title: 'SQL Server', description: 'Catálogo, usuarios, empresas, órdenes, costos, precios, views y triggers.' },
       ],
+      diagram: {
+        title: 'Diagrama simple de arquitectura',
+        description:
+          'Vista resumida de cómo se conectan los flujos público y administrativo con la aplicación, la base de datos y los servicios externos.',
+        browser: 'Cliente / Admin',
+        browserDetails: ['Tienda', 'Admin'],
+        app: 'ASP.NET Core MVC',
+        appDetails: ['Controladores y vistas', 'Identity + roles', 'Reglas de negocio', 'Localización ES/EN'],
+        data: 'SQL Server',
+        dataDetails: ['EF Core', 'Views', 'Triggers', 'Costos y precios'],
+        services: 'Servicios externos',
+        serviceDetails: ['Stripe', 'Facebook OAuth'],
+      },
       flows: [
         {
           title: 'Flujo público',
@@ -611,6 +626,19 @@ export const ukiyoContent = {
         { title: 'Entity Framework Core', description: 'Mapping between domain entities and relational persistence.' },
         { title: 'SQL Server', description: 'Catalog, users, companies, orders, costs, prices, views, and triggers.' },
       ],
+      diagram: {
+        title: 'Simple architecture diagram',
+        description:
+          'A summarized view of how the public and admin flows connect with the application, database, and external services.',
+        browser: 'Customer / Admin',
+        browserDetails: ['Store', 'Admin'],
+        app: 'ASP.NET Core MVC',
+        appDetails: ['Controllers and views', 'Identity + roles', 'Business rules', 'ES/EN localization'],
+        data: 'SQL Server',
+        dataDetails: ['EF Core', 'Views', 'Triggers', 'Costs and prices'],
+        services: 'External services',
+        serviceDetails: ['Stripe', 'Facebook OAuth'],
+      },
       flows: [
         {
           title: 'Public flow',

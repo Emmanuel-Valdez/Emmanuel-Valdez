@@ -138,6 +138,28 @@ The admin price calculator considers:
 - `src/components/AboutMe.astro`: personal profile section.
 - `src/components/Contact.astro`: contact and CV download section.
 
+## Internationalization
+
+The portfolio currently supports Spanish and English static routes:
+
+```text
+/
+/en/
+/proyectos/ukiyo/
+/en/projects/ukiyo/
+```
+
+Visible copy, localized routes, metadata, and CV links are centralized in `src/data/i18n.ts`.
+
+The root Spanish version is the default experience. The English version should stay synchronized when visible content changes.
+
+Localized CV files are served from `public/media/`:
+
+```text
+Emmanuel_Valdez_CV_Backend_NET_2026_ES.pdf
+Emmanuel_Valdez_CV_Backend_NET_2026_EN.pdf
+```
+
 ## Local Development
 
 Install dependencies:
@@ -211,9 +233,7 @@ export default defineConfig({
 
 Planned improvements that strengthen the backend/fullstack portfolio signal:
 
-- Add a dedicated Ukiyo case study page.
 - Add updated screenshots, GIFs, or short videos for Ukiyo workflows.
-- Add a simple architecture diagram for Ukiyo.
 - Document a Docker-based deployment once a project is running on the Oracle Linux server.
 - Add notes about the cloud architecture course and infrastructure decisions when there is concrete deployment evidence.
 - Keep the Spanish and English versions synchronized as the portfolio evolves.

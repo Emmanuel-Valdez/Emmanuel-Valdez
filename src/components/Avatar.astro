@@ -1,5 +1,11 @@
 ---
 import Badge from '@/components/Badge.astro';
+
+interface Props {
+  availabilityLabel: string;
+}
+
+const { availabilityLabel } = Astro.props;
 ---
 
 
@@ -15,5 +21,5 @@ import Badge from '@/components/Badge.astro';
   rel="noopener noreferrer"
   class="flex items-center transition justify-center hover:scale-105"
 >
-  <Badge>Disponible para trabajar</Badge>
+  <Badge>{availabilityLabel}</Badge>
 </a>
