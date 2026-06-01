@@ -175,27 +175,27 @@ const screenshots = [
   description="Caso de estudio de Ukiyo Designs, sistema e-commerce y gestión de precios construido con ASP.NET Core 8 MVC, Entity Framework Core, SQL Server, Identity, Stripe y localización ES/EN."
   image="/projects/ukiyo/store-home.jpg"
 >
-  <main id="main-content" class="px-4 pt-24 sm:px-6 sm:pt-28">
-    <article class="mx-auto w-full max-w-5xl pb-16 md:pb-24">
+  <main id="main-content" class="px-4 pt-20 sm:px-6 sm:pt-28">
+    <article class="mx-auto w-full max-w-5xl pb-14 md:pb-24">
       <a href="/#projects" class="text-sm font-medium text-sky-200 transition hover:text-white">
         Volver a proyectos
       </a>
 
-      <header class="relative mt-8 overflow-hidden rounded-3xl border border-sky-300/20 bg-slate-950/80 p-5 shadow-2xl shadow-sky-950/30 md:rounded-[2rem] md:p-10">
+      <header class="relative mt-6 overflow-hidden rounded-3xl border border-sky-300/20 bg-slate-950/80 p-4 shadow-2xl shadow-sky-950/30 sm:mt-8 sm:p-6 md:rounded-[2rem] md:p-10">
         <div class="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-sky-300 to-transparent" aria-hidden="true"></div>
         <div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.26em]">
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.26em]">
               Caso de estudio · ASP.NET Core + SQL Server
             </p>
-            <h1 class="mt-4 text-balance text-4xl font-black tracking-tight text-white md:text-6xl">
+            <h1 class="mt-3 text-balance text-3xl font-black tracking-tight text-white sm:mt-4 sm:text-4xl md:text-6xl">
               Ukiyo Designs
             </h1>
-            <p class="mt-5 max-w-2xl text-pretty text-base leading-7 text-gray-300 sm:text-lg sm:leading-8">
+            <p class="mt-4 max-w-2xl text-pretty text-sm leading-7 text-gray-300 sm:mt-5 sm:text-lg sm:leading-8">
               Sistema e-commerce y de gestión para un negocio familiar que fabrica mochilas, bolsos e indumentaria. El objetivo fue convertir un flujo de costos basado en Excel en una aplicación web con base de datos, roles, pagos y cálculo administrativo de precios.
             </p>
 
-            <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div class="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:flex-wrap">
               <LinkButton href="https://ukiyo.bsite.net/" class="justify-center sm:justify-start">
                 <WebIcon class="size-5" />
                 Demo
@@ -211,27 +211,27 @@ const screenshots = [
             <img
               src="/projects/ukiyo/store-home.jpg"
               alt="Captura real de Ukiyo Designs con catálogo de productos"
-              class="h-full min-h-56 w-full object-cover object-top sm:min-h-72"
+              class="h-full min-h-48 w-full object-cover object-top sm:min-h-72"
             />
           </div>
         </div>
       </header>
 
-      <section class="mt-8 grid gap-4 md:grid-cols-3" aria-label="Resumen del proyecto">
+      <section class="mt-6 grid gap-3 sm:mt-8 sm:gap-4 md:grid-cols-3" aria-label="Resumen del proyecto">
         {metrics.map((metric) => (
-          <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+          <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:p-5">
             <p class="text-sm text-gray-400">{metric.label}</p>
-            <p class="mt-2 text-xl font-bold text-white">{metric.value}</p>
+            <p class="mt-2 text-lg font-bold text-white sm:text-xl">{metric.value}</p>
           </div>
         ))}
       </section>
 
-      <section class="mt-14 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+      <section class="mt-10 grid gap-5 sm:mt-14 sm:gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Contexto</p>
-          <h2 class="mt-3 text-3xl font-bold text-white">De planilla a sistema de negocio</h2>
+          <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Contexto</p>
+          <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">De planilla a sistema de negocio</h2>
         </div>
-        <div class="space-y-5 text-pretty leading-7 text-gray-300">
+        <div class="space-y-4 text-pretty text-sm leading-7 text-gray-300 sm:space-y-5 sm:text-base">
           <p>
             Ukiyo Designs nace de una necesidad concreta: vender productos fabricados por el negocio y calcular precios con una lógica más confiable que una planilla. El sistema mantiene la parte comercial visible para clientes y agrega una capa administrativa para gestionar operaciones internas.
           </p>
@@ -241,10 +241,10 @@ const screenshots = [
         </div>
       </section>
 
-      <section class="mt-14 grid gap-6 md:grid-cols-2">
-        <div class="rounded-3xl border border-red-300/10 bg-red-950/10 p-6">
+      <section class="mt-10 grid gap-4 sm:mt-14 sm:gap-6 md:grid-cols-2">
+        <div class="rounded-3xl border border-red-300/10 bg-red-950/10 p-5 sm:p-6">
           <h2 class="text-2xl font-bold text-white">Problema</h2>
-          <ul class="mt-5 space-y-4 text-gray-300">
+          <ul class="mt-4 space-y-3 text-sm leading-6 text-gray-300 sm:mt-5 sm:space-y-4 sm:text-base">
             {problemItems.map((item) => (
               <li class="flex gap-3">
                 <span class="mt-2 size-1.5 shrink-0 rounded-full bg-red-300" aria-hidden="true"></span>
@@ -254,9 +254,9 @@ const screenshots = [
           </ul>
         </div>
 
-        <div class="rounded-3xl border border-sky-300/20 bg-sky-950/20 p-6">
+        <div class="rounded-3xl border border-sky-300/20 bg-sky-950/20 p-5 sm:p-6">
           <h2 class="text-2xl font-bold text-white">Solución</h2>
-          <ul class="mt-5 space-y-4 text-gray-300">
+          <ul class="mt-4 space-y-3 text-sm leading-6 text-gray-300 sm:mt-5 sm:space-y-4 sm:text-base">
             {solutionItems.map((item) => (
               <li class="flex gap-3">
                 <span class="mt-2 size-1.5 shrink-0 rounded-full bg-sky-300" aria-hidden="true"></span>
@@ -267,18 +267,18 @@ const screenshots = [
         </div>
       </section>
 
-      <section class="mt-14 rounded-3xl border border-sky-300/20 bg-slate-950/70 p-6 md:p-8">
-        <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <section class="mt-10 rounded-3xl border border-sky-300/20 bg-slate-950/70 p-5 sm:mt-14 sm:p-6 md:p-8">
+        <div class="grid gap-6 sm:gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Arquitectura</p>
-            <h2 class="mt-3 text-3xl font-bold text-white">Un sistema web con lógica de negocio centralizada</h2>
-            <p class="mt-5 text-pretty leading-7 text-gray-300">
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Arquitectura</p>
+            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">Un sistema web con lógica de negocio centralizada</h2>
+            <p class="mt-4 text-pretty text-sm leading-7 text-gray-300 sm:mt-5 sm:text-base">
               Ukiyo separa el uso público y administrativo, pero ambos flujos pasan por la misma aplicación ASP.NET Core MVC. El backend aplica reglas de negocio, Entity Framework Core conecta con SQL Server y los servicios externos cubren pago, autenticación social y localización.
             </p>
           </div>
 
-          <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
-            <ol class="space-y-4" aria-label="Flujo técnico de Ukiyo Designs">
+          <div class="rounded-2xl border border-white/10 bg-black/30 p-4 sm:p-5">
+            <ol class="space-y-3 sm:space-y-4" aria-label="Flujo técnico de Ukiyo Designs">
               <li class="flex gap-4">
                 <span class="flex size-9 shrink-0 items-center justify-center rounded-full border border-sky-300/30 bg-sky-300/10 text-sm font-bold text-sky-100">1</span>
                 <div>
@@ -311,9 +311,9 @@ const screenshots = [
           </div>
         </div>
 
-        <div class="mt-8 grid gap-4 md:grid-cols-3">
+        <div class="mt-6 grid gap-3 sm:mt-8 sm:gap-4 md:grid-cols-3">
           {architectureFlows.map((flow) => (
-            <article class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+            <article class="rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:p-5">
               <h3 class="text-lg font-bold text-white">{flow.title}</h3>
               <p class="mt-3 text-sm leading-6 text-gray-400">{flow.description}</p>
             </article>
@@ -321,20 +321,20 @@ const screenshots = [
         </div>
       </section>
 
-      <section class="mt-8 rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
+      <section class="mt-6 rounded-3xl border border-white/10 bg-white/[0.03] p-5 sm:mt-8 sm:p-6 md:p-8">
         <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Stack por capas</p>
-            <h2 class="mt-3 text-3xl font-bold text-white">Qué responsabilidad cumple cada parte</h2>
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Stack por capas</p>
+            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">Qué responsabilidad cumple cada parte</h2>
           </div>
           <p class="max-w-sm text-sm leading-6 text-gray-400">
             La arquitectura prioriza una aplicación monolítica clara: UI, reglas, datos e integraciones en capas fáciles de explicar y mantener.
           </p>
         </div>
 
-        <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div class="mt-6 grid gap-3 sm:mt-8 sm:gap-4 md:grid-cols-2 lg:grid-cols-4">
           {stackLayers.map((layer) => (
-            <article class="rounded-2xl border border-white/10 bg-slate-950/70 p-5">
+            <article class="rounded-2xl border border-white/10 bg-slate-950/70 p-4 sm:p-5">
               <h3 class="text-lg font-bold text-white">{layer.layer}</h3>
               <ul class="mt-4 space-y-3 text-sm text-gray-300">
                 {layer.items.map((item) => (
@@ -349,18 +349,18 @@ const screenshots = [
         </div>
       </section>
 
-      <section class="mt-14 rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
+      <section class="mt-10 rounded-3xl border border-white/10 bg-white/[0.03] p-5 sm:mt-14 sm:p-6 md:p-8">
         <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Calculadora administrativa</p>
-            <h2 class="mt-3 text-3xl font-bold text-white">Reglas de precio basadas en costos reales</h2>
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Calculadora administrativa</p>
+            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">Reglas de precio basadas en costos reales</h2>
           </div>
           <p class="max-w-sm text-sm text-gray-400">
             El precio minorista final queda a criterio administrativo, pero el sistema entrega una base objetiva para decidir.
           </p>
         </div>
 
-        <div class="mt-8 grid gap-3 md:grid-cols-2">
+        <div class="mt-6 grid gap-3 sm:mt-8 md:grid-cols-2">
           {calculationInputs.map((item) => (
             <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4 text-sm text-gray-300">
               {item}
@@ -368,7 +368,7 @@ const screenshots = [
           ))}
         </div>
 
-        <div class="mt-8 rounded-2xl border border-sky-300/20 bg-sky-950/20 p-5">
+        <div class="mt-6 rounded-2xl border border-sky-300/20 bg-sky-950/20 p-4 sm:mt-8 sm:p-5">
           <h3 class="text-xl font-bold text-white">Dashboard de precios finales</h3>
           <p class="mt-3 text-pretty text-sm leading-6 text-gray-300">
             La lista de precios finales funciona como control operativo: permite revisar costos, márgenes y precios publicados antes de aplicar cambios comerciales.
@@ -384,24 +384,24 @@ const screenshots = [
         </div>
       </section>
 
-      <section class="mt-14 rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
+      <section class="mt-10 rounded-3xl border border-white/10 bg-white/[0.03] p-5 sm:mt-14 sm:p-6 md:p-8">
         <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Modelo de datos</p>
-            <h2 class="mt-3 text-3xl font-bold text-white">Entidades pensadas para e-commerce y pricing</h2>
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Modelo de datos</p>
+            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">Entidades pensadas para e-commerce y pricing</h2>
           </div>
           <p class="max-w-sm text-sm leading-6 text-gray-400">
             El dominio separa catálogo, usuarios, compañías, órdenes y cálculo de costos para mantener clara la lógica de negocio.
           </p>
         </div>
 
-        <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div class="mt-6 grid gap-3 sm:mt-8 sm:gap-4 md:grid-cols-2 lg:grid-cols-4">
           {dataModelGroups.map((group) => (
-            <article class="rounded-2xl border border-white/10 bg-slate-950/70 p-5">
+            <article class="rounded-2xl border border-white/10 bg-slate-950/70 p-4 sm:p-5">
               <h3 class="text-lg font-bold text-white">{group.title}</h3>
               <ul class="mt-4 space-y-2 text-sm text-gray-300">
                 {group.items.map((item) => (
-                  <li class="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 font-mono text-xs text-gray-300">
+                  <li class="overflow-hidden break-words rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 font-mono text-[0.7rem] text-gray-300 sm:text-xs">
                     {item}
                   </li>
                 ))}
@@ -411,11 +411,11 @@ const screenshots = [
         </div>
       </section>
 
-      <section class="mt-14 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
-        <div class="rounded-3xl border border-white/10 bg-slate-950/70 p-6 md:p-8">
-          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Backend</p>
-          <h2 class="mt-3 text-3xl font-bold text-white">Decisiones técnicas relevantes</h2>
-          <ul class="mt-6 space-y-4 text-gray-300">
+      <section class="mt-10 grid gap-4 sm:mt-14 sm:gap-8 lg:grid-cols-[1fr_0.9fr]">
+        <div class="rounded-3xl border border-white/10 bg-slate-950/70 p-5 sm:p-6 md:p-8">
+          <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Backend</p>
+          <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">Decisiones técnicas relevantes</h2>
+          <ul class="mt-5 space-y-3 text-sm leading-6 text-gray-300 sm:mt-6 sm:space-y-4 sm:text-base">
             {backendHighlights.map((item) => (
               <li class="flex gap-3">
                 <span class="mt-2 size-1.5 shrink-0 rounded-full bg-sky-300" aria-hidden="true"></span>
@@ -425,11 +425,11 @@ const screenshots = [
           </ul>
         </div>
 
-        <aside class="rounded-3xl border border-sky-300/20 bg-gradient-to-b from-sky-950/40 to-slate-950 p-6 md:p-8">
+        <aside class="rounded-3xl border border-sky-300/20 bg-gradient-to-b from-sky-950/40 to-slate-950 p-5 sm:p-6 md:p-8">
           <h2 class="text-2xl font-bold text-white">Stack</h2>
           <ul class="mt-5 flex flex-wrap gap-2" aria-label="Stack técnico de Ukiyo Designs">
             {stack.map((item) => (
-              <li class="rounded-full border border-sky-300/20 bg-sky-300/10 px-3 py-1.5 text-sm font-medium text-sky-100">
+              <li class="rounded-full border border-sky-300/20 bg-sky-300/10 px-3 py-1.5 text-xs font-medium text-sky-100 sm:text-sm">
                 {item}
               </li>
             ))}
@@ -437,13 +437,13 @@ const screenshots = [
         </aside>
       </section>
 
-      <section class="mt-14 rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
-        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Impacto</p>
-        <h2 class="mt-3 text-3xl font-bold text-white">Qué demuestra este proyecto</h2>
-        <p class="mt-5 max-w-3xl text-pretty leading-7 text-gray-300">
+      <section class="mt-10 rounded-3xl border border-white/10 bg-white/[0.03] p-5 sm:mt-14 sm:p-6 md:p-8">
+        <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Impacto</p>
+        <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">Qué demuestra este proyecto</h2>
+        <p class="mt-4 max-w-3xl text-pretty text-sm leading-7 text-gray-300 sm:mt-5 sm:text-base">
           Ukiyo muestra capacidad para transformar un problema de negocio en software funcional: modelar datos, implementar reglas, conectar servicios externos y construir una interfaz usable para clientes y administración. Es un proyecto fullstack, pero el valor principal está en el backend, la base de datos y la lógica de negocio.
         </p>
-        <ul class="mt-6 grid gap-3 text-sm text-gray-300 md:grid-cols-2">
+        <ul class="mt-5 grid gap-3 text-sm leading-6 text-gray-300 sm:mt-6 md:grid-cols-2">
           {readinessItems.map((item) => (
             <li class="flex gap-3 rounded-2xl border border-white/10 bg-slate-950/70 p-4">
               <span class="mt-2 size-1.5 shrink-0 rounded-full bg-sky-300" aria-hidden="true"></span>
@@ -453,27 +453,27 @@ const screenshots = [
         </ul>
       </section>
 
-      <section class="mt-14">
+      <section class="mt-10 sm:mt-14">
         <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Media real</p>
-            <h2 class="mt-3 text-3xl font-bold text-white">Capturas del producto funcionando</h2>
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">Media real</p>
+            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">Capturas del producto funcionando</h2>
           </div>
           <p class="max-w-md text-sm leading-6 text-gray-400">
             Capturas tomadas desde la app publicada con una cuenta demo, mostrando tanto el flujo público como pantallas administrativas.
           </p>
         </div>
 
-        <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="mt-6 grid gap-4 sm:mt-8 sm:gap-6 md:grid-cols-2">
           {screenshots.map((screenshot) => (
             <figure class="overflow-hidden rounded-3xl border border-white/10 bg-slate-950/80 shadow-xl shadow-black/20">
               <img
                 src={screenshot.src}
                 alt={screenshot.alt}
                 loading="lazy"
-                class="aspect-[16/10] w-full object-cover object-top"
+                class="aspect-[4/3] w-full object-cover object-top sm:aspect-[16/10]"
               />
-              <figcaption class="border-t border-white/10 p-5">
+              <figcaption class="border-t border-white/10 p-4 sm:p-5">
                 <h3 class="text-lg font-bold text-white">{screenshot.title}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-400">{screenshot.description}</p>
               </figcaption>
