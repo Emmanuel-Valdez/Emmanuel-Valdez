@@ -4,6 +4,7 @@ import GitHubIcon from '@/icons/GitHubIcon.astro';
 import MailIcon from '@/icons/MailIcon.astro';
 import SocialPill from '@/components/SocialPill.astro';
 import Avatar from '@/components/Avatar.astro';
+import DownloadIcon from '@/icons/Download.astro';
 
 interface Props {
   content: {
@@ -15,6 +16,18 @@ interface Props {
     stackAriaLabel: string;
     stack: readonly string[];
     availabilityLabel: string;
+    ctas: {
+      ariaLabel: string;
+      project: string;
+      projectHref: string;
+      contact: string;
+      contactHref: string;
+      cv: string;
+      cvFile: {
+        href: string;
+        download: string;
+      };
+    };
   };
 }
 
@@ -42,6 +55,19 @@ const { content } = Astro.props;
       ))
     }
   </ul>
+  <nav class="flex gap-4 mt-8 flex-wrap" aria-label={content.ctas.ariaLabel}>
+    <SocialPill href={content.ctas.projectHref}>
+      {content.ctas.project}
+    </SocialPill>
+    <SocialPill href={content.ctas.contactHref}>
+      <MailIcon class="size-4 md:size-6" />
+      {content.ctas.contact}
+    </SocialPill>
+    <SocialPill download={content.ctas.cvFile.download} href={content.ctas.cvFile.href}>
+      <DownloadIcon class="size-4 md:size-6" />
+      {content.ctas.cv}
+    </SocialPill>
+  </nav>
   <nav class="flex gap-4 mt-8 flex-wrap">
     <SocialPill href="https://www.linkedin.com/in/evalmondev/">
       <LinkedInIcon class="size-4 md:size-6" />

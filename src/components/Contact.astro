@@ -6,6 +6,7 @@ import MailIcon from '@/icons/MailIcon.astro';
 interface Props {
   content: {
     text: string;
+    emailLabel: string;
     cvLabel: string;
     cv: {
       href: string;
@@ -24,7 +25,7 @@ const { content } = Astro.props;
   <div class="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
     <LinkButton href="mailto:evalmon.dev@gmail.com" class="justify-center sm:justify-start">
       <MailIcon class="size-4 md:size-6" />
-      evalmon.dev@gmail.com
+      {content.emailLabel}
     </LinkButton>
 
     <LinkButton download={content.cv.download} href={content.cv.href} class="justify-center sm:justify-start"

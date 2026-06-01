@@ -119,21 +119,21 @@ const FEATURED_HIGHLIGHTS = FEATURED_PROJECT.highlights ?? [];
         </ul>
 
         <footer class="mt-6 flex flex-wrap items-center gap-4">
-          {FEATURED_PROJECT.github && (
-            <LinkButton href={FEATURED_PROJECT.github}>
-              <GitHubIcon class="size-5" />
-              {content.buttons.code}
-            </LinkButton>
-          )}
+          <LinkButton href={content.featuredStudyHref}>
+            {content.featuredStudyLabel}
+          </LinkButton>
           {FEATURED_PROJECT.link && (
             <LinkButton href={FEATURED_PROJECT.link}>
               <WebIcon class="size-5" />
               {content.buttons.preview}
             </LinkButton>
           )}
-          <LinkButton href={content.featuredStudyHref}>
-            {content.featuredStudyLabel}
-          </LinkButton>
+          {FEATURED_PROJECT.github && (
+            <LinkButton href={FEATURED_PROJECT.github}>
+              <GitHubIcon class="size-5" />
+              {content.buttons.code}
+            </LinkButton>
+          )}
         </footer>
       </div>
     </div>

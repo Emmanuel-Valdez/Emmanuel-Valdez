@@ -79,17 +79,17 @@ export const homeContent = {
       contact: 'Hablemos',
     },
     hero: {
-      title: 'Backend .NET Developer enfocado en e-commerce y sistemas de gestión',
+      title: 'Backend .NET Developer enfocado en e-commerce, datos y sistemas de gestión',
       lines: [
         {
-          text: 'Hola, soy Emmanuel Valdez. Desarrollo aplicaciones con C#, SQL Server y lógica de negocio para procesos reales de venta, gestión y operación.',
+          text: 'Construyo aplicaciones con ASP.NET Core, C# y SQL Server para transformar procesos operativos en software usable.',
         },
         {
-          text: 'Tengo experiencia práctica administrando e-commerce y construyendo Ukiyo, un sistema propio con ASP.NET Core, roles, pagos y calculadora de precios.',
+          text: ' Mi proyecto principal, Ukiyo, convierte un flujo de costos en Excel en un sistema web con tienda, roles, pagos, órdenes y cálculo administrativo de precios.',
           class: 'text-blue-200/90',
         },
         {
-          text: ' Actualmente profundizo Linux, Docker y arquitectura cloud.',
+          text: ' Estoy preparando el siguiente paso técnico hacia despliegues con Linux, Docker y cloud.',
           class: 'text-gray-300/90',
         },
         {
@@ -100,19 +100,28 @@ export const homeContent = {
       stackAriaLabel: 'Stack principal y aprendizaje actual',
       stack: ['.NET 8', 'C#', 'SQL Server', 'Node.js', 'Linux', 'Docker', 'Cloud architecture'],
       availabilityLabel: 'Disponible para trabajar',
+      ctas: {
+        ariaLabel: 'Acciones principales',
+        project: 'Ver proyecto principal',
+        projectHref: routes.es.ukiyo,
+        contact: 'Contactarme',
+        contactHref: '#contact',
+        cv: 'Descargar CV en PDF',
+        cvFile: cvFiles.es,
+      },
     },
     experience: [
       {
         date: '2020 - Actualmente...',
-        title: 'Operación e-commerce, datos y mejora de procesos',
+        title: 'Operación e-commerce y análisis de procesos para sistema propio',
         company: 'Ukiyo Mochilas y algo más',
         description:
-          'Trabajo sobre la operación real de un negocio de productos físicos: catálogo, stock, publicaciones, ventas, pedidos, atención al cliente, logística y datos comerciales. Esa experiencia fue la base para diseñar Ukiyo como sistema propio de e-commerce, costos, precios y gestión administrativa.',
+          'Trabajo en la operación de un negocio de productos físicos: catálogo, stock, publicaciones, ventas, pedidos, atención al cliente, logística y datos comerciales. Esa experiencia me permitió detectar procesos repetitivos, criterios de precio y necesidades administrativas que luego transformé en módulos de Ukiyo, un sistema propio construido con ASP.NET Core y SQL Server.',
         highlights: [
-          'Administración de plataformas e-commerce, incluyendo catálogo, stock, publicaciones, ventas y migración desde Tienda Nube hacia Tienda Negocio.',
-          'Seguimiento de pedidos, coordinación logística y revisión de información comercial para tomar mejores decisiones operativas.',
-          'Identificación de procesos repetitivos y criterios de precios que luego se transformaron en módulos dentro del sistema Ukiyo.',
-          'Contexto real para modelar productos, usuarios, órdenes, empresas, costos y reglas de negocio en una aplicación ASP.NET Core + SQL Server.',
+          'Administración de catálogo, stock, publicaciones, ventas y migración entre plataformas e-commerce.',
+          'Seguimiento de pedidos, coordinación logística y revisión de datos comerciales para decisiones operativas.',
+          'Identificación de procesos repetitivos convertidos luego en módulos de software: productos, usuarios, órdenes, compañías, costos y precios.',
+          'Modelado de reglas reales de negocio dentro de una aplicación ASP.NET Core con persistencia en SQL Server.',
         ],
         tags: ['E-commerce', 'Procesos de negocio', 'Datos comerciales', 'Pricing', 'SQL Server'],
         tagsAriaLabel: 'Áreas de experiencia',
@@ -121,20 +130,20 @@ export const homeContent = {
       },
     ],
     projects: {
-      featuredStudyLabel: 'Ver caso de estudio',
+      featuredStudyLabel: 'Leer caso de estudio',
       featuredStudyHref: routes.es.ukiyo,
       supportingLabel: 'Proyectos de soporte',
       stackAriaPrefix: 'Stack técnico de',
       buttons: {
-        code: 'Code',
-        preview: 'Preview',
+        code: 'Ver código en GitHub',
+        preview: 'Ver demo',
       },
       items: [
         {
           title: 'Ukiyo Designs',
           eyebrow: 'Proyecto destacado · solución real para e-commerce',
           description:
-            'Sistema ASP.NET Core MVC para un emprendimiento familiar que fabrica mochilas, bolsos e indumentaria. Reemplaza un Excel de costos que había creado previamente y centraliza tienda, productos, usuarios, roles, órdenes, favoritos y cálculo de precios.',
+            'Sistema e-commerce y administrativo para un negocio real. Convierte un flujo de costos en Excel en una aplicación web con tienda, roles, pagos, órdenes y cálculo de precios basado en SQL Server.',
           stack: [
             'ASP.NET Core 8 MVC',
             'Entity Framework Core',
@@ -192,20 +201,21 @@ export const homeContent = {
         },
       ],
       intro:
-        'Soy Emmanuel Valdez. Me enfoco en backend con .NET, C# y SQL, especialmente en aplicaciones donde los datos, la lógica de negocio y los procesos operativos son el centro del producto.',
+        'Soy Emmanuel Valdez, desarrollador backend .NET enfocado en aplicaciones donde la lógica de negocio, los datos y la operación importan tanto como la interfaz.',
       strong: 'backend con .NET, C# y SQL',
       paragraphs: [
-        'Vengo de una base técnica en producción industrial y automatización, por eso tiendo a mirar el software como una herramienta para ordenar flujos reales: costos, inventario, ventas, logística, usuarios y decisiones administrativas.',
-        'Esa mirada se refleja en Ukiyo, un sistema e-commerce y de gestión construido con ASP.NET Core, SQL Server, roles, pagos y una calculadora de precios que transforma una planilla de costos en un flujo administrable desde una aplicación web.',
-        'Actualmente estoy profundizando arquitectura cloud, Linux y Docker para llevar este tipo de sistemas a despliegues más controlados. No busco presentar infraestructura como experiencia productiva exagerada, sino como una dirección técnica concreta y en desarrollo.',
+        'Vengo de una base técnica en producción industrial y automatización, por eso tiendo a pensar el software como una herramienta para ordenar procesos reales: costos, inventario, ventas, logística, usuarios y decisiones administrativas.',
+        'Esa mirada se refleja en Ukiyo, un sistema e-commerce y administrativo construido con ASP.NET Core y SQL Server. El proyecto me permitió trabajar con autenticación, roles, pagos, modelos relacionales, reglas de precio y pantallas administrativas conectadas a necesidades concretas del negocio.',
+        'Actualmente profundizo Linux, Docker y arquitectura cloud como siguiente paso para llevar este tipo de sistemas hacia despliegues más controlados y mantenibles.',
       ],
       closing:
         'También fui maestro particular y ayudante de cátedra en matemáticas, física e inglés. Esa experiencia fortaleció mi forma de explicar problemas complejos, documentar decisiones y colaborar con otras personas.',
       imageAlt: 'Retrato de Emmanuel Valdez',
     },
     contact: {
-      text: 'Disponible para oportunidades Backend .NET, Full Stack .NET o desarrollo de sistemas internos/e-commerce. Si mi perfil encaja con tu equipo o proyecto, podés escribirme por email o descargar mi CV.',
-      cvLabel: 'Descargar CV',
+      text: '¿Buscás un desarrollador backend .NET para sistemas internos, e-commerce o aplicaciones con lógica de negocio real? Escribime por email o descargá mi CV.',
+      emailLabel: 'Escribirme por email',
+      cvLabel: 'Descargar CV en PDF',
       cv: cvFiles.es,
     },
   },
@@ -222,17 +232,17 @@ export const homeContent = {
       contact: 'Let\'s Talk',
     },
     hero: {
-      title: '.NET Backend Developer focused on e-commerce and business management systems',
+      title: '.NET Backend Developer focused on e-commerce, data, and business management systems',
       lines: [
         {
-          text: 'Hi, I am Emmanuel Valdez. I build applications with C#, SQL Server, and business logic for real sales, management, and operations workflows.',
+          text: 'I build applications with ASP.NET Core, C#, and SQL Server to turn operational workflows into usable software.',
         },
         {
-          text: 'I have hands-on experience running e-commerce operations and building Ukiyo, my own ASP.NET Core system with roles, payments, and a pricing calculator.',
+          text: ' My main project, Ukiyo, turns an Excel-based cost workflow into a web system with a store, roles, payments, orders, and admin price calculation.',
           class: 'text-blue-200/90',
         },
         {
-          text: ' I am currently deepening Linux, Docker, and cloud architecture.',
+          text: ' I am preparing the next technical step toward deployments with Linux, Docker, and cloud.',
           class: 'text-gray-300/90',
         },
         {
@@ -243,19 +253,28 @@ export const homeContent = {
       stackAriaLabel: 'Main stack and current learning path',
       stack: ['.NET 8', 'C#', 'SQL Server', 'Node.js', 'Linux', 'Docker', 'Cloud architecture'],
       availabilityLabel: 'Available for work',
+      ctas: {
+        ariaLabel: 'Primary actions',
+        project: 'View main project',
+        projectHref: routes.en.ukiyo,
+        contact: 'Contact me',
+        contactHref: '#contact',
+        cv: 'Download CV as PDF',
+        cvFile: cvFiles.en,
+      },
     },
     experience: [
       {
         date: '2020 - Present',
-        title: 'E-commerce operations, data, and process improvement',
+        title: 'E-commerce operations and process analysis for a custom system',
         company: 'Ukiyo Mochilas y algo más',
         description:
-          'I work on the real operation of a physical-products business: catalog, stock, listings, sales, orders, customer service, logistics, and commercial data. That experience became the foundation for designing Ukiyo as a custom e-commerce, cost, pricing, and admin management system.',
+          'I work on the operation of a physical-products business: catalog, stock, listings, sales, orders, customer service, logistics, and commercial data. That experience helped me detect repetitive processes, pricing criteria, and admin needs that I later turned into modules inside Ukiyo, a custom system built with ASP.NET Core and SQL Server.',
         highlights: [
-          'Managed e-commerce platforms, including catalog, stock, listings, sales, and migration from Tienda Nube to Tienda Negocio.',
-          'Tracked orders, coordinated logistics, and reviewed commercial information to support better operational decisions.',
-          'Identified repetitive processes and pricing criteria that later became modules inside the Ukiyo system.',
-          'Real business context for modeling products, users, orders, companies, costs, and business rules in an ASP.NET Core + SQL Server application.',
+          'Managed catalog, stock, listings, sales, and migration between e-commerce platforms.',
+          'Tracked orders, coordinated logistics, and reviewed commercial data for operational decisions.',
+          'Identified repetitive processes later converted into software modules: products, users, orders, companies, costs, and prices.',
+          'Modeled real business rules inside an ASP.NET Core application with SQL Server persistence.',
         ],
         tags: ['E-commerce', 'Business processes', 'Commercial data', 'Pricing', 'SQL Server'],
         tagsAriaLabel: 'Experience areas',
@@ -264,20 +283,20 @@ export const homeContent = {
       },
     ],
     projects: {
-      featuredStudyLabel: 'View case study',
+      featuredStudyLabel: 'Read case study',
       featuredStudyHref: routes.en.ukiyo,
       supportingLabel: 'Supporting projects',
       stackAriaPrefix: 'Technical stack for',
       buttons: {
-        code: 'Code',
-        preview: 'Preview',
+        code: 'View code on GitHub',
+        preview: 'View demo',
       },
       items: [
         {
           title: 'Ukiyo Designs',
           eyebrow: 'Featured project · real e-commerce solution',
           description:
-            'ASP.NET Core MVC system for a family business that manufactures backpacks, bags, and apparel. It replaces a cost spreadsheet I had previously created and centralizes the store, products, users, roles, orders, favorites, and price calculation.',
+            'E-commerce and admin system for a real business. It turns an Excel-based cost workflow into a web application with a store, roles, payments, orders, and SQL Server-based price calculation.',
           stack: [
             'ASP.NET Core 8 MVC',
             'Entity Framework Core',
@@ -335,20 +354,21 @@ export const homeContent = {
         },
       ],
       intro:
-        'I am Emmanuel Valdez. I focus on backend development with .NET, C#, and SQL, especially in applications where data, business logic, and operational processes are the center of the product.',
+        'I am Emmanuel Valdez, a .NET backend developer focused on applications where business logic, data, and operations matter as much as the interface.',
       strong: 'backend development with .NET, C#, and SQL',
       paragraphs: [
-        'I come from a technical background in industrial production and automation, so I tend to see software as a tool for organizing real workflows: costs, inventory, sales, logistics, users, and administrative decisions.',
-        'That perspective is reflected in Ukiyo, an e-commerce and management system built with ASP.NET Core, SQL Server, roles, payments, and a pricing calculator that turns a cost spreadsheet into a manageable web application workflow.',
-        'I am currently deepening cloud architecture, Linux, and Docker to move these kinds of systems toward more controlled deployments. I do not present infrastructure as exaggerated production experience, but as a concrete technical direction in progress.',
+        'I come from a technical background in industrial production and automation, so I tend to think of software as a tool for organizing real processes: costs, inventory, sales, logistics, users, and administrative decisions.',
+        'That perspective is reflected in Ukiyo, an e-commerce and admin system built with ASP.NET Core and SQL Server. The project let me work with authentication, roles, payments, relational models, pricing rules, and admin screens connected to concrete business needs.',
+        'I am currently deepening Linux, Docker, and cloud architecture as the next step toward more controlled and maintainable deployments.',
       ],
       closing:
         'I also worked as a private teacher and teaching assistant in math, physics, and English. That experience strengthened how I explain complex problems, document decisions, and collaborate with other people.',
       imageAlt: 'Portrait of Emmanuel Valdez',
     },
     contact: {
-      text: 'Available for .NET Backend, .NET Full Stack, or internal systems/e-commerce development opportunities. If my profile fits your team or project, you can email me or download my CV.',
-      cvLabel: 'Download CV',
+      text: 'Looking for a .NET backend developer for internal systems, e-commerce, or applications with real business logic? Email me or download my CV.',
+      emailLabel: 'Email me',
+      cvLabel: 'Download CV as PDF',
       cv: cvFiles.en,
     },
   },
@@ -367,24 +387,24 @@ export const ukiyoContent = {
     eyebrow: 'Caso de estudio · ASP.NET Core + SQL Server',
     title: 'Ukiyo Designs',
     intro:
-      'Sistema e-commerce y de gestión para un negocio familiar que fabrica mochilas, bolsos e indumentaria. El objetivo fue convertir un flujo de costos basado en Excel en una aplicación web con base de datos, roles, pagos y cálculo administrativo de precios.',
+      'Ukiyo Designs es un sistema e-commerce y de gestión construido con ASP.NET Core MVC y SQL Server para un negocio real de productos físicos. Reemplaza un flujo de costos basado en Excel y centraliza tienda, catálogo, usuarios, roles, órdenes, favoritos, pagos y cálculo administrativo de precios.',
     buttons: {
-      demo: 'Demo',
-      code: 'Código',
+      demo: 'Ver demo de Ukiyo',
+      code: 'Ver código en GitHub',
     },
     heroImageAlt: 'Captura real de Ukiyo Designs con catálogo de productos',
     metricsAriaLabel: 'Resumen del proyecto',
     metrics: [
-      { label: 'Negocio real', value: 'E-commerce + gestión' },
-      { label: 'Modelo de precios', value: 'Mayorista y minorista' },
-      { label: 'Usuarios', value: 'Customer, Company, Employee, Admin' },
+      { label: 'Roles', value: 'Customer, Company, Employee, Admin' },
+      { label: 'Pricing', value: 'Costos, márgenes, mayorista y minorista' },
+      { label: 'Integraciones', value: 'Stripe + Facebook OAuth + ES/EN' },
     ],
     context: {
       eyebrow: 'Contexto',
       title: 'De planilla a sistema de negocio',
       paragraphs: [
-        'Ukiyo Designs nace de una necesidad concreta: vender productos fabricados por el negocio y calcular precios con una lógica más confiable que una planilla. El sistema mantiene la parte comercial visible para clientes y agrega una capa administrativa para gestionar operaciones internas.',
-        'El proyecto demuestra trabajo backend aplicado a reglas reales: costos variables, costos fijos, impuestos, márgenes, roles, pagos, autenticación y persistencia en SQL Server.',
+        'Ukiyo nace de una necesidad concreta: vender productos fabricados por el negocio y calcular precios con criterios más confiables que una planilla. La solución combina una tienda pública con un panel administrativo donde se gestionan productos, usuarios, compañías, órdenes y variables de costos.',
+        'El backend concentra las reglas de negocio y usa SQL Server para persistir datos, calcular totales y mantener consistencia en precios finales.',
       ],
     },
     problemTitle: 'Problema',
@@ -521,7 +541,8 @@ export const ukiyoContent = {
         'Pruebas manuales completas antes de preparar la demo del portfolio.',
         'Validación de checkout guards, acceso a órdenes, disponibilidad de productos y flujos login/carrito.',
         'Revisión de soft-delete de compañías, deletes de calculadora y metadata de localización.',
-        'Backlog técnico honesto: tests automatizados, Docker, fake email sender, Serilog y middleware centralizado de excepciones.',
+        'Roadmap de portfolio: priorizar proyectos antes que experiencia, sumar métricas técnicas visibles, bloque rápido para reclutadores y aclaración del alcance de la demo/admin.',
+        'Roadmap técnico final antes de presentarlo como experiencia de infraestructura: tests automatizados, Docker, deploy en Linux/cloud, fake email sender, Serilog y middleware centralizado de excepciones.',
       ],
     },
     media: {
@@ -581,24 +602,24 @@ export const ukiyoContent = {
     eyebrow: 'Case study · ASP.NET Core + SQL Server',
     title: 'Ukiyo Designs',
     intro:
-      'E-commerce and management system for a family business that manufactures backpacks, bags, and apparel. The goal was to turn an Excel-based cost workflow into a database-backed web application with roles, payments, and admin price calculation.',
+      'Ukiyo Designs is an e-commerce and management system built with ASP.NET Core MVC and SQL Server for a real physical-products business. It replaces an Excel-based cost workflow and centralizes the store, catalog, users, roles, orders, favorites, payments, and admin price calculation.',
     buttons: {
-      demo: 'Demo',
-      code: 'Code',
+      demo: 'View Ukiyo demo',
+      code: 'View code on GitHub',
     },
     heroImageAlt: 'Real screenshot of Ukiyo Designs with product catalog',
     metricsAriaLabel: 'Project summary',
     metrics: [
-      { label: 'Real business', value: 'E-commerce + management' },
-      { label: 'Pricing model', value: 'Wholesale and retail' },
-      { label: 'Users', value: 'Customer, Company, Employee, Admin' },
+      { label: 'Roles', value: 'Customer, Company, Employee, Admin' },
+      { label: 'Pricing', value: 'Costs, margins, wholesale and retail' },
+      { label: 'Integrations', value: 'Stripe + Facebook OAuth + ES/EN' },
     ],
     context: {
       eyebrow: 'Context',
       title: 'From spreadsheet to business system',
       paragraphs: [
-        'Ukiyo Designs started from a concrete need: selling products made by the business and calculating prices with logic more reliable than a spreadsheet. The system keeps the customer-facing commercial layer and adds an admin layer for internal operations.',
-        'The project demonstrates backend work applied to real rules: variable costs, fixed costs, taxes, margins, roles, payments, authentication, and SQL Server persistence.',
+        'Ukiyo started from a concrete need: selling products made by the business and calculating prices with criteria more reliable than a spreadsheet. The solution combines a public store with an admin panel for products, users, companies, orders, and cost variables.',
+        'The backend centralizes business rules and uses SQL Server to persist data, calculate totals, and keep final prices consistent.',
       ],
     },
     problemTitle: 'Problem',
@@ -735,7 +756,8 @@ export const ukiyoContent = {
         'Complete manual testing before preparing the portfolio demo.',
         'Validation of checkout guards, order access, product availability, and login/cart flows.',
         'Review of company soft-delete, calculator deletes, and localization metadata.',
-        'Honest technical backlog: automated tests, Docker, fake email sender, Serilog, and centralized exception middleware.',
+        'Portfolio roadmap: prioritize projects before experience, add visible technical metrics, a quick recruiter block, and a clear note about demo/admin scope.',
+        'Final technical roadmap before presenting it as infrastructure experience: automated tests, Docker, Linux/cloud deployment, fake email sender, Serilog, and centralized exception middleware.',
       ],
     },
     media: {
