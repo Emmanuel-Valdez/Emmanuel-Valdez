@@ -1,6 +1,6 @@
 # Emmanuel Valdez Portfolio
 
-Personal developer portfolio for Emmanuel Valdez Montigel, a Backend Developer focused on .NET, C#, SQL, e-commerce systems, and business process automation.
+Personal developer portfolio for Emmanuel Valdez, a Backend Developer focused on .NET, C#, SQL, e-commerce systems, and business process automation.
 
 The current public UI content is Spanish. Code, comments, repository documentation, and implementation notes should stay in English until an on-demand Spanish-English translation feature is added.
 
