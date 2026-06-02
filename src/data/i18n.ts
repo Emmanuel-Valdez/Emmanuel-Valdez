@@ -426,6 +426,12 @@ export const ukiyoContent = {
     },
     heroImageAlt: 'Captura real de Ukiyo Designs con catálogo de productos',
     metricsAriaLabel: 'Resumen del proyecto',
+    summary: {
+      eyebrow: 'Resumen ejecutivo',
+      title: 'Ukiyo en 20 segundos',
+      description:
+        'Una lectura rápida del tipo de sistema, mi rol, el problema de negocio, el stack y la evidencia disponible.',
+    },
     metrics: [
       { label: 'Roles', value: 'Customer, Company, Employee, Admin' },
       { label: 'Pricing', value: 'Costos, márgenes, mayorista y minorista' },
@@ -435,10 +441,10 @@ export const ukiyoContent = {
       { label: 'Tipo de proyecto', value: 'E-commerce + sistema administrativo', emphasis: true },
       { label: 'Rol', value: 'Backend, datos y lógica de negocio con entrega fullstack' },
       { label: 'Problema central', value: 'Pricing operativo que dependía de Excel y decisiones manuales', emphasis: true },
-      { label: 'Stack', value: 'ASP.NET Core MVC, EF Core, SQL Server, Identity, Stripe' },
+      { label: 'Stack', value: 'ASP.NET Core MVC, EF Core, SQL Server, Identity, Stripe, Facebook OAuth y ES/EN' },
       { label: 'Alcance', value: 'Tienda, carrito, órdenes, usuarios, compañías, admin y pricing' },
-      { label: 'Prueba técnica', value: 'Roles, SQL views/triggers, modelo relacional y flujos protegidos' },
-      { label: 'Evidencia', value: 'Demo, GitHub, video walkthrough y capturas reales' },
+      { label: 'Prueba técnica', value: 'SQL views/triggers, roles, flujos protegidos y modelo conceptual' },
+      { label: 'Evidencia', value: 'Video walkthrough, demo pública, GitHub y capturas reales' },
       { label: 'Lectura recruiter', value: 'Backend .NET aplicado a reglas de negocio y datos reales', emphasis: true },
     ],
     walkthrough: {
@@ -705,6 +711,12 @@ export const ukiyoContent = {
     },
     heroImageAlt: 'Real screenshot of Ukiyo Designs with product catalog',
     metricsAriaLabel: 'Project summary',
+    summary: {
+      eyebrow: 'Executive summary',
+      title: 'Ukiyo in 20 seconds',
+      description:
+        'A quick read of the system type, my role, the business problem, the stack, and the available evidence.',
+    },
     metrics: [
       { label: 'Roles', value: 'Customer, Company, Employee, Admin' },
       { label: 'Pricing', value: 'Costs, margins, wholesale and retail' },
@@ -714,10 +726,10 @@ export const ukiyoContent = {
       { label: 'Project type', value: 'E-commerce + admin business system', emphasis: true },
       { label: 'Role', value: 'Backend, data, and business logic with fullstack delivery' },
       { label: 'Core problem', value: 'Operational pricing depended on Excel and manual decisions', emphasis: true },
-      { label: 'Stack', value: 'ASP.NET Core MVC, EF Core, SQL Server, Identity, Stripe' },
+      { label: 'Stack', value: 'ASP.NET Core MVC, EF Core, SQL Server, Identity, Stripe, Facebook OAuth, ES/EN' },
       { label: 'Scope', value: 'Storefront, cart, orders, users, companies, admin, and pricing' },
-      { label: 'Technical proof', value: 'Roles, SQL views/triggers, relational model, and protected flows' },
-      { label: 'Evidence', value: 'Demo, GitHub, video walkthrough, and real screenshots' },
+      { label: 'Technical proof', value: 'SQL views/triggers, roles, protected flows, and conceptual data model' },
+      { label: 'Evidence', value: 'Video walkthrough, public demo, GitHub, and real screenshots' },
       { label: 'Recruiter takeaway', value: '.NET backend work applied to business rules and real data', emphasis: true },
     ],
     walkthrough: {

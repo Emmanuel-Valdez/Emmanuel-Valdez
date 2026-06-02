@@ -59,6 +59,8 @@ The business needed a better way to manage:
 
 Ukiyo was built as an ASP.NET Core 8 MVC application using Entity Framework Core and SQL Server. It includes a public customer store and an admin area for managing products, companies, users, orders, and price calculations.
 
+The portfolio case study now opens with a bento executive summary so recruiters can scan the project type, role, problem, stack, scope, technical proof, evidence, and backend takeaway before reading the deeper narrative.
+
 The admin price calculator considers:
 
 - Fabrics and material costs.
@@ -245,9 +247,12 @@ Planned improvements that strengthen the backend/fullstack portfolio signal:
 - Add notes about the cloud architecture course and infrastructure decisions when there is concrete deployment evidence.
 - Keep the Spanish and English versions synchronized as the portfolio evolves.
 - Improve visual polish without shifting the positioning toward pure frontend.
+- Continue the staged Ukiyo case-study refactor: early visual evidence, stronger admin pricing calculator prominence, and clearer backend decision cards.
 
 Recently completed portfolio improvements:
 
+- The Ukiyo case study now includes a bilingual bento executive summary directly after the hero.
+- The Ukiyo case study narrative was reduced and reorganized around a summary-first single-scroll structure.
 - Projects now appear before experience on the homepage.
 - Ukiyo includes visible technical metrics on the featured project card.
 - Hero actions were simplified around the Ukiyo case study, CV download, and email contact.
