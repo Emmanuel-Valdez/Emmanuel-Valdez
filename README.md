@@ -115,12 +115,14 @@ The admin price calculator considers:
 ├── public/
 │   ├── media/
 │   ├── projects/
+│   ├── videos/
 │   └── favicon.svg
 ├── src/
 │   ├── components/
 │   ├── icons/
 │   ├── layouts/
 │   └── pages/
+├── ukiyo-walkthrough/
 ├── astro.config.mjs
 ├── tailwind.config.mjs
 └── package.json
@@ -139,6 +141,8 @@ The admin price calculator considers:
 - `src/components/Projects.astro`: featured Ukiyo case study and supporting project cards.
 - `src/components/AboutMe.astro`: personal profile section.
 - `src/components/Contact.astro`: contact and CV download section.
+- `public/videos/ukiyo-walkthrough.mp4`: embedded Ukiyo case study walkthrough.
+- `ukiyo-walkthrough/`: HyperFrames source project for the Ukiyo walkthrough video.
 
 ## Internationalization
 
@@ -236,7 +240,7 @@ export default defineConfig({
 Planned improvements that strengthen the backend/fullstack portfolio signal:
 
 - Review the latest Netlify deployment after each pushed portfolio update.
-- Add updated screenshots, GIFs, or short videos for Ukiyo workflows.
+- Validate the embedded Ukiyo walkthrough experience on desktop and mobile after production deploys.
 - Document a Docker-based deployment once a project is running on the Oracle Linux server.
 - Add notes about the cloud architecture course and infrastructure decisions when there is concrete deployment evidence.
 - Keep the Spanish and English versions synchronized as the portfolio evolves.
@@ -249,6 +253,7 @@ Recently completed portfolio improvements:
 - Hero actions were simplified around the Ukiyo case study, CV download, and email contact.
 - The Ukiyo case study now explains demo scope and protected admin boundaries.
 - The Ukiyo data model now includes business-oriented entity groups and a compact conceptual relationship diagram.
+- The Ukiyo case study now includes an embedded end-to-end video walkthrough.
 
 ## Repository Notes
 
