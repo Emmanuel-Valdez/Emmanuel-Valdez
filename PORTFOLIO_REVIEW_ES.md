@@ -21,10 +21,12 @@ Lo importante ya esta implementado:
 - Proyectos aparecen antes que experiencia para mostrar evidencia antes que contexto operativo.
 - Ukiyo destacado como case study principal.
 - Proyectos secundarios presentados como soporte/progresion, no como evidencia equivalente a Ukiyo.
+- AboutMe renderiza intro + texto destacado de forma directa, evitando depender de un `split` fragil entre copy normal y resaltado.
 - Case study de Ukiyo con resumen ejecutivo tipo bento, video walkthrough embebido, evidencia visual temprana, alcance de demo, calculadora admin destacada, decisiones backend escaneables, accordions tecnicos y galeria final agrupada.
 - Copy bilingue sincronizado para el contenido visible principal.
 - Metadata localizada, canonical, hreflang y Open Graph.
 - CVs separados por idioma en `public/media/`.
+- Mejoras de accesibilidad/mobile aplicadas: skip link, foco visible, targets tactiles mas amplios, resumen accesible del video y accordions nativos con indicadores visibles.
 - README con alcance, rutas, stack, estructura y notas de uso.
 
 ## Fortalezas actuales
@@ -43,7 +45,7 @@ Lo importante ya esta implementado:
 ## Riesgos pendientes
 
 - La validacion final en produccion depende de revisar Netlify despues de cada push importante.
-- El video aporta evidencia dinamica, pero conviene verificar peso, carga, mobile y reproduccion en produccion.
+- El video ya tiene resumen accesible, pero conviene verificar peso, carga, mobile y reproduccion en produccion.
 - La evidencia backend podria fortalecerse con tests, consultas, migraciones o documentacion tecnica mas profunda cuando existan como evidencia verificable.
 - El siguiente riesgo de densidad ya no esta en la estructura principal de Ukiyo, sino en agregar mas contenido sin una prueba nueva clara.
 - No hay que presentar Docker, Linux, cloud ni tests como experiencia productiva hasta tener implementacion real y verificable.
@@ -61,6 +63,7 @@ Lo importante ya esta implementado:
 ## Criterio para cambios nuevos
 
 - Si cambia copy visible en Espanol, actualizar tambien Ingles.
+- Si se edita el texto destacado de AboutMe, mantener `intro` y `strong` como piezas separadas para evitar duplicados o capitalizacion incorrecta.
 - Si cambia una ruta, revisar `canonical`, `hreflang` y switch de idioma.
 - Si se agrega media, verificar peso, mobile, controles y alt text o etiqueta accesible.
 - Si se agrega contenido tecnico, mantenerlo concreto, verificable y seguro.

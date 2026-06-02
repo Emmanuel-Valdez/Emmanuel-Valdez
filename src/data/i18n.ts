@@ -218,7 +218,7 @@ export const homeContent = {
       ],
       intro:
         'Soy Emmanuel Valdez, desarrollador backend .NET enfocado en aplicaciones donde la lógica de negocio, los datos y la operación importan tanto como la interfaz.',
-      strong: 'backend con .NET, C# y SQL',
+      strong: 'Backend con .NET, C# y SQL',
       paragraphs: [
         'Vengo de una base técnica en producción industrial y automatización, por eso tiendo a pensar el software como una herramienta para ordenar procesos reales: costos, inventario, ventas, logística, usuarios y decisiones administrativas.',
         'Esa mirada se refleja en Ukiyo, un sistema e-commerce y administrativo construido con ASP.NET Core y SQL Server. El proyecto me permitió trabajar con autenticación, roles, pagos, modelos relacionales, reglas de precio y pantallas administrativas conectadas a necesidades concretas del negocio.',
@@ -454,6 +454,12 @@ export const ukiyoContent = {
         'El video muestra el flujo principal sin exponer permisos sensibles: compra del cliente, creación de la orden y seguimiento administrativo sobre datos persistidos.',
       videoLabel: 'Video recorrido del caso de estudio Ukiyo Designs',
       fallback: 'Tu navegador no puede reproducir este video. Podés revisar las capturas del caso de estudio más abajo.',
+      transcriptLabel: 'Resumen accesible del video',
+      transcriptItems: [
+        'El recorrido muestra la tienda pública, el catálogo, el detalle de producto y el avance del cliente hacia el carrito.',
+        'Luego se evidencia la persistencia de la orden y los datos necesarios para seguimiento administrativo.',
+        'El cierre muestra la gestión de estados desde administración para preparación, envío, entrega y visibilidad del cliente.',
+      ],
       highlights: [
         'Flujo de cliente: sesión, catálogo, carrito y avance hacia pago.',
         'Persistencia de órdenes y datos necesarios para seguimiento administrativo.',
@@ -787,6 +793,12 @@ export const ukiyoContent = {
         'The video shows the main flow without exposing sensitive permissions: customer purchase, order creation, and admin tracking over persisted data.',
       videoLabel: 'Video walkthrough for the Ukiyo Designs case study',
       fallback: 'Your browser cannot play this video. You can review the case study screenshots below.',
+      transcriptLabel: 'Accessible video summary',
+      transcriptItems: [
+        'The walkthrough shows the public store, catalog, product detail, and customer movement toward the cart.',
+        'It then shows persisted order data and the information required for administrative tracking.',
+        'The final part shows admin status management for preparation, shipping, delivery, and customer visibility.',
+      ],
       highlights: [
         'Customer flow: session, catalog, cart, and movement toward payment.',
         'Persisted orders and data required for administrative tracking.',

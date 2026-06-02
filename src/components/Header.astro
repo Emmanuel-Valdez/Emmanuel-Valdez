@@ -15,22 +15,22 @@ const englishHref = locale === 'en' ? Astro.url.pathname : languageHref;
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-0 z-10 flex w-full items-center justify-center px-2 pt-2"
 >
   <nav
     aria-label={copy.headerAriaLabel}
-    class="border border-black rounded-full px-2 py-1 items-center bg-black/50 backdrop-blur-2xl flex flex-row text-xs sm:px-3 sm:text-base"
+    class="flex max-w-full flex-row items-center overflow-x-auto rounded-full border border-black bg-black/70 px-2 py-1 text-xs backdrop-blur-2xl sm:px-3 sm:text-base"
   >
-    <a class="whitespace-nowrap hover:bg-white/10 hover:text-indigo-300 rounded-full px-2 transition" href={`${homeHref}#projects`}
+    <a class="inline-flex min-h-9 items-center whitespace-nowrap rounded-full px-2 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-h-10 sm:px-3" href={`${homeHref}#projects`}
       >{copy.nav.projects}</a
     >
-    <a class="whitespace-nowrap hover:bg-white/10 hover:text-indigo-300 rounded-full px-2 transition" href={`${homeHref}#experience`}
+    <a class="inline-flex min-h-9 items-center whitespace-nowrap rounded-full px-2 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-h-10 sm:px-3" href={`${homeHref}#experience`}
       >{copy.nav.experience}</a
     >
-    <a class="whitespace-nowrap hover:bg-white/10 hover:text-indigo-300 rounded-full px-2 transition" href={`${homeHref}#about`}
+    <a class="inline-flex min-h-9 items-center whitespace-nowrap rounded-full px-2 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-h-10 sm:px-3" href={`${homeHref}#about`}
       >{copy.nav.about}</a
     >
-    <a class="whitespace-nowrap hover:bg-white/10 hover:text-indigo-300 rounded-full px-2 transition" href={`${homeHref}#contact`}
+    <a class="inline-flex min-h-9 items-center whitespace-nowrap rounded-full px-2 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-h-10 sm:px-3" href={`${homeHref}#contact`}
       >{copy.nav.contact}</a
     >
     <div
@@ -40,13 +40,13 @@ const englishHref = locale === 'en' ? Astro.url.pathname : languageHref;
     >
       <a
         aria-current={locale === 'es' ? 'page' : undefined}
-        class={`rounded-full px-2 py-0.5 transition ${locale === 'es' ? 'bg-sky-300 text-slate-950 shadow-sm shadow-sky-950/40' : 'text-sky-100 hover:bg-white/10 hover:text-white'}`}
+        class={`inline-flex min-h-8 items-center rounded-full px-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 ${locale === 'es' ? 'bg-sky-300 text-slate-950 shadow-sm shadow-sky-950/40' : 'text-sky-100 hover:bg-white/10 hover:text-white'}`}
         href={spanishHref}
         hreflang="es"
       >ES</a>
       <a
         aria-current={locale === 'en' ? 'page' : undefined}
-        class={`rounded-full px-2 py-0.5 transition ${locale === 'en' ? 'bg-sky-300 text-slate-950 shadow-sm shadow-sky-950/40' : 'text-sky-100 hover:bg-white/10 hover:text-white'}`}
+        class={`inline-flex min-h-8 items-center rounded-full px-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 ${locale === 'en' ? 'bg-sky-300 text-slate-950 shadow-sm shadow-sky-950/40' : 'text-sky-100 hover:bg-white/10 hover:text-white'}`}
         href={englishHref}
         hreflang="en"
       >EN</a>

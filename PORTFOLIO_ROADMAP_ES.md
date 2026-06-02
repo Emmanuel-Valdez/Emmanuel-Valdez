@@ -32,6 +32,7 @@ Already implemented:
 - HyperFrames source for the walkthrough video versioned in `ukiyo-walkthrough/` and final MP4 served from `public/videos/`.
 - Separate CVs by language in `public/media/`.
 - Localized metadata, canonical, hreflang, and Open Graph.
+- Stage 9 accessibility/mobile pass: skip link, visible focus, improved touch targets, accessible video summary, semantic details/summary, and build verification.
 
 ## Positioning To Preserve
 
@@ -442,6 +443,25 @@ Acceptance criteria:
 - Secondary projects do not dilute the main brand.
 
 ### Stage 9: Mobile, Accessibility, And QA Requirements
+
+Status: completed.
+
+Implemented in:
+
+- `src/layouts/Layout.astro`
+- `src/components/Header.astro`
+- `src/components/LinkButton.astro`
+- `src/components/SocialPill.astro`
+- `src/pages/proyectos/ukiyo.astro`
+- `src/data/i18n.ts`
+
+Notes:
+
+- Global skip link, page language, localized metadata, canonical, hreflang, and focus-visible styling are present.
+- Header links and shared CTA components now have larger mobile touch targets and clearer keyboard focus states.
+- Ukiyo technical accordions use native `details`/`summary` with clearer focus styling and visible open indicators.
+- The walkthrough video includes an accessible localized summary below the video for users who cannot consume the MP4 directly.
+- Build verification remains required after changes; production Netlify/mobile video playback still needs manual post-deploy review.
 
 Goal: preserve usability while introducing bento, navigation, and accordions.
 
