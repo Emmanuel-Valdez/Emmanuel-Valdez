@@ -82,33 +82,41 @@ export const homeContent = {
       title: 'Backend .NET Developer enfocado en e-commerce, datos y sistemas de gestión',
       lines: [
         {
-          text: 'Construyo aplicaciones con ASP.NET Core, C# y SQL Server para transformar procesos operativos en software usable.',
+          text: 'Convierto procesos operativos -costos, stock, órdenes y precios- en software usable y mantenible para negocios reales.',
         },
         {
-          text: ' Mi proyecto principal, Ukiyo, convierte un flujo de costos en Excel en un sistema web con tienda, roles, pagos, órdenes y cálculo administrativo de precios.',
+          text: ' En Ukiyo, transformé un flujo de costos en Excel en un sistema web con tienda, roles, pagos, órdenes y cálculo administrativo de precios.',
           class: 'text-blue-200/90',
         },
         {
-          text: ' Estoy enfocando el portfolio en evidencia ya disponible: Ukiyo, SQL Server, roles, pagos y lógica de negocio.',
-          class: 'text-gray-300/90',
-        },
-        {
-          text: ' De Mendoza, Argentina.',
+          text: ' Desde Mendoza, Argentina.',
           class: 'text-red-200/90',
         },
       ],
-      stackAriaLabel: 'Stack principal y aprendizaje actual',
-      stack: ['.NET 8', 'C#', 'ASP.NET Core MVC', 'Entity Framework Core', 'SQL Server', 'Node.js'],
+      stackAriaLabel: 'Competencias backend demostradas',
+      stack: ['Lógica de negocio', 'Modelado relacional', 'Roles y autenticación', 'Pagos', 'E-commerce'],
       availabilityLabel: 'Disponible para trabajar',
       ctas: {
         ariaLabel: 'Acciones principales',
-        project: 'Ver proyecto principal',
+        project: 'Ver proyecto Ukiyo',
         projectHref: routes.es.ukiyo,
-        contact: 'Contactarme',
-        contactHref: '#contact',
-        cv: 'Descargar CV en PDF',
+        contact: 'Escribirme por email',
+        contactHref: 'mailto:evalmon.dev@gmail.com',
+        cv: 'Descargar CV',
         cvFile: cvFiles.es,
       },
+      recruiter: {
+        title: 'Perfil rápido',
+        ariaLabel: 'Resumen profesional rápido',
+        items: [
+          { label: 'Stack', value: '.NET, C#, SQL Server' },
+          { label: 'Ubicación', value: 'Mendoza, Argentina' },
+          { label: 'Modalidad', value: 'Remoto / híbrido' },
+          { label: 'Roles objetivo', value: 'Backend .NET, Fullstack .NET' },
+          { label: 'Idioma', value: 'Español / Inglés' },
+        ],
+      },
+      socialAriaLabel: 'Perfiles profesionales',
     },
     experience: [
       {
@@ -243,33 +251,41 @@ export const homeContent = {
       title: '.NET Backend Developer focused on e-commerce, data, and business management systems',
       lines: [
         {
-          text: 'I build applications with ASP.NET Core, C#, and SQL Server to turn operational workflows into usable software.',
+          text: 'I turn operational workflows - costs, stock, orders, and pricing - into usable, maintainable software for real businesses.',
         },
         {
-          text: ' My main project, Ukiyo, turns an Excel-based cost workflow into a web system with a store, roles, payments, orders, and admin price calculation.',
+          text: ' In Ukiyo, I turned an Excel-based cost workflow into a web system with a store, roles, payments, orders, and admin price calculation.',
           class: 'text-blue-200/90',
-        },
-        {
-          text: ' I am keeping the portfolio focused on evidence already available: Ukiyo, SQL Server, roles, payments, and business logic.',
-          class: 'text-gray-300/90',
         },
         {
           text: ' Based in Mendoza, Argentina.',
           class: 'text-red-200/90',
         },
       ],
-      stackAriaLabel: 'Main stack and current learning path',
-      stack: ['.NET 8', 'C#', 'ASP.NET Core MVC', 'Entity Framework Core', 'SQL Server', 'Node.js'],
+      stackAriaLabel: 'Demonstrated backend competencies',
+      stack: ['Business logic', 'Relational modeling', 'Roles and auth', 'Payments', 'E-commerce'],
       availabilityLabel: 'Available for work',
       ctas: {
         ariaLabel: 'Primary actions',
-        project: 'View main project',
+        project: 'View Ukiyo project',
         projectHref: routes.en.ukiyo,
-        contact: 'Contact me',
-        contactHref: '#contact',
-        cv: 'Download CV as PDF',
+        contact: 'Email me',
+        contactHref: 'mailto:evalmon.dev@gmail.com',
+        cv: 'Download CV',
         cvFile: cvFiles.en,
       },
+      recruiter: {
+        title: 'Quick profile',
+        ariaLabel: 'Quick professional summary',
+        items: [
+          { label: 'Stack', value: '.NET, C#, SQL Server' },
+          { label: 'Location', value: 'Mendoza, Argentina' },
+          { label: 'Work mode', value: 'Remote / hybrid' },
+          { label: 'Target roles', value: '.NET Backend, .NET Fullstack' },
+          { label: 'Languages', value: 'Spanish / English' },
+        ],
+      },
+      socialAriaLabel: 'Professional profiles',
     },
     experience: [
       {
