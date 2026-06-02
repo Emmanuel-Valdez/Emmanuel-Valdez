@@ -134,6 +134,7 @@ export const homeContent = {
       featuredStudyHref: routes.es.ukiyo,
       supportingLabel: 'Proyectos de soporte',
       stackAriaPrefix: 'Stack técnico de',
+      metricsAriaPrefix: 'Métricas técnicas de',
       buttons: {
         code: 'Ver código en GitHub',
         preview: 'Ver demo',
@@ -156,6 +157,13 @@ export const homeContent = {
             'Calculadora administrativa con telas, herrajes, packaging, costos fijos, costos porcentuales y márgenes de ganancia.',
             'Dashboard de precios finales con comparación entre precios actuales, costos calculados, márgenes, filtros y exportación.',
             'Soporte multi-compañía, Identity, Facebook OAuth, Stripe, localización ES/EN y SQL views/triggers para cálculos.',
+          ],
+          metrics: [
+            { value: '4', label: 'roles de usuario' },
+            { value: '5', label: 'módulos admin' },
+            { value: '2', label: 'integraciones' },
+            { value: 'SQL', label: 'views/triggers' },
+            { value: 'ES/EN', label: 'localización' },
           ],
           link: 'https://ukiyo.bsite.net/',
           github: 'https://github.com/Emmanuel-Valdez/Ukiyo',
@@ -287,6 +295,7 @@ export const homeContent = {
       featuredStudyHref: routes.en.ukiyo,
       supportingLabel: 'Supporting projects',
       stackAriaPrefix: 'Technical stack for',
+      metricsAriaPrefix: 'Technical metrics for',
       buttons: {
         code: 'View code on GitHub',
         preview: 'View demo',
@@ -309,6 +318,13 @@ export const homeContent = {
             'Admin calculator for fabrics, hardware, packaging, fixed costs, percentage costs, and profit margins.',
             'Final-price dashboard comparing current prices, calculated costs, margins, filters, and export options.',
             'Multi-company support, Identity, Facebook OAuth, Stripe, ES/EN localization, and SQL views/triggers for calculations.',
+          ],
+          metrics: [
+            { value: '4', label: 'user roles' },
+            { value: '5', label: 'admin modules' },
+            { value: '2', label: 'integrations' },
+            { value: 'SQL', label: 'views/triggers' },
+            { value: 'ES/EN', label: 'localization' },
           ],
           link: 'https://ukiyo.bsite.net/',
           github: 'https://github.com/Emmanuel-Valdez/Ukiyo',

@@ -48,6 +48,10 @@ interface Project {
   description: string;
   stack?: readonly string[];
   highlights?: readonly string[];
+  metrics?: readonly {
+    value: string;
+    label: string;
+  }[];
   link: string;
   github: string;
   image: string;
@@ -61,6 +65,7 @@ interface Props {
     featuredStudyHref: string;
     supportingLabel: string;
     stackAriaPrefix: string;
+    metricsAriaPrefix: string;
     buttons: {
       code: string;
       preview: string;
@@ -75,6 +80,7 @@ const PROJECTS = content.items;
 const [FEATURED_PROJECT, ...SUPPORTING_PROJECTS] = PROJECTS;
 const FEATURED_STACK = FEATURED_PROJECT.stack ?? [];
 const FEATURED_HIGHLIGHTS = FEATURED_PROJECT.highlights ?? [];
+const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
 ---
 
 <div class="flex flex-col gap-y-12">
@@ -117,6 +123,22 @@ const FEATURED_HIGHLIGHTS = FEATURED_PROJECT.highlights ?? [];
             </li>
           ))}
         </ul>
+
+        {FEATURED_METRICS.length > 0 && (
+          <ul
+            class="mt-6 grid grid-cols-2 gap-2 border-y border-white/10 py-4 sm:grid-cols-3"
+            aria-label={`${content.metricsAriaPrefix} ${FEATURED_PROJECT.title}`}
+          >
+            {FEATURED_METRICS.map((metric) => (
+              <li class="rounded-2xl border border-sky-300/15 bg-slate-900/70 px-3 py-3 shadow-inner shadow-sky-950/20 transition duration-300 hover:border-sky-300/40 hover:bg-sky-300/10">
+                <span class="block text-lg font-bold leading-none text-sky-100">{metric.value}</span>
+                <span class="mt-1 block text-[0.68rem] font-medium uppercase leading-tight tracking-[0.08em] text-gray-400">
+                  {metric.label}
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
 
         <footer class="mt-6 flex flex-wrap items-center gap-4">
           <LinkButton href={content.featuredStudyHref}>
