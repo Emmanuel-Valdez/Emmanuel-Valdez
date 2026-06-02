@@ -23,9 +23,12 @@ Already implemented:
 - Featured Ukiyo card with technical metrics: roles, admin modules, integrations, SQL views/triggers, and ES/EN localization.
 - Ukiyo case study now starts with a bento executive summary after the hero.
 - Ukiyo case study with embedded video walkthrough.
+- Ukiyo case study with early visual evidence before architecture/data-model depth.
+- Admin pricing calculator promoted as a central proof point.
+- Technical depth consolidated into `Key Backend Decisions` with secondary details in accordions.
 - Demo-scope block that separates public flows, protected areas, and screenshot/video evidence.
-- Data-model block with business-domain groups and a safe conceptual relationship diagram.
-- Real screenshots and a simple Ukiyo architecture diagram.
+- Safe conceptual data model and implementation details kept as expandable secondary depth.
+- Real screenshots grouped by flow and a simple Ukiyo architecture diagram.
 - HyperFrames source for the walkthrough video versioned in `ukiyo-walkthrough/` and final MP4 served from `public/videos/`.
 - Separate CVs by language in `public/media/`.
 - Localized metadata, canonical, hreflang, and Open Graph.
@@ -263,6 +266,20 @@ Acceptance criteria:
 
 ### Stage 5: Restore Early Visual Impact
 
+Status: completed.
+
+Implemented in:
+
+- `src/pages/proyectos/ukiyo.astro`
+- `src/data/i18n.ts`
+
+Notes:
+
+- Visual proof appears before architecture/data-model depth.
+- The early evidence uses customer flow and cost data screenshots.
+- The final gallery remains available near the end and is grouped by flow.
+- `final-prices.png` is reserved for the pricing calculator proof point to avoid duplicate visual weight.
+
 Goal: keep the project visually convincing before the page becomes technical.
 
 Tasks:
@@ -291,6 +308,19 @@ Acceptance criteria:
 
 ### Stage 6: Give The Admin Pricing Calculator More Prominence
 
+Status: completed.
+
+Implemented in:
+
+- `src/pages/proyectos/ukiyo.astro`
+- `src/data/i18n.ts`
+
+Notes:
+
+- The calculator appears before secondary backend/data-model details.
+- It is framed through cost inputs, business rules, SQL support, and admin outcome.
+- `final-prices.png` is used as the strongest visual proof for this section.
+
 Goal: make the most differentiated part of Ukiyo stand out.
 
 Why this matters:
@@ -318,6 +348,19 @@ Acceptance criteria:
 - It appears before secondary backend/data-model details.
 
 ### Stage 7: Convert Technical Depth Into Key Decisions
+
+Status: completed.
+
+Implemented in:
+
+- `src/pages/proyectos/ukiyo.astro`
+- `src/data/i18n.ts`
+
+Notes:
+
+- Scattered backend/data-model depth was consolidated into `Key Backend Decisions`.
+- Decision cards cover ASP.NET Core MVC, EF Core + SQL Server, Identity roles, SQL views, SQL triggers, Stripe + Facebook OAuth, and localization.
+- Conceptual data model, stack by layer, and implementation notes now live in native accordions.
 
 Goal: show backend depth without overwhelming the reader.
 
@@ -358,6 +401,18 @@ Acceptance criteria:
 - Accordions are used only for secondary depth, not primary story.
 
 ### Stage 8: Improve Home Page Copy Only If Needed
+
+Status: completed.
+
+Implemented in:
+
+- `src/data/i18n.ts`
+
+Notes:
+
+- The hero now uses the stronger business-systems/data/operational-logic positioning.
+- Secondary project descriptions were reframed as supporting evidence and learning/progression, not equal proof to Ukiyo.
+- Home page order and structure stayed unchanged.
 
 Goal: keep the home page focused and avoid letting secondary projects compete with Ukiyo.
 

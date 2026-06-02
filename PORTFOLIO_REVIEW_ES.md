@@ -17,9 +17,11 @@ Lo importante ya esta implementado:
 
 - Portfolio bilingue Espanol/Ingles con rutas estaticas en `/`, `/en/`, `/proyectos/ukiyo/` y `/en/projects/ukiyo/`.
 - Hero reposicionado hacia Backend .NET, e-commerce, datos y sistemas de gestion.
+- Hero refinado hacia sistemas de negocio, datos y logica operativa.
 - Proyectos aparecen antes que experiencia para mostrar evidencia antes que contexto operativo.
 - Ukiyo destacado como case study principal.
-- Case study de Ukiyo con resumen ejecutivo tipo bento, video walkthrough embebido, screenshots reales, alcance de demo, diagrama de arquitectura y modelo de datos conceptual.
+- Proyectos secundarios presentados como soporte/progresion, no como evidencia equivalente a Ukiyo.
+- Case study de Ukiyo con resumen ejecutivo tipo bento, video walkthrough embebido, evidencia visual temprana, alcance de demo, calculadora admin destacada, decisiones backend escaneables, accordions tecnicos y galeria final agrupada.
 - Copy bilingue sincronizado para el contenido visible principal.
 - Metadata localizada, canonical, hreflang y Open Graph.
 - CVs separados por idioma en `public/media/`.
@@ -31,28 +33,30 @@ Lo importante ya esta implementado:
 - Stack relevante para busquedas .NET: ASP.NET Core, EF Core, SQL Server, Identity, Stripe y OAuth.
 - Complejidad real: catalogo, carrito, ordenes, roles, empresas, precios, costos, localizacion y administracion.
 - Resumen ejecutivo cerca del hero que permite entender tipo de proyecto, rol, problema, stack, alcance, evidencia y valor recruiter en una lectura rapida.
-- Evidencia visual estatica y dinamica del flujo de Ukiyo.
+- Evidencia visual estatica y dinamica del flujo de Ukiyo: video, flujo cliente, costos por producto, dashboard de precios finales y galeria agrupada.
+- La calculadora administrativa ahora funciona como proof point central: costos base, reglas de margen, soporte SQL y resultado admin.
+- La profundidad tecnica se presenta como `Key Backend Decisions`, con modelo de datos, stack por capas y notas de implementacion en accordions secundarios.
 - Presentacion bilingue para ampliar alcance.
 - Portfolio simple, profesional y suficiente para acompanar postulaciones backend/fullstack.
+- Home page mantiene la estructura actual y evita que proyectos secundarios diluyan el foco backend .NET de Ukiyo.
 
 ## Riesgos pendientes
 
 - La validacion final en produccion depende de revisar Netlify despues de cada push importante.
 - El video aporta evidencia dinamica, pero conviene verificar peso, carga, mobile y reproduccion en produccion.
-- La evidencia backend podria fortalecerse con tests, consultas, decisiones tecnicas o documentacion de arquitectura mas profunda.
-- El siguiente riesgo de densidad esta en las secciones tecnicas posteriores; conviene priorizar evidencia visual temprana, calculadora de pricing y decisiones backend escaneables antes de agregar mas contenido.
+- La evidencia backend podria fortalecerse con tests, consultas, migraciones o documentacion tecnica mas profunda cuando existan como evidencia verificable.
+- El siguiente riesgo de densidad ya no esta en la estructura principal de Ukiyo, sino en agregar mas contenido sin una prueba nueva clara.
 - No hay que presentar Docker, Linux, cloud ni tests como experiencia productiva hasta tener implementacion real y verificable.
 
 ## Mejoras futuras con mas impacto
 
-1. Restaurar impacto visual temprano en Ukiyo con 1 o 2 screenshots fuertes antes de la profundidad tecnica.
-2. Dar mas prominencia a la calculadora admin de pricing como prueba diferencial del sistema.
-3. Convertir profundidad tecnica dispersa en decisiones backend mas escaneables, usando accordions solo para detalles secundarios.
-4. QA visual y funcional en produccion para las 4 rutas principales despues de cambios relevantes.
-5. Verificar la experiencia del video de Ukiyo en desktop/mobile y ajustar solo si afecta carga o legibilidad.
-6. Sumar evidencia backend verificable: tests, validaciones, queries, migraciones o decisiones tecnicas explicadas.
-7. Documentar Docker/Linux/cloud solo cuando exista un deploy real o laboratorio reproducible con evidencia.
-8. Mantener el contenido bilingue sincronizado sin seguir agregando secciones si no aumentan la senal profesional.
+1. QA visual y funcional en produccion para las 4 rutas principales despues de cambios relevantes.
+2. Verificar la experiencia del video de Ukiyo en desktop/mobile y ajustar solo si afecta carga o legibilidad.
+3. Revisar Netlify despues de cada push importante para confirmar que el build publicado refleja los cambios.
+4. Sumar evidencia backend verificable: tests, validaciones, queries, migraciones o decisiones tecnicas explicadas.
+5. Documentar Docker/Linux/cloud solo cuando exista un deploy real o laboratorio reproducible con evidencia.
+6. Mantener el contenido bilingue sincronizado sin seguir agregando secciones si no aumentan la senal profesional.
+7. Si se reduce repeticion visual, conservar `final-prices.png` como prueba principal de la calculadora y usar `cost-by-product.png` como evidencia previa de datos de costo.
 
 ## Criterio para cambios nuevos
 
@@ -66,4 +70,4 @@ Lo importante ya esta implementado:
 
 El portfolio ya cumple su objetivo principal: presentar a Emmanuel Valdez como desarrollador backend/fullstack .NET con evidencia concreta en e-commerce, datos y sistemas de gestion.
 
-La mejora mas valiosa ahora no es rehacer la UI completa, sino continuar el refactor enfocado de Ukiyo: evidencia visual temprana, calculadora de pricing mas fuerte y decisiones backend mas faciles de escanear, manteniendo QA de produccion despues de cada push relevante.
+La mejora mas valiosa ahora no es rehacer la UI completa ni agregar mas secciones. El refactor principal de Ukiyo ya cubre resumen, evidencia visual temprana, calculadora destacada y decisiones backend. Lo siguiente debe ser QA de produccion y nueva evidencia backend real cuando exista.

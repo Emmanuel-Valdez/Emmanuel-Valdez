@@ -79,7 +79,7 @@ export const homeContent = {
       contact: 'Hablemos',
     },
     hero: {
-      title: 'Backend .NET Developer enfocado en e-commerce, datos y sistemas de gestión',
+      title: 'Backend .NET Developer enfocado en sistemas de negocio, datos y lógica operativa',
       lines: [
         {
           text: 'Convierto procesos operativos -costos, stock, órdenes y precios- en software usable y mantenible para negocios reales.',
@@ -182,7 +182,7 @@ export const homeContent = {
         {
           title: 'Proyecto final C# QUARK Academy',
           description:
-            'Calculadora de costos para tienda de ropa creada en C# con Windows Forms. Incluye historial de cotización, restricciones de stock y manejo de errores.',
+            'Proyecto C# de base para practicar lógica de negocio, historial de cotización, restricciones de stock y manejo de errores en Windows Forms.',
           link: '',
           github: 'https://github.com/Emmanuel-Valdez/ProyectoCQuarq',
           image: '/projects/CotizadorTiendaRopa.webp',
@@ -192,7 +192,7 @@ export const homeContent = {
         {
           title: 'Funko shop',
           description:
-            'Tienda virtual de funkos creada con Node.js, Express y MySQL. Incluye operaciones CRUD, carrito de compras, paginación y autenticación.',
+            'Proyecto web de aprendizaje con Node.js, Express y MySQL. Sirve como soporte para mostrar CRUD, carrito, paginación y autenticación fuera del stack .NET principal.',
           link: 'https://fullstackproject-backend.vercel.app/',
           github: 'https://github.com/Emmanuel-Valdez/fullstackproject-backend',
           image: '/projects/funko_shopWeb.webp',
@@ -248,7 +248,7 @@ export const homeContent = {
       contact: 'Let\'s Talk',
     },
     hero: {
-      title: '.NET Backend Developer focused on e-commerce, data, and business management systems',
+      title: '.NET Backend Developer focused on business systems, data, and operational logic',
       lines: [
         {
           text: 'I turn operational workflows - costs, stock, orders, and pricing - into usable, maintainable software for real businesses.',
@@ -351,7 +351,7 @@ export const homeContent = {
         {
           title: 'C# QUARK Academy final project',
           description:
-            'Cost quotation tool for a clothing store built with C# and Windows Forms. Includes quote history, stock restrictions, and error handling.',
+            'Foundational C# project for practicing business logic, quote history, stock restrictions, and error handling in Windows Forms.',
           link: '',
           github: 'https://github.com/Emmanuel-Valdez/ProyectoCQuarq',
           image: '/projects/CotizadorTiendaRopa.webp',
@@ -361,7 +361,7 @@ export const homeContent = {
         {
           title: 'Funko shop',
           description:
-            'Virtual Funko store built with Node.js, Express, and MySQL. Includes CRUD operations, shopping cart, pagination, and authentication.',
+            'Learning web project with Node.js, Express, and MySQL. It supports the portfolio by showing CRUD, cart, pagination, and authentication outside the main .NET stack.',
           link: 'https://fullstackproject-backend.vercel.app/',
           github: 'https://github.com/Emmanuel-Valdez/fullstackproject-backend',
           image: '/projects/funko_shopWeb.webp',
