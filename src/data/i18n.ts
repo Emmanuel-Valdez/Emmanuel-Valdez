@@ -431,6 +431,22 @@ export const ukiyoContent = {
       { label: 'Pricing', value: 'Costos, márgenes, mayorista y minorista' },
       { label: 'Integraciones', value: 'Stripe + Facebook OAuth + ES/EN' },
     ],
+    walkthrough: {
+      eyebrow: 'Video walkthrough',
+      title: 'El flujo completo como evidencia central',
+      description:
+        'Este recorrido muestra Ukiyo de punta a punta: desde la sesión del cliente y la compra hasta la creación de la orden y su seguimiento administrativo. El video resume cómo se conectan tienda, backend, pagos, datos y operación real en una sola experiencia.',
+      videoLabel: 'Video recorrido del caso de estudio Ukiyo Designs',
+      fallback: 'Tu navegador no puede reproducir este video. Podés revisar las capturas del caso de estudio más abajo.',
+      highlights: [
+        'Autenticación, sesión y flujo de compra conectados al carrito.',
+        'Catálogo, detalle de producto y navegación pública orientada a clientes.',
+        'Carrito, Stripe Checkout y creación de órdenes persistidas.',
+        'Visibilidad administrativa de órdenes, totales y datos de clientes demo.',
+        'Gestión de estados desde admin para reflejar preparación, envío y entrega.',
+        'Sincronización del fulfillment para que el cliente vea el avance de su pedido.',
+      ],
+    },
     demoScope: {
       eyebrow: 'Alcance de la demo',
       title: 'Qué se puede probar y qué se muestra como evidencia',
@@ -690,6 +706,22 @@ export const ukiyoContent = {
       { label: 'Pricing', value: 'Costs, margins, wholesale and retail' },
       { label: 'Integrations', value: 'Stripe + Facebook OAuth + ES/EN' },
     ],
+    walkthrough: {
+      eyebrow: 'Video walkthrough',
+      title: 'The full flow as the central evidence',
+      description:
+        'This walkthrough shows Ukiyo end to end: from customer session and purchase flow to order creation and admin tracking. The video summarizes how the store, backend, payments, data, and real operations connect in one experience.',
+      videoLabel: 'Video walkthrough for the Ukiyo Designs case study',
+      fallback: 'Your browser cannot play this video. You can review the case study screenshots below.',
+      highlights: [
+        'Authentication, session, and shopping flow connected to the cart.',
+        'Product catalog, product details, and customer-facing navigation.',
+        'Cart, Stripe Checkout, and persisted order creation.',
+        'Admin visibility over orders, totals, and demo customer data.',
+        'Admin status management for preparation, shipping, and delivery.',
+        'Customer-facing fulfillment sync so users can follow order progress.',
+      ],
+    },
     demoScope: {
       eyebrow: 'Demo scope',
       title: 'What can be tested and what is shown as evidence',
