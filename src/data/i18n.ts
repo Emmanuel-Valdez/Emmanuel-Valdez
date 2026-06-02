@@ -419,7 +419,7 @@ export const ukiyoContent = {
     eyebrow: 'Caso de estudio · ASP.NET Core + SQL Server',
     title: 'Ukiyo Designs',
     intro:
-      'Ukiyo Designs es un sistema e-commerce y de gestión construido con ASP.NET Core MVC y SQL Server para un negocio real de productos físicos. Reemplaza un flujo de costos basado en Excel y centraliza tienda, catálogo, usuarios, roles, órdenes, favoritos, pagos y cálculo administrativo de precios.',
+      'Ukiyo Designs es una aplicación ASP.NET Core MVC + SQL Server creada para reemplazar un flujo de pricing en Excel por un sistema web con tienda, órdenes, roles, pagos y administración de costos.',
     buttons: {
       demo: 'Ver demo de Ukiyo',
       code: 'Ver código en GitHub',
@@ -431,20 +431,27 @@ export const ukiyoContent = {
       { label: 'Pricing', value: 'Costos, márgenes, mayorista y minorista' },
       { label: 'Integraciones', value: 'Stripe + Facebook OAuth + ES/EN' },
     ],
+    summaryCards: [
+      { label: 'Tipo de proyecto', value: 'E-commerce + sistema administrativo', emphasis: true },
+      { label: 'Rol', value: 'Backend, datos y lógica de negocio con entrega fullstack' },
+      { label: 'Problema central', value: 'Pricing operativo que dependía de Excel y decisiones manuales', emphasis: true },
+      { label: 'Stack', value: 'ASP.NET Core MVC, EF Core, SQL Server, Identity, Stripe' },
+      { label: 'Alcance', value: 'Tienda, carrito, órdenes, usuarios, compañías, admin y pricing' },
+      { label: 'Prueba técnica', value: 'Roles, SQL views/triggers, modelo relacional y flujos protegidos' },
+      { label: 'Evidencia', value: 'Demo, GitHub, video walkthrough y capturas reales' },
+      { label: 'Lectura recruiter', value: 'Backend .NET aplicado a reglas de negocio y datos reales', emphasis: true },
+    ],
     walkthrough: {
       eyebrow: 'Video walkthrough',
       title: 'El flujo completo como evidencia central',
       description:
-        'Este recorrido muestra Ukiyo de punta a punta: desde la sesión del cliente y la compra hasta la creación de la orden y su seguimiento administrativo. El video resume cómo se conectan tienda, backend, pagos, datos y operación real en una sola experiencia.',
+        'El video muestra el flujo principal sin exponer permisos sensibles: compra del cliente, creación de la orden y seguimiento administrativo sobre datos persistidos.',
       videoLabel: 'Video recorrido del caso de estudio Ukiyo Designs',
       fallback: 'Tu navegador no puede reproducir este video. Podés revisar las capturas del caso de estudio más abajo.',
       highlights: [
-        'Autenticación, sesión y flujo de compra conectados al carrito.',
-        'Catálogo, detalle de producto y navegación pública orientada a clientes.',
-        'Carrito, Stripe Checkout y creación de órdenes persistidas.',
-        'Visibilidad administrativa de órdenes, totales y datos de clientes demo.',
-        'Gestión de estados desde admin para reflejar preparación, envío y entrega.',
-        'Sincronización del fulfillment para que el cliente vea el avance de su pedido.',
+        'Flujo de cliente: sesión, catálogo, carrito y avance hacia pago.',
+        'Persistencia de órdenes y datos necesarios para seguimiento administrativo.',
+        'Gestión admin de estados para preparación, envío, entrega y visibilidad del cliente.',
       ],
     },
     demoScope: {
@@ -470,30 +477,30 @@ export const ukiyoContent = {
     },
     context: {
       eyebrow: 'Contexto',
-      title: 'De planilla a sistema de negocio',
+      title: 'Del Excel al sistema web',
       paragraphs: [
-        'Ukiyo nace de una necesidad concreta: vender productos fabricados por el negocio y calcular precios con criterios más confiables que una planilla. La solución combina una tienda pública con un panel administrativo donde se gestionan productos, usuarios, compañías, órdenes y variables de costos.',
-        'El backend concentra las reglas de negocio y usa SQL Server para persistir datos, calcular totales y mantener consistencia en precios finales.',
+        'Ukiyo nace para ordenar dos necesidades del negocio: vender productos físicos desde una tienda pública y calcular precios con criterios más consistentes que una planilla.',
+        'La aplicación concentra tienda, administración y pricing en un sistema ASP.NET Core donde SQL Server persiste datos operativos y sostiene reglas de cálculo.',
       ],
     },
     problemTitle: 'Problema',
     solutionTitle: 'Solución',
     problemItems: [
-      'El cálculo de precios dependía de un Excel creado previamente para costos, sueldos, impuestos, ganancia y precio final.',
-      'La información del negocio estaba separada entre archivos, procesos manuales y decisiones administrativas.',
-      'El negocio necesitaba vender productos, gestionar usuarios y mantener criterios consistentes para precios mayoristas y minoristas.',
+      'El pricing dependía de una planilla y de decisiones administrativas difíciles de centralizar.',
+      'La información comercial vivía separada entre catálogo, pedidos, costos y usuarios.',
+      'El negocio necesitaba una base consistente para vender, calcular precios y revisar órdenes.',
     ],
     solutionItems: [
-      'Tienda pública para explorar productos, buscar, guardar favoritos y comprar.',
-      'Panel administrativo para productos, empresas, roles, órdenes y datos de cálculo.',
-      'Calculadora de precios con telas, herrajes, packaging, costos fijos, costos porcentuales, márgenes y dashboard de precios finales.',
-      'Integración con Identity, Facebook OAuth, Stripe y localización en español/inglés.',
+      'Tienda pública para catálogo, favoritos, carrito y flujo de compra.',
+      'Panel administrativo para productos, compañías, usuarios, roles y órdenes.',
+      'Calculadora que conecta costos, márgenes y precios finales sobre datos persistidos.',
+      'Integraciones con Identity, Facebook OAuth, Stripe y localización ES/EN.',
     ],
     architecture: {
       eyebrow: 'Arquitectura',
-      title: 'Un sistema web con lógica de negocio centralizada',
+      title: 'Arquitectura en una mirada',
       description:
-        'Ukiyo separa el uso público y administrativo, pero ambos flujos pasan por la misma aplicación ASP.NET Core MVC. El backend aplica reglas de negocio, Entity Framework Core conecta con SQL Server y los servicios externos cubren pago, autenticación social y localización.',
+        'La aplicación mantiene tienda pública y panel administrativo dentro de un monolito ASP.NET Core MVC. EF Core conecta el dominio con SQL Server, mientras Identity, Stripe y OAuth cubren autenticación, pagos e integraciones externas.',
       flowAriaLabel: 'Flujo técnico de Ukiyo Designs',
       steps: [
         { title: 'Cliente / Admin', description: 'Tienda pública, carrito, órdenes y panel administrativo.' },
@@ -534,9 +541,9 @@ export const ukiyoContent = {
     },
     stackLayers: {
       eyebrow: 'Stack por capas',
-      title: 'Qué responsabilidad cumple cada parte',
+      title: 'Responsabilidad por capa',
       description:
-        'La arquitectura prioriza una aplicación monolítica clara: UI, reglas, datos e integraciones en capas fáciles de explicar y mantener.',
+        'La estructura separa interfaz, reglas, datos e integraciones sin ocultar que el proyecto sigue siendo un monolito MVC mantenible.',
       items: [
         { layer: 'Interfaz', items: ['Tienda pública', 'Panel administrativo', 'Localización ES/EN'] },
         { layer: 'Aplicación', items: ['ASP.NET Core 8 MVC', 'Identity y roles', 'Reglas de precios'] },
@@ -547,16 +554,14 @@ export const ukiyoContent = {
     calculator: {
       eyebrow: 'Calculadora administrativa',
       title: 'Reglas de precio basadas en costos reales',
-      description: 'El precio minorista final queda a criterio administrativo, pero el sistema entrega una base objetiva para decidir.',
+      description: 'La calculadora convierte materiales, costos fijos, costos porcentuales y márgenes en precios sugeridos para decisiones administrativas.',
       finalTitle: 'Dashboard de precios finales',
       finalDescription:
-        'La lista de precios finales funciona como control operativo: permite revisar costos, márgenes y precios publicados antes de aplicar cambios comerciales.',
+        'El dashboard permite comparar precios vigentes contra valores calculados, detectar productos que requieren revisión y mantener la decisión comercial final en manos del administrador.',
       inputs: [
-        'Telas y materiales principales.',
-        'Herrajes: botones, cierres, hebillas y componentes por prenda/producto.',
-        'Packaging por categoría.',
-        'Costos fijos: impuestos, alquiler, servicios, herramientas y gastos operativos.',
-        'Costos porcentuales: comisiones de plataforma, pasarelas de pago y otros cargos variables.',
+        'Materiales, telas, herrajes y packaging por producto o categoría.',
+        'Costos fijos como impuestos, alquiler, servicios, herramientas y gastos operativos.',
+        'Costos porcentuales como comisiones de plataforma, pasarelas de pago y cargos variables.',
         'Márgenes para precio mayorista justo y precio minorista sugerido.',
       ],
       finalFeatures: [
@@ -607,11 +612,11 @@ export const ukiyoContent = {
       stackTitle: 'Stack',
       stackAriaLabel: 'Stack técnico de Ukiyo Designs',
       highlights: [
-        'Modelo multi-compañía para separar operaciones y usuarios asociados a empresas.',
-        'Roles diferenciados para clientes, compañías, empleados y administradores.',
-        'SQL views específicas para costos fijos mensuales, costos porcentuales, costos por producto y precios finales.',
-        'SQL triggers para mantener totales actualizados cuando cambian cantidades o precios de telas, herrajes y packaging.',
-        'Migraciones EF Core, seed data y reparación inicial de filas necesarias para la calculadora.',
+        'Modelo multi-compañía para separar usuarios y operaciones asociadas a empresas sin mezclar responsabilidades.',
+        'Identity y roles para diferenciar permisos de clientes, compañías, empleados y administradores.',
+        'SQL views para centralizar costos fijos, costos porcentuales, costos por producto y precios finales calculados.',
+        'SQL triggers para mantener totales consistentes cuando cambian cantidades o precios de insumos.',
+        'Migraciones, seed data y reparación inicial para asegurar que la calculadora tenga filas base válidas.',
       ],
       stack: [
         'ASP.NET Core 8 MVC',
@@ -628,13 +633,12 @@ export const ukiyoContent = {
       eyebrow: 'Impacto',
       title: 'Qué demuestra este proyecto',
       description:
-        'Ukiyo muestra capacidad para transformar un problema de negocio en software funcional: modelar datos, implementar reglas, conectar servicios externos y construir una interfaz usable para clientes y administración. Es un proyecto fullstack, pero el valor principal está en el backend, la base de datos y la lógica de negocio.',
+        'Ukiyo demuestra capacidad para convertir un problema operativo real en software backend funcional: modelado relacional, autenticación, roles, pagos, reglas de pricing, persistencia SQL y administración de órdenes.',
       items: [
-        'Pruebas manuales completas antes de preparar la demo del portfolio.',
-        'Validación del flujo de compra, acceso a órdenes, disponibilidad de productos y flujos login/carrito.',
-        'Revisión de soft-delete de compañías, deletes de calculadora y metadata de localización.',
-        'Evidencia visible del alcance del sistema: tienda pública, panel administrativo, roles, pagos, órdenes, pricing y persistencia relacional.',
-        'Mejoras técnicas pendientes documentadas internamente, sin presentarlas como experiencia hasta implementarlas y validarlas.',
+        'Flujo de compra, carrito, login, disponibilidad de productos y acceso a órdenes revisados manualmente antes de publicar la demo.',
+        'Pantallas públicas y administrativas documentadas con video y capturas reales.',
+        'Separación clara entre demo pública, áreas protegidas y evidencia visual de flujos internos.',
+        'Proyecto fullstack con valor principal en backend, base de datos y reglas de negocio aplicadas.',
       ],
     },
     media: {
@@ -694,7 +698,7 @@ export const ukiyoContent = {
     eyebrow: 'Case study · ASP.NET Core + SQL Server',
     title: 'Ukiyo Designs',
     intro:
-      'Ukiyo Designs is an e-commerce and management system built with ASP.NET Core MVC and SQL Server for a real physical-products business. It replaces an Excel-based cost workflow and centralizes the store, catalog, users, roles, orders, favorites, payments, and admin price calculation.',
+      'Ukiyo Designs is an ASP.NET Core MVC + SQL Server application built to replace an Excel-based pricing workflow with a web system for storefront, orders, roles, payments, and cost administration.',
     buttons: {
       demo: 'View Ukiyo demo',
       code: 'View code on GitHub',
@@ -706,20 +710,27 @@ export const ukiyoContent = {
       { label: 'Pricing', value: 'Costs, margins, wholesale and retail' },
       { label: 'Integrations', value: 'Stripe + Facebook OAuth + ES/EN' },
     ],
+    summaryCards: [
+      { label: 'Project type', value: 'E-commerce + admin business system', emphasis: true },
+      { label: 'Role', value: 'Backend, data, and business logic with fullstack delivery' },
+      { label: 'Core problem', value: 'Operational pricing depended on Excel and manual decisions', emphasis: true },
+      { label: 'Stack', value: 'ASP.NET Core MVC, EF Core, SQL Server, Identity, Stripe' },
+      { label: 'Scope', value: 'Storefront, cart, orders, users, companies, admin, and pricing' },
+      { label: 'Technical proof', value: 'Roles, SQL views/triggers, relational model, and protected flows' },
+      { label: 'Evidence', value: 'Demo, GitHub, video walkthrough, and real screenshots' },
+      { label: 'Recruiter takeaway', value: '.NET backend work applied to business rules and real data', emphasis: true },
+    ],
     walkthrough: {
       eyebrow: 'Video walkthrough',
       title: 'The full flow as the central evidence',
       description:
-        'This walkthrough shows Ukiyo end to end: from customer session and purchase flow to order creation and admin tracking. The video summarizes how the store, backend, payments, data, and real operations connect in one experience.',
+        'The video shows the main flow without exposing sensitive permissions: customer purchase, order creation, and admin tracking over persisted data.',
       videoLabel: 'Video walkthrough for the Ukiyo Designs case study',
       fallback: 'Your browser cannot play this video. You can review the case study screenshots below.',
       highlights: [
-        'Authentication, session, and shopping flow connected to the cart.',
-        'Product catalog, product details, and customer-facing navigation.',
-        'Cart, Stripe Checkout, and persisted order creation.',
-        'Admin visibility over orders, totals, and demo customer data.',
-        'Admin status management for preparation, shipping, and delivery.',
-        'Customer-facing fulfillment sync so users can follow order progress.',
+        'Customer flow: session, catalog, cart, and movement toward payment.',
+        'Persisted orders and data required for administrative tracking.',
+        'Admin status management for preparation, shipping, delivery, and customer visibility.',
       ],
     },
     demoScope: {
@@ -745,30 +756,30 @@ export const ukiyoContent = {
     },
     context: {
       eyebrow: 'Context',
-      title: 'From spreadsheet to business system',
+      title: 'From Excel to a web system',
       paragraphs: [
-        'Ukiyo started from a concrete need: selling products made by the business and calculating prices with criteria more reliable than a spreadsheet. The solution combines a public store with an admin panel for products, users, companies, orders, and cost variables.',
-        'The backend centralizes business rules and uses SQL Server to persist data, calculate totals, and keep final prices consistent.',
+        'Ukiyo was built to organize two business needs: selling physical products through a public store and calculating prices with more consistent criteria than a spreadsheet.',
+        'The application brings storefront, administration, and pricing into an ASP.NET Core system where SQL Server persists operational data and supports calculation rules.',
       ],
     },
     problemTitle: 'Problem',
     solutionTitle: 'Solution',
     problemItems: [
-      'Price calculation depended on an Excel file previously created for costs, wages, taxes, profit, and final price.',
-      'Business information was split between files, manual processes, and administrative decisions.',
-      'The business needed to sell products, manage users, and keep consistent criteria for wholesale and retail prices.',
+      'Pricing depended on a spreadsheet and administrative decisions that were hard to centralize.',
+      'Commercial information was split across catalog, orders, costs, and users.',
+      'The business needed a consistent base for selling, calculating prices, and reviewing orders.',
     ],
     solutionItems: [
-      'Public store for browsing products, searching, saving favorites, and buying.',
-      'Admin panel for products, companies, roles, orders, and calculation data.',
-      'Pricing calculator with fabrics, hardware, packaging, fixed costs, percentage costs, margins, and final-price dashboard.',
-      'Integration with Identity, Facebook OAuth, Stripe, and Spanish/English localization.',
+      'Public store for catalog, favorites, cart, and purchase flow.',
+      'Admin panel for products, companies, users, roles, and orders.',
+      'Calculator that connects costs, margins, and final prices over persisted data.',
+      'Integrations with Identity, Facebook OAuth, Stripe, and ES/EN localization.',
     ],
     architecture: {
       eyebrow: 'Architecture',
-      title: 'A web system with centralized business logic',
+      title: 'Architecture in one glance',
       description:
-        'Ukiyo separates public and administrative usage, but both flows run through the same ASP.NET Core MVC application. The backend applies business rules, Entity Framework Core connects to SQL Server, and external services cover payments, social authentication, and localization.',
+        'The application keeps the public store and admin panel inside a maintainable ASP.NET Core MVC monolith. EF Core connects the domain to SQL Server, while Identity, Stripe, and OAuth cover authentication, payments, and external integrations.',
       flowAriaLabel: 'Technical flow for Ukiyo Designs',
       steps: [
         { title: 'Customer / Admin', description: 'Public store, cart, orders, and admin panel.' },
@@ -809,9 +820,9 @@ export const ukiyoContent = {
     },
     stackLayers: {
       eyebrow: 'Stack by layer',
-      title: 'What each part is responsible for',
+      title: 'Responsibility by layer',
       description:
-        'The architecture prioritizes a clear monolithic application: UI, rules, data, and integrations in layers that are easy to explain and maintain.',
+        'The structure separates interface, rules, data, and integrations while keeping the project as a maintainable MVC monolith.',
       items: [
         { layer: 'Interface', items: ['Public store', 'Admin panel', 'ES/EN localization'] },
         { layer: 'Application', items: ['ASP.NET Core 8 MVC', 'Identity and roles', 'Pricing rules'] },
@@ -822,16 +833,14 @@ export const ukiyoContent = {
     calculator: {
       eyebrow: 'Admin calculator',
       title: 'Pricing rules based on real costs',
-      description: 'The final retail price remains an admin decision, but the system provides an objective base for that decision.',
+      description: 'The calculator turns materials, fixed costs, percentage-based costs, and margins into suggested prices for administrative decisions.',
       finalTitle: 'Final-price dashboard',
       finalDescription:
-        'The final-price list works as an operational control: it lets the admin review costs, margins, and published prices before applying commercial changes.',
+        'The dashboard compares current prices against calculated values, highlights products that need review, and keeps the final commercial decision in the admin\'s hands.',
       inputs: [
-        'Fabrics and main materials.',
-        'Hardware: buttons, zippers, buckles, and product/garment components.',
-        'Packaging by category.',
-        'Fixed costs: taxes, rent, utilities, tools, and operating expenses.',
-        'Percentage costs: platform commissions, payment gateway fees, and other variable charges.',
+        'Materials, fabrics, hardware, and packaging by product or category.',
+        'Fixed costs such as taxes, rent, utilities, tools, and operating expenses.',
+        'Percentage costs such as platform commissions, payment gateway fees, and variable charges.',
         'Margins for fair wholesale price and suggested retail price.',
       ],
       finalFeatures: [
@@ -882,11 +891,11 @@ export const ukiyoContent = {
       stackTitle: 'Stack',
       stackAriaLabel: 'Technical stack for Ukiyo Designs',
       highlights: [
-        'Multi-company model to separate operations and users associated with companies.',
-        'Different roles for customers, companies, employees, and admins.',
-        'Specific SQL views for monthly fixed costs, percentage costs, product costs, and final prices.',
-        'SQL triggers to keep totals updated when fabric, hardware, or packaging quantities/prices change.',
-        'EF Core migrations, seed data, and startup repair flows for calculator rows required by the system.',
+        'Multi-company model to separate users and company operations without mixing responsibilities.',
+        'Identity and roles to distinguish permissions for customers, companies, employees, and admins.',
+        'SQL views to centralize fixed costs, percentage costs, product costs, and calculated final prices.',
+        'SQL triggers to keep totals consistent when input quantities or prices change.',
+        'Migrations, seed data, and startup repair flows to ensure the calculator has valid base rows.',
       ],
       stack: [
         'ASP.NET Core 8 MVC',
@@ -903,13 +912,12 @@ export const ukiyoContent = {
       eyebrow: 'Impact',
       title: 'What this project demonstrates',
       description:
-        'Ukiyo shows the ability to turn a business problem into functional software: model data, implement rules, connect external services, and build a usable interface for customers and admins. It is a fullstack project, but its main value is in the backend, database, and business logic.',
+        'Ukiyo demonstrates the ability to turn a real operational problem into functional backend software: relational modeling, authentication, roles, payments, pricing rules, SQL persistence, and order administration.',
       items: [
-        'Complete manual testing before preparing the portfolio demo.',
-        'Validation of checkout guards, order access, product availability, and login/cart flows.',
-        'Review of company soft-delete, calculator deletes, and localization metadata.',
-        'Visible evidence of the system scope: public store, admin panel, roles, payments, orders, pricing, and relational persistence.',
-        'Pending technical improvements are documented internally and not presented as experience until implemented and validated.',
+        'Purchase flow, cart, login, product availability, and order access were manually reviewed before publishing the demo.',
+        'Public and admin screens are documented with video and real screenshots.',
+        'The case study clearly separates public demo access, protected areas, and visual evidence for internal flows.',
+        'Fullstack project with its main value in backend, database design, and applied business rules.',
       ],
     },
     media: {
