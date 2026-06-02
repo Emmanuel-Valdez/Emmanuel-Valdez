@@ -502,6 +502,25 @@ export const ukiyoContent = {
       'Calculadora que conecta costos, márgenes y precios finales sobre datos persistidos.',
       'Integraciones con Identity, Facebook OAuth, Stripe y localización ES/EN.',
     ],
+    visualProof: {
+      eyebrow: 'Evidencia visual',
+      title: 'Producto y pricing antes de la profundidad técnica',
+      description:
+        'Dos pantallas clave muestran el valor del sistema antes de entrar en arquitectura: compra del cliente y decisiones administrativas de precio.',
+      items: [
+        {
+          screenshotIndex: 1,
+          label: 'Flujo de cliente',
+          takeaway: 'La tienda conecta catálogo, detalle de producto y carrito en una experiencia de compra verificable.',
+        },
+        {
+          screenshotIndex: 3,
+          label: 'Datos de costos',
+          takeaway: 'El módulo de costos centraliza los valores base por producto que alimentan el cálculo de precios, márgenes y decisiones comerciales del administrador.',
+          emphasis: true,
+        },
+      ],
+    },
     architecture: {
       eyebrow: 'Arquitectura',
       title: 'Arquitectura en una mirada',
@@ -561,6 +580,13 @@ export const ukiyoContent = {
       eyebrow: 'Calculadora administrativa',
       title: 'Reglas de precio basadas en costos reales',
       description: 'La calculadora convierte materiales, costos fijos, costos porcentuales y márgenes en precios sugeridos para decisiones administrativas.',
+      proofTitle: 'Por qué es el proof point diferencial',
+      proofItems: [
+        { title: 'Inputs de costo', description: 'Materiales, packaging, costos fijos y comisiones alimentan el cálculo desde datos administrables.' },
+        { title: 'Reglas de negocio', description: 'Los márgenes mayoristas y minoristas se aplican como criterios explícitos, no como decisiones sueltas en una planilla.' },
+        { title: 'Soporte SQL', description: 'Views y triggers ayudan a mantener totales y precios calculados consistentes.' },
+        { title: 'Resultado admin', description: 'El administrador compara costos, precios actuales y precios sugeridos antes de decidir cambios comerciales.' },
+      ],
       finalTitle: 'Dashboard de precios finales',
       finalDescription:
         'El dashboard permite comparar precios vigentes contra valores calculados, detectar productos que requieren revisión y mantener la decisión comercial final en manos del administrador.',
@@ -614,9 +640,26 @@ export const ukiyoContent = {
     },
     backend: {
       eyebrow: 'Backend',
-      title: 'Decisiones técnicas relevantes',
+      title: 'Key Backend Decisions',
+      description:
+        'Estas decisiones muestran backend .NET aplicado a flujos públicos, administración, persistencia relacional, pricing e integraciones externas.',
       stackTitle: 'Stack',
       stackAriaLabel: 'Stack técnico de Ukiyo Designs',
+      decisions: [
+        { title: 'ASP.NET Core MVC para tienda y admin', description: 'Un monolito MVC mantiene cerca las vistas, controladores y reglas del dominio sin introducir complejidad distribuida innecesaria.' },
+        { title: 'EF Core + SQL Server para persistencia relacional', description: 'El modelo conecta catálogo, usuarios, órdenes, costos y precios en una base consistente para la operación.' },
+        { title: 'Identity roles para flujos protegidos', description: 'Clientes, compañías, empleados y administradores pueden tener permisos distintos sin exponer acciones sensibles en la demo pública.' },
+        { title: 'SQL views para pricing y costos', description: 'Las views centralizan cálculos de costos por producto y precios finales para que la UI no replique lógica crítica.' },
+        { title: 'SQL triggers para consistencia de totales', description: 'Los triggers ayudan a mantener valores derivados sincronizados cuando cambian cantidades o precios de insumos.' },
+        { title: 'Stripe y Facebook OAuth como integraciones externas', description: 'Pagos y autenticación social se integran como servicios acotados alrededor del flujo principal de compra.' },
+        { title: 'Localización ES/EN para contenido público', description: 'La interfaz bilingüe permite validar navegación y contenido visible en español e inglés desde el mismo sistema.' },
+      ],
+      detailsTitle: 'Detalles técnicos secundarios',
+      detailsDescription:
+        'Estos detalles siguen disponibles para hiring managers, pero quedan debajo de las decisiones principales para reducir densidad visual.',
+      dataModelDetailsTitle: 'Modelo de datos conceptual',
+      stackDetailsTitle: 'Stack por capas',
+      implementationDetailsTitle: 'Notas de implementación',
       highlights: [
         'Modelo multi-compañía para separar usuarios y operaciones asociadas a empresas sin mezclar responsabilidades.',
         'Identity y roles para diferenciar permisos de clientes, compañías, empleados y administradores.',
@@ -652,6 +695,11 @@ export const ukiyoContent = {
       title: 'Capturas del producto funcionando',
       description:
         'Capturas tomadas desde la app publicada con una cuenta demo, mostrando tanto el flujo público como pantallas administrativas.',
+      groups: [
+        { title: 'Flujo de cliente', screenshotIndexes: [0, 1] },
+        { title: 'Flujo administrativo', screenshotIndexes: [2, 5] },
+        { title: 'Workflow de pricing', screenshotIndexes: [3, 4] },
+      ],
       screenshots: [
         {
           src: '/projects/ukiyo/store-home.jpg',
@@ -787,6 +835,25 @@ export const ukiyoContent = {
       'Calculator that connects costs, margins, and final prices over persisted data.',
       'Integrations with Identity, Facebook OAuth, Stripe, and ES/EN localization.',
     ],
+    visualProof: {
+      eyebrow: 'Visual evidence',
+      title: 'Product and pricing before technical depth',
+      description:
+        'Two key screens show the system value before architecture details: customer purchase flow and administrative pricing decisions.',
+      items: [
+        {
+          screenshotIndex: 1,
+          label: 'Customer flow',
+          takeaway: 'The store connects catalog, product detail, and cart into a verifiable purchase experience.',
+        },
+        {
+          screenshotIndex: 3,
+          label: 'Cost data',
+          takeaway: 'This module centralizes product-level cost data used to calculate prices, margins, and admin-controlled commercial decisions.',
+          emphasis: true,
+        },
+      ],
+    },
     architecture: {
       eyebrow: 'Architecture',
       title: 'Architecture in one glance',
@@ -846,6 +913,13 @@ export const ukiyoContent = {
       eyebrow: 'Admin calculator',
       title: 'Pricing rules based on real costs',
       description: 'The calculator turns materials, fixed costs, percentage-based costs, and margins into suggested prices for administrative decisions.',
+      proofTitle: 'Why this is the differentiated proof point',
+      proofItems: [
+        { title: 'Cost inputs', description: 'Materials, packaging, fixed costs, and fees feed the calculation from admin-managed data.' },
+        { title: 'Business rules', description: 'Wholesale and retail margins are applied as explicit criteria instead of isolated spreadsheet decisions.' },
+        { title: 'SQL support', description: 'Views and triggers help keep totals and calculated prices consistent.' },
+        { title: 'Admin outcome', description: 'The admin compares costs, current prices, and suggested prices before making commercial changes.' },
+      ],
       finalTitle: 'Final-price dashboard',
       finalDescription:
         'The dashboard compares current prices against calculated values, highlights products that need review, and keeps the final commercial decision in the admin\'s hands.',
@@ -899,9 +973,26 @@ export const ukiyoContent = {
     },
     backend: {
       eyebrow: 'Backend',
-      title: 'Relevant technical decisions',
+      title: 'Key Backend Decisions',
+      description:
+        '.NET backend decisions applied to public flows, administration, relational persistence, pricing, and external integrations.',
       stackTitle: 'Stack',
       stackAriaLabel: 'Technical stack for Ukiyo Designs',
+      decisions: [
+        { title: 'ASP.NET Core MVC for store and admin', description: 'A MVC monolith keeps views, controllers, and domain rules close without adding unnecessary distributed complexity.' },
+        { title: 'EF Core + SQL Server for relational persistence', description: 'The model connects catalog, users, orders, costs, and prices in one consistent operational database.' },
+        { title: 'Identity roles for protected flows', description: 'Customers, companies, employees, and admins can have distinct permissions without exposing sensitive actions in the public demo.' },
+        { title: 'SQL views for pricing and costs', description: 'Views centralize cost-by-product and final-price calculations so the UI does not duplicate critical logic.' },
+        { title: 'SQL triggers for total consistency', description: 'Triggers help keep derived values synchronized when input quantities or prices change.' },
+        { title: 'Stripe and Facebook OAuth as external integrations', description: 'Payments and social authentication are integrated as bounded services around the main purchase flow.' },
+        { title: 'ES/EN localization for public content', description: 'The bilingual interface validates navigation and visible content in Spanish and English from the same system.' },
+      ],
+      detailsTitle: 'Secondary technical details',
+      detailsDescription:
+        'These details remain available for hiring managers, but sit below the main decisions to reduce visual density.',
+      dataModelDetailsTitle: 'Conceptual data model',
+      stackDetailsTitle: 'Stack by layer',
+      implementationDetailsTitle: 'Implementation notes',
       highlights: [
         'Multi-company model to separate users and company operations without mixing responsibilities.',
         'Identity and roles to distinguish permissions for customers, companies, employees, and admins.',
@@ -937,6 +1028,11 @@ export const ukiyoContent = {
       title: 'Screenshots of the working product',
       description:
         'Screenshots taken from the published app using a demo account, showing both the public flow and admin screens.',
+      groups: [
+        { title: 'Customer flow', screenshotIndexes: [0, 1] },
+        { title: 'Admin flow', screenshotIndexes: [2, 5] },
+        { title: 'Pricing workflow', screenshotIndexes: [3, 4] },
+      ],
       screenshots: [
         {
           src: '/projects/ukiyo/store-home.jpg',
