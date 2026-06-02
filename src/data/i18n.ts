@@ -431,6 +431,27 @@ export const ukiyoContent = {
       { label: 'Pricing', value: 'Costos, márgenes, mayorista y minorista' },
       { label: 'Integraciones', value: 'Stripe + Facebook OAuth + ES/EN' },
     ],
+    demoScope: {
+      eyebrow: 'Alcance de la demo',
+      title: 'Qué se puede probar y qué se muestra como evidencia',
+      description:
+        'La demo publicada permite revisar el producto en funcionamiento sin exponer datos operativos sensibles ni permisos administrativos completos.',
+      publicTitle: 'Disponible públicamente',
+      protectedTitle: 'Protegido por rol',
+      evidenceTitle: 'Evidencia en capturas',
+      publicItems: [
+        'Navegación de la tienda, catálogo, detalle de producto y flujo hacia carrito.',
+        'Interfaz localizada en español e inglés para validar navegación y contenido visible.',
+      ],
+      protectedItems: [
+        'Panel administrativo, gestión de productos, compañías, órdenes y variables de cálculo.',
+        'Acciones que modifican precios, costos, usuarios, estados de orden o datos internos del negocio.',
+      ],
+      evidenceItems: [
+        'Las capturas documentan roles, órdenes, módulos administrativos, pagos, pricing y datos persistidos en SQL Server.',
+        'Las pantallas protegidas se muestran con datos demo para explicar alcance técnico sin abrir permisos sensibles.',
+      ],
+    },
     context: {
       eyebrow: 'Contexto',
       title: 'De planilla a sistema de negocio',
@@ -571,7 +592,7 @@ export const ukiyoContent = {
         'Ukiyo muestra capacidad para transformar un problema de negocio en software funcional: modelar datos, implementar reglas, conectar servicios externos y construir una interfaz usable para clientes y administración. Es un proyecto fullstack, pero el valor principal está en el backend, la base de datos y la lógica de negocio.',
       items: [
         'Pruebas manuales completas antes de preparar la demo del portfolio.',
-        'Validación de checkout guards, acceso a órdenes, disponibilidad de productos y flujos login/carrito.',
+        'Validación del flujo de compra, acceso a órdenes, disponibilidad de productos y flujos login/carrito.',
         'Revisión de soft-delete de compañías, deletes de calculadora y metadata de localización.',
         'Evidencia visible del alcance del sistema: tienda pública, panel administrativo, roles, pagos, órdenes, pricing y persistencia relacional.',
         'Mejoras técnicas pendientes documentadas internamente, sin presentarlas como experiencia hasta implementarlas y validarlas.',
@@ -646,6 +667,27 @@ export const ukiyoContent = {
       { label: 'Pricing', value: 'Costs, margins, wholesale and retail' },
       { label: 'Integrations', value: 'Stripe + Facebook OAuth + ES/EN' },
     ],
+    demoScope: {
+      eyebrow: 'Demo scope',
+      title: 'What can be tested and what is shown as evidence',
+      description:
+        'The published demo lets visitors inspect the working product without exposing sensitive operational data or full admin permissions.',
+      publicTitle: 'Publicly available',
+      protectedTitle: 'Role-protected',
+      evidenceTitle: 'Screenshot evidence',
+      publicItems: [
+        'Store navigation, catalog, product detail, and flow toward the cart.',
+        'Spanish/English localized interface to validate navigation and visible content.',
+      ],
+      protectedItems: [
+        'Admin panel, product management, companies, orders, and calculation variables.',
+        'Actions that change prices, costs, users, order statuses, or internal business data.',
+      ],
+      evidenceItems: [
+        'Screenshots document roles, orders, admin modules, payments, pricing, and SQL Server-backed data.',
+        'Protected screens are shown with demo data to explain technical scope without opening sensitive permissions.',
+      ],
+    },
     context: {
       eyebrow: 'Context',
       title: 'From spreadsheet to business system',
