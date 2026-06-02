@@ -95,6 +95,8 @@ The admin price calculator considers:
 - Role-based flows for customers, company users, employees, and admins.
 - SQL views for price and cost calculations.
 - SQL triggers to keep unit and product-level totals updated.
+- Demo scope documentation that separates public flows, protected admin areas, and screenshot-based evidence.
+- Conceptual data model section that groups catalog, accounts, orders, costs, and pricing without exposing sensitive internals.
 - Seeded demo data and startup repair flows for calculator rows.
 - Manual regression testing completed before portfolio/demo publish readiness.
 
@@ -233,17 +235,26 @@ export default defineConfig({
 
 Planned improvements that strengthen the backend/fullstack portfolio signal:
 
+- Review the latest Netlify deployment after each pushed portfolio update.
 - Add updated screenshots, GIFs, or short videos for Ukiyo workflows.
 - Document a Docker-based deployment once a project is running on the Oracle Linux server.
 - Add notes about the cloud architecture course and infrastructure decisions when there is concrete deployment evidence.
 - Keep the Spanish and English versions synchronized as the portfolio evolves.
 - Improve visual polish without shifting the positioning toward pure frontend.
 
+Recently completed portfolio improvements:
+
+- Projects now appear before experience on the homepage.
+- Ukiyo includes visible technical metrics on the featured project card.
+- Hero actions were simplified around the Ukiyo case study, CV download, and email contact.
+- The Ukiyo case study now explains demo scope and protected admin boundaries.
+- The Ukiyo data model now includes business-oriented entity groups and a compact conceptual relationship diagram.
+
 ## Repository Notes
 
 - Do not commit local assistant context files.
 - Keep generated build output out of Git.
-- Keep visible Spanish UI copy unchanged until the translation feature is implemented.
+- Keep Spanish and English public UI copy synchronized.
 - Keep secrets out of the repository. Use environment variables or ignored local files for credentials.
 
 ## License and Usage
