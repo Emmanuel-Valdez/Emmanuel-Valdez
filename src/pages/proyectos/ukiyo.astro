@@ -19,6 +19,7 @@ const calculationInputs = content.calculator.inputs;
 const finalPriceFeatures = content.calculator.finalFeatures;
 const backendHighlights = content.backend.highlights;
 const dataModelGroups = content.dataModel.groups;
+const dataModelDiagram = content.dataModel.diagram;
 const readinessItems = content.impact.items;
 const screenshots = content.media.screenshots;
 ---
@@ -333,31 +334,72 @@ const screenshots = content.media.screenshots;
         </div>
       </section>
 
-      <section class="mt-10 rounded-3xl border border-white/10 bg-white/[0.03] p-5 sm:mt-14 sm:p-6 md:p-8">
-        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+      <section class="relative mt-10 overflow-hidden rounded-3xl border border-sky-300/20 bg-slate-950/70 p-5 shadow-2xl shadow-sky-950/10 sm:mt-14 sm:p-6 md:p-8">
+        <div class="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-sky-300/70 to-transparent" aria-hidden="true"></div>
+        <div class="absolute -right-24 -top-24 size-64 rounded-full bg-sky-300/10 blur-3xl" aria-hidden="true"></div>
+
+        <div class="relative flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">{content.dataModel.eyebrow}</p>
-            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">{content.dataModel.title}</h2>
+            <h2 class="mt-3 max-w-2xl text-balance text-2xl font-bold text-white sm:text-3xl">{content.dataModel.title}</h2>
           </div>
-          <p class="max-w-sm text-sm leading-6 text-gray-400">
+          <p class="max-w-md text-pretty text-sm leading-6 text-gray-300">
             {content.dataModel.description}
           </p>
         </div>
 
-        <div class="mt-6 grid gap-3 sm:mt-8 sm:gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {dataModelGroups.map((group) => (
-            <article class="rounded-2xl border border-white/10 bg-slate-950/70 p-4 sm:p-5">
-              <h3 class="text-lg font-bold text-white">{group.title}</h3>
-              <ul class="mt-4 space-y-2 text-sm text-gray-300">
-                {group.items.map((item) => (
-                  <li class="overflow-hidden break-words rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 font-mono text-[0.7rem] text-gray-300 sm:text-xs">
-                    {item}
-                  </li>
+        <figure class="relative mt-6 rounded-3xl border border-sky-300/15 bg-black/25 p-4 sm:mt-8 sm:p-5 md:p-6" aria-labelledby="data-model-diagram-title">
+          <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h3 id="data-model-diagram-title" class="text-xl font-bold text-white sm:text-2xl">{dataModelDiagram.title}</h3>
+              <p class="mt-2 max-w-2xl text-sm leading-6 text-gray-400">
+                {dataModelDiagram.description}
+              </p>
+            </div>
+          </div>
+
+          <ol class="mt-5 grid gap-3" aria-label={dataModelDiagram.ariaLabel}>
+            {dataModelDiagram.flows.map((flow) => (
+              <li class="grid gap-2 rounded-2xl border border-white/10 bg-slate-950/70 p-3 sm:grid-cols-[1fr_auto_1fr_auto_1fr] sm:items-center sm:p-4">
+                {flow.map((node, nodeIndex) => (
+                  <>
+                    <span class="rounded-xl border border-sky-200/15 bg-white/[0.04] px-3 py-2.5 text-center font-mono text-xs font-semibold leading-5 text-sky-50 sm:text-sm">
+                      {node}
+                    </span>
+                    {nodeIndex < flow.length - 1 && (
+                      <span class="hidden px-1 text-center text-lg font-bold text-sky-200/70 sm:block" aria-hidden="true">→</span>
+                    )}
+                  </>
                 ))}
-              </ul>
-            </article>
+              </li>
+            ))}
+          </ol>
+        </figure>
+
+        <ol class="relative mt-6 grid gap-3 sm:mt-8 sm:gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {dataModelGroups.map((group, index) => (
+            <li>
+              <article class="flex h-full flex-col rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-slate-950/80 p-4 shadow-xl shadow-black/10 sm:p-5">
+                <div class="flex items-start justify-between gap-3">
+                  <h3 class="text-base font-bold leading-6 text-white sm:text-lg">{group.title}</h3>
+                  <span class="rounded-full border border-sky-300/20 bg-sky-300/10 px-2.5 py-1 font-mono text-[0.65rem] font-semibold text-sky-100" aria-hidden="true">
+                    0{index + 1}
+                  </span>
+                </div>
+
+                <ul class="mt-4 flex flex-wrap gap-2 text-sm text-gray-300">
+                  {group.items.map((item) => (
+                    <li>
+                      <code class="block overflow-hidden break-words rounded-lg border border-white/10 bg-slate-950/80 px-2.5 py-2 font-mono text-[0.7rem] leading-none text-gray-200 sm:text-xs">
+                        {item}
+                      </code>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </li>
           ))}
-        </div>
+        </ol>
       </section>
 
       <section class="mt-10 grid gap-4 sm:mt-14 sm:gap-8 lg:grid-cols-[1fr_0.9fr]">

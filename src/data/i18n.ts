@@ -552,14 +552,37 @@ export const ukiyoContent = {
     },
     dataModel: {
       eyebrow: 'Modelo de datos',
-      title: 'Entidades pensadas para e-commerce y pricing',
+      title: 'Modelo relacional para tienda, pedidos y pricing',
       description:
-        'El dominio separa catálogo, usuarios, compañías, órdenes y cálculo de costos para mantener clara la lógica de negocio.',
+        'El dominio agrupa catálogo, cuentas, pedidos y costos para separar responsabilidades y convertir datos operativos en precios calculados.',
+      diagram: {
+        title: 'Relaciones principales del dominio',
+        description:
+          'Resumen conceptual: muestra cómo se conectan las áreas del sistema sin exponer estructura interna, datos sensibles ni reglas comerciales privadas.',
+        ariaLabel: 'Diagrama relacional conceptual del modelo de datos de Ukiyo',
+        flows: [
+          ['Catálogo y carrito', 'Pedidos', 'Operación administrativa'],
+          ['Cuentas y empresas', 'Pedidos', 'Roles y permisos'],
+          ['Insumos de costo', 'SQL views', 'Precios calculados'],
+        ],
+      },
       groups: [
-        { title: 'Comercio', items: ['Product', 'Category', 'ProductImage', 'ShoppingCart'] },
-        { title: 'Órdenes y usuarios', items: ['OrderHeader', 'OrderDetail', 'ApplicationUser', 'Company'] },
-        { title: 'Calculadora', items: ['Fabric', 'GarmentHardware', 'Packaging', 'FixedCost', 'PercentageCost', 'PercentageProfit'] },
-        { title: 'SQL Views', items: ['FixedCostMonthlyView', 'TotalPercentageCostView', 'CostByProductView', 'FinalPriceView'] },
+        { title: 'Catálogo y carrito', items: ['Product', 'Category', 'ProductImage', 'ShoppingCart'] },
+        { title: 'Cuentas y empresas', items: ['ApplicationUser', 'Company'] },
+        { title: 'Pedidos', items: ['OrderHeader', 'OrderDetail'] },
+        {
+          title: 'Costos y pricing',
+          items: [
+            'Fabric',
+            'GarmentHardware',
+            'Packaging',
+            'FixedCost',
+            'PercentageCost',
+            'PercentageProfit',
+            'CostByProductView',
+            'FinalPriceView',
+          ],
+        },
       ],
     },
     backend: {
@@ -788,14 +811,37 @@ export const ukiyoContent = {
     },
     dataModel: {
       eyebrow: 'Data model',
-      title: 'Entities designed for e-commerce and pricing',
+      title: 'Relational model for store, orders, and pricing',
       description:
-        'The domain separates catalog, users, companies, orders, and cost calculation to keep business logic clear.',
+        'The domain groups catalog, accounts, orders, and costs to separate responsibilities and turn operational data into calculated prices.',
+      diagram: {
+        title: 'Main domain relationships',
+        description:
+          'Conceptual summary: it shows how system areas connect without exposing internal structure, sensitive data, or private business rules.',
+        ariaLabel: 'Conceptual relational diagram for the Ukiyo data model',
+        flows: [
+          ['Catalog and cart', 'Orders', 'Admin operations'],
+          ['Accounts and companies', 'Orders', 'Roles and permissions'],
+          ['Cost inputs', 'SQL views', 'Calculated prices'],
+        ],
+      },
       groups: [
-        { title: 'Commerce', items: ['Product', 'Category', 'ProductImage', 'ShoppingCart'] },
-        { title: 'Orders and users', items: ['OrderHeader', 'OrderDetail', 'ApplicationUser', 'Company'] },
-        { title: 'Calculator', items: ['Fabric', 'GarmentHardware', 'Packaging', 'FixedCost', 'PercentageCost', 'PercentageProfit'] },
-        { title: 'SQL Views', items: ['FixedCostMonthlyView', 'TotalPercentageCostView', 'CostByProductView', 'FinalPriceView'] },
+        { title: 'Catalog and cart', items: ['Product', 'Category', 'ProductImage', 'ShoppingCart'] },
+        { title: 'Accounts and companies', items: ['ApplicationUser', 'Company'] },
+        { title: 'Orders', items: ['OrderHeader', 'OrderDetail'] },
+        {
+          title: 'Costs and pricing',
+          items: [
+            'Fabric',
+            'GarmentHardware',
+            'Packaging',
+            'FixedCost',
+            'PercentageCost',
+            'PercentageProfit',
+            'CostByProductView',
+            'FinalPriceView',
+          ],
+        },
       ],
     },
     backend: {
