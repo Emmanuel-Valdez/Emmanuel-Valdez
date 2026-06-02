@@ -1,6 +1,6 @@
 # Emmanuel Valdez Portfolio
 
-Personal developer portfolio for Emmanuel Valdez, a Backend Developer focused on .NET, C#, SQL, e-commerce systems, and business process automation.
+Personal developer portfolio for Emmanuel Valdez, a Backend Developer focused on .NET, C#, SQL Server, business systems, data, and operational logic.
 
 The public UI supports Spanish and English static routes. Code, comments, repository documentation, and implementation notes should stay in English unless broader bilingual documentation is explicitly needed.
 
@@ -20,11 +20,11 @@ Primary focus areas:
 - E-commerce and business management systems.
 - Data modeling, business logic, pricing workflows, and operational processes.
 - Fullstack implementation when needed to deliver usable products.
-- Current cloud architecture training with practical Linux server setup and Docker deployment preparation.
+- Infrastructure topics such as Linux, Docker, and cloud are treated as future growth areas unless backed by implemented, documented evidence.
 
 ## Featured Project: Ukiyo Designs
 
-Ukiyo Designs is the main project showcased in this portfolio because it solves a real business problem.
+Ukiyo Designs is the main technical case study showcased in this portfolio because it proves backend .NET work against a real business problem.
 
 Repository:
 
@@ -59,7 +59,9 @@ The business needed a better way to manage:
 
 Ukiyo was built as an ASP.NET Core 8 MVC application using Entity Framework Core and SQL Server. It includes a public customer store and an admin area for managing products, companies, users, orders, and price calculations.
 
-The portfolio case study now opens with a bento executive summary so recruiters can scan the project type, role, problem, stack, scope, technical proof, evidence, and backend takeaway before reading the deeper narrative.
+The portfolio case study now opens with a reduced technical summary so recruiters can scan role, problem, stack, implementation proof, and backend takeaway before reading the deeper narrative.
+
+The current case study is intentionally developer-centered: brand/product language was reduced, the demo scope was compressed, duplicate stack sections were removed, and screenshots are treated as additional evidence rather than the main story.
 
 The admin price calculator considers:
 
@@ -80,6 +82,14 @@ The admin price calculator considers:
 - Added localization support for Spanish and English.
 - Prepared the project for portfolio/demo publishing.
 
+### What I Built
+
+- SQL Server-backed data model for catalog, accounts, orders, costs, and pricing.
+- ASP.NET Core MVC flows for storefront and administrative workflows.
+- Identity role separation for customer, company, employee, and admin access.
+- Stripe checkout, Facebook OAuth, and Spanish/English localization.
+- Pricing calculator using persisted cost inputs, SQL views, triggers, and admin decision screens.
+
 ### Technical Stack
 
 - ASP.NET Core 8.0 MVC
@@ -97,8 +107,8 @@ The admin price calculator considers:
 - Role-based flows for customers, company users, employees, and admins.
 - SQL views for price and cost calculations.
 - SQL triggers to keep unit and product-level totals updated.
-- Demo scope documentation that separates public flows, protected admin areas, and screenshot-based evidence.
-- Conceptual data model section that groups catalog, accounts, orders, costs, and pricing without exposing sensitive internals.
+- Compact demo scope note that separates public storefront flows from protected admin/pricing areas documented through screenshots.
+- Technical decisions section plus accordions for secondary details such as stack by layer, conceptual data model, and implementation notes.
 - Seeded demo data and startup repair flows for calculator rows.
 - Manual regression testing completed before portfolio/demo publish readiness.
 

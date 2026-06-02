@@ -10,10 +10,10 @@ const content = ukiyoContent[locale];
 const alternatePath = locale === 'es' ? routes.en.ukiyo : routes.es.ukiyo;
 const stack = content.backend.stack;
 const summaryCards = content.summaryCards;
+const whatBuiltItems = content.whatBuilt.items;
 const demoScope = content.demoScope;
 const problemItems = content.problemItems;
 const solutionItems = content.solutionItems;
-const architectureFlows = content.architecture.flows;
 const stackLayers = content.stackLayers.items;
 const calculationInputs = content.calculator.inputs;
 const finalPriceFeatures = content.calculator.finalFeatures;
@@ -116,6 +116,31 @@ const walkthroughHighlights = content.walkthrough.highlights;
         </div>
       </section>
 
+      <section class="mt-8 rounded-3xl border border-sky-300/20 bg-slate-950/70 p-5 sm:mt-10 sm:p-6 md:p-8" aria-labelledby="ukiyo-built-title">
+        <div class="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div>
+            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">
+              {content.whatBuilt.eyebrow}
+            </p>
+            <h2 id="ukiyo-built-title" class="mt-3 text-balance text-2xl font-bold text-white sm:text-3xl">
+              {content.whatBuilt.title}
+            </h2>
+            <p class="mt-4 text-pretty text-sm leading-7 text-gray-300 sm:text-base">
+              {content.whatBuilt.description}
+            </p>
+          </div>
+
+          <ul class="grid gap-3 text-sm leading-6 text-gray-300 sm:grid-cols-2">
+            {whatBuiltItems.map((item) => (
+              <li class="flex gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+                <span class="mt-2 size-1.5 shrink-0 rounded-full bg-sky-300" aria-hidden="true"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <section class="relative mt-8 overflow-hidden rounded-3xl border border-sky-300/20 bg-slate-950/75 p-4 shadow-2xl shadow-sky-950/20 sm:mt-10 sm:p-6 md:p-8" aria-labelledby="ukiyo-walkthrough-title">
         <div class="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-sky-300/80 to-transparent" aria-hidden="true"></div>
         <div class="absolute -left-24 -top-24 size-64 rounded-full bg-sky-300/10 blur-3xl" aria-hidden="true"></div>
@@ -172,64 +197,37 @@ const walkthroughHighlights = content.walkthrough.highlights;
         </div>
       </section>
 
-      <section class="relative mt-8 overflow-hidden rounded-3xl border border-emerald-300/20 bg-slate-950/70 p-5 shadow-2xl shadow-emerald-950/10 sm:mt-10 sm:p-6 md:p-8">
-        <div class="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-emerald-300/80 to-transparent" aria-hidden="true"></div>
-        <div class="absolute -right-20 -top-24 size-56 rounded-full bg-emerald-300/10 blur-3xl" aria-hidden="true"></div>
-
-        <div class="relative grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-          <div>
-            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-emerald-200/80 sm:text-sm sm:tracking-[0.24em]">
-              {demoScope.eyebrow}
-            </p>
-            <h2 class="mt-3 text-balance text-2xl font-bold text-white sm:text-3xl">
-              {demoScope.title}
-            </h2>
-            <p class="mt-4 text-pretty text-sm leading-7 text-gray-300 sm:text-base">
-              {demoScope.description}
-            </p>
-          </div>
-
-          <div class="grid gap-3 sm:gap-4">
-            <article class="rounded-2xl border border-emerald-300/20 bg-emerald-300/[0.08] p-4 sm:p-5">
-              <h3 class="text-lg font-bold text-emerald-50">{demoScope.publicTitle}</h3>
-              <ul class="mt-4 space-y-3 text-sm leading-6 text-gray-300">
-                {demoScope.publicItems.map((item) => (
-                  <li class="flex gap-3">
-                    <span class="mt-2 size-1.5 shrink-0 rounded-full bg-emerald-300" aria-hidden="true"></span>
-                    <span>{item}</span>
-                  </li>
-                ))}
+      <aside class="mt-5 rounded-2xl border border-emerald-300/20 bg-emerald-300/[0.07] p-4 sm:p-5" aria-label={demoScope.title}>
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200/80">{demoScope.eyebrow}</p>
+        <h2 class="mt-2 text-xl font-bold text-white">{demoScope.title}</h2>
+        <p class="mt-2 text-sm leading-6 text-gray-300">{demoScope.description}</p>
+        <details class="group mt-3 rounded-xl border border-white/10 bg-slate-950/40 p-2">
+          <summary class="flex min-h-11 cursor-pointer list-none items-center justify-between gap-3 rounded-lg px-2 text-sm font-semibold text-emerald-50 marker:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300">
+            <span>{demoScope.evidenceTitle}</span>
+            <span class="text-lg leading-none text-emerald-200 transition group-open:rotate-45" aria-hidden="true">+</span>
+          </summary>
+          <div class="grid gap-4 px-2 pb-2 pt-3 text-sm leading-6 text-gray-300 md:grid-cols-3">
+            <div>
+              <h3 class="font-bold text-emerald-50">{demoScope.publicTitle}</h3>
+              <ul class="mt-2 space-y-2">
+                {demoScope.publicItems.map((item) => <li>{item}</li>)}
               </ul>
-            </article>
-
-            <div class="grid gap-3 sm:gap-4 md:grid-cols-2">
-              <article class="rounded-2xl border border-amber-300/20 bg-amber-300/[0.07] p-4 sm:p-5">
-                <h3 class="text-lg font-bold text-amber-50">{demoScope.protectedTitle}</h3>
-                <ul class="mt-4 space-y-3 text-sm leading-6 text-gray-300">
-                  {demoScope.protectedItems.map((item) => (
-                    <li class="flex gap-3">
-                      <span class="mt-2 size-1.5 shrink-0 rounded-full bg-amber-300" aria-hidden="true"></span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-
-              <article class="rounded-2xl border border-sky-300/20 bg-sky-300/[0.07] p-4 sm:p-5">
-                <h3 class="text-lg font-bold text-sky-50">{demoScope.evidenceTitle}</h3>
-                <ul class="mt-4 space-y-3 text-sm leading-6 text-gray-300">
-                  {demoScope.evidenceItems.map((item) => (
-                    <li class="flex gap-3">
-                      <span class="mt-2 size-1.5 shrink-0 rounded-full bg-sky-300" aria-hidden="true"></span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
+            </div>
+            <div>
+              <h3 class="font-bold text-amber-50">{demoScope.protectedTitle}</h3>
+              <ul class="mt-2 space-y-2">
+                {demoScope.protectedItems.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold text-sky-50">{demoScope.evidenceTitle}</h3>
+              <ul class="mt-2 space-y-2">
+                {demoScope.evidenceItems.map((item) => <li>{item}</li>)}
+              </ul>
             </div>
           </div>
-        </div>
-      </section>
+        </details>
+      </aside>
 
       <section class="mt-10 rounded-3xl border border-white/10 bg-white/[0.03] p-5 sm:mt-14 sm:p-6 md:p-8">
         <div class="grid gap-5 sm:gap-8 lg:grid-cols-[0.9fr_1.1fr]">
@@ -397,42 +395,6 @@ const walkthroughHighlights = content.walkthrough.highlights;
           </div>
         </div>
 
-        <div class="mt-6 grid gap-3 sm:mt-8 sm:gap-4 md:grid-cols-3">
-          {architectureFlows.map((flow) => (
-            <article class="rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:p-5">
-              <h3 class="text-lg font-bold text-white">{flow.title}</h3>
-              <p class="mt-3 text-sm leading-6 text-gray-400">{flow.description}</p>
-            </article>
-          ))}
-        </div>
-
-        <div class="mt-6 rounded-3xl border border-white/10 bg-white/[0.03] p-4 sm:mt-8 sm:p-5 md:p-6">
-          <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">{content.stackLayers.eyebrow}</p>
-              <h3 class="mt-3 text-xl font-bold text-white sm:text-2xl">{content.stackLayers.title}</h3>
-            </div>
-            <p class="max-w-sm text-sm leading-6 text-gray-400">
-              {content.stackLayers.description}
-            </p>
-          </div>
-
-          <div class="mt-5 grid gap-3 sm:mt-6 sm:gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {stackLayers.map((layer) => (
-              <article class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
-                <h4 class="text-base font-bold text-white">{layer.layer}</h4>
-                <ul class="mt-3 space-y-2 text-sm text-gray-300">
-                  {layer.items.map((item) => (
-                    <li class="flex gap-3">
-                      <span class="mt-2 size-1.5 shrink-0 rounded-full bg-sky-300" aria-hidden="true"></span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </div>
       </section>
 
       <section class="relative mt-10 overflow-hidden rounded-3xl border border-sky-300/25 bg-slate-950/80 p-5 shadow-2xl shadow-sky-950/20 sm:mt-14 sm:p-6 md:p-8" aria-labelledby="ukiyo-calculator-title">
@@ -633,39 +595,42 @@ const walkthroughHighlights = content.walkthrough.highlights;
       </section>
 
       <section class="mt-10 sm:mt-14">
-        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">{content.media.eyebrow}</p>
-            <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">{content.media.title}</h2>
-          </div>
-          <p class="max-w-md text-sm leading-6 text-gray-400">
-            {content.media.description}
-          </p>
-        </div>
+        <details class="group rounded-3xl border border-white/10 bg-white/[0.03] p-4 open:border-sky-300/20 open:bg-slate-950/60 sm:p-5 md:p-6">
+          <summary class="flex min-h-12 cursor-pointer list-none flex-col gap-3 rounded-2xl px-2 py-1 marker:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 md:flex-row md:items-end md:justify-between">
+            <span>
+              <span class="block text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-sky-200/80 sm:text-sm sm:tracking-[0.24em]">{content.media.eyebrow}</span>
+              <span class="mt-3 block text-2xl font-bold text-white sm:text-3xl">{content.media.title}</span>
+            </span>
+            <span class="flex items-center gap-3 text-sm leading-6 text-gray-400 md:max-w-md">
+              <span>{content.media.description}</span>
+              <span class="text-xl leading-none text-sky-200 transition group-open:rotate-45" aria-hidden="true">+</span>
+            </span>
+          </summary>
 
-        <div class="mt-6 grid gap-6 sm:mt-8 sm:gap-8">
-          {mediaGroups.map((group) => (
-            <section aria-label={group.title}>
-              <h3 class="text-lg font-bold text-white sm:text-xl">{group.title}</h3>
-              <div class="mt-4 grid gap-4 sm:gap-6 md:grid-cols-2">
-                {group.screenshots.map((screenshot) => (
-                  <figure class="overflow-hidden rounded-3xl border border-white/10 bg-slate-950/80 shadow-xl shadow-black/20">
-                    <img
-                      src={screenshot.src}
-                      alt={screenshot.alt}
-                      loading="lazy"
-                      class="aspect-[4/3] w-full object-cover object-top sm:aspect-[16/10]"
-                    />
-                    <figcaption class="border-t border-white/10 p-4 sm:p-5">
-                      <h4 class="text-lg font-bold text-white">{screenshot.title}</h4>
-                      <p class="mt-2 text-sm leading-6 text-gray-400">{screenshot.description}</p>
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
+          <div class="mt-6 grid gap-6 sm:mt-8 sm:gap-8">
+            {mediaGroups.map((group) => (
+              <section aria-label={group.title}>
+                <h3 class="text-lg font-bold text-white sm:text-xl">{group.title}</h3>
+                <div class="mt-4 grid gap-4 sm:gap-6 md:grid-cols-2">
+                  {group.screenshots.map((screenshot) => (
+                    <figure class="overflow-hidden rounded-3xl border border-white/10 bg-slate-950/80 shadow-xl shadow-black/20">
+                      <img
+                        src={screenshot.src}
+                        alt={screenshot.alt}
+                        loading="lazy"
+                        class="aspect-[4/3] w-full object-cover object-top sm:aspect-[16/10]"
+                      />
+                      <figcaption class="border-t border-white/10 p-4 sm:p-5">
+                        <h4 class="text-lg font-bold text-white">{screenshot.title}</h4>
+                        <p class="mt-2 text-sm leading-6 text-gray-400">{screenshot.description}</p>
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+        </details>
       </section>
     </article>
   </main>

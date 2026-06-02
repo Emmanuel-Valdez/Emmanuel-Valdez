@@ -85,7 +85,7 @@ export const homeContent = {
           text: 'Convierto procesos operativos -costos, stock, órdenes y precios- en software usable y mantenible para negocios reales.',
         },
         {
-          text: ' En Ukiyo, transformé un flujo de costos en Excel en un sistema web con tienda, roles, pagos, órdenes y cálculo administrativo de precios.',
+          text: ' Como prueba principal, construí un caso backend .NET que reemplaza un flujo de costos en Excel por tienda, roles, pagos, órdenes y cálculo administrativo de precios en Ukiyo.',
           class: 'text-blue-200/90',
         },
         {
@@ -98,7 +98,7 @@ export const homeContent = {
       availabilityLabel: 'Disponible para trabajar',
       ctas: {
         ariaLabel: 'Acciones principales',
-        project: 'Ver proyecto Ukiyo',
+        project: 'Ver caso backend .NET',
         projectHref: routes.es.ukiyo,
         contact: 'Escribirme por email',
         contactHref: 'mailto:evalmon.dev@gmail.com',
@@ -140,7 +140,7 @@ export const homeContent = {
     projects: {
       featuredStudyLabel: 'Leer caso de estudio',
       featuredStudyHref: routes.es.ukiyo,
-      supportingLabel: 'Proyectos de soporte',
+      supportingLabel: 'Otros proyectos técnicos',
       stackAriaPrefix: 'Stack técnico de',
       metricsAriaPrefix: 'Métricas técnicas de',
       buttons: {
@@ -150,9 +150,9 @@ export const homeContent = {
       items: [
         {
           title: 'Ukiyo Designs',
-          eyebrow: 'Proyecto destacado · solución real para e-commerce',
+          eyebrow: 'Caso técnico destacado · backend .NET aplicado a negocio real',
           description:
-            'Sistema e-commerce y administrativo para un negocio real. Convierte un flujo de costos en Excel en una aplicación web con tienda, roles, pagos, órdenes y cálculo de precios basado en SQL Server.',
+            'Caso de estudio backend .NET para un negocio real: tienda, roles, pagos, órdenes y cálculo de precios basado en SQL Server a partir de un flujo operativo que antes dependía de Excel.',
           stack: [
             'ASP.NET Core 8 MVC',
             'Entity Framework Core',
@@ -254,7 +254,7 @@ export const homeContent = {
           text: 'I turn operational workflows - costs, stock, orders, and pricing - into usable, maintainable software for real businesses.',
         },
         {
-          text: ' In Ukiyo, I turned an Excel-based cost workflow into a web system with a store, roles, payments, orders, and admin price calculation.',
+          text: ' As the main proof point, I built a .NET backend case study that replaces an Excel-based cost workflow with storefront, roles, payments, orders, and admin price calculation in Ukiyo.',
           class: 'text-blue-200/90',
         },
         {
@@ -267,7 +267,7 @@ export const homeContent = {
       availabilityLabel: 'Available for work',
       ctas: {
         ariaLabel: 'Primary actions',
-        project: 'View Ukiyo project',
+        project: 'View .NET backend case study',
         projectHref: routes.en.ukiyo,
         contact: 'Email me',
         contactHref: 'mailto:evalmon.dev@gmail.com',
@@ -309,7 +309,7 @@ export const homeContent = {
     projects: {
       featuredStudyLabel: 'Read case study',
       featuredStudyHref: routes.en.ukiyo,
-      supportingLabel: 'Supporting projects',
+      supportingLabel: 'Additional technical projects',
       stackAriaPrefix: 'Technical stack for',
       metricsAriaPrefix: 'Technical metrics for',
       buttons: {
@@ -319,9 +319,9 @@ export const homeContent = {
       items: [
         {
           title: 'Ukiyo Designs',
-          eyebrow: 'Featured project · real e-commerce solution',
+          eyebrow: 'Featured technical case · .NET backend applied to a real business',
           description:
-            'E-commerce and admin system for a real business. It turns an Excel-based cost workflow into a web application with a store, roles, payments, orders, and SQL Server-based price calculation.',
+            '.NET backend case study for a real business: storefront, roles, payments, orders, and SQL Server-based price calculation built from an operational workflow that previously depended on Excel.',
           stack: [
             'ASP.NET Core 8 MVC',
             'Entity Framework Core',
@@ -421,16 +421,16 @@ export const ukiyoContent = {
     intro:
       'Ukiyo Designs es una aplicación ASP.NET Core MVC + SQL Server creada para reemplazar un flujo de pricing en Excel por un sistema web con tienda, órdenes, roles, pagos y administración de costos.',
     buttons: {
-      demo: 'Ver demo de Ukiyo',
+      demo: 'Ver demo técnica',
       code: 'Ver código en GitHub',
     },
     heroImageAlt: 'Captura real de Ukiyo Designs con catálogo de productos',
     metricsAriaLabel: 'Resumen del proyecto',
     summary: {
-      eyebrow: 'Resumen ejecutivo',
-      title: 'Ukiyo en 20 segundos',
+      eyebrow: 'Resumen técnico',
+      title: 'Resumen técnico en 20 segundos',
       description:
-        'Una lectura rápida del tipo de sistema, mi rol, el problema de negocio, el stack y la evidencia disponible.',
+        'Una lectura rápida del tipo de sistema, mi rol, el problema operativo, el stack y la evidencia técnica disponible.',
     },
     metrics: [
       { label: 'Roles', value: 'Customer, Company, Employee, Admin' },
@@ -438,18 +438,28 @@ export const ukiyoContent = {
       { label: 'Integraciones', value: 'Stripe + Facebook OAuth + ES/EN' },
     ],
     summaryCards: [
-      { label: 'Tipo de proyecto', value: 'E-commerce + sistema administrativo', emphasis: true },
+      { label: 'Tipo de proyecto', value: 'Caso backend .NET para e-commerce + administración', emphasis: true },
       { label: 'Rol', value: 'Backend, datos y lógica de negocio con entrega fullstack' },
       { label: 'Problema central', value: 'Pricing operativo que dependía de Excel y decisiones manuales', emphasis: true },
       { label: 'Stack', value: 'ASP.NET Core MVC, EF Core, SQL Server, Identity, Stripe, Facebook OAuth y ES/EN' },
-      { label: 'Alcance', value: 'Tienda, carrito, órdenes, usuarios, compañías, admin y pricing' },
-      { label: 'Prueba técnica', value: 'SQL views/triggers, roles, flujos protegidos y modelo conceptual' },
-      { label: 'Evidencia', value: 'Video walkthrough, demo pública, GitHub y capturas reales' },
-      { label: 'Lectura recruiter', value: 'Backend .NET aplicado a reglas de negocio y datos reales', emphasis: true },
+      { label: 'Prueba técnica', value: 'SQL views/triggers, roles, flujos protegidos, demo pública, GitHub y capturas reales', emphasis: true },
     ],
+    whatBuilt: {
+      eyebrow: 'Qué construí',
+      title: 'Implementación personal detrás del caso',
+      description:
+        'El foco no es promocionar una marca: es mostrar cómo convertí una operación real en módulos backend verificables.',
+      items: [
+        'Modelo de datos SQL Server para catálogo, usuarios, compañías, órdenes, costos y precios.',
+        'Flujos ASP.NET Core MVC para tienda, carrito, administración, órdenes y pricing.',
+        'Identity roles para separar cliente, compañía, empleado y administrador.',
+        'Integraciones acotadas con Stripe, Facebook OAuth y localización ES/EN.',
+        'Calculadora de precios con costos, márgenes, views/triggers SQL y revisión administrativa.',
+      ],
+    },
     walkthrough: {
-      eyebrow: 'Video walkthrough',
-      title: 'El flujo completo como evidencia central',
+      eyebrow: 'Evidencia funcional',
+      title: 'Flujos implementados antes que arquitectura',
       description:
         'El video muestra el flujo principal sin exponer permisos sensibles: compra del cliente, creación de la orden y seguimiento administrativo sobre datos persistidos.',
       videoLabel: 'Video recorrido del caso de estudio Ukiyo Designs',
@@ -467,10 +477,10 @@ export const ukiyoContent = {
       ],
     },
     demoScope: {
-      eyebrow: 'Alcance de la demo',
-      title: 'Qué se puede probar y qué se muestra como evidencia',
+      eyebrow: 'Nota sobre la demo',
+      title: 'Demo pública y evidencia protegida',
       description:
-        'La demo publicada permite revisar el producto en funcionamiento sin exponer datos operativos sensibles ni permisos administrativos completos.',
+        'La demo pública permite revisar la tienda sin exponer permisos administrativos ni datos operativos sensibles. Las áreas de admin, pricing y órdenes se documentan mediante video y capturas con datos demo.',
       publicTitle: 'Disponible públicamente',
       protectedTitle: 'Protegido por rol',
       evidenceTitle: 'Evidencia en capturas',
@@ -509,8 +519,8 @@ export const ukiyoContent = {
       'Integraciones con Identity, Facebook OAuth, Stripe y localización ES/EN.',
     ],
     visualProof: {
-      eyebrow: 'Evidencia visual',
-      title: 'Producto y pricing antes de la profundidad técnica',
+      eyebrow: 'Evidencia de flujos implementados',
+      title: 'Evidencia funcional antes de arquitectura',
       description:
         'Dos pantallas clave muestran el valor del sistema antes de entrar en arquitectura: compra del cliente y decisiones administrativas de precio.',
       items: [
@@ -531,7 +541,7 @@ export const ukiyoContent = {
       eyebrow: 'Arquitectura',
       title: 'Arquitectura en una mirada',
       description:
-        'La aplicación mantiene tienda pública y panel administrativo dentro de un monolito ASP.NET Core MVC. EF Core conecta el dominio con SQL Server, mientras Identity, Stripe y OAuth cubren autenticación, pagos e integraciones externas.',
+        'Vista liviana del sistema: tienda pública y panel administrativo conviven en un monolito ASP.NET Core MVC conectado a SQL Server, con servicios externos acotados para pagos y autenticación social.',
       flowAriaLabel: 'Flujo técnico de Ukiyo Designs',
       steps: [
         { title: 'Cliente / Admin', description: 'Tienda pública, carrito, órdenes y panel administrativo.' },
@@ -685,22 +695,20 @@ export const ukiyoContent = {
       ],
     },
     impact: {
-      eyebrow: 'Impacto',
-      title: 'Qué demuestra este proyecto',
+      eyebrow: 'Takeaway profesional',
+      title: 'Qué demuestra este caso',
       description:
-        'Ukiyo demuestra capacidad para convertir un problema operativo real en software backend funcional: modelado relacional, autenticación, roles, pagos, reglas de pricing, persistencia SQL y administración de órdenes.',
+        'Este caso demuestra backend .NET aplicado a datos reales, reglas de negocio, roles, pagos, pricing y administración de órdenes sin depender de claims de infraestructura que el proyecto no necesita sobreexponer.',
       items: [
-        'Flujo de compra, carrito, login, disponibilidad de productos y acceso a órdenes revisados manualmente antes de publicar la demo.',
-        'Pantallas públicas y administrativas documentadas con video y capturas reales.',
-        'Separación clara entre demo pública, áreas protegidas y evidencia visual de flujos internos.',
         'Proyecto fullstack con valor principal en backend, base de datos y reglas de negocio aplicadas.',
+        'Evidencia verificable mediante demo pública, video, GitHub y capturas de flujos protegidos.',
       ],
     },
     media: {
-      eyebrow: 'Media real',
-      title: 'Capturas del producto funcionando',
+      eyebrow: 'Evidencia adicional',
+      title: 'Capturas técnicas complementarias',
       description:
-        'Capturas tomadas desde la app publicada con una cuenta demo, mostrando tanto el flujo público como pantallas administrativas.',
+        'Capturas usadas como soporte para documentar flujos públicos y pantallas protegidas sin abrir permisos sensibles.',
       groups: [
         { title: 'Flujo de cliente', screenshotIndexes: [0, 1] },
         { title: 'Flujo administrativo', screenshotIndexes: [2, 5] },
@@ -760,16 +768,16 @@ export const ukiyoContent = {
     intro:
       'Ukiyo Designs is an ASP.NET Core MVC + SQL Server application built to replace an Excel-based pricing workflow with a web system for storefront, orders, roles, payments, and cost administration.',
     buttons: {
-      demo: 'View Ukiyo demo',
+      demo: 'View technical demo',
       code: 'View code on GitHub',
     },
     heroImageAlt: 'Real screenshot of Ukiyo Designs with product catalog',
     metricsAriaLabel: 'Project summary',
     summary: {
-      eyebrow: 'Executive summary',
-      title: 'Ukiyo in 20 seconds',
+      eyebrow: 'Technical summary',
+      title: 'Technical summary in 20 seconds',
       description:
-        'A quick read of the system type, my role, the business problem, the stack, and the available evidence.',
+        'A quick read of the system type, my role, the operational problem, the stack, and the available technical evidence.',
     },
     metrics: [
       { label: 'Roles', value: 'Customer, Company, Employee, Admin' },
@@ -777,18 +785,28 @@ export const ukiyoContent = {
       { label: 'Integrations', value: 'Stripe + Facebook OAuth + ES/EN' },
     ],
     summaryCards: [
-      { label: 'Project type', value: 'E-commerce + admin business system', emphasis: true },
+      { label: 'Project type', value: '.NET backend case for e-commerce + administration', emphasis: true },
       { label: 'Role', value: 'Backend, data, and business logic with fullstack delivery' },
       { label: 'Core problem', value: 'Operational pricing depended on Excel and manual decisions', emphasis: true },
       { label: 'Stack', value: 'ASP.NET Core MVC, EF Core, SQL Server, Identity, Stripe, Facebook OAuth, ES/EN' },
-      { label: 'Scope', value: 'Storefront, cart, orders, users, companies, admin, and pricing' },
-      { label: 'Technical proof', value: 'SQL views/triggers, roles, protected flows, and conceptual data model' },
-      { label: 'Evidence', value: 'Video walkthrough, public demo, GitHub, and real screenshots' },
-      { label: 'Recruiter takeaway', value: '.NET backend work applied to business rules and real data', emphasis: true },
+      { label: 'Technical proof', value: 'SQL views/triggers, roles, protected flows, public demo, GitHub, and real screenshots', emphasis: true },
     ],
+    whatBuilt: {
+      eyebrow: 'What I built',
+      title: 'Personal implementation behind the case',
+      description:
+        'The goal is not brand promotion: it is to show how I turned a real operation into verifiable backend modules.',
+      items: [
+        'SQL Server data model for catalog, users, companies, orders, costs, and prices.',
+        'ASP.NET Core MVC flows for storefront, cart, admin, orders, and pricing.',
+        'Identity roles to separate customer, company, employee, and admin permissions.',
+        'Bounded integrations with Stripe, Facebook OAuth, and ES/EN localization.',
+        'Pricing calculator with costs, margins, SQL views/triggers, and admin review.',
+      ],
+    },
     walkthrough: {
-      eyebrow: 'Video walkthrough',
-      title: 'The full flow as the central evidence',
+      eyebrow: 'Functional evidence',
+      title: 'Implemented flows before architecture',
       description:
         'The video shows the main flow without exposing sensitive permissions: customer purchase, order creation, and admin tracking over persisted data.',
       videoLabel: 'Video walkthrough for the Ukiyo Designs case study',
@@ -806,10 +824,10 @@ export const ukiyoContent = {
       ],
     },
     demoScope: {
-      eyebrow: 'Demo scope',
-      title: 'What can be tested and what is shown as evidence',
+      eyebrow: 'Demo note',
+      title: 'Public demo and protected evidence',
       description:
-        'The published demo lets visitors inspect the working product without exposing sensitive operational data or full admin permissions.',
+        'The public demo lets visitors inspect the storefront without exposing admin permissions or sensitive operational data. Admin, pricing, and order areas are documented through video and screenshots with demo data.',
       publicTitle: 'Publicly available',
       protectedTitle: 'Role-protected',
       evidenceTitle: 'Screenshot evidence',
@@ -848,8 +866,8 @@ export const ukiyoContent = {
       'Integrations with Identity, Facebook OAuth, Stripe, and ES/EN localization.',
     ],
     visualProof: {
-      eyebrow: 'Visual evidence',
-      title: 'Product and pricing before technical depth',
+      eyebrow: 'Implemented flow evidence',
+      title: 'Functional evidence before architecture',
       description:
         'Two key screens show the system value before architecture details: customer purchase flow and administrative pricing decisions.',
       items: [
@@ -870,7 +888,7 @@ export const ukiyoContent = {
       eyebrow: 'Architecture',
       title: 'Architecture in one glance',
       description:
-        'The application keeps the public store and admin panel inside a maintainable ASP.NET Core MVC monolith. EF Core connects the domain to SQL Server, while Identity, Stripe, and OAuth cover authentication, payments, and external integrations.',
+        'A lightweight view of the system: public store and admin panel live in a maintainable ASP.NET Core MVC monolith connected to SQL Server, with bounded external services for payments and social authentication.',
       flowAriaLabel: 'Technical flow for Ukiyo Designs',
       steps: [
         { title: 'Customer / Admin', description: 'Public store, cart, orders, and admin panel.' },
@@ -1024,22 +1042,20 @@ export const ukiyoContent = {
       ],
     },
     impact: {
-      eyebrow: 'Impact',
-      title: 'What this project demonstrates',
+      eyebrow: 'Professional takeaway',
+      title: 'What this case demonstrates',
       description:
-        'Ukiyo demonstrates the ability to turn a real operational problem into functional backend software: relational modeling, authentication, roles, payments, pricing rules, SQL persistence, and order administration.',
+        'This case demonstrates .NET backend work applied to real data, business rules, roles, payments, pricing, and order administration without relying on infrastructure claims the project does not need to overexpose.',
       items: [
-        'Purchase flow, cart, login, product availability, and order access were manually reviewed before publishing the demo.',
-        'Public and admin screens are documented with video and real screenshots.',
-        'The case study clearly separates public demo access, protected areas, and visual evidence for internal flows.',
         'Fullstack project with its main value in backend, database design, and applied business rules.',
+        'Verifiable evidence through public demo, video, GitHub, and screenshots of protected flows.',
       ],
     },
     media: {
-      eyebrow: 'Real media',
-      title: 'Screenshots of the working product',
+      eyebrow: 'Additional evidence',
+      title: 'Complementary technical screenshots',
       description:
-        'Screenshots taken from the published app using a demo account, showing both the public flow and admin screens.',
+        'Screenshots used as support to document public flows and protected screens without opening sensitive permissions.',
       groups: [
         { title: 'Customer flow', screenshotIndexes: [0, 1] },
         { title: 'Admin flow', screenshotIndexes: [2, 5] },

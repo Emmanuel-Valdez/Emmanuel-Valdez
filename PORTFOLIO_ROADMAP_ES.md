@@ -33,6 +33,7 @@ Already implemented:
 - Separate CVs by language in `public/media/`.
 - Localized metadata, canonical, hreflang, and Open Graph.
 - Stage 9 accessibility/mobile pass: skip link, visible focus, improved touch targets, accessible video summary, semantic details/summary, and build verification.
+- Stage 10 density pass: home CTA reframed as a .NET backend case study, Ukiyo bento reduced, `What I built` added, demo scope compressed, duplicate stack content removed, architecture simplified, and final gallery reduced to additional evidence.
 
 ## Positioning To Preserve
 
@@ -501,6 +502,36 @@ Acceptance criteria:
 - Desktop and mobile layouts are visually checked.
 - Video playback and perceived MP4 load are checked in production after push.
 - ES/EN routes remain synchronized.
+
+### Stage 10: Reduce Ukiyo Density And Recenter Developer Proof
+
+Status: completed.
+
+Implemented in:
+
+- `src/pages/proyectos/ukiyo.astro`
+- `src/data/i18n.ts`
+
+Notes:
+
+- Home CTA now points to a `.NET backend case study` instead of only the Ukiyo brand.
+- Supporting projects are labeled as additional technical projects, preserving breadth without competing with Ukiyo.
+- Ukiyo labels now emphasize technical summary, implemented flows, and backend evidence.
+- Bento summary was reduced from eight cards to five high-signal cards.
+- A concise `Que construi` / `What I built` section clarifies Emmanuel's personal implementation work.
+- Demo scope was compressed into a smaller note instead of a large early section.
+- Architecture was simplified and duplicate stack-by-layer content was kept only in secondary details.
+- The final screenshot gallery is lower-prominence additional evidence.
+
+Goal: keep Ukiyo as the flagship proof while making the portfolio read as Emmanuel's developer portfolio, not a product advertisement.
+
+Acceptance criteria:
+
+- Developer identity remains visible before the Ukiyo brand.
+- The strongest technical proof remains easy to scan.
+- Repeated sections are reduced instead of restyled.
+- No junior/entry-level positioning is added.
+- No unsupported infrastructure or testing claims are introduced.
 
 ## Copy Optimization Checklist
 
