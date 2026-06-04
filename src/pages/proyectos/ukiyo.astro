@@ -34,6 +34,7 @@ const mediaGroups = content.media.groups.map((group) => ({
   screenshots: group.screenshotIndexes.map((index) => screenshots[index]),
 }));
 const walkthroughHighlights = content.walkthrough.highlights;
+const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4' : '/videos/ukiyo-walkthrough.mp4';
 ---
 
 <Layout
@@ -154,7 +155,7 @@ const walkthroughHighlights = content.walkthrough.highlights;
               poster="/projects/ukiyo/store-home.jpg"
               aria-label={content.walkthrough.videoLabel}
             >
-              <source src="/videos/ukiyo-walkthrough.mp4" type="video/mp4" />
+              <source src={walkthroughVideoSrc} type="video/mp4" />
               {content.walkthrough.fallback}
             </video>
             <figcaption class="border-t border-white/10 bg-slate-950/80 p-3 sm:p-4">

@@ -153,7 +153,8 @@ The admin price calculator considers:
 - `src/components/Projects.astro`: featured Ukiyo case study and supporting project cards.
 - `src/components/AboutMe.astro`: personal profile section.
 - `src/components/Contact.astro`: contact and CV download section.
-- `public/videos/ukiyo-walkthrough.mp4`: embedded Ukiyo case study walkthrough.
+- `public/videos/ukiyo-walkthrough.mp4`: embedded English Ukiyo case study walkthrough.
+- `public/videos/ukiyo-walkthrough-es.mp4`: embedded Spanish Ukiyo case study walkthrough.
 - `ukiyo-walkthrough/`: HyperFrames source project for the Ukiyo walkthrough video.
 
 ## Internationalization
@@ -269,6 +270,7 @@ Recently completed portfolio improvements:
 - The Ukiyo case study now explains demo scope and protected admin boundaries.
 - The Ukiyo data model now includes business-oriented entity groups and a compact conceptual relationship diagram.
 - The Ukiyo case study now includes an embedded end-to-end video walkthrough.
+- The Spanish Ukiyo route now uses the Spanish walkthrough render while the English route keeps the original video.
 
 ## Repository Notes
 
