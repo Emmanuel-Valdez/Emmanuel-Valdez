@@ -18,6 +18,7 @@ Already implemented:
 - Ukiyo highlighted as the main project.
 - Projects shown before work experience on the home page.
 - Main copy oriented toward Backend .NET, e-commerce, data, and business management systems.
+- First-screen identity now shows `Emmanuel Valdez` before the backend role; `evaldez` is used as the compact header brand and `evaldez.ar` as the canonical domain.
 - Simplified hero CTAs: Ukiyo as primary action, CV as secondary action, email as tertiary action.
 - Recruiter quick-profile block near the hero with stack, location, work mode, target roles, and language.
 - Featured Ukiyo card with technical metrics: roles, admin modules, integrations, SQL views/triggers, and ES/EN localization.
@@ -63,6 +64,8 @@ English option:
 
 Criteria:
 
+- `Emmanuel Valdez` stays as the primary professional identity above the fold and across metadata.
+- `evaldez` is a compact brand/handle; `evaldez.ar` is the canonical public domain and secondary brand signal.
 - Backend .NET, C#, ASP.NET Core, and SQL Server stay as the main focus.
 - Fullstack is presented as a delivery capability, not the primary identity.
 - Ukiyo must read as real business software, not a clone, tutorial, or academic project.
@@ -586,6 +589,7 @@ These improvements would strengthen the backend profile, but they must only be a
 
 - If visible Spanish copy changes, update English copy too.
 - If visible English copy changes, update Spanish copy too.
+- Do not let `evaldez` or `evaldez.ar` replace `Emmanuel Valdez` as the first-screen professional identity.
 - If a route changes, verify canonical, hreflang, and language-switch URLs.
 - If media is added, verify file weight, mobile loading, controls, alt text, and accessible labels.
 - Do not claim production Docker until it exists.

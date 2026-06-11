@@ -26,6 +26,10 @@ export const common = {
   es: {
     skipLink: 'Saltar al contenido principal',
     headerAriaLabel: 'Navegación principal',
+    brand: {
+      label: 'evaldez',
+      ariaLabel: 'Inicio de evaldez, portfolio de Emmanuel Valdez',
+    },
     nav: {
       experience: 'Experiencia',
       projects: 'Proyectos',
@@ -39,6 +43,7 @@ export const common = {
       alternateHref: routes.en.home,
     },
     footer: {
+      brand: 'Emmanuel Valdez · evaldez.ar',
       about: 'Sobre mí',
       contact: 'Contacto',
     },
@@ -46,6 +51,10 @@ export const common = {
   en: {
     skipLink: 'Skip to main content',
     headerAriaLabel: 'Main navigation',
+    brand: {
+      label: 'evaldez',
+      ariaLabel: 'evaldez home, Emmanuel Valdez portfolio',
+    },
     nav: {
       experience: 'Experience',
       projects: 'Projects',
@@ -59,6 +68,7 @@ export const common = {
       alternateHref: routes.es.home,
     },
     footer: {
+      brand: 'Emmanuel Valdez · evaldez.ar',
       about: 'About',
       contact: 'Contact',
     },
@@ -68,9 +78,9 @@ export const common = {
 export const homeContent = {
   es: {
     meta: {
-      title: 'Portfolio de Emmanuel Valdez - Backend Developer .NET, C# y SQL',
+      title: 'Emmanuel Valdez | Desarrollador Backend .NET',
       description:
-        'Portfolio de Emmanuel Valdez, backend developer orientado a .NET, C#, SQL, e-commerce, sistemas de gestión y bases de datos.',
+        'Portfolio de Emmanuel Valdez, Desarrollador Backend .NET enfocado en ASP.NET Core, C#, SQL Server, EF Core, autenticación, pagos y sistemas de negocio.',
     },
     sections: {
       experience: 'Experiencia Laboral',
@@ -79,6 +89,8 @@ export const homeContent = {
       contact: 'Hablemos',
     },
     hero: {
+      name: 'Emmanuel Valdez',
+      brandLine: 'evaldez.ar · Portfolio backend .NET',
       title: 'Backend .NET Developer enfocado en sistemas de negocio, datos y lógica operativa',
       lines: [
         {
@@ -237,9 +249,9 @@ export const homeContent = {
   },
   en: {
     meta: {
-      title: 'Emmanuel Valdez Portfolio - .NET, C# and SQL Backend Developer',
+      title: 'Emmanuel Valdez | Backend .NET Developer',
       description:
-        'Portfolio of Emmanuel Valdez, a backend developer focused on .NET, C#, SQL, e-commerce, business management systems, and databases.',
+        'Portfolio of Emmanuel Valdez, Backend .NET Developer focused on ASP.NET Core, C#, SQL Server, EF Core, authentication, payments, and business systems.',
     },
     sections: {
       experience: 'Work Experience',
@@ -248,6 +260,8 @@ export const homeContent = {
       contact: 'Let\'s Talk',
     },
     hero: {
+      name: 'Emmanuel Valdez',
+      brandLine: 'evaldez.ar · .NET backend portfolio',
       title: '.NET Backend Developer focused on business systems, data, and operational logic',
       lines: [
         {

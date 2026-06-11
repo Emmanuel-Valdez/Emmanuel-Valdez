@@ -1,4 +1,4 @@
-# Emmanuel Valdez Portfolio
+# Emmanuel Valdez - Backend .NET Developer Portfolio
 
 Personal developer portfolio for Emmanuel Valdez, a Backend Developer focused on .NET, C#, SQL Server, business systems, data, and operational logic.
 

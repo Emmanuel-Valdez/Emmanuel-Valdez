@@ -16,6 +16,8 @@ Objetivo principal:
 Lo importante ya esta implementado:
 
 - Portfolio bilingue Espanol/Ingles con rutas estaticas en `/`, `/en/`, `/proyectos/ukiyo/` y `/en/projects/ukiyo/`.
+- Identidad visible above-the-fold: el hero muestra `Emmanuel Valdez` antes del rol, el header usa `evaldez` como marca corta y el footer refuerza `Emmanuel Valdez · evaldez.ar`.
+- Dominio canonico actualizado a `https://evaldez.ar`; `evaldez` funciona como handle/marca secundaria, no como reemplazo del nombre profesional.
 - Hero reposicionado hacia Backend .NET, e-commerce, datos y sistemas de gestion.
 - Hero refinado hacia sistemas de negocio, datos y logica operativa.
 - Proyectos aparecen antes que experiencia para mostrar evidencia antes que contexto operativo.
@@ -36,6 +38,7 @@ Lo importante ya esta implementado:
 - Stack relevante para busquedas .NET: ASP.NET Core, EF Core, SQL Server, Identity, Stripe y OAuth.
 - Complejidad real: catalogo, carrito, ordenes, roles, empresas, precios, costos, localizacion y administracion.
 - Resumen tecnico cerca del hero que permite entender rol, problema, stack, prueba de implementacion y valor recruiter en una lectura rapida.
+- La primera pantalla ya responde quien es el candidato, que rol busca, cual es su foco backend y cual es la marca/dominio personal.
 - Evidencia visual estatica y dinamica del flujo de Ukiyo: video, flujo cliente, costos por producto, dashboard de precios finales y galeria agrupada.
 - La calculadora administrativa ahora funciona como proof point central: costos base, reglas de margen, soporte SQL y resultado admin.
 - La profundidad tecnica se presenta como `Key Backend Decisions`, con modelo de datos, stack por capas y notas de implementacion en accordions secundarios.
@@ -65,6 +68,7 @@ Lo importante ya esta implementado:
 ## Criterio para cambios nuevos
 
 - Si cambia copy visible en Espanol, actualizar tambien Ingles.
+- Mantener `Emmanuel Valdez` como identidad profesional principal; usar `evaldez` y `evaldez.ar` solo como marca corta, dominio o firma secundaria.
 - Si se edita el texto destacado de AboutMe, mantener `intro` y `strong` como piezas separadas para evitar duplicados o capitalizacion incorrecta.
 - Si cambia una ruta, revisar `canonical`, `hreflang` y switch de idioma.
 - Si se agrega media, verificar peso, mobile, controles y alt text o etiqueta accesible.
