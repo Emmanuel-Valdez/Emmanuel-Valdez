@@ -4,6 +4,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://evalmondev.netlify.app',
+  site: 'https://evaldez.ar',
   integrations: [tailwind()]
 });

@@ -7,7 +7,7 @@ The public UI supports Spanish and English static routes. Code, comments, reposi
 ## Live Site
 
 ```text
-https://evalmondev.netlify.app
+https://evaldez.ar
 ```
 
 ## Positioning
@@ -220,7 +220,7 @@ This catches Astro and TypeScript diagnostics before generating the static site.
 The primary deployment target is Netlify:
 
 ```text
-https://evalmondev.netlify.app
+https://evaldez.ar
 ```
 
 Netlify should use:
@@ -235,7 +235,7 @@ Publish directory:
 dist/
 ```
 
-The project also has a Vercel deployment, but Netlify is the preferred production target for now because the provided domain is simpler. A custom domain is not required at this stage.
+The project also has a Vercel deployment, but Netlify is the preferred production target for now. The canonical public domain is `https://evaldez.ar`.
 
 ## SEO Configuration
 
@@ -243,7 +243,7 @@ The project also has a Vercel deployment, but Netlify is the preferred productio
 
 ```js
 export default defineConfig({
-  site: 'https://evalmondev.netlify.app',
+  site: 'https://evaldez.ar',
   integrations: [tailwind()],
 });
 ```
