@@ -1,5 +1,9 @@
 ---
 import { common, routes, type Locale } from '@/data/i18n';
+import BriefCaseIcon from '@/icons/BriefCaseIcon.astro';
+import CodeIcon from '@/icons/Code.astro';
+import CoffeeIcon from '@/icons/Coffee.astro';
+import UserIcon from '@/icons/User.astro';
 
 interface Props {
   locale?: Locale;
@@ -19,24 +23,24 @@ const englishHref = locale === 'en' ? Astro.url.pathname : languageHref;
 >
   <nav
     aria-label={copy.headerAriaLabel}
-    class="flex max-w-full flex-row items-center overflow-x-auto rounded-full border border-black bg-black/70 px-2 py-1 text-xs backdrop-blur-2xl sm:px-3 sm:text-base"
+    class="flex max-w-[calc(100vw-1rem)] flex-row items-center overflow-hidden rounded-full border border-black bg-black/70 px-1.5 py-1 text-xs backdrop-blur-2xl sm:px-3 sm:text-base"
   >
     <a
       aria-label={copy.brand.ariaLabel}
-      class="mr-1 inline-flex min-h-9 items-center whitespace-nowrap rounded-full border border-sky-300/20 bg-sky-300/10 px-3 font-semibold tracking-[0.16em] text-sky-100 transition hover:bg-sky-300/20 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-h-10 sm:px-4"
+      class="mr-1 inline-flex min-h-9 items-center whitespace-nowrap rounded-full border border-sky-300/20 bg-sky-300/10 px-2 font-semibold tracking-[0.08em] text-sky-100 transition hover:bg-sky-300/20 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-h-10 sm:px-4 sm:tracking-[0.16em]"
       href={homeHref}
     >{copy.brand.label}</a>
-    <a class="inline-flex min-h-9 items-center whitespace-nowrap rounded-full px-2 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-h-10 sm:px-3" href={`${homeHref}#projects`}
-      >{copy.nav.projects}</a
+    <a aria-label={copy.nav.projects} class="inline-flex min-h-9 min-w-9 items-center justify-center rounded-full px-1.5 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-w-0 sm:px-3" href={`${homeHref}#projects`}
+      ><span class="sm:hidden" aria-hidden="true"><CodeIcon /></span><span class="sr-only sm:not-sr-only">{copy.nav.projects}</span></a
     >
-    <a class="inline-flex min-h-9 items-center whitespace-nowrap rounded-full px-2 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-h-10 sm:px-3" href={`${homeHref}#experience`}
-      >{copy.nav.experience}</a
+    <a aria-label={copy.nav.experience} class="inline-flex min-h-9 min-w-9 items-center justify-center rounded-full px-1.5 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-w-0 sm:px-3" href={`${homeHref}#experience`}
+      ><span class="sm:hidden" aria-hidden="true"><BriefCaseIcon /></span><span class="sr-only sm:not-sr-only">{copy.nav.experience}</span></a
     >
-    <a class="inline-flex min-h-9 items-center whitespace-nowrap rounded-full px-2 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-h-10 sm:px-3" href={`${homeHref}#about`}
-      >{copy.nav.about}</a
+    <a aria-label={copy.nav.about} class="inline-flex min-h-9 min-w-9 items-center justify-center rounded-full px-1.5 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-w-0 sm:px-3" href={`${homeHref}#about`}
+      ><span class="sm:hidden" aria-hidden="true"><UserIcon /></span><span class="sr-only sm:not-sr-only">{copy.nav.about}</span></a
     >
-    <a class="inline-flex min-h-9 items-center whitespace-nowrap rounded-full px-2 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-h-10 sm:px-3" href={`${homeHref}#contact`}
-      >{copy.nav.contact}</a
+    <a aria-label={copy.nav.contact} class="inline-flex min-h-9 min-w-9 items-center justify-center rounded-full px-1.5 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-w-0 sm:px-3" href={`${homeHref}#contact`}
+      ><span class="sm:hidden" aria-hidden="true"><CoffeeIcon /></span><span class="sr-only sm:not-sr-only">{copy.nav.contact}</span></a
     >
     <div
       aria-label={copy.language.label}
