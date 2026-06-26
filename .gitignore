@@ -27,12 +27,19 @@ pnpm-debug.log*
 .opencode/
 .opencode-context/
 .agents/
+PROJECT_CONTEXT.md
+portfolio-copy.md
+ev_brand_identity.md
+plans/
 PORTFOLIO_REVIEW_ES.md
 PORTFOLIO_ROADMAP_ES.md
+UKIYO_STAGE_1_AUDIT.md
 skills-lock.json
 opencode.json
 opencode.jsonc
 
 # HyperFrames local outputs
+ukiyo-walkthrough/.hyperframes/
+ukiyo-walkthrough/backups/
 ukiyo-walkthrough/renders/
 ukiyo-walkthrough/.thumbnails/
