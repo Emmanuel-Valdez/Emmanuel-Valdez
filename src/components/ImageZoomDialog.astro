@@ -1,0 +1,53 @@
+<dialog class="image-zoom-dialog rounded-3xl border border-white/10 bg-slate-950 p-0 text-white shadow-2xl shadow-black/60 backdrop:bg-black/80" aria-label="Enlarged project image">
+  <div class="relative max-h-[92vh] w-[min(96vw,1200px)] overflow-hidden rounded-3xl">
+    <button
+      type="button"
+      class="image-zoom-close absolute right-3 top-3 z-10 flex size-10 items-center justify-center rounded-full border border-white/15 bg-black/70 text-2xl leading-none text-white transition hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
+      aria-label="Close enlarged image"
+    >
+      ×
+    </button>
+    <figure class="bg-black/50">
+      <img class="image-zoom-img mx-auto max-h-[80vh] w-full object-contain" src="" alt="" />
+      <figcaption class="image-zoom-caption border-t border-white/10 px-4 py-3 text-sm leading-6 text-gray-300 sm:px-5"></figcaption>
+    </figure>
+  </div>
+</dialog>
+
+<script is:inline>
+  (() => {
+    const dialog = document.querySelector('.image-zoom-dialog');
+    if (!(dialog instanceof HTMLDialogElement)) return;
+
+    const image = dialog.querySelector('.image-zoom-img');
+    const caption = dialog.querySelector('.image-zoom-caption');
+    const closeButton = dialog.querySelector('.image-zoom-close');
+    let trigger = null;
+
+    const close = () => dialog.close();
+
+    document.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-image-zoom]');
+      if (!button) return;
+
+      trigger = button;
+      image.src = window.matchMedia('(min-width: 768px)').matches
+        ? button.dataset.zoomSrcDesktop || button.dataset.zoomSrc || ''
+        : button.dataset.zoomSrc || '';
+      image.alt = button.dataset.zoomAlt || '';
+      caption.textContent = button.dataset.zoomCaption || button.dataset.zoomAlt || '';
+      caption.hidden = !caption.textContent;
+      dialog.showModal();
+    });
+
+    closeButton?.addEventListener('click', close);
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) close();
+    });
+    dialog.addEventListener('close', () => {
+      trigger?.focus();
+      trigger = null;
+      image.removeAttribute('src');
+    });
+  })();
+</script>

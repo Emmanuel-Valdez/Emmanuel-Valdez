@@ -4,6 +4,7 @@ import CSharpIcon from '../icons/techIcons/CSharp.astro';
 import ExpressIcon from '../icons/techIcons/Express.astro';
 import MySQLIcon from '../icons/techIcons/MySQL.astro';
 import GitHubIcon from '@/icons/techIcons/GitHub.astro';
+import ImageZoomDialog from '@/components/ImageZoomDialog.astro';
 import LinkButton from './LinkButton.astro';
 import WebIcon from '@/icons/Web.astro';
 import MSSQLIcon from '@/icons/techIcons/MSSQL.astro';
@@ -100,29 +101,39 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
     <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-300/80 to-transparent" aria-hidden="true"></div>
     <div class="grid gap-8 p-5 md:grid-cols-[1.05fr_0.95fr] md:p-7 lg:p-8">
       <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-black/30">
-        {FEATURED_PROJECT.imageMobile ? (
-          <>
+        <button
+          type="button"
+          class="block h-full w-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
+          data-image-zoom
+          data-zoom-src={FEATURED_PROJECT.image}
+          data-zoom-src-desktop={FEATURED_PROJECT.imageMobile ?? FEATURED_PROJECT.image}
+          data-zoom-alt={FEATURED_PROJECT.imageAlt}
+          data-zoom-caption={FEATURED_PROJECT.title}
+        >
+          {FEATURED_PROJECT.imageMobile ? (
+            <>
+              <img
+                alt={FEATURED_PROJECT.imageAlt}
+                class="h-full min-h-72 w-full object-cover object-top transition duration-500 md:group-hover:scale-[1.03] md:hidden"
+                loading="lazy"
+                src={FEATURED_PROJECT.image}
+              />
+              <img
+                alt={FEATURED_PROJECT.imageAlt}
+                class="hidden h-full min-h-72 w-full object-cover object-top transition duration-500 md:block md:group-hover:scale-[1.03]"
+                loading="lazy"
+                src={FEATURED_PROJECT.imageMobile}
+              />
+            </>
+          ) : (
             <img
               alt={FEATURED_PROJECT.imageAlt}
-              class="h-full min-h-72 w-full object-cover object-top transition duration-500 md:group-hover:scale-[1.03] md:hidden"
+              class="h-full min-h-72 w-full object-cover object-top transition duration-500 md:group-hover:scale-[1.03]"
               loading="lazy"
               src={FEATURED_PROJECT.image}
             />
-            <img
-              alt={FEATURED_PROJECT.imageAlt}
-              class="hidden h-full min-h-72 w-full object-cover object-top transition duration-500 md:block md:group-hover:scale-[1.03]"
-              loading="lazy"
-              src={FEATURED_PROJECT.imageMobile}
-            />
-          </>
-        ) : (
-          <img
-            alt={FEATURED_PROJECT.imageAlt}
-            class="h-full min-h-72 w-full object-cover object-top transition duration-500 md:group-hover:scale-[1.03]"
-            loading="lazy"
-            src={FEATURED_PROJECT.image}
-          />
-        )}
+          )}
+        </button>
       </div>
 
       <div class="flex flex-col justify-center">
@@ -244,4 +255,5 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
       }
     </div>
   </div>
+  <ImageZoomDialog />
 </div>
