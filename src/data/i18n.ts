@@ -548,28 +548,30 @@ export const vaultshopContent = {
         },
       ],
     },
-    architecture: {
-      eyebrow: 'Arquitectura',
-      title: 'Arquitectura en una mirada',
-      description:
-        'Vista liviana del sistema: tienda pública y panel administrativo conviven en un monolito ASP.NET Core MVC conectado a PostgreSQL, con servicios externos acotados para pagos y autenticación social.',
-      flowAriaLabel: 'Flujo técnico de VaultShop',
-      steps: [
-        { title: 'Cliente / Admin', description: 'Tienda pública, carrito, órdenes y panel administrativo.' },
-        { title: 'ASP.NET Core MVC', description: 'Controladores, vistas, autenticación, roles y reglas de negocio.' },
-        { title: 'Entity Framework Core', description: 'Mapeo entre entidades del dominio y persistencia relacional.' },
-        { title: 'PostgreSQL', description: 'Catálogo, usuarios, empresas, órdenes, costos, precios, views y triggers.' },
-      ],
-      diagram: {
-        title: 'Diagrama simple de arquitectura',
+      architecture: {
+        eyebrow: 'Arquitectura',
+        title: 'Arquitectura en una mirada',
         description:
-          'Vista resumida de cómo se conectan los flujos público y administrativo con la aplicación, la base de datos y los servicios externos.',
-        browser: 'Cliente / Admin',
-        browserDetails: ['Tienda', 'Admin'],
-        app: 'ASP.NET Core MVC',
-        appDetails: ['Controladores y vistas', 'Identity + roles', 'Reglas de negocio', 'Localización ES/EN'],
-        data: 'PostgreSQL',
-        dataDetails: ['EF Core', 'Views', 'Triggers', 'Costos y precios'],
+        'Vista liviana del despliegue: Nginx recibe el tráfico HTTPS, Docker Compose coordina la app y los servicios internos, y ASP.NET Core MVC concentra tienda pública, administración y reglas de negocio.',
+        flowAriaLabel: 'Flujo técnico de VaultShop',
+        steps: [
+        { title: 'Internet / usuarios', description: 'Clientes y administradores entran por HTTPS al dominio público.' },
+        { title: 'Nginx HTTPS', description: 'Reverse proxy y terminación TLS hacia el contenedor de la aplicación.' },
+        { title: 'Docker Compose', description: 'Orquesta ASP.NET Core, PostgreSQL y MinIO en el VPS Ubuntu.' },
+        { title: 'Datos e integraciones', description: 'PostgreSQL persiste el dominio, MinIO guarda imágenes y Stripe procesa pagos.' },
+        ],
+        diagram: {
+        title: 'Diagrama de despliegue',
+        description:
+          'Flujo resumido del tráfico real: usuarios, proxy HTTPS, contenedores internos, persistencia y servicios externos.',
+        browser: 'Internet',
+        browserDetails: ['Cliente', 'Admin'],
+        edge: 'Nginx HTTPS',
+        edgeDetails: ['TLS', 'Reverse proxy'],
+        app: 'Docker + ASP.NET Core',
+        appDetails: ['MVC', 'Identity + roles', 'Reglas de negocio', 'ES/EN'],
+        data: 'PostgreSQL + MinIO',
+        dataDetails: ['EF Core', 'Views/triggers', 'Costos y precios', 'Imágenes'],
         services: 'Servicios externos',
         serviceDetails: ['Stripe', 'Facebook OAuth'],
       },
@@ -927,28 +929,30 @@ export const vaultshopContent = {
         },
       ],
     },
-    architecture: {
-      eyebrow: 'Architecture',
-      title: 'Architecture in one glance',
-      description:
-        'A lightweight view of the system: public store and admin panel live in a maintainable ASP.NET Core MVC monolith connected to PostgreSQL, with bounded external services for payments and social authentication.',
-      flowAriaLabel: 'Technical flow for VaultShop',
-      steps: [
-        { title: 'Customer / Admin', description: 'Public store, cart, orders, and admin panel.' },
-        { title: 'ASP.NET Core MVC', description: 'Controllers, views, authentication, roles, and business rules.' },
-        { title: 'Entity Framework Core', description: 'Mapping between domain entities and relational persistence.' },
-        { title: 'PostgreSQL', description: 'Catalog, users, companies, orders, costs, prices, views, and triggers.' },
-      ],
-      diagram: {
-        title: 'Simple architecture diagram',
+      architecture: {
+        eyebrow: 'Architecture',
+        title: 'Architecture in one glance',
         description:
-          'A summarized view of how the public and admin flows connect with the application, database, and external services.',
-        browser: 'Customer / Admin',
-        browserDetails: ['Store', 'Admin'],
-        app: 'ASP.NET Core MVC',
-        appDetails: ['Controllers and views', 'Identity + roles', 'Business rules', 'ES/EN localization'],
-        data: 'PostgreSQL',
-        dataDetails: ['EF Core', 'Views', 'Triggers', 'Costs and prices'],
+        'A lightweight deployment view: Nginx receives HTTPS traffic, Docker Compose coordinates the app and internal services, and ASP.NET Core MVC owns the storefront, admin area, and business rules.',
+        flowAriaLabel: 'Technical flow for VaultShop',
+        steps: [
+        { title: 'Internet / users', description: 'Customers and admins enter through HTTPS on the public domain.' },
+        { title: 'Nginx HTTPS', description: 'Reverse proxy and TLS termination to the application container.' },
+        { title: 'Docker Compose', description: 'Orchestrates ASP.NET Core, PostgreSQL, and MinIO on the Ubuntu VPS.' },
+        { title: 'Data and integrations', description: 'PostgreSQL persists the domain, MinIO stores images, and Stripe handles payments.' },
+        ],
+        diagram: {
+        title: 'Deployment diagram',
+        description:
+          'A summarized view of real traffic flow: users, HTTPS proxy, internal containers, persistence, and external services.',
+        browser: 'Internet',
+        browserDetails: ['Customer', 'Admin'],
+        edge: 'Nginx HTTPS',
+        edgeDetails: ['TLS', 'Reverse proxy'],
+        app: 'Docker + ASP.NET Core',
+        appDetails: ['MVC', 'Identity + roles', 'Business rules', 'ES/EN'],
+        data: 'PostgreSQL + MinIO',
+        dataDetails: ['EF Core', 'Views/triggers', 'Costs and prices', 'Images'],
         services: 'External services',
         serviceDetails: ['Stripe', 'Facebook OAuth'],
       },
