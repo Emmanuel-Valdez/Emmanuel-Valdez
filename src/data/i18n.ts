@@ -453,13 +453,6 @@ export const vaultshopContent = {
       { label: 'Pricing', value: 'Costos, márgenes, mayorista y minorista' },
       { label: 'Integraciones', value: 'Stripe + Facebook OAuth + ES/EN' },
     ],
-    summaryCards: [
-      { label: 'Tipo de proyecto', value: 'Caso backend .NET para e-commerce + administración', emphasis: true },
-      { label: 'Rol', value: 'Backend, datos y lógica de negocio con entrega fullstack' },
-      { label: 'Problema central', value: 'Pricing operativo que dependía de Excel y decisiones manuales', emphasis: true },
-      { label: 'Stack', value: 'ASP.NET Core MVC, EF Core, PostgreSQL, Identity, Stripe, Facebook OAuth y ES/EN' },
-      { label: 'Prueba técnica', value: 'SQL views/triggers, roles, flujos protegidos, demo pública, GitHub y capturas reales', emphasis: true },
-    ],
     whatBuilt: {
       eyebrow: 'Qué construí',
       title: 'Implementación personal detrás del caso',
@@ -710,14 +703,53 @@ export const vaultshopContent = {
         'DotNetEnv',
       ],
     },
-    impact: {
-      eyebrow: 'Takeaway profesional',
-      title: 'Qué demuestra este caso',
+    lessonsLearned: {
+      eyebrow: 'Aprendizajes y mejoras',
+      title: 'Qué aprendí y qué haría distinto',
       description:
-        'Este caso demuestra backend .NET aplicado a datos reales, reglas de negocio, roles, pagos, pricing y administración de órdenes sin depender de claims de infraestructura que el proyecto no necesita sobreexponer.',
+        'Lo que resultó más complejo de lo esperado, qué cambiaría en una segunda versión y qué faltaría para producción real.',
       items: [
-        'Proyecto fullstack con valor principal en backend, base de datos y reglas de negocio aplicadas.',
-        'Evidencia verificable mediante demo pública, video, GitHub y capturas de flujos protegidos.',
+        'La calculadora fue más difícil de diseñar de lo esperado: modelar costos variables, márgenes y triggers para mantener totales consistentes requirió varias iteraciones.',
+        'Docker simplificó el deploy pero el monitoreo sigue siendo básico: en producción agregaría health checks, logs centralizados y alertas.',
+        'La demo pública fue clave para mostrar valor sin abrir permisos sensibles, pero un sistema real necesita CI/CD, backups automatizados y observabilidad.',
+      ],
+    },
+    infrastructure: {
+      eyebrow: 'Infraestructura',
+      title: 'Docker, Nginx y VPS',
+      description:
+        'El despliegue usa Docker Compose para aislamiento de servicios, Nginx como reverse proxy con HTTPS, y un VPS Ubuntu real para control total del entorno.',
+      items: [
+        { title: 'Docker Compose', description: 'Tres servicios aislados: ASP.NET Core, PostgreSQL y MinIO. Un solo comando para levantar todo el entorno.' },
+        { title: 'Nginx HTTPS', description: 'Terminación SSL con Let\'s Encrypt y reverse proxy hacia el contenedor de la aplicación.' },
+        { title: 'MinIO', description: 'Almacenamiento de imágenes compatible con S3, autoalojado para no depender de servicios externos.' },
+        { title: 'VPS Ubuntu', description: 'Control total del entorno de producción, aprendizaje real de administración de servidores y despliegue manual.' },
+      ],
+    },
+    operationalProof: {
+      eyebrow: 'Evidencia operativa',
+      title: 'Lo que funciona en el VPS real',
+      description:
+        'Más allá del código: evidencia de que el sistema está desplegado y operativo con procesos básicos de mantenimiento.',
+      items: [
+        { label: 'Demo', value: 'En vivo en vaultshop.evaldez.ar' },
+        { label: 'HTTPS', value: 'Certificado Let\'s Encrypt, renovación automática' },
+        { label: 'Backup', value: 'pg_dump + MinIO, restauración verificada' },
+        { label: 'Deploy', value: 'Docker Compose, actualización manual' },
+      ],
+    },
+    limitations: {
+      eyebrow: 'Limitaciones',
+      title: 'Qué es y qué no es',
+      description:
+        'Un caso de estudio backend con despliegue real, no un sistema empresarial en producción.',
+      items: [
+        'Monolito MVC, no microservicios: suficiente para el alcance actual pero no escalable horizontalmente.',
+        'Un solo VPS, sin redundancia ni balanceo de carga.',
+        'Datos demo, no clientes reales.',
+        'Sin CI/CD a producción: el deploy es manual.',
+        'Sin stack de observabilidad: no hay Grafana, logs centralizados ni métricas.',
+        'Stripe en modo test, no en producción real.',
       ],
     },
     media: {
@@ -799,13 +831,6 @@ export const vaultshopContent = {
       { label: 'Roles', value: 'Customer, Company, Employee, Admin' },
       { label: 'Pricing', value: 'Costs, margins, wholesale and retail' },
       { label: 'Integrations', value: 'Stripe + Facebook OAuth + ES/EN' },
-    ],
-    summaryCards: [
-      { label: 'Project type', value: '.NET backend case for e-commerce + administration', emphasis: true },
-      { label: 'Role', value: 'Backend, data, and business logic with fullstack delivery' },
-      { label: 'Core problem', value: 'Operational pricing depended on Excel and manual decisions', emphasis: true },
-      { label: 'Stack', value: 'ASP.NET Core MVC, EF Core, PostgreSQL, Identity, Stripe, Facebook OAuth, ES/EN' },
-      { label: 'Technical proof', value: 'SQL views/triggers, roles, protected flows, public demo, GitHub, and real screenshots', emphasis: true },
     ],
     whatBuilt: {
       eyebrow: 'What I built',
@@ -1057,14 +1082,53 @@ export const vaultshopContent = {
         'Ubuntu VPS',
       ],
     },
-    impact: {
-      eyebrow: 'Professional takeaway',
-      title: 'What this case demonstrates',
+    lessonsLearned: {
+      eyebrow: 'Lessons and improvements',
+      title: 'What I learned and what I would do differently',
       description:
-        'This case demonstrates .NET backend work applied to real data, business rules, roles, payments, pricing, and order administration without relying on infrastructure claims the project does not need to overexpose.',
+        'What was harder than expected, what I would change in a second version, and what production would require.',
       items: [
-        'Fullstack project with its main value in backend, database design, and applied business rules.',
-        'Verifiable evidence through public demo, video, GitHub, and screenshots of protected flows.',
+        'The calculator was harder to design than expected: modeling variable costs, margins, and triggers to keep totals consistent required several iterations.',
+        'Docker simplified deployment but monitoring remains basic: in production I would add health checks, centralized logging, and alerts.',
+        'The public demo was key to showing value without opening sensitive permissions, but a real system needs CI/CD, automated backups, and observability.',
+      ],
+    },
+    infrastructure: {
+      eyebrow: 'Infrastructure',
+      title: 'Docker, Nginx, and VPS',
+      description:
+        'Deployment uses Docker Compose for service isolation, Nginx as reverse proxy with HTTPS, and a real Ubuntu VPS for full environment control.',
+      items: [
+        { title: 'Docker Compose', description: 'Three isolated services: ASP.NET Core, PostgreSQL, and MinIO. One command to bring up the entire environment.' },
+        { title: 'Nginx HTTPS', description: 'SSL termination with Let\'s Encrypt and reverse proxy to the application container.' },
+        { title: 'MinIO', description: 'S3-compatible image storage, self-hosted to avoid external service dependencies.' },
+        { title: 'Ubuntu VPS', description: 'Full control of the production environment, real server administration learning, and manual deployment.' },
+      ],
+    },
+    operationalProof: {
+      eyebrow: 'Operational proof',
+      title: 'What works on the real VPS',
+      description:
+        'Beyond code: evidence that the system is deployed and operational with basic maintenance processes.',
+      items: [
+        { label: 'Demo', value: 'Live at vaultshop.evaldez.ar' },
+        { label: 'HTTPS', value: 'Let\'s Encrypt certificate, auto-renewal' },
+        { label: 'Backup', value: 'pg_dump + MinIO, restore verified' },
+        { label: 'Deploy', value: 'Docker Compose, manual update' },
+      ],
+    },
+    limitations: {
+      eyebrow: 'Limitations',
+      title: 'What it is and what it is not',
+      description:
+        'A backend case study with real deployment, not an enterprise production system.',
+      items: [
+        'MVC monolith, not microservices: sufficient for current scope but not horizontally scalable.',
+        'Single VPS, no redundancy or load balancing.',
+        'Demo data, not real customers.',
+        'No CI/CD to production: deployment is manual.',
+        'No observability stack: no Grafana, centralized logging, or metrics.',
+        'Stripe in test mode, not real production.',
       ],
     },
     media: {
