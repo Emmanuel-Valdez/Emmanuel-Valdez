@@ -80,7 +80,7 @@ export const homeContent = {
     meta: {
       title: 'Emmanuel Valdez | Desarrollador Backend .NET',
       description:
-        'Portfolio de Emmanuel Valdez, Desarrollador Backend .NET enfocado en ASP.NET Core, C#, SQL Server, EF Core, autenticación, pagos y sistemas de negocio.',
+        'Portfolio de Emmanuel Valdez, Desarrollador Backend .NET enfocado en ASP.NET Core, C#, PostgreSQL, EF Core, autenticación, pagos y sistemas de negocio.',
     },
     sections: {
       experience: 'Experiencia Laboral',
@@ -113,7 +113,7 @@ export const homeContent = {
         project: 'Ver caso VaultShop',
         projectHref: routes.es.vaultshop,
         contact: 'Escribirme por email',
-        contactHref: 'mailto:evalmon.dev@gmail.com',
+        contactHref: 'mailto:contact@evaldez.ar',
         cv: 'Descargar CV',
         cvFile: cvFiles.es,
       },
@@ -133,20 +133,19 @@ export const homeContent = {
     experience: [
       {
         date: '2020 - Actualmente...',
-      title: 'Operación e-commerce y desarrollo de sistema propio',
-      company: 'VaultShop',
-      description:
-        'Construí y desplegué VaultShop, una aplicación ASP.NET Core 8 MVC con PostgreSQL, Docker Compose, MinIO, Stripe, Identity roles y Nginx HTTPS en un VPS Ubuntu real. El sistema centraliza tienda, roles, pagos, órdenes, almacenamiento de imágenes y monitoreo de uptime/TLS.',
-      highlights: [
-        'Diseñé e implementé el backend con ASP.NET Core 8 MVC, EF Core y PostgreSQL/Npgsql.',
-        'Desplegué la aplicación con Docker Compose, Nginx HTTPS y Ubuntu VPS en Oracle Cloud.',
-        'Implementé Stripe Checkout con webhooks firmados, MinIO para almacenamiento de imágenes y ASP.NET Core Identity para roles.',
-        'Configuré CI con GitHub Actions, backup/restore validado para PostgreSQL y MinIO, y monitoreo básico de uptime/TLS.',
-      ],
-      tags: ['ASP.NET Core', 'PostgreSQL', 'Docker', 'Stripe', 'Linux VPS'],
+        title: 'Operaciones e-commerce y administración',
+        company: 'Ukiyo / Emprendimiento familiar',
+        description:
+          'Gestioné operaciones completas de tienda online: catálogo, stock, pedidos, atención al cliente, despacho y logística. Identifiqué problemas operativos (costos manuales, errores de precio, falta de historial) y los transformé en requisitos para la plataforma VaultShop.',
+        highlights: [
+          'Coordiné migración de TiendaNube a Tienda Negocio manteniendo continuidad operativa.',
+          'Identifiqué necesidades de pricing, roles y administración que se convirtieron en el alcance de VaultShop.',
+          'Gestión diaria de catálogo, stock, pedidos, atención al cliente y logística de despacho.',
+        ],
+        tags: ['E-commerce', 'TiendaNube', 'Tienda Negocio', 'Logística', 'Pricing'],
         tagsAriaLabel: 'Áreas de experiencia',
-        link: 'https://vaultshop.evaldez.ar',
-        linkLabel: 'Ver tienda en vivo',
+        link: '',
+        linkLabel: '',
       },
     ],
     projects: {
@@ -219,7 +218,7 @@ export const homeContent = {
       focusAreas: [
         {
           title: 'Backend y datos',
-          description: '.NET, C#, SQL Server, reglas de negocio, roles, cálculos y persistencia relacional.',
+          description: '.NET, C#, PostgreSQL, reglas de negocio, roles, cálculos y persistencia relacional.',
         },
         {
           title: 'Procesos reales',
@@ -253,7 +252,7 @@ export const homeContent = {
     meta: {
       title: 'Emmanuel Valdez | Backend .NET Developer',
       description:
-        'Portfolio of Emmanuel Valdez, Backend .NET Developer focused on ASP.NET Core, C#, SQL Server, EF Core, authentication, payments, and business systems.',
+        'Portfolio of Emmanuel Valdez, Backend .NET Developer focused on ASP.NET Core, C#, PostgreSQL, EF Core, authentication, payments, and business systems.',
     },
     sections: {
       experience: 'Work Experience',
@@ -286,7 +285,7 @@ export const homeContent = {
         project: 'View VaultShop case study',
         projectHref: routes.en.vaultshop,
         contact: 'Email me',
-        contactHref: 'mailto:evalmon.dev@gmail.com',
+        contactHref: 'mailto:contact@evaldez.ar',
         cv: 'Download CV',
         cvFile: cvFiles.en,
       },
@@ -306,20 +305,19 @@ export const homeContent = {
     experience: [
       {
         date: '2020 - Present',
-      title: 'E-commerce operations and custom system development',
-      company: 'VaultShop',
-      description:
-        'I built and deployed VaultShop, an ASP.NET Core 8 MVC application with PostgreSQL, Docker Compose, MinIO, Stripe, Identity roles, and Nginx HTTPS on a real Ubuntu VPS. The system centralizes storefront, roles, payments, orders, image storage, and uptime/TLS monitoring.',
-      highlights: [
-        'Designed and implemented the backend with ASP.NET Core 8 MVC, EF Core, and PostgreSQL/Npgsql.',
-        'Deployed the application with Docker Compose, Nginx HTTPS, and Ubuntu VPS on Oracle Cloud.',
-        'Implemented Stripe Checkout with signed webhooks, MinIO for image storage, and ASP.NET Core Identity for roles.',
-        'Set up CI with GitHub Actions, validated backup/restore for PostgreSQL and MinIO, and basic uptime/TLS monitoring.',
-      ],
-      tags: ['ASP.NET Core', 'PostgreSQL', 'Docker', 'Stripe', 'Linux VPS'],
+        title: 'E-commerce operations and administration',
+        company: 'Ukiyo / Family business',
+        description:
+          'I managed full online store operations: catalog, stock, orders, customer service, shipping, and logistics. I identified operational issues (manual costs, pricing errors, lack of history) and turned them into requirements for the VaultShop platform.',
+        highlights: [
+          'Coordinated migration from TiendaNube to Tienda Negocio while maintaining operational continuity.',
+          'Identified pricing, roles, and administration needs that became VaultShop\'s scope.',
+          'Daily management of catalog, stock, orders, customer service, and shipping logistics.',
+        ],
+        tags: ['E-commerce', 'TiendaNube', 'Tienda Negocio', 'Logistics', 'Pricing'],
         tagsAriaLabel: 'Experience areas',
-        link: 'https://vaultshop.evaldez.ar',
-        linkLabel: 'View live store',
+        link: '',
+        linkLabel: '',
       },
     ],
     projects: {
@@ -392,7 +390,7 @@ export const homeContent = {
       focusAreas: [
         {
           title: 'Backend and data',
-          description: '.NET, C#, SQL Server, business rules, roles, calculations, and relational persistence.',
+          description: '.NET, C#, PostgreSQL, business rules, roles, calculations, and relational persistence.',
         },
         {
           title: 'Real processes',
@@ -459,7 +457,7 @@ export const vaultshopContent = {
       { label: 'Tipo de proyecto', value: 'Caso backend .NET para e-commerce + administración', emphasis: true },
       { label: 'Rol', value: 'Backend, datos y lógica de negocio con entrega fullstack' },
       { label: 'Problema central', value: 'Pricing operativo que dependía de Excel y decisiones manuales', emphasis: true },
-      { label: 'Stack', value: 'ASP.NET Core MVC, EF Core, SQL Server, Identity, Stripe, Facebook OAuth y ES/EN' },
+      { label: 'Stack', value: 'ASP.NET Core MVC, EF Core, PostgreSQL, Identity, Stripe, Facebook OAuth y ES/EN' },
       { label: 'Prueba técnica', value: 'SQL views/triggers, roles, flujos protegidos, demo pública, GitHub y capturas reales', emphasis: true },
     ],
     whatBuilt: {
@@ -468,7 +466,7 @@ export const vaultshopContent = {
       description:
         'El foco no es promocionar una marca: es mostrar cómo convertí una operación real en módulos backend verificables.',
       items: [
-        'Modelo de datos SQL Server para catálogo, usuarios, compañías, órdenes, costos y precios.',
+        'Modelo de datos PostgreSQL para catálogo, usuarios, compañías, órdenes, costos y precios.',
         'Flujos ASP.NET Core MVC para tienda, carrito, administración, órdenes y pricing.',
         'Identity roles para separar cliente, compañía, empleado y administrador.',
         'Integraciones acotadas con Stripe, Facebook OAuth y localización ES/EN.',
@@ -511,7 +509,7 @@ export const vaultshopContent = {
         'Acciones que modifican precios, costos, usuarios, estados de orden o datos internos del negocio.',
       ],
       evidenceItems: [
-        'Las capturas documentan roles, órdenes, módulos administrativos, pagos, pricing y datos persistidos en SQL Server.',
+        'Las capturas documentan roles, órdenes, módulos administrativos, pagos, pricing y datos persistidos en PostgreSQL.',
         'Las pantallas protegidas se muestran con datos demo para explicar alcance técnico sin abrir permisos sensibles.',
       ],
     },
@@ -519,8 +517,8 @@ export const vaultshopContent = {
       eyebrow: 'Contexto',
       title: 'Del Excel al sistema web',
       paragraphs: [
-        'Ukiyo nace para ordenar dos necesidades del negocio: vender productos físicos desde una tienda pública y calcular precios con criterios más consistentes que una planilla.',
-        'La aplicación concentra tienda, administración y pricing en un sistema ASP.NET Core donde SQL Server persiste datos operativos y sostiene reglas de cálculo.',
+        'VaultShop nace para ordenar dos necesidades del negocio: vender productos físicos desde una tienda pública y calcular precios con criterios más consistentes que una planilla.',
+        'La aplicación concentra tienda, administración y pricing en un sistema ASP.NET Core donde PostgreSQL persiste datos operativos y sostiene reglas de cálculo.',
       ],
     },
     problemTitle: 'Problema',
@@ -559,13 +557,13 @@ export const vaultshopContent = {
       eyebrow: 'Arquitectura',
       title: 'Arquitectura en una mirada',
       description:
-        'Vista liviana del sistema: tienda pública y panel administrativo conviven en un monolito ASP.NET Core MVC conectado a SQL Server, con servicios externos acotados para pagos y autenticación social.',
+        'Vista liviana del sistema: tienda pública y panel administrativo conviven en un monolito ASP.NET Core MVC conectado a PostgreSQL, con servicios externos acotados para pagos y autenticación social.',
       flowAriaLabel: 'Flujo técnico de VaultShop',
       steps: [
         { title: 'Cliente / Admin', description: 'Tienda pública, carrito, órdenes y panel administrativo.' },
         { title: 'ASP.NET Core MVC', description: 'Controladores, vistas, autenticación, roles y reglas de negocio.' },
         { title: 'Entity Framework Core', description: 'Mapeo entre entidades del dominio y persistencia relacional.' },
-        { title: 'SQL Server', description: 'Catálogo, usuarios, empresas, órdenes, costos, precios, views y triggers.' },
+        { title: 'PostgreSQL', description: 'Catálogo, usuarios, empresas, órdenes, costos, precios, views y triggers.' },
       ],
       diagram: {
         title: 'Diagrama simple de arquitectura',
@@ -575,7 +573,7 @@ export const vaultshopContent = {
         browserDetails: ['Tienda', 'Admin'],
         app: 'ASP.NET Core MVC',
         appDetails: ['Controladores y vistas', 'Identity + roles', 'Reglas de negocio', 'Localización ES/EN'],
-        data: 'SQL Server',
+        data: 'PostgreSQL',
         dataDetails: ['EF Core', 'Views', 'Triggers', 'Costos y precios'],
         services: 'Servicios externos',
         serviceDetails: ['Stripe', 'Facebook OAuth'],
@@ -589,12 +587,12 @@ export const vaultshopContent = {
         {
           title: 'Flujo administrativo',
           description:
-            'El panel admin concentra productos, usuarios, compañías, órdenes y datos de cálculo. La lógica de negocio vive en el backend y se apoya en SQL Server para persistencia y cálculos consistentes.',
+            'El panel admin concentra productos, usuarios, compañías, órdenes y datos de cálculo. La lógica de negocio vive en el backend y se apoya en PostgreSQL para persistencia y cálculos consistentes.',
         },
         {
           title: 'Base de datos y cálculos',
           description:
-            'SQL Server guarda catálogo, usuarios, empresas, órdenes, costos y precios. Las views y triggers ayudan a centralizar totales y mantener sincronizados los valores usados por la calculadora.',
+            'PostgreSQL guarda catálogo, usuarios, empresas, órdenes, costos y precios. Las views y triggers ayudan a centralizar totales y mantener sincronizados los valores usados por la calculadora.',
         },
       ],
     },
@@ -606,7 +604,7 @@ export const vaultshopContent = {
       items: [
         { layer: 'Interfaz', items: ['Tienda pública', 'Panel administrativo', 'Localización ES/EN'] },
         { layer: 'Aplicación', items: ['ASP.NET Core 8 MVC', 'Identity y roles', 'Reglas de precios'] },
-        { layer: 'Datos', items: ['Entity Framework Core', 'SQL Server', 'Views y triggers'] },
+        { layer: 'Datos', items: ['Entity Framework Core', 'PostgreSQL', 'Views y triggers'] },
         { layer: 'Servicios externos', items: ['Stripe', 'Facebook OAuth', 'DotNetEnv para secretos locales'] },
       ],
     },
@@ -646,7 +644,7 @@ export const vaultshopContent = {
         title: 'Relaciones principales del dominio',
         description:
           'Resumen conceptual: muestra cómo se conectan las áreas del sistema sin exponer estructura interna, datos sensibles ni reglas comerciales privadas.',
-        ariaLabel: 'Diagrama relacional conceptual del modelo de datos de Ukiyo',
+        ariaLabel: 'Diagrama relacional conceptual del modelo de datos de VaultShop',
         flows: [
           ['Catálogo y carrito', 'Pedidos', 'Operación administrativa'],
           ['Cuentas y empresas', 'Pedidos', 'Roles y permisos'],
@@ -681,7 +679,7 @@ export const vaultshopContent = {
       stackAriaLabel: 'Stack técnico de VaultShop',
       decisions: [
         { title: 'ASP.NET Core MVC para tienda y admin', description: 'Un monolito MVC mantiene cerca las vistas, controladores y reglas del dominio sin introducir complejidad distribuida innecesaria.' },
-        { title: 'EF Core + SQL Server para persistencia relacional', description: 'El modelo conecta catálogo, usuarios, órdenes, costos y precios en una base consistente para la operación.' },
+        { title: 'EF Core + PostgreSQL para persistencia relacional', description: 'El modelo conecta catálogo, usuarios, órdenes, costos y precios en una base consistente para la operación.' },
         { title: 'Identity roles para flujos protegidos', description: 'Clientes, compañías, empleados y administradores pueden tener permisos distintos sin exponer acciones sensibles en la demo pública.' },
         { title: 'SQL views para pricing y costos', description: 'Las views centralizan cálculos de costos por producto y precios finales para que la UI no replique lógica crítica.' },
         { title: 'SQL triggers para consistencia de totales', description: 'Los triggers ayudan a mantener valores derivados sincronizados cuando cambian cantidades o precios de insumos.' },
@@ -704,7 +702,7 @@ export const vaultshopContent = {
       stack: [
         'ASP.NET Core 8 MVC',
         'Entity Framework Core',
-        'SQL Server',
+        'PostgreSQL',
         'ASP.NET Core Identity',
         'Facebook OAuth',
         'Stripe',
@@ -806,7 +804,7 @@ export const vaultshopContent = {
       { label: 'Project type', value: '.NET backend case for e-commerce + administration', emphasis: true },
       { label: 'Role', value: 'Backend, data, and business logic with fullstack delivery' },
       { label: 'Core problem', value: 'Operational pricing depended on Excel and manual decisions', emphasis: true },
-      { label: 'Stack', value: 'ASP.NET Core MVC, EF Core, SQL Server, Identity, Stripe, Facebook OAuth, ES/EN' },
+      { label: 'Stack', value: 'ASP.NET Core MVC, EF Core, PostgreSQL, Identity, Stripe, Facebook OAuth, ES/EN' },
       { label: 'Technical proof', value: 'SQL views/triggers, roles, protected flows, public demo, GitHub, and real screenshots', emphasis: true },
     ],
     whatBuilt: {
@@ -815,7 +813,7 @@ export const vaultshopContent = {
       description:
         'The goal is not brand promotion: it is to show how I turned a real operation into verifiable backend modules.',
       items: [
-        'SQL Server data model for catalog, users, companies, orders, costs, and prices.',
+        'PostgreSQL data model for catalog, users, companies, orders, costs, and prices.',
         'ASP.NET Core MVC flows for storefront, cart, admin, orders, and pricing.',
         'Identity roles to separate customer, company, employee, and admin permissions.',
         'Bounded integrations with Stripe, Facebook OAuth, and ES/EN localization.',
@@ -858,7 +856,7 @@ export const vaultshopContent = {
         'Actions that change prices, costs, users, order statuses, or internal business data.',
       ],
       evidenceItems: [
-        'Screenshots document roles, orders, admin modules, payments, pricing, and SQL Server-backed data.',
+        'Screenshots document roles, orders, admin modules, payments, pricing, and PostgreSQL-backed data.',
         'Protected screens are shown with demo data to explain technical scope without opening sensitive permissions.',
       ],
     },
@@ -866,8 +864,8 @@ export const vaultshopContent = {
       eyebrow: 'Context',
       title: 'From Excel to a web system',
       paragraphs: [
-        'Ukiyo was built to organize two business needs: selling physical products through a public store and calculating prices with more consistent criteria than a spreadsheet.',
-        'The application brings storefront, administration, and pricing into an ASP.NET Core system where SQL Server persists operational data and supports calculation rules.',
+        'VaultShop was built to organize two business needs: selling physical products through a public store and calculating prices with more consistent criteria than a spreadsheet.',
+        'The application brings storefront, administration, and pricing into an ASP.NET Core system where PostgreSQL persists operational data and supports calculation rules.',
       ],
     },
     problemTitle: 'Problem',
@@ -906,13 +904,13 @@ export const vaultshopContent = {
       eyebrow: 'Architecture',
       title: 'Architecture in one glance',
       description:
-        'A lightweight view of the system: public store and admin panel live in a maintainable ASP.NET Core MVC monolith connected to SQL Server, with bounded external services for payments and social authentication.',
+        'A lightweight view of the system: public store and admin panel live in a maintainable ASP.NET Core MVC monolith connected to PostgreSQL, with bounded external services for payments and social authentication.',
       flowAriaLabel: 'Technical flow for VaultShop',
       steps: [
         { title: 'Customer / Admin', description: 'Public store, cart, orders, and admin panel.' },
         { title: 'ASP.NET Core MVC', description: 'Controllers, views, authentication, roles, and business rules.' },
         { title: 'Entity Framework Core', description: 'Mapping between domain entities and relational persistence.' },
-        { title: 'SQL Server', description: 'Catalog, users, companies, orders, costs, prices, views, and triggers.' },
+        { title: 'PostgreSQL', description: 'Catalog, users, companies, orders, costs, prices, views, and triggers.' },
       ],
       diagram: {
         title: 'Simple architecture diagram',
@@ -922,7 +920,7 @@ export const vaultshopContent = {
         browserDetails: ['Store', 'Admin'],
         app: 'ASP.NET Core MVC',
         appDetails: ['Controllers and views', 'Identity + roles', 'Business rules', 'ES/EN localization'],
-        data: 'SQL Server',
+        data: 'PostgreSQL',
         dataDetails: ['EF Core', 'Views', 'Triggers', 'Costs and prices'],
         services: 'External services',
         serviceDetails: ['Stripe', 'Facebook OAuth'],
@@ -936,12 +934,12 @@ export const vaultshopContent = {
         {
           title: 'Admin flow',
           description:
-            'The admin panel centralizes products, users, companies, orders, and calculation data. Business logic lives in the backend and relies on SQL Server for persistence and consistent calculations.',
+            'The admin panel centralizes products, users, companies, orders, and calculation data. Business logic lives in the backend and relies on PostgreSQL for persistence and consistent calculations.',
         },
         {
           title: 'Database and calculations',
           description:
-            'SQL Server stores catalog, users, companies, orders, costs, and prices. Views and triggers help centralize totals and keep values used by the calculator synchronized.',
+            'PostgreSQL stores catalog, users, companies, orders, costs, and prices. Views and triggers help centralize totals and keep values used by the calculator synchronized.',
         },
       ],
     },
@@ -953,7 +951,7 @@ export const vaultshopContent = {
       items: [
         { layer: 'Interface', items: ['Public store', 'Admin panel', 'ES/EN localization'] },
         { layer: 'Application', items: ['ASP.NET Core 8 MVC', 'Identity and roles', 'Pricing rules'] },
-        { layer: 'Data', items: ['Entity Framework Core', 'SQL Server', 'Views and triggers'] },
+        { layer: 'Data', items: ['Entity Framework Core', 'PostgreSQL', 'Views and triggers'] },
         { layer: 'External services', items: ['Stripe', 'Facebook OAuth', 'DotNetEnv for local secrets'] },
       ],
     },
@@ -993,7 +991,7 @@ export const vaultshopContent = {
         title: 'Main domain relationships',
         description:
           'Conceptual summary: it shows how system areas connect without exposing internal structure, sensitive data, or private business rules.',
-        ariaLabel: 'Conceptual relational diagram for the Ukiyo data model',
+        ariaLabel: 'Conceptual relational diagram for the VaultShop data model',
         flows: [
           ['Catalog and cart', 'Orders', 'Admin operations'],
           ['Accounts and companies', 'Orders', 'Roles and permissions'],
@@ -1028,7 +1026,7 @@ export const vaultshopContent = {
       stackAriaLabel: 'Technical stack for VaultShop',
       decisions: [
         { title: 'ASP.NET Core MVC for store and admin', description: 'A MVC monolith keeps views, controllers, and domain rules close without adding unnecessary distributed complexity.' },
-        { title: 'EF Core + SQL Server for relational persistence', description: 'The model connects catalog, users, orders, costs, and prices in one consistent operational database.' },
+        { title: 'EF Core + PostgreSQL for relational persistence', description: 'The model connects catalog, users, orders, costs, and prices in one consistent operational database.' },
         { title: 'Identity roles for protected flows', description: 'Customers, companies, employees, and admins can have distinct permissions without exposing sensitive actions in the public demo.' },
         { title: 'SQL views for pricing and costs', description: 'Views centralize cost-by-product and final-price calculations so the UI does not duplicate critical logic.' },
         { title: 'SQL triggers for total consistency', description: 'Triggers help keep derived values synchronized when input quantities or prices change.' },
