@@ -27,8 +27,8 @@ export const common = {
     skipLink: 'Saltar al contenido principal',
     headerAriaLabel: 'Navegación principal',
     brand: {
-      label: 'evaldez',
-      ariaLabel: 'Inicio de evaldez, portfolio de Emmanuel Valdez',
+      label: 'ev_',
+      ariaLabel: 'Inicio del portfolio de Emmanuel Valdez, firma ev_',
     },
     nav: {
       experience: 'Experiencia',
@@ -52,8 +52,8 @@ export const common = {
     skipLink: 'Skip to main content',
     headerAriaLabel: 'Main navigation',
     brand: {
-      label: 'evaldez',
-      ariaLabel: 'evaldez home, Emmanuel Valdez portfolio',
+      label: 'ev_',
+      ariaLabel: 'Emmanuel Valdez portfolio home, ev_ signature',
     },
     nav: {
       experience: 'Experience',
@@ -187,7 +187,7 @@ export const homeContent = {
             { value: 'VPS', label: 'Ubuntu 24.04' },
           ],
           link: 'https://vaultshop.evaldez.ar',
-          github: 'https://github.com/Emmanuel-Valdez/VaultShop',
+          github: 'https://github.com/Emmanuel-Valdez/ukiyo',
           image: '/projects/vaultshop/storefront.webp',
           imageMobile: '/projects/vaultshop/mobile-storefront.webp',
           imageAlt: 'Captura real de la tienda VaultShop con catálogo de productos',
@@ -360,7 +360,7 @@ export const homeContent = {
             { value: 'VPS', label: 'Ubuntu 24.04' },
           ],
           link: 'https://vaultshop.evaldez.ar',
-          github: 'https://github.com/Emmanuel-Valdez/VaultShop',
+          github: 'https://github.com/Emmanuel-Valdez/ukiyo',
           image: '/projects/vaultshop/storefront.webp',
           imageMobile: '/projects/vaultshop/mobile-storefront.webp',
           imageAlt: 'Real screenshot of VaultShop online store with product catalog',
@@ -441,6 +441,15 @@ export const vaultshopContent = {
     buttons: {
       demo: 'Ver tienda en vivo',
       code: 'Ver código en GitHub',
+    },
+    statusBadges: {
+      ariaLabel: 'Estado técnico de la demo VaultShop',
+      items: [
+        { label: 'Estado de la demo', value: '● Live' },
+        { label: 'Seguridad de conexión', value: '🔒 HTTPS' },
+        { label: 'Estado de respaldo', value: '✓ Backup tested' },
+        { label: 'Despliegue', value: '● Docker Compose' },
+      ],
     },
     heroImageAlt: 'Captura real de VaultShop con catálogo de productos',
     metricsAriaLabel: 'Resumen del proyecto',
@@ -822,6 +831,15 @@ export const vaultshopContent = {
     buttons: {
       demo: 'View live store',
       code: 'View code on GitHub',
+    },
+    statusBadges: {
+      ariaLabel: 'Technical status for the VaultShop demo',
+      items: [
+        { label: 'Demo status', value: '● Live' },
+        { label: 'Connection security', value: '🔒 HTTPS' },
+        { label: 'Backup status', value: '✓ Backup tested' },
+        { label: 'Deployment', value: '● Docker Compose' },
+      ],
     },
     heroImageAlt: 'Real screenshot of VaultShop with product catalog',
     metricsAriaLabel: 'Project summary',

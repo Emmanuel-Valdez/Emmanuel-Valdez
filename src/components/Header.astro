@@ -23,39 +23,39 @@ const englishHref = locale === 'en' ? Astro.url.pathname : languageHref;
 >
   <nav
     aria-label={copy.headerAriaLabel}
-    class="flex max-w-[calc(100vw-1rem)] flex-row items-center overflow-hidden rounded-full border border-black bg-black/70 px-1.5 py-1 text-xs backdrop-blur-2xl sm:px-3 sm:text-base"
+    class="flex max-w-[calc(100vw-1rem)] flex-row items-center overflow-hidden rounded-full border border-blue-400/15 bg-slate-950/80 px-1.5 py-1 text-xs backdrop-blur-2xl sm:px-3 sm:text-base"
   >
     <a
       aria-label={copy.brand.ariaLabel}
-      class="mr-1 inline-flex min-h-9 items-center whitespace-nowrap rounded-full border border-sky-300/20 bg-sky-300/10 px-2 font-semibold tracking-[0.08em] text-sky-100 transition hover:bg-sky-300/20 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-h-10 sm:px-4 sm:tracking-[0.16em]"
+      class="mr-1 inline-flex min-h-9 items-center whitespace-nowrap rounded-full border border-blue-400/15 bg-slate-900/80 px-2 font-mono font-semibold tracking-[0.08em] text-amber-200 transition hover:border-amber-300/35 hover:bg-amber-300/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 sm:min-h-10 sm:px-4 sm:tracking-[0.16em]"
       href={homeHref}
     >{copy.brand.label}</a>
-    <a aria-label={copy.nav.projects} class="inline-flex min-h-9 min-w-9 items-center justify-center rounded-full px-1.5 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-w-0 sm:px-3" href={`${homeHref}#projects`}
+    <a aria-label={copy.nav.projects} class="inline-flex min-h-9 min-w-9 items-center justify-center rounded-full px-1.5 transition hover:bg-white/10 hover:text-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 sm:min-w-0 sm:px-3" href={`${homeHref}#projects`}
       ><span class="sm:hidden" aria-hidden="true"><CodeIcon /></span><span class="sr-only sm:not-sr-only">{copy.nav.projects}</span></a
     >
-    <a aria-label={copy.nav.experience} class="inline-flex min-h-9 min-w-9 items-center justify-center rounded-full px-1.5 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-w-0 sm:px-3" href={`${homeHref}#experience`}
+    <a aria-label={copy.nav.experience} class="inline-flex min-h-9 min-w-9 items-center justify-center rounded-full px-1.5 transition hover:bg-white/10 hover:text-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 sm:min-w-0 sm:px-3" href={`${homeHref}#experience`}
       ><span class="sm:hidden" aria-hidden="true"><BriefCaseIcon /></span><span class="sr-only sm:not-sr-only">{copy.nav.experience}</span></a
     >
-    <a aria-label={copy.nav.about} class="inline-flex min-h-9 min-w-9 items-center justify-center rounded-full px-1.5 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-w-0 sm:px-3" href={`${homeHref}#about`}
+    <a aria-label={copy.nav.about} class="inline-flex min-h-9 min-w-9 items-center justify-center rounded-full px-1.5 transition hover:bg-white/10 hover:text-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 sm:min-w-0 sm:px-3" href={`${homeHref}#about`}
       ><span class="sm:hidden" aria-hidden="true"><UserIcon /></span><span class="sr-only sm:not-sr-only">{copy.nav.about}</span></a
     >
-    <a aria-label={copy.nav.contact} class="inline-flex min-h-9 min-w-9 items-center justify-center rounded-full px-1.5 transition hover:bg-white/10 hover:text-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 sm:min-w-0 sm:px-3" href={`${homeHref}#contact`}
+    <a aria-label={copy.nav.contact} class="inline-flex min-h-9 min-w-9 items-center justify-center rounded-full px-1.5 transition hover:bg-white/10 hover:text-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 sm:min-w-0 sm:px-3" href={`${homeHref}#contact`}
       ><span class="sm:hidden" aria-hidden="true"><CoffeeIcon /></span><span class="sr-only sm:not-sr-only">{copy.nav.contact}</span></a
     >
     <div
       aria-label={copy.language.label}
-      class="ml-1 inline-flex items-center rounded-full border border-white/10 bg-white/5 p-0.5 text-[0.68rem] font-semibold sm:text-xs"
+      class="ml-1 inline-flex items-center rounded-full border border-blue-400/15 bg-white/5 p-0.5 text-[0.68rem] font-semibold sm:text-xs"
       role="group"
     >
       <a
         aria-current={locale === 'es' ? 'page' : undefined}
-        class={`inline-flex min-h-8 items-center rounded-full px-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 ${locale === 'es' ? 'bg-sky-300 text-slate-950 shadow-sm shadow-sky-950/40' : 'text-sky-100 hover:bg-white/10 hover:text-white'}`}
+        class={`inline-flex min-h-8 items-center rounded-full px-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 ${locale === 'es' ? 'bg-amber-400 text-slate-950 shadow-sm shadow-black/40' : 'text-slate-200 hover:bg-white/10 hover:text-white'}`}
         href={spanishHref}
         hreflang="es"
       >ES</a>
       <a
         aria-current={locale === 'en' ? 'page' : undefined}
-        class={`inline-flex min-h-8 items-center rounded-full px-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300 ${locale === 'en' ? 'bg-sky-300 text-slate-950 shadow-sm shadow-sky-950/40' : 'text-sky-100 hover:bg-white/10 hover:text-white'}`}
+        class={`inline-flex min-h-8 items-center rounded-full px-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 ${locale === 'en' ? 'bg-amber-400 text-slate-950 shadow-sm shadow-black/40' : 'text-slate-200 hover:bg-white/10 hover:text-white'}`}
         href={englishHref}
         hreflang="en"
       >EN</a>

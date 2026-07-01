@@ -57,7 +57,7 @@ const copy = common[locale];
     <a class="skip-link" href="#main-content">{copy.skipLink}</a>
     <div
       aria-hidden="true"
-      class="absolute top-0 z-[-2] h-screen w-full bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(12,19,198,0.3),rgba(255,255,255,0))]"
+      class="absolute top-0 z-[-2] h-screen w-full bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(212,160,23,0.14),rgba(15,23,42,0))]"
     >
     </div>
     <Header locale={locale} alternatePath={alternatePath} />
@@ -69,7 +69,7 @@ const copy = common[locale];
   :root {
     color-scheme: dark;
     --accent-primary: #d4a017;
-    --accent-secondary: #e8eaf2;
+    --accent-secondary: #94a3b8;
   }
 
   html {
@@ -81,10 +81,11 @@ const copy = common[locale];
     flex-direction: column;
     min-height: 100vh;
     overscroll-behavior: none;
+    background: #020617;
     color: rgba(255, 255, 255, 0.9);
   }
   :focus-visible {
-    outline: 2px solid #93c5fd;
+    outline: 2px solid var(--accent-primary);
     outline-offset: 4px;
     scroll-margin-top: 6rem;
     scroll-margin-bottom: 2rem;
