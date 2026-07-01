@@ -66,6 +66,7 @@ interface Project {
   link: string;
   github: string;
   image: string;
+  imageMobile?: string;
   imageAlt: string;
   tags: readonly TagKey[];
 }
@@ -99,12 +100,29 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
     <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-300/80 to-transparent" aria-hidden="true"></div>
     <div class="grid gap-8 p-5 md:grid-cols-[1.05fr_0.95fr] md:p-7 lg:p-8">
       <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-black/30">
-        <img
-          alt={FEATURED_PROJECT.imageAlt}
-          class="h-full min-h-72 w-full object-cover object-top transition duration-500 md:group-hover:scale-[1.03]"
-          loading="lazy"
-          src={FEATURED_PROJECT.image}
-        />
+        {FEATURED_PROJECT.imageMobile ? (
+          <>
+            <img
+              alt={FEATURED_PROJECT.imageAlt}
+              class="h-full min-h-72 w-full object-cover object-top transition duration-500 md:group-hover:scale-[1.03] md:hidden"
+              loading="lazy"
+              src={FEATURED_PROJECT.image}
+            />
+            <img
+              alt={FEATURED_PROJECT.imageAlt}
+              class="hidden h-full min-h-72 w-full object-cover object-top transition duration-500 md:block md:group-hover:scale-[1.03]"
+              loading="lazy"
+              src={FEATURED_PROJECT.imageMobile}
+            />
+          </>
+        ) : (
+          <img
+            alt={FEATURED_PROJECT.imageAlt}
+            class="h-full min-h-72 w-full object-cover object-top transition duration-500 md:group-hover:scale-[1.03]"
+            loading="lazy"
+            src={FEATURED_PROJECT.image}
+          />
+        )}
       </div>
 
       <div class="flex flex-col justify-center">
