@@ -3,11 +3,11 @@ import Layout from '@/layouts/Layout.astro';
 import LinkButton from '@/components/LinkButton.astro';
 import GitHubIcon from '@/icons/techIcons/GitHub.astro';
 import WebIcon from '@/icons/Web.astro';
-import { routes, type Locale, ukiyoContent } from '@/data/i18n';
+import { routes, type Locale, vaultshopContent } from '@/data/i18n';
 
 const locale = (Astro.props.locale ?? 'es') as Locale;
-const content = ukiyoContent[locale];
-const alternatePath = locale === 'es' ? routes.en.ukiyo : routes.es.ukiyo;
+const content = vaultshopContent[locale];
+const alternatePath = locale === 'es' ? routes.en.vaultshop : routes.es.vaultshop;
 const stack = content.backend.stack;
 const summaryCards = content.summaryCards;
 const whatBuiltItems = content.whatBuilt.items;
@@ -65,11 +65,11 @@ const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4'
             </p>
 
             <div class="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:flex-wrap">
-              <LinkButton href="https://ukiyo.bsite.net/" class="justify-center sm:justify-start">
+              <LinkButton href="https://vaultshop.evaldez.ar/" class="justify-center sm:justify-start">
                 <WebIcon class="size-5" />
                 {content.buttons.demo}
               </LinkButton>
-              <LinkButton href="https://github.com/Emmanuel-Valdez/Ukiyo" class="justify-center sm:justify-start">
+              <LinkButton href="https://github.com/Emmanuel-Valdez/VaultShop" class="justify-center sm:justify-start">
                 <GitHubIcon class="size-5" />
                 {content.buttons.code}
               </LinkButton>
@@ -78,7 +78,7 @@ const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4'
 
           <div class="overflow-hidden rounded-2xl border border-white/10 bg-black/30">
             <img
-              src="/projects/ukiyo/store-home.jpg"
+              src="/projects/vaultshop/storefront.webp"
               alt={content.heroImageAlt}
               class="h-full min-h-48 w-full object-cover object-top sm:min-h-72"
             />
@@ -152,7 +152,7 @@ const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4'
               class="aspect-video w-full bg-black object-cover"
               controls
               preload="metadata"
-              poster="/projects/ukiyo/store-home.jpg"
+              poster="/projects/vaultshop/storefront.webp"
               aria-label={content.walkthrough.videoLabel}
             >
               <source src={walkthroughVideoSrc} type="video/mp4" />

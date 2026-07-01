@@ -7,6 +7,7 @@ import GitHubIcon from '@/icons/techIcons/GitHub.astro';
 import LinkButton from './LinkButton.astro';
 import WebIcon from '@/icons/Web.astro';
 import MSSQLIcon from '@/icons/techIcons/MSSQL.astro';
+import DockerIcon from '@/icons/techIcons/Docker.astro';
 
 const TAGS = {
   NodeJS: {
@@ -38,6 +39,16 @@ const TAGS = {
     name: 'MS SQL',
     class: 'bg-black text-white',
     icon: MSSQLIcon,
+  },
+  PostgreSQL: {
+    name: 'PostgreSQL',
+    class: 'bg-[#336791] text-white',
+    icon: MSSQLIcon,
+  },
+  Docker: {
+    name: 'Docker',
+    class: 'bg-[#2496ED] text-white',
+    icon: DockerIcon,
   },
 };
 type TagKey = keyof typeof TAGS;
