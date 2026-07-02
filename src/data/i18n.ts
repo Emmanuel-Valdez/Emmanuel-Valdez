@@ -134,7 +134,7 @@ export const homeContent = {
       {
         date: '2020 - Actualmente...',
         title: 'Operaciones e-commerce y administración',
-        company: 'Ukiyo / Emprendimiento familiar',
+        company: 'VaultShop / Emprendimiento familiar',
         description:
           'Gestioné operaciones completas de tienda online: catálogo, stock, pedidos, atención al cliente, despacho y logística. Identifiqué problemas operativos (costos manuales, errores de precio, falta de historial) y los transformé en requisitos para la plataforma VaultShop.',
         highlights: [
@@ -187,7 +187,7 @@ export const homeContent = {
             { value: 'VPS', label: 'Ubuntu 24.04' },
           ],
           link: 'https://vaultshop.evaldez.ar',
-          github: 'https://github.com/Emmanuel-Valdez/ukiyo',
+          github: 'https://github.com/Emmanuel-Valdez/VaultShop',
           image: '/projects/vaultshop/storefront.webp',
           imageMobile: '/projects/vaultshop/mobile-storefront.webp',
           imageAlt: 'Captura real de la tienda VaultShop con catálogo de productos',
@@ -307,7 +307,7 @@ export const homeContent = {
       {
         date: '2020 - Present',
         title: 'E-commerce operations and administration',
-        company: 'Ukiyo / Family business',
+        company: 'VaultShop / Family business',
         description:
           'I managed full online store operations: catalog, stock, orders, customer service, shipping, and logistics. I identified operational issues (manual costs, pricing errors, lack of history) and turned them into requirements for the VaultShop platform.',
         highlights: [
@@ -360,7 +360,7 @@ export const homeContent = {
             { value: 'VPS', label: 'Ubuntu 24.04' },
           ],
           link: 'https://vaultshop.evaldez.ar',
-          github: 'https://github.com/Emmanuel-Valdez/ukiyo',
+          github: 'https://github.com/Emmanuel-Valdez/VaultShop',
           image: '/projects/vaultshop/storefront.webp',
           imageMobile: '/projects/vaultshop/mobile-storefront.webp',
           imageAlt: 'Real screenshot of VaultShop online store with product catalog',
