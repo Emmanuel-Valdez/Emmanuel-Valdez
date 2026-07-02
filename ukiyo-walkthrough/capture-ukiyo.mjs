@@ -2,14 +2,14 @@ import { chromium } from "playwright";
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 
-const baseUrl = "https://ukiyo.bsite.net";
+const baseUrl = "https://vaultshop.evaldez.ar";
 const assetsDir = new URL("./assets/", import.meta.url);
-const customerEmail = "demo.customer2@ukiyo.local";
-const adminEmail = "demo.customer8@ukiyo.local";
-const password = process.env.UKIYO_DEMO_PASSWORD;
+const customerEmail = process.env.VAULTSHOP_CUSTOMER_EMAIL ?? "demo.customer@vaultshop.local";
+const adminEmail = process.env.VAULTSHOP_ADMIN_EMAIL ?? "demo.admin@vaultshop.local";
+const password = process.env.VAULTSHOP_DEMO_PASSWORD;
 
 if (!password) {
-  throw new Error("Set UKIYO_DEMO_PASSWORD before running the capture script.");
+  throw new Error("Set VAULTSHOP_DEMO_PASSWORD before running the capture script.");
 }
 
 async function shot(page, name) {
@@ -48,7 +48,7 @@ async function clickFirst(page, selectors) {
 
 async function login(page, email) {
   await page.goto(`${baseUrl}/Identity/Account/Login`, { waitUntil: "networkidle" });
-  await shot(page, email.includes("customer2") ? "01-login" : "06-admin-login");
+  await shot(page, email === customerEmail ? "01-login" : "06-admin-login");
 
   await fillFirst(page, ["input[type='email']", "input[name='Input.Email']", "input[name='Email']", "#Input_Email"], email);
   await fillFirst(page, ["input[type='password']", "input[name='Input.Password']", "input[name='Password']", "#Input_Password"], password);

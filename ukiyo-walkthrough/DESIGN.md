@@ -1,4 +1,6 @@
-# Ukiyo Walkthrough Design
+# VaultShop Walkthrough Design
+
+This workspace now produces the VaultShop walkthrough videos used by the portfolio. Historical `ukiyo-walkthrough` filenames are kept only to avoid breaking existing video paths and scripts.
 
 ## Palette
 
@@ -21,8 +23,8 @@
 
 ## Style Rules
 
-- Premium dark SaaS dashboard, not storefront-only.
-- Use captured Ukiyo screens as authentic product evidence inside cinematic browser frames.
+- Premium dark e-commerce/backend case-study dashboard, not storefront-only.
+- Use captured VaultShop screens as authentic product evidence inside cinematic browser frames.
 - Keep accents warm and elegant; avoid generic blue-purple neon.
 - Prefer business workflow language: customer action, order pipeline, operations dashboard.
 - Never show passwords or non-demo secrets.

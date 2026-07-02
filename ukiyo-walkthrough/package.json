@@ -7,7 +7,9 @@
     "lint": "hyperframes lint",
     "validate": "hyperframes validate",
     "inspect": "hyperframes inspect",
-    "render": "hyperframes render --output renders/ukiyo-walkthrough.mp4"
+    "render": "hyperframes render --output renders/ukiyo-walkthrough.mp4",
+    "render:es": "hyperframes render --variables \"{\\\"locale\\\":\\\"es\\\"}\" --output ../public/videos/ukiyo-walkthrough-es.mp4",
+    "render:en": "hyperframes render --variables \"{\\\"locale\\\":\\\"en\\\"}\" --output ../public/videos/ukiyo-walkthrough.mp4"
   },
   "dependencies": {
     "ffmpeg-static": "^5.3.0",

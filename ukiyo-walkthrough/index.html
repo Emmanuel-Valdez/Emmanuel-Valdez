@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es-AR">
+<html lang="es-AR" data-composition-variables='[{"id":"locale","type":"enum","label":"Language","default":"es","options":[{"value":"es","label":"Spanish"},{"value":"en","label":"English"}]}]'>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Recorrido SaaS de Ukiyo</title>
+    <title>Recorrido de VaultShop</title>
     <style>
       * { box-sizing: border-box; }
       body { margin: 0; background: #071018; color: #f4efe6; font-family: system-ui, sans-serif; }
@@ -69,20 +69,20 @@
       <audio id="music" data-start="0" data-duration="25" data-track-index="0" src="assets/tech-loop.wav" data-volume="0.38"></audio>
 
       <div class="chrome">
-        <div class="brand"><div class="mark"></div>Ukiyo Designs</div>
-        <div class="chrome-meta">Del cliente a la operación del negocio</div>
+        <div class="brand"><div class="mark"></div>VaultShop</div>
+        <div class="chrome-meta" data-i18n="chromeMeta">Del cliente a la operación del e-commerce</div>
       </div>
 
       <section id="scene-login" class="scene clip" data-start="0" data-duration="3.4" data-track-index="1">
         <div class="scene-content">
           <div class="copy">
-            <div class="eyebrow">01 / Acceso del cliente</div>
-            <h1>El acceso seguro inicia el flujo operativo.</h1>
-            <p>El cliente inicia sesión e ingresa a la tienda con contexto de cuenta, estado del carrito e historial de pedidos disponibles.</p>
-            <div class="proof"><div class="proof-card"><small>Cuenta</small><strong>Autenticada</strong></div><div class="proof-card"><small>Sesión</small><strong>Activa</strong></div></div>
+            <div class="eyebrow" data-i18n="sceneLoginEyebrow">01 / Acceso del cliente</div>
+            <h1 data-i18n="sceneLoginTitle">El acceso seguro inicia el flujo operativo.</h1>
+            <p data-i18n="sceneLoginBody">El cliente inicia sesión e ingresa a la tienda con contexto de cuenta, estado del carrito e historial de pedidos disponibles.</p>
+            <div class="proof"><div class="proof-card"><small data-i18n="sceneLoginProof1Label">Cuenta</small><strong data-i18n="sceneLoginProof1Value">Autenticada</strong></div><div class="proof-card"><small data-i18n="sceneLoginProof2Label">Sesión</small><strong data-i18n="sceneLoginProof2Value">Activa</strong></div></div>
           </div>
           <div class="screen-stage">
-            <div class="browser primary" data-layout-allow-overflow><div class="dots"><i></i><i></i><i></i></div><img src="assets/01-login.png" alt="Pantalla de acceso de cliente en Ukiyo" /></div>
+            <div class="browser primary" data-layout-allow-overflow><div class="dots"><i></i><i></i><i></i></div><img src="assets/01-login.png" alt="Pantalla de acceso de cliente en VaultShop" /></div>
             <div class="scan one"></div>
           </div>
         </div>
@@ -91,14 +91,14 @@
       <section id="scene-browse" class="scene clip" data-start="3.4" data-duration="3.2" data-track-index="1">
         <div class="scene-content">
           <div class="copy">
-            <div class="eyebrow">02 / Exploración de productos</div>
-            <h1>La intención de compra se convierte en selección.</h1>
-            <p>El cliente pasa del catálogo a una vista detallada, con el contexto del producto listo para avanzar a la compra.</p>
-            <div class="proof"><div class="proof-card"><small>Catálogo</small><strong>Explorado</strong></div><div class="proof-card"><small>Producto</small><strong>Seleccionado</strong></div></div>
+            <div class="eyebrow" data-i18n="sceneBrowseEyebrow">02 / Exploración de productos</div>
+            <h1 data-i18n="sceneBrowseTitle">La intención de compra se convierte en selección.</h1>
+            <p data-i18n="sceneBrowseBody">El cliente pasa del catálogo a una vista detallada, con el contexto del producto listo para avanzar a la compra.</p>
+            <div class="proof"><div class="proof-card"><small data-i18n="sceneBrowseProof1Label">Catálogo</small><strong data-i18n="sceneBrowseProof1Value">Explorado</strong></div><div class="proof-card"><small data-i18n="sceneBrowseProof2Label">Producto</small><strong data-i18n="sceneBrowseProof2Value">Seleccionado</strong></div></div>
           </div>
           <div class="screen-stage">
-            <div class="browser primary" data-layout-allow-overflow><div class="dots"><i></i><i></i><i></i></div><img src="assets/02-catalog.png" alt="Catálogo de productos de Ukiyo" /></div>
-            <div class="browser secondary"><div class="dots"><i></i><i></i><i></i></div><img src="assets/03-product-details.png" alt="Detalle de producto en Ukiyo" /></div>
+            <div class="browser primary" data-layout-allow-overflow><div class="dots"><i></i><i></i><i></i></div><img src="assets/02-catalog.png" alt="Catálogo de productos de VaultShop" /></div>
+            <div class="browser secondary"><div class="dots"><i></i><i></i><i></i></div><img src="assets/03-product-details.png" alt="Detalle de producto en VaultShop" /></div>
           </div>
         </div>
       </section>
@@ -106,15 +106,15 @@
       <section id="scene-purchase" class="scene clip" data-start="6.6" data-duration="3.6" data-track-index="1">
         <div class="scene-content">
           <div class="copy">
-            <div class="eyebrow">03 / Flujo de compra</div>
-            <h1>El carrito conduce al pago.</h1>
-            <p>El producto pasa al carrito, el cliente avanza al pago y el pedido queda listo para confirmarse.</p>
-            <div class="proof"><div class="proof-card"><small>Carrito</small><strong>Actualizado</strong></div><div class="proof-card"><small>Pago</small><strong>Iniciado</strong></div></div>
+            <div class="eyebrow" data-i18n="scenePurchaseEyebrow">03 / Flujo de compra</div>
+            <h1 data-i18n="scenePurchaseTitle">El carrito conduce al pago.</h1>
+            <p data-i18n="scenePurchaseBody">El producto pasa al carrito, el cliente avanza al pago y el pedido queda listo para confirmarse.</p>
+            <div class="proof"><div class="proof-card"><small data-i18n="scenePurchaseProof1Label">Carrito</small><strong data-i18n="scenePurchaseProof1Value">Actualizado</strong></div><div class="proof-card"><small data-i18n="scenePurchaseProof2Label">Pago</small><strong data-i18n="scenePurchaseProof2Value">Iniciado</strong></div></div>
           </div>
           <div class="screen-stage">
-            <div class="browser primary" data-layout-allow-overflow><div class="dots"><i></i><i></i><i></i></div><img src="assets/04-cart.png" alt="Carrito de compra de Ukiyo" /></div>
-            <div class="browser secondary"><div class="dots"><i></i><i></i><i></i></div><img src="assets/05-checkout.png" alt="Pantalla de checkout de Ukiyo" /></div>
-            <div class="toast"><b></b>Pago iniciado</div>
+            <div class="browser primary" data-layout-allow-overflow><div class="dots"><i></i><i></i><i></i></div><img src="assets/04-cart.png" alt="Carrito de compra de VaultShop" /></div>
+            <div class="browser secondary"><div class="dots"><i></i><i></i><i></i></div><img src="assets/05-checkout.png" alt="Pantalla de checkout de VaultShop" /></div>
+            <div class="toast"><b></b><span data-i18n="scenePurchaseToast">Pago iniciado</span></div>
           </div>
         </div>
       </section>
@@ -122,15 +122,15 @@
       <section id="scene-success" class="scene clip" data-start="10.2" data-duration="3.6" data-track-index="1">
         <div class="scene-content">
           <div class="copy">
-            <div class="eyebrow">04 / Confirmación exitosa</div>
-            <h1>El pago completa el ciclo del cliente.</h1>
-            <p>El pago en Stripe y la pantalla de éxito consolidan un pedido confirmado, listo para ser gestionado por operaciones.</p>
-            <div class="proof"><div class="proof-card"><small>Pago</small><strong>Aprobado</strong></div><div class="proof-card"><small>Pedido #11</small><strong>Confirmado</strong></div></div>
+            <div class="eyebrow" data-i18n="sceneSuccessEyebrow">04 / Confirmación exitosa</div>
+            <h1 data-i18n="sceneSuccessTitle">El pago completa el ciclo del cliente.</h1>
+            <p data-i18n="sceneSuccessBody">El pago en Stripe y la pantalla de éxito consolidan un pedido confirmado, listo para ser gestionado por operaciones.</p>
+            <div class="proof"><div class="proof-card"><small data-i18n="sceneSuccessProof1Label">Pago</small><strong data-i18n="sceneSuccessProof1Value">Aprobado</strong></div><div class="proof-card"><small data-i18n="sceneSuccessProof2Label">Pedido #11</small><strong data-i18n="sceneSuccessProof2Value">Confirmado</strong></div></div>
           </div>
           <div class="screen-stage">
-            <div class="browser primary" data-layout-allow-overflow><div class="dots"><i></i><i></i><i></i></div><img src="assets/07-success.png" alt="Pantalla de éxito de pedido en Ukiyo" /></div>
+            <div class="browser primary" data-layout-allow-overflow><div class="dots"><i></i><i></i><i></i></div><img src="assets/07-success.png" alt="Pantalla de éxito de pedido en VaultShop" /></div>
             <div class="browser stripe"><div class="dots"><i></i><i></i><i></i></div><img src="assets/06-stripe.png" alt="Pantalla de pago en checkout de Stripe" /></div>
-            <div class="toast"><b></b>Confirmación del pedido visible</div>
+            <div class="toast"><b></b><span data-i18n="sceneSuccessToast">Confirmación del pedido visible</span></div>
           </div>
         </div>
       </section>
@@ -138,14 +138,14 @@
       <section id="scene-admin" class="scene clip" data-start="13.8" data-duration="3.2" data-track-index="1">
         <div class="scene-content">
           <div class="copy">
-            <div class="eyebrow">05 / Panel de administración</div>
-            <h1>El nuevo pedido llega a operaciones.</h1>
-            <p>El panel de administración muestra el pedido #11 en la cola activa y vincula la acción del cliente con la gestión operativa del negocio.</p>
-            <div class="proof"><div class="proof-card"><small>Pedido #11</small><strong>Ingresado</strong></div><div class="proof-card"><small>Operaciones</small><strong>Notificadas</strong></div></div>
+            <div class="eyebrow" data-i18n="sceneAdminEyebrow">05 / Panel de administración</div>
+            <h1 data-i18n="sceneAdminTitle">El nuevo pedido llega a operaciones.</h1>
+            <p data-i18n="sceneAdminBody">El panel de administración muestra el pedido #11 en la cola activa y vincula la acción del cliente con la gestión operativa del negocio.</p>
+            <div class="proof"><div class="proof-card"><small data-i18n="sceneAdminProof1Label">Pedido #11</small><strong data-i18n="sceneAdminProof1Value">Ingresado</strong></div><div class="proof-card"><small data-i18n="sceneAdminProof2Label">Operaciones</small><strong data-i18n="sceneAdminProof2Value">Notificadas</strong></div></div>
           </div>
           <div class="screen-stage">
             <div class="browser primary" data-layout-allow-overflow><div class="dots"><i></i><i></i><i></i></div><img src="assets/08-admin-order.png" alt="Lista de pedidos de administración con el pedido 11" /></div>
-            <div class="kpis"><div class="kpi"><small>Nuevo pedido</small><strong>+1</strong></div><div class="kpi"><small>Pedido</small><strong>#11</strong></div><div class="kpi"><small>Gestión</small><strong>Accionable</strong></div></div>
+            <div class="kpis"><div class="kpi"><small data-i18n="sceneAdminKpi1Label">Nuevo pedido</small><strong>+1</strong></div><div class="kpi"><small data-i18n="orderLabel">Pedido</small><strong>#11</strong></div><div class="kpi"><small data-i18n="sceneAdminKpi3Label">Gestión</small><strong data-i18n="sceneAdminKpi3Value">Accionable</strong></div></div>
           </div>
         </div>
       </section>
@@ -153,43 +153,43 @@
       <section id="scene-shipping" class="scene clip" data-start="17" data-duration="3.8" data-track-index="1">
         <div class="scene-content">
           <div class="copy">
-            <div class="eyebrow">06 / Gestión del pedido</div>
-            <h1>La actualización operativa llega al cliente.</h1>
-            <p>El administrador abre el detalle del pedido, actualiza el estado operativo y despacha la compra desde la vista de gestión.</p>
-            <div class="proof"><div class="proof-card"><small>Pedido</small><strong>Revisado</strong></div><div class="proof-card"><small>Estado</small><strong>Enviado</strong></div></div>
+            <div class="eyebrow" data-i18n="sceneShippingEyebrow">06 / Gestión del pedido</div>
+            <h1 data-i18n="sceneShippingTitle">La actualización operativa llega al cliente.</h1>
+            <p data-i18n="sceneShippingBody">El administrador abre el detalle del pedido, actualiza el estado operativo y despacha la compra desde la vista de gestión.</p>
+            <div class="proof"><div class="proof-card"><small data-i18n="orderLabel">Pedido</small><strong data-i18n="sceneShippingProof1Value">Revisado</strong></div><div class="proof-card"><small data-i18n="statusLabel">Estado</small><strong data-i18n="shippedValue">Enviado</strong></div></div>
           </div>
           <div class="screen-stage">
-            <div class="browser primary" data-layout-allow-overflow><div class="dots"><i></i><i></i><i></i></div><img src="assets/09-order-details.png" alt="Detalle de pedido en administración de Ukiyo" /></div>
-            <div class="browser status-next"><div class="dots"><i></i><i></i><i></i></div><img src="assets/10-order-shipped.png" alt="Estado de pedido enviado en Ukiyo" /></div>
-            <div class="toast"><b></b>Estado actualizado a enviado</div>
+            <div class="browser primary" data-layout-allow-overflow><div class="dots"><i></i><i></i><i></i></div><img src="assets/09-order-details.png" alt="Detalle de pedido en administración de VaultShop" /></div>
+            <div class="browser status-next"><div class="dots"><i></i><i></i><i></i></div><img src="assets/10-order-shipped.png" alt="Estado de pedido enviado en VaultShop" /></div>
+            <div class="toast"><b></b><span data-i18n="sceneShippingToast">Estado actualizado a enviado</span></div>
           </div>
         </div>
       </section>
 
       <section id="scene-customer-orders" class="scene clip" data-start="20.8" data-duration="4.2" data-track-index="1">
         <div class="final-line">
-          <h2>Cada acción del cliente se refleja en la operación del negocio.</h2>
-          <div class="tag">Flujo extremo a extremo</div>
+          <h2 data-i18n="finalLine">Cada acción del cliente se refleja en la operación del negocio.</h2>
+          <div class="tag" data-i18n="finalTag">Flujo extremo a extremo</div>
         </div>
         <div class="scene-content">
           <div class="copy">
-            <div class="eyebrow">07 / Pedidos del cliente</div>
-            <h1>El cliente ve el pedido #11 con estado enviado.</h1>
-            <p>El flujo se cierra donde empezó: la cuenta del cliente refleja el cambio de estado operativo.</p>
+            <div class="eyebrow" data-i18n="sceneCustomerOrdersEyebrow">07 / Pedidos del cliente</div>
+            <h1 data-i18n="sceneCustomerOrdersTitle">El cliente ve el pedido #11 con estado enviado.</h1>
+            <p data-i18n="sceneCustomerOrdersBody">El flujo se cierra donde empezó: la cuenta del cliente refleja el cambio de estado operativo.</p>
           </div>
           <div class="screen-stage">
             <div class="browser primary" data-layout-allow-overflow><div class="dots"><i></i><i></i><i></i></div><img src="assets/11-order-list-customer.png" alt="Lista de pedidos del cliente con pedido enviado" /></div>
-            <div class="kpis"><div class="kpi"><small>Pedido</small><strong>#11</strong></div><div class="kpi"><small>Estado</small><strong>Enviado</strong></div><div class="kpi"><small>Vista cliente</small><strong>Sincronizada</strong></div></div>
+            <div class="kpis"><div class="kpi"><small data-i18n="orderLabel">Pedido</small><strong>#11</strong></div><div class="kpi"><small data-i18n="statusLabel">Estado</small><strong data-i18n="shippedValue">Enviado</strong></div><div class="kpi"><small data-i18n="sceneCustomerOrdersKpi3Label">Vista cliente</small><strong data-i18n="sceneCustomerOrdersKpi3Value">Sincronizada</strong></div></div>
           </div>
         </div>
       </section>
 
       <div class="rail">
-        <div id="step-auth" class="step"><small>01</small><span>Acceso</span></div>
-        <div id="step-browse" class="step"><small>02</small><span>Catálogo</span></div>
-        <div id="step-cart" class="step"><small>03</small><span>Pago</span></div>
-        <div id="step-success" class="step"><small>04</small><span>Confirmación</span></div>
-        <div id="step-admin" class="step"><small>05</small><span>Operación</span></div>
+        <div id="step-auth" class="step"><small>01</small><span data-i18n="railAuth">Acceso</span></div>
+        <div id="step-browse" class="step"><small>02</small><span data-i18n="railBrowse">Catálogo</span></div>
+        <div id="step-cart" class="step"><small>03</small><span data-i18n="railCart">Pago</span></div>
+        <div id="step-success" class="step"><small>04</small><span data-i18n="railSuccess">Confirmación</span></div>
+        <div id="step-admin" class="step"><small>05</small><span data-i18n="railAdmin">Operación</span></div>
       </div>
       <div class="fadeout"></div>
     </div>
@@ -197,6 +197,82 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
     <script>
       window.__timelines = window.__timelines || {};
+      const { locale = "es" } = window.__hyperframes?.getVariables?.() ?? {};
+      const translations = {
+        en: {
+          chromeMeta: "From customer action to e-commerce operations",
+          sceneLoginEyebrow: "01 / Customer access",
+          sceneLoginTitle: "Secure access starts the operational flow.",
+          sceneLoginBody: "The customer signs in and enters the store with account context, cart state, and order history available.",
+          sceneLoginProof1Label: "Account",
+          sceneLoginProof1Value: "Authenticated",
+          sceneLoginProof2Label: "Session",
+          sceneLoginProof2Value: "Active",
+          sceneBrowseEyebrow: "02 / Product browsing",
+          sceneBrowseTitle: "Purchase intent becomes a selection.",
+          sceneBrowseBody: "The customer moves from the catalog to a product detail view, ready to continue toward purchase.",
+          sceneBrowseProof1Label: "Catalog",
+          sceneBrowseProof1Value: "Browsed",
+          sceneBrowseProof2Label: "Product",
+          sceneBrowseProof2Value: "Selected",
+          scenePurchaseEyebrow: "03 / Purchase flow",
+          scenePurchaseTitle: "The cart leads into payment.",
+          scenePurchaseBody: "The product moves into the cart, the customer continues to checkout, and the order is ready to confirm.",
+          scenePurchaseProof1Label: "Cart",
+          scenePurchaseProof1Value: "Updated",
+          scenePurchaseProof2Label: "Payment",
+          scenePurchaseProof2Value: "Started",
+          scenePurchaseToast: "Payment started",
+          sceneSuccessEyebrow: "04 / Successful confirmation",
+          sceneSuccessTitle: "Payment completes the customer cycle.",
+          sceneSuccessBody: "Stripe payment and the success screen consolidate a confirmed order, ready for operations to manage.",
+          sceneSuccessProof1Label: "Payment",
+          sceneSuccessProof1Value: "Approved",
+          sceneSuccessProof2Label: "Order #11",
+          sceneSuccessProof2Value: "Confirmed",
+          sceneSuccessToast: "Order confirmation visible",
+          sceneAdminEyebrow: "05 / Admin panel",
+          sceneAdminTitle: "The new order reaches operations.",
+          sceneAdminBody: "The admin panel shows order #11 in the active queue and links the customer action to business operations.",
+          sceneAdminProof1Label: "Order #11",
+          sceneAdminProof1Value: "Received",
+          sceneAdminProof2Label: "Operations",
+          sceneAdminProof2Value: "Notified",
+          sceneAdminKpi1Label: "New order",
+          orderLabel: "Order",
+          sceneAdminKpi3Label: "Management",
+          sceneAdminKpi3Value: "Actionable",
+          sceneShippingEyebrow: "06 / Order management",
+          sceneShippingTitle: "The operational update reaches the customer.",
+          sceneShippingBody: "The admin opens order detail, updates the operational status, and ships the purchase from the management view.",
+          sceneShippingProof1Value: "Reviewed",
+          statusLabel: "Status",
+          shippedValue: "Shipped",
+          sceneShippingToast: "Status updated to shipped",
+          finalLine: "Every customer action is reflected in business operations.",
+          finalTag: "End-to-end flow",
+          sceneCustomerOrdersEyebrow: "07 / Customer orders",
+          sceneCustomerOrdersTitle: "The customer sees order #11 as shipped.",
+          sceneCustomerOrdersBody: "The flow closes where it started: the customer account reflects the operational status change.",
+          sceneCustomerOrdersKpi3Label: "Customer view",
+          sceneCustomerOrdersKpi3Value: "Synchronized",
+          railAuth: "Access",
+          railBrowse: "Catalog",
+          railCart: "Payment",
+          railSuccess: "Confirmation",
+          railAdmin: "Operations",
+        },
+      };
+
+      if (locale === "en") {
+        document.documentElement.lang = "en-US";
+        document.title = "VaultShop Walkthrough";
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const value = translations.en[element.dataset.i18n];
+          if (value) element.textContent = value;
+        });
+      }
+
       const tl = gsap.timeline({ paused: true });
 
       tl.to(".orb.a", { scale: 1.08, x: -36, y: -24, duration: 6, yoyo: true, repeat: 4, ease: "sine.inOut" }, 0);
