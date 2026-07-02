@@ -24,6 +24,7 @@ pnpm-debug.log*
 .idea/
 
 # OpenCode / local assistant context
+.codebase-memory/
 .opencode/
 .opencode-context/
 .agents/

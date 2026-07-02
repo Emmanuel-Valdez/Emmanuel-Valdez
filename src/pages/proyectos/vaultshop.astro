@@ -1,7 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import LinkButton from '@/components/LinkButton.astro';
-import ImageZoomDialog from '@/components/ImageZoomDialog.astro';
 import GitHubIcon from '@/icons/techIcons/GitHub.astro';
 import WebIcon from '@/icons/Web.astro';
 import { routes, type Locale, vaultshopContent } from '@/data/i18n';
@@ -64,7 +63,7 @@ const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4'
             </p>
 
             <div class="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:flex-wrap">
-              <LinkButton href="https://vaultshop.evaldez.ar/" class="justify-center sm:justify-start">
+              <LinkButton href="https://vaultshop.evaldez.ar/" class="justify-center !border-amber-300/40 !bg-amber-400/10 !text-amber-100 shadow-lg shadow-amber-950/20 hover:!border-amber-300/70 hover:!bg-amber-400/15 hover:!text-white focus:!ring-amber-300/40 sm:justify-start">
                 <WebIcon class="size-5" />
                 {content.buttons.demo}
               </LinkButton>
@@ -84,20 +83,18 @@ const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4'
           </div>
 
           <div class="overflow-hidden rounded-2xl border border-white/10 bg-black/30">
-            <button
-              type="button"
+            <a
               class="group/image block h-full w-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
-              data-image-zoom
-              data-zoom-src="/projects/vaultshop/storefront.webp"
-              data-zoom-alt={content.heroImageAlt}
-              data-zoom-caption={content.heroImageAlt}
+              href="/projects/vaultshop/storefront.webp"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src="/projects/vaultshop/storefront.webp"
                 alt={content.heroImageAlt}
                 class="h-full min-h-48 w-full object-cover object-top transition duration-500 group-hover/image:scale-[1.02] sm:min-h-72"
               />
-            </button>
+            </a>
           </div>
         </div>
       </header>
@@ -374,13 +371,11 @@ const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4'
 
           <div class="grid gap-4">
             <figure class="overflow-hidden rounded-3xl border border-blue-400/15 bg-black/30 shadow-2xl shadow-black/20">
-              <button
-                type="button"
+              <a
                 class="group/image block w-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
-                data-image-zoom
-                data-zoom-src={pricingScreenshot.src}
-                data-zoom-alt={pricingScreenshot.alt}
-                data-zoom-caption={content.calculator.finalTitle}
+                href={pricingScreenshot.src}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   src={pricingScreenshot.src}
@@ -388,7 +383,7 @@ const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4'
                   loading="lazy"
                   class="aspect-[4/3] w-full object-cover object-top transition duration-500 group-hover/image:scale-[1.02] sm:aspect-[16/10]"
                 />
-              </button>
+              </a>
               <figcaption class="border-t border-white/10 p-4 sm:p-5">
                 <h3 class="text-xl font-bold text-white">{content.calculator.finalTitle}</h3>
                 <p class="mt-2 text-sm leading-6 text-gray-300">{content.calculator.finalDescription}</p>
@@ -620,13 +615,11 @@ const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4'
                 <div class="mt-4 grid gap-4 sm:gap-6 md:grid-cols-2">
                   {group.screenshots.map((screenshot) => (
                     <figure class="overflow-hidden rounded-3xl border border-white/10 bg-slate-950/80 shadow-xl shadow-black/20">
-                      <button
-                        type="button"
+                      <a
                         class="group/image block w-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
-                        data-image-zoom
-                        data-zoom-src={screenshot.src}
-                        data-zoom-alt={screenshot.alt}
-                        data-zoom-caption={screenshot.title}
+                        href={screenshot.src}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <img
                           src={screenshot.src}
@@ -634,7 +627,7 @@ const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4'
                           loading="lazy"
                           class="aspect-[4/3] w-full object-cover object-top transition duration-500 group-hover/image:scale-[1.02] sm:aspect-[16/10]"
                         />
-                      </button>
+                      </a>
                       <figcaption class="border-t border-white/10 p-4 sm:p-5">
                         <h4 class="text-lg font-bold text-white">{screenshot.title}</h4>
                         <p class="mt-2 text-sm leading-6 text-gray-400">{screenshot.description}</p>
@@ -648,6 +641,5 @@ const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4'
         </details>
       </section>
     </article>
-    <ImageZoomDialog />
   </main>
 </Layout>

@@ -1,62 +1,8 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import Experience from '@/components/Experience.astro';
-import SectionContainer from '@/components/SectionContainer.astro';
-import CodeIcon from '@/icons/Code.astro';
-import Projects from '@/components/Projects.astro';
-import BriefCaseIcon from '@/icons/BriefCaseIcon.astro';
-import UserIcon from '@/icons/User.astro';
-import CoffeeIcon from '@/icons/Coffee.astro';
-import AboutMe from '@/components/AboutMe.astro';
-import Contact from '@/components/Contact.astro';
-import Hero from '@/components/Hero.astro';
+import HomePage from '@/components/HomePage.astro';
 import { homeContent, routes } from '@/data/i18n';
 
 const content = homeContent.en;
 ---
 
-<Layout
-  title={content.meta.title}
-  description={content.meta.description}
-  locale="en"
-  alternatePath={routes.es.home}
->
-  <main id="main-content" class="px-4">
-    <SectionContainer class="py-20 pb-32">
-      <Hero content={content.hero}/>
-    </SectionContainer>
-
-    <SectionContainer id="projects">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-        <CodeIcon class="size-7" />
-        {content.sections.projects}
-      </h2>
-      <Projects content={content.projects} />
-    </SectionContainer>
-
-    <SectionContainer id="experience">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-        <BriefCaseIcon class="size-7" />
-        {content.sections.experience}
-      </h2>
-      <Experience items={content.experience} />
-    </SectionContainer>
-
-    <SectionContainer id="about">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-        <UserIcon class="size-7" />
-        {content.sections.about}
-      </h2>
-      <AboutMe content={content.about} />
-    </SectionContainer>
-
-    <SectionContainer id="contact" >
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-        <CoffeeIcon class="size-7" />
-        {content.sections.contact}
-      </h2>
-
-      <Contact content={content.contact}/>
-    </SectionContainer>
-  </main>
-</Layout>
+<HomePage content={content} locale="en" alternatePath={routes.es.home} />

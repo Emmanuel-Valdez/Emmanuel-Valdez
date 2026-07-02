@@ -4,11 +4,9 @@ import CSharpIcon from '../icons/techIcons/CSharp.astro';
 import ExpressIcon from '../icons/techIcons/Express.astro';
 import MySQLIcon from '../icons/techIcons/MySQL.astro';
 import GitHubIcon from '@/icons/techIcons/GitHub.astro';
-import ImageZoomDialog from '@/components/ImageZoomDialog.astro';
 import LinkButton from './LinkButton.astro';
 import WebIcon from '@/icons/Web.astro';
 import MSSQLIcon from '@/icons/techIcons/MSSQL.astro';
-import DockerIcon from '@/icons/techIcons/Docker.astro';
 
 const TAGS = {
   NodeJS: {
@@ -45,11 +43,6 @@ const TAGS = {
     name: 'PostgreSQL',
     class: 'bg-[#336791] text-white',
     icon: MSSQLIcon,
-  },
-  Docker: {
-    name: 'Docker',
-    class: 'bg-[#2496ED] text-white',
-    icon: DockerIcon,
   },
 };
 type TagKey = keyof typeof TAGS;
@@ -101,14 +94,11 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
     <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-300/80 to-transparent" aria-hidden="true"></div>
     <div class="grid gap-8 p-5 md:grid-cols-[1.05fr_0.95fr] md:p-7 lg:p-8">
       <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-black/30">
-        <button
-          type="button"
+        <a
           class="block h-full w-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
-          data-image-zoom
-          data-zoom-src={FEATURED_PROJECT.image}
-          data-zoom-src-desktop={FEATURED_PROJECT.imageMobile ?? FEATURED_PROJECT.image}
-          data-zoom-alt={FEATURED_PROJECT.imageAlt}
-          data-zoom-caption={FEATURED_PROJECT.title}
+          href={FEATURED_PROJECT.imageMobile ?? FEATURED_PROJECT.image}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {FEATURED_PROJECT.imageMobile ? (
             <>
@@ -133,7 +123,7 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
               src={FEATURED_PROJECT.image}
             />
           )}
-        </button>
+        </a>
       </div>
 
       <div class="flex flex-col justify-center">
@@ -255,5 +245,4 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
       }
     </div>
   </div>
-  <ImageZoomDialog />
 </div>
