@@ -1,0 +1,17 @@
+node_modules
+dist
+.astro
+.git
+.codebase-memory
+.opencode
+.agents
+PROJECT_CONTEXT*.md
+plans
+ukiyo-walkthrough/node_modules
+ukiyo-walkthrough/renders
+ukiyo-walkthrough/.hyperframes
+ukiyo-walkthrough/.thumbnails
+ukiyo-walkthrough/backups
+*.log
+.env
+.env.*

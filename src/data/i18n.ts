@@ -13,12 +13,12 @@ export const routes = {
 
 export const cvFiles = {
   es: {
-    href: '/media/Emmanuel_Valdez_CV_Backend_NET_2026_ES.pdf',
-    download: 'Emmanuel-Valdez-CV-Backend-NET-ES.pdf',
+    href: '/media/Emmanuel_Valdez_Portfolio_CV_ES.pdf',
+    download: 'Emmanuel-Valdez-Portfolio-CV-ES.pdf',
   },
   en: {
-    href: '/media/Emmanuel_Valdez_CV_Backend_NET_2026_EN.pdf',
-    download: 'Emmanuel-Valdez-CV-Backend-NET-EN.pdf',
+    href: '/media/Emmanuel_Valdez_Portfolio_CV_EN.pdf',
+    download: 'Emmanuel-Valdez-Portfolio-CV-EN.pdf',
   },
 } as const;
 
