@@ -33,6 +33,9 @@ const mediaGroups = content.media.groups.map((group) => ({
 }));
 const walkthroughHighlights = content.walkthrough.highlights;
 const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4' : '/videos/ukiyo-walkthrough.mp4';
+const lightboxLabels = locale === 'es'
+  ? { close: 'Cerrar imagen ampliada', open: 'Abrir imagen completa en una pestaña nueva', title: 'Vista ampliada de captura' }
+  : { close: 'Close enlarged image', open: 'Open full image in a new tab', title: 'Enlarged screenshot view' };
 ---
 
 <Layout
@@ -88,6 +91,8 @@ const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4'
               href="/projects/vaultshop/storefront.webp"
               target="_blank"
               rel="noopener noreferrer"
+              data-lightbox-image
+              data-lightbox-alt={content.heroImageAlt}
             >
               <img
                 src="/projects/vaultshop/storefront.webp"
@@ -376,6 +381,8 @@ const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4'
                 href={pricingScreenshot.src}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-lightbox-image
+                data-lightbox-alt={pricingScreenshot.alt}
               >
                 <img
                   src={pricingScreenshot.src}
@@ -620,6 +627,8 @@ const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4'
                         href={screenshot.src}
                         target="_blank"
                         rel="noopener noreferrer"
+                        data-lightbox-image
+                        data-lightbox-alt={screenshot.alt}
                       >
                         <img
                           src={screenshot.src}
@@ -642,4 +651,54 @@ const walkthroughVideoSrc = locale === 'es' ? '/videos/ukiyo-walkthrough-es.mp4'
       </section>
     </article>
   </main>
+
+  <dialog id="vaultshop-lightbox" aria-labelledby="vaultshop-lightbox-title" class="m-auto w-[min(94vw,72rem)] rounded-3xl border border-white/10 bg-slate-950/95 p-0 text-white shadow-2xl shadow-black/50 backdrop:bg-black/80">
+    <div class="flex items-center justify-between gap-4 border-b border-white/10 p-3 sm:p-4">
+      <h2 id="vaultshop-lightbox-title" class="text-sm font-semibold text-slate-100 sm:text-base">{lightboxLabels.title}</h2>
+      <button type="button" class="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-sm font-semibold text-white transition hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300" data-lightbox-close aria-label={lightboxLabels.close}>
+        ×
+      </button>
+    </div>
+    <div class="bg-black/50 p-2 sm:p-4">
+      <img data-lightbox-preview src="" alt="" class="max-h-[78vh] w-full rounded-2xl object-contain" />
+    </div>
+    <div class="border-t border-white/10 p-3 sm:p-4">
+      <a data-lightbox-open href="#" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-amber-200 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300">
+        {lightboxLabels.open}
+      </a>
+    </div>
+  </dialog>
+
+  <script>
+    const dialog = document.querySelector<HTMLDialogElement>('#vaultshop-lightbox');
+    const preview = dialog?.querySelector<HTMLImageElement>('[data-lightbox-preview]');
+    const fullImageLink = dialog?.querySelector<HTMLAnchorElement>('[data-lightbox-open]');
+    const closeButton = dialog?.querySelector<HTMLButtonElement>('[data-lightbox-close]');
+    let lastTrigger: HTMLElement | null = null;
+
+    if (dialog && preview && fullImageLink && closeButton) {
+      document.querySelectorAll<HTMLAnchorElement>('[data-lightbox-image]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+
+          event.preventDefault();
+          lastTrigger = link;
+          preview.src = link.href;
+          preview.alt = link.dataset.lightboxAlt ?? '';
+          fullImageLink.href = link.href;
+          dialog.showModal();
+          closeButton.focus();
+        });
+      });
+
+      closeButton.addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+      dialog.addEventListener('close', () => {
+        preview.removeAttribute('src');
+        lastTrigger?.focus();
+      });
+    }
+  </script>
 </Layout>
