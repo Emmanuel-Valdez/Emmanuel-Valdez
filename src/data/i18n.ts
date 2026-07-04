@@ -196,7 +196,7 @@ export const homeContent = {
         {
           title: 'Proyecto final C# QUARK Academy',
           description:
-            'Proyecto C# de base para practicar lógica de negocio, historial de cotización, restricciones de stock y manejo de errores en Windows Forms.',
+            'Aplicación C# Windows Forms que modela lógica de cotización, historial, restricciones de stock y manejo de errores para una tienda de ropa.',
           link: '',
           github: 'https://github.com/Emmanuel-Valdez/ProyectoCQuarq',
           image: '/projects/CotizadorTiendaRopa.webp',
@@ -206,7 +206,7 @@ export const homeContent = {
         {
           title: 'Funko shop',
           description:
-            'Proyecto web de aprendizaje con Node.js, Express y MySQL. Sirve como soporte para mostrar CRUD, carrito, paginación y autenticación fuera del stack .NET principal.',
+            'Aplicación web Node.js, Express y MySQL que muestra CRUD, carrito, paginación y autenticación fuera del stack .NET principal.',
           link: 'https://fullstackproject-backend.vercel.app/',
           github: 'https://github.com/Emmanuel-Valdez/fullstackproject-backend',
           image: '/projects/funko_shopWeb.webp',
@@ -235,7 +235,7 @@ export const homeContent = {
       strong: 'Backend con .NET, C# y SQL',
       paragraphs: [
         'Vengo de una base técnica en producción industrial y automatización, por eso tiendo a pensar el software como una herramienta para ordenar procesos reales: costos, inventario, ventas, logística, usuarios y decisiones administrativas.',
-        'Esa mirada se refleja en VaultShop, una aplicación ASP.NET Core 8 MVC desplegada en un VPS real con PostgreSQL, Docker Compose, MinIO, Stripe, Identity roles y Nginx HTTPS. El proyecto me permitió trabajar con persistencia relacional, pagos, roles, almacenamiento de objetos, CI/CD y monitoreo.',
+        'Esa mirada se refleja en VaultShop, una aplicación ASP.NET Core 8 MVC desplegada en un VPS real con PostgreSQL, Docker Compose, MinIO, Stripe, Identity roles y Nginx HTTPS. El proyecto me permitió trabajar con persistencia relacional, pagos, roles, almacenamiento de objetos, CI, despliegue y monitoreo.',
         'Actualmente estoy consolidando el portfolio alrededor de evidencia verificable: sistemas desplegados, datos relacionales, pagos, roles, infraestructura y documentación operativa.',
       ],
       closing:
@@ -369,7 +369,7 @@ export const homeContent = {
         {
           title: 'C# QUARK Academy final project',
           description:
-            'Foundational C# project for practicing business logic, quote history, stock restrictions, and error handling in Windows Forms.',
+            'C# Windows Forms application that models quotation logic, quote history, stock restrictions, and error handling for a clothing store.',
           link: '',
           github: 'https://github.com/Emmanuel-Valdez/ProyectoCQuarq',
           image: '/projects/CotizadorTiendaRopa.webp',
@@ -379,7 +379,7 @@ export const homeContent = {
         {
           title: 'Funko shop',
           description:
-            'Learning web project with Node.js, Express, and MySQL. It supports the portfolio by showing CRUD, cart, pagination, and authentication outside the main .NET stack.',
+            'Node.js, Express, and MySQL web application showing CRUD, cart, pagination, and authentication outside the main .NET stack.',
           link: 'https://fullstackproject-backend.vercel.app/',
           github: 'https://github.com/Emmanuel-Valdez/fullstackproject-backend',
           image: '/projects/funko_shopWeb.webp',
@@ -408,7 +408,7 @@ export const homeContent = {
       strong: 'backend development with .NET, C#, and SQL',
       paragraphs: [
         'I come from a technical background in industrial production and automation, so I tend to think of software as a tool for organizing real processes: costs, inventory, sales, logistics, users, and administrative decisions.',
-        'That perspective is reflected in VaultShop, an ASP.NET Core 8 MVC application deployed on a real VPS with PostgreSQL, Docker Compose, MinIO, Stripe, Identity roles, and Nginx HTTPS. The project let me work with relational persistence, payments, roles, object storage, CI/CD, and monitoring.',
+        'That perspective is reflected in VaultShop, an ASP.NET Core 8 MVC application deployed on a real VPS with PostgreSQL, Docker Compose, MinIO, Stripe, Identity roles, and Nginx HTTPS. The project let me work with relational persistence, payments, roles, object storage, CI, deployment, and monitoring.',
         'I am currently consolidating the portfolio around verifiable evidence: deployed systems, relational data, payments, roles, infrastructure, and operational documentation.',
       ],
       closing:
@@ -724,7 +724,7 @@ export const vaultshopContent = {
       items: [
         'La calculadora fue más difícil de diseñar de lo esperado: modelar costos variables, márgenes y triggers para mantener totales consistentes requirió varias iteraciones.',
         'Docker simplificó el deploy pero el monitoreo sigue siendo básico: en producción agregaría health checks, logs centralizados y alertas.',
-        'La demo pública fue clave para mostrar valor sin abrir permisos sensibles, pero un sistema real necesita CI/CD, backups automatizados y observabilidad.',
+        'La demo pública fue clave para mostrar valor sin abrir permisos sensibles, pero un sistema real necesita despliegue automatizado, backups automatizados y observabilidad.',
       ],
     },
     infrastructure: {
@@ -736,7 +736,7 @@ export const vaultshopContent = {
         { title: 'Docker Compose', description: 'Tres servicios aislados: ASP.NET Core, PostgreSQL y MinIO. Un solo comando para levantar todo el entorno.' },
         { title: 'Nginx HTTPS', description: 'Terminación SSL con Let\'s Encrypt y reverse proxy hacia el contenedor de la aplicación.' },
         { title: 'MinIO', description: 'Almacenamiento de imágenes compatible con S3, autoalojado para no depender de servicios externos.' },
-        { title: 'VPS Ubuntu', description: 'Control total del entorno de producción, aprendizaje real de administración de servidores y despliegue manual.' },
+        { title: 'VPS Ubuntu', description: 'Control total del entorno de ejecución, administración real de servidores y despliegue manual.' },
       ],
     },
     operationalProof: {
@@ -760,7 +760,7 @@ export const vaultshopContent = {
         'Monolito MVC, no microservicios: suficiente para el alcance actual pero no escalable horizontalmente.',
         'Un solo VPS, sin redundancia ni balanceo de carga.',
         'Datos demo, no clientes reales.',
-        'Sin CI/CD a producción: el deploy es manual.',
+        'Sin despliegue automático a producción: el deploy es manual.',
         'Sin stack de observabilidad: no hay Grafana, logs centralizados ni métricas.',
         'Stripe en modo test, no en producción real.',
       ],
@@ -1114,7 +1114,7 @@ export const vaultshopContent = {
       items: [
         'The calculator was harder to design than expected: modeling variable costs, margins, and triggers to keep totals consistent required several iterations.',
         'Docker simplified deployment but monitoring remains basic: in production I would add health checks, centralized logging, and alerts.',
-        'The public demo was key to showing value without opening sensitive permissions, but a real system needs CI/CD, automated backups, and observability.',
+        'The public demo was key to showing value without opening sensitive permissions, but a real system needs automated deployment, automated backups, and observability.',
       ],
     },
     infrastructure: {
@@ -1126,7 +1126,7 @@ export const vaultshopContent = {
         { title: 'Docker Compose', description: 'Three isolated services: ASP.NET Core, PostgreSQL, and MinIO. One command to bring up the entire environment.' },
         { title: 'Nginx HTTPS', description: 'SSL termination with Let\'s Encrypt and reverse proxy to the application container.' },
         { title: 'MinIO', description: 'S3-compatible image storage, self-hosted to avoid external service dependencies.' },
-        { title: 'Ubuntu VPS', description: 'Full control of the production environment, real server administration learning, and manual deployment.' },
+        { title: 'Ubuntu VPS', description: 'Full control of the runtime environment, real server administration, and manual deployment.' },
       ],
     },
     operationalProof: {
@@ -1150,7 +1150,7 @@ export const vaultshopContent = {
         'MVC monolith, not microservices: sufficient for current scope but not horizontally scalable.',
         'Single VPS, no redundancy or load balancing.',
         'Demo data, not real customers.',
-        'No CI/CD to production: deployment is manual.',
+        'No automated production deployment: deployment is manual.',
         'No observability stack: no Grafana, centralized logging, or metrics.',
         'Stripe in test mode, not real production.',
       ],

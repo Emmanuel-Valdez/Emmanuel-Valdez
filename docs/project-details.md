@@ -50,14 +50,14 @@ VaultShop is presented as a portfolio case study with demo data and protected ad
 - Docker Compose
 - Nginx HTTPS reverse proxy
 - Ubuntu 24.04 VPS (Oracle Cloud)
-- GitHub Actions CI
+- GitHub Actions CI + manual deploy workflow
 
 ## Portfolio Tech Stack
 
 - Astro
 - Tailwind CSS
 - TypeScript
-- Netlify static deployment
+- Dockerized static Astro build
 
 ## Local Development
 
@@ -74,13 +74,21 @@ npm run build
 
 ## Deployment
 
-Primary deployment target: Netlify -> `https://evaldez.ar`
+Primary deployment target: Dockerized static Astro build on Ubuntu VPS behind Nginx HTTPS -> `https://evaldez.ar`
 
 ```sh
 npm run build
 ```
 
-Publish directory: `dist/`
+Manual deploy runs from GitHub Actions (`workflow_dispatch`) through Tailscale OAuth and SSH to `/opt/evaldez-portfolio`:
+
+```sh
+git pull --ff-only
+docker compose build
+docker compose up -d
+```
+
+Runtime: Nginx container serving `dist/` generated during Docker build.
 
 ## Repository Notes
 
