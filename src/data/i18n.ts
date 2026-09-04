@@ -97,11 +97,11 @@ export const homeContent = {
           text: 'Convierto procesos operativos -costos, stock, órdenes y precios- en software usable y mantenible para negocios reales.',
         },
         {
-          text: 'Construí y desplegué VaultShop: ASP.NET Core 8 MVC, PostgreSQL, Docker, MinIO, Stripe, Mercado Pago, Identity + OAuth, Nginx HTTPS — en un VPS real.',
+          text: ' Construí y desplegué VaultShop: ASP.NET Core 8 MVC, PostgreSQL, Docker, MinIO, Stripe, Mercado Pago, Identity + OAuth, Nginx HTTPS — en un VPS real.',
           class: 'text-blue-200/90',
         },
         {
-          text: 'Desde Mendoza, Argentina.',
+          text: ' Desde Mendoza, Argentina.',
           class: 'text-red-200/90',
         },
       ],
@@ -271,11 +271,11 @@ export const homeContent = {
           text: 'I turn operational workflows - costs, stock, orders, and pricing - into usable, maintainable software for real businesses.',
         },
         {
-          text: 'I built and deployed VaultShop: ASP.NET Core 8 MVC, PostgreSQL, Docker, MinIO, Stripe, Mercado Pago, Identity + OAuth, Nginx HTTPS — on a real VPS.',
+          text: ' I built and deployed VaultShop: ASP.NET Core 8 MVC, PostgreSQL, Docker, MinIO, Stripe, Mercado Pago, Identity + OAuth, Nginx HTTPS — on a real VPS.',
           class: 'text-blue-200/90',
         },
         {
-          text: 'Based in Mendoza, Argentina.',
+          text: ' Based in Mendoza, Argentina.',
           class: 'text-red-200/90',
         },
       ],
