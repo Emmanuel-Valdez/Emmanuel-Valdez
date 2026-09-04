@@ -97,16 +97,16 @@ export const homeContent = {
           text: 'Convierto procesos operativos -costos, stock, órdenes y precios- en software usable y mantenible para negocios reales.',
         },
         {
-          text: ' Como prueba principal, construí y desplegué VaultShop: una aplicación ASP.NET Core 8 MVC con PostgreSQL, Docker Compose, MinIO, Stripe, Identity roles y Nginx HTTPS en un VPS real.',
+          text: 'Construí y desplegué VaultShop: ASP.NET Core 8 MVC, PostgreSQL, Docker, MinIO, Stripe, Mercado Pago, Identity + OAuth, Nginx HTTPS — en un VPS real.',
           class: 'text-blue-200/90',
         },
         {
-          text: ' Desde Mendoza, Argentina.',
+          text: 'Desde Mendoza, Argentina.',
           class: 'text-red-200/90',
         },
       ],
       stackAriaLabel: 'Competencias backend demostradas',
-      stack: ['ASP.NET Core 8', 'PostgreSQL', 'Docker', 'Stripe', 'Nginx', 'Linux VPS'],
+      stack: ['ASP.NET Core 8', 'C#', 'EF Core', 'PostgreSQL', 'Identity', 'Docker', 'Stripe', 'Mercado Pago', 'Nginx', 'Ubuntu'],
       availabilityLabel: 'Disponible para trabajar',
       ctas: {
         ariaLabel: 'Acciones principales',
@@ -132,20 +132,20 @@ export const homeContent = {
     },
     experience: [
       {
-        date: '2020 - Actualmente...',
-        title: 'Operaciones e-commerce y administración',
-        company: 'VaultShop / Emprendimiento familiar',
+        date: '2020 - Presente',
+        title: 'Operaciones e-commerce y desarrollo de plataforma',
+        company: 'Ukiyo Studio',
         description:
-          'Gestioné operaciones completas de tienda online: catálogo, stock, pedidos, atención al cliente, despacho y logística. Identifiqué problemas operativos (costos manuales, errores de precio, falta de historial) y los transformé en requisitos para la plataforma VaultShop.',
+          'Gestioné operaciones completas de tienda online y desarrollé VaultShop como plataforma backend para Ukiyo Studio: catálogo, stock, pedidos, precios, roles y administración. VaultShop es el entorno de prueba donde validé todas las capacidades que hoy ofrece Ukiyo Studio.',
         highlights: [
           'Coordiné migración de TiendaNube a Tienda Negocio manteniendo continuidad operativa.',
-          'Identifiqué necesidades de pricing, roles y administración que se convirtieron en el alcance de VaultShop.',
+          'Construí VaultShop como plataforma backend con ASP.NET Core, PostgreSQL, Docker, pagos y roles para Ukiyo Studio.',
           'Gestión diaria de catálogo, stock, pedidos, atención al cliente y logística de despacho.',
         ],
-        tags: ['E-commerce', 'TiendaNube', 'Tienda Negocio', 'Logística', 'Pricing'],
+        tags: ['E-commerce', 'ASP.NET Core', 'VaultShop', 'Ukiyo Studio', 'Pricing'],
         tagsAriaLabel: 'Áreas de experiencia',
-        link: '',
-        linkLabel: '',
+        link: 'https://ukiyostudio.evaldez.ar',
+        linkLabel: 'Ukiyo Studio',
       },
     ],
     projects: {
@@ -163,28 +163,29 @@ export const homeContent = {
           title: 'VaultShop',
           eyebrow: 'Caso técnico destacado · e-commerce desplegado en VPS real',
           description:
-            'Aplicación ASP.NET Core 8 MVC desplegada en un VPS Ubuntu con PostgreSQL, Docker Compose, MinIO, Stripe, Identity roles, localización ES/EN y Nginx HTTPS.',
+            'Aplicación ASP.NET Core 8 MVC desplegada en un VPS Ubuntu con PostgreSQL, Docker Compose, MinIO, Stripe, Mercado Pago, Identity roles con Google OAuth, localización ES/EN y Nginx HTTPS.',
           stack: [
             'ASP.NET Core 8 MVC',
             'Entity Framework Core + PostgreSQL',
             'ASP.NET Core Identity',
-            'Stripe Checkout + webhooks',
+            'Stripe + Mercado Pago',
+            'Google OAuth',
             'MinIO / S3 storage',
-            'Docker Compose',
-            'Nginx HTTPS',
+            'Docker Compose + Nginx',
             'Ubuntu VPS',
           ],
           highlights: [
             'Self-hosted en Oracle Cloud VPS con Docker Compose y Nginx HTTPS reverse proxy.',
-            'Backup/restore validado para PostgreSQL y MinIO. Monitoreo básico de uptime/TLS.',
-            'CI con GitHub Actions: restore, build y tests en cada push a main.',
+            'Backup/restore validado para PostgreSQL y MinIO. Health checks y rate limiting.',
+            'CI con GitHub Actions: restore, build y 159 tests en cada push a main.',
             'Theme configurable, admin order guards, PWA manifest dinámico.',
           ],
           metrics: [
-            { value: '8', label: 'tecnologías' },
-            { value: '3', label: 'servicios' },
-            { value: 'CI', label: 'GitHub Actions' },
-            { value: 'VPS', label: 'Ubuntu 24.04' },
+            { value: '10', label: 'tecnologías' },
+            { value: '3', label: 'métodos de pago' },
+            { value: '159', label: 'tests' },
+            { value: 'GitHub Actions', label: 'CI/CD' },
+            { value: 'Ubuntu 24.04', label: 'VPS' },
           ],
           link: 'https://vaultshop.evaldez.ar',
           github: 'https://github.com/Emmanuel-Valdez/VaultShop',
@@ -232,10 +233,10 @@ export const homeContent = {
       ],
       intro:
         'Soy Emmanuel Valdez, desarrollador backend .NET enfocado en aplicaciones donde la lógica de negocio, los datos y la operación importan tanto como la interfaz.',
-      strong: 'Backend con .NET, C# y SQL',
+      strong: 'desarrollo backend con .NET, C# y SQL',
       paragraphs: [
         'Vengo de una base técnica en producción industrial y automatización, por eso tiendo a pensar el software como una herramienta para ordenar procesos reales: costos, inventario, ventas, logística, usuarios y decisiones administrativas.',
-        'Esa mirada se refleja en VaultShop, una aplicación ASP.NET Core 8 MVC desplegada en un VPS real con PostgreSQL, Docker Compose, MinIO, Stripe, Identity roles y Nginx HTTPS. El proyecto me permitió trabajar con persistencia relacional, pagos, roles, almacenamiento de objetos, CI, despliegue y monitoreo.',
+        'Esa mirada se refleja en VaultShop, el caso de estudio que construí, despliegé y documenté en detalle — desde el modelo de datos relacional hasta la calculadora de precios administrativa.',
         'Actualmente estoy consolidando el portfolio alrededor de evidencia verificable: sistemas desplegados, datos relacionales, pagos, roles, infraestructura y documentación operativa.',
       ],
       closing:
@@ -270,16 +271,16 @@ export const homeContent = {
           text: 'I turn operational workflows - costs, stock, orders, and pricing - into usable, maintainable software for real businesses.',
         },
         {
-          text: ' As the main proof point, I built and deployed VaultShop: an ASP.NET Core 8 MVC application with PostgreSQL, Docker Compose, MinIO, Stripe, Identity roles, and Nginx HTTPS on a real VPS.',
+          text: 'I built and deployed VaultShop: ASP.NET Core 8 MVC, PostgreSQL, Docker, MinIO, Stripe, Mercado Pago, Identity + OAuth, Nginx HTTPS — on a real VPS.',
           class: 'text-blue-200/90',
         },
         {
-          text: ' Based in Mendoza, Argentina.',
+          text: 'Based in Mendoza, Argentina.',
           class: 'text-red-200/90',
         },
       ],
       stackAriaLabel: 'Demonstrated backend competencies',
-      stack: ['ASP.NET Core 8', 'PostgreSQL', 'Docker', 'Stripe', 'Nginx', 'Linux VPS'],
+      stack: ['ASP.NET Core 8', 'C#', 'EF Core', 'PostgreSQL', 'Identity', 'Docker', 'Stripe', 'Mercado Pago', 'Nginx', 'Ubuntu'],
       availabilityLabel: 'Available for work',
       ctas: {
         ariaLabel: 'Primary actions',
@@ -306,19 +307,19 @@ export const homeContent = {
     experience: [
       {
         date: '2020 - Present',
-        title: 'E-commerce operations and administration',
-        company: 'VaultShop / Family business',
+        title: 'E-commerce operations and platform development',
+        company: 'Ukiyo Studio',
         description:
-          'I managed full online store operations: catalog, stock, orders, customer service, shipping, and logistics. I identified operational issues (manual costs, pricing errors, lack of history) and turned them into requirements for the VaultShop platform.',
+          'I managed full online store operations and built VaultShop as the backend platform for Ukiyo Studio: catalog, stock, orders, pricing, roles, and administration. VaultShop is the testbed where I built and validated all the capabilities that Ukiyo Studio now offers.',
         highlights: [
           'Coordinated migration from TiendaNube to Tienda Negocio while maintaining operational continuity.',
-          'Identified pricing, roles, and administration needs that became VaultShop\'s scope.',
+          'Built VaultShop as a backend platform with ASP.NET Core, PostgreSQL, Docker, payments, and roles for Ukiyo Studio.',
           'Daily management of catalog, stock, orders, customer service, and shipping logistics.',
         ],
-        tags: ['E-commerce', 'TiendaNube', 'Tienda Negocio', 'Logistics', 'Pricing'],
+        tags: ['E-commerce', 'ASP.NET Core', 'VaultShop', 'Ukiyo Studio', 'Pricing'],
         tagsAriaLabel: 'Experience areas',
-        link: '',
-        linkLabel: '',
+        link: 'https://ukiyostudio.evaldez.ar',
+        linkLabel: 'Ukiyo Studio',
       },
     ],
     projects: {
@@ -336,28 +337,29 @@ export const homeContent = {
           title: 'VaultShop',
           eyebrow: 'Featured technical case · e-commerce deployed on a real VPS',
           description:
-            'ASP.NET Core 8 MVC application deployed on an Ubuntu VPS with PostgreSQL, Docker Compose, MinIO, Stripe, Identity roles, ES/EN localization, and Nginx HTTPS.',
+            'ASP.NET Core 8 MVC application deployed on an Ubuntu VPS with PostgreSQL, Docker Compose, MinIO, Stripe, Mercado Pago, Identity roles with Google OAuth, ES/EN localization, and Nginx HTTPS.',
           stack: [
             'ASP.NET Core 8 MVC',
             'Entity Framework Core + PostgreSQL',
             'ASP.NET Core Identity',
-            'Stripe Checkout + webhooks',
+            'Stripe + Mercado Pago',
+            'Google OAuth',
             'MinIO / S3 storage',
-            'Docker Compose',
-            'Nginx HTTPS',
+            'Docker Compose + Nginx',
             'Ubuntu VPS',
           ],
           highlights: [
             'Self-hosted on Oracle Cloud VPS with Docker Compose and Nginx HTTPS reverse proxy.',
-            'Backup/restore validated for PostgreSQL and MinIO. Basic uptime/TLS monitoring.',
-            'CI with GitHub Actions: restore, build, and tests on every push to main.',
+            'Backup/restore validated for PostgreSQL and MinIO. Health checks and rate limiting.',
+            'CI with GitHub Actions: restore, build, and 159 tests on every push to main.',
             'Configurable theme, admin order guards, dynamic PWA manifest.',
           ],
           metrics: [
-            { value: '8', label: 'technologies' },
-            { value: '3', label: 'services' },
-            { value: 'CI', label: 'GitHub Actions' },
-            { value: 'VPS', label: 'Ubuntu 24.04' },
+            { value: '10', label: 'technologies' },
+            { value: '3', label: 'payment methods' },
+            { value: '159', label: 'tests' },
+            { value: 'GitHub Actions', label: 'CI/CD' },
+            { value: 'Ubuntu 24.04', label: 'VPS' },
           ],
           link: 'https://vaultshop.evaldez.ar',
           github: 'https://github.com/Emmanuel-Valdez/VaultShop',
@@ -408,7 +410,7 @@ export const homeContent = {
       strong: 'backend development with .NET, C#, and SQL',
       paragraphs: [
         'I come from a technical background in industrial production and automation, so I tend to think of software as a tool for organizing real processes: costs, inventory, sales, logistics, users, and administrative decisions.',
-        'That perspective is reflected in VaultShop, an ASP.NET Core 8 MVC application deployed on a real VPS with PostgreSQL, Docker Compose, MinIO, Stripe, Identity roles, and Nginx HTTPS. The project let me work with relational persistence, payments, roles, object storage, CI, deployment, and monitoring.',
+        'That perspective is reflected in VaultShop, the case study I built, deployed, and documented in detail — from the relational data model to the admin pricing calculator.',
         'I am currently consolidating the portfolio around verifiable evidence: deployed systems, relational data, payments, roles, infrastructure, and operational documentation.',
       ],
       closing:
@@ -429,7 +431,7 @@ export const vaultshopContent = {
     meta: {
       title: 'Caso de estudio VaultShop - ASP.NET Core, PostgreSQL y e-commerce',
       description:
-        'Caso de estudio de VaultShop, aplicación e-commerce desplegada en VPS real con ASP.NET Core 8 MVC, Entity Framework Core, PostgreSQL, Docker Compose, MinIO, Stripe, Identity roles y Nginx HTTPS.',
+        'Caso de estudio de VaultShop, aplicación e-commerce desplegada en VPS real con ASP.NET Core 8 MVC, Entity Framework Core, PostgreSQL, Docker Compose, MinIO, Stripe, Mercado Pago, Google OAuth y Nginx HTTPS.',
       image: '/projects/vaultshop/storefront.webp',
     },
     backHref: '/#projects',
@@ -437,7 +439,7 @@ export const vaultshopContent = {
     eyebrow: 'Caso de estudio · ASP.NET Core + PostgreSQL + VPS',
     title: 'VaultShop',
     intro:
-      'VaultShop es una aplicación ASP.NET Core 8 MVC desplegada en un VPS Ubuntu real con PostgreSQL, Docker Compose, MinIO para almacenamiento de imágenes, Stripe para pagos, Identity roles para autenticación y Nginx HTTPS como reverse proxy.',
+      'VaultShop es la plataforma backend que construí para Ukiyo Studio. Es una aplicación ASP.NET Core 8 MVC desplegada en un VPS Ubuntu real con PostgreSQL, Docker Compose, MinIO, Stripe, Mercado Pago, transferencia bancaria, Identity + Google OAuth y Nginx HTTPS.',
     buttons: {
       demo: 'Ver tienda en vivo',
       code: 'Ver código en GitHub',
@@ -462,7 +464,7 @@ export const vaultshopContent = {
     metrics: [
       { label: 'Roles', value: 'Customer, Company, Employee, Admin' },
       { label: 'Pricing', value: 'Costos, márgenes, mayorista y minorista' },
-      { label: 'Integraciones', value: 'Stripe + Facebook OAuth + ES/EN' },
+      { label: 'Integraciones', value: 'Stripe + Mercado Pago + Google OAuth + ES/EN' },
     ],
     whatBuilt: {
       eyebrow: 'Qué construí',
@@ -473,8 +475,8 @@ export const vaultshopContent = {
         'Modelo de datos PostgreSQL para catálogo, usuarios, compañías, órdenes, costos y precios.',
         'Flujos ASP.NET Core MVC para tienda, carrito, administración, órdenes y pricing.',
         'Identity roles para separar cliente, compañía, empleado y administrador.',
-        'Integraciones acotadas con Stripe, Facebook OAuth y localización ES/EN.',
-        'Calculadora de precios con costos, márgenes, views/triggers SQL y revisión administrativa.',
+        'Integraciones modulares con Stripe, Mercado Pago, transferencia bancaria, Google OAuth y localización ES/EN.',
+        'Calculadora de precios con PricingCalculatorService + EF Core, costos, márgenes y revisión administrativa.',
       ],
     },
     walkthrough: {
@@ -536,7 +538,7 @@ export const vaultshopContent = {
       'Tienda pública para catálogo, favoritos, carrito y flujo de compra.',
       'Panel administrativo para productos, compañías, usuarios, roles y órdenes.',
       'Calculadora que conecta costos, márgenes y precios finales sobre datos persistidos.',
-      'Integraciones con Identity, Facebook OAuth, Stripe y localización ES/EN.',
+      'Integraciones con Identity, Google OAuth, Stripe, Mercado Pago, transferencia bancaria y localización ES/EN.',
     ],
     visualProof: {
       eyebrow: 'Evidencia de flujos implementados',
@@ -580,9 +582,9 @@ export const vaultshopContent = {
         app: 'Docker + ASP.NET Core',
         appDetails: ['MVC', 'Identity + roles', 'Reglas de negocio', 'ES/EN'],
         data: 'PostgreSQL + MinIO',
-        dataDetails: ['EF Core', 'Views/triggers', 'Costos y precios', 'Imágenes'],
+        dataDetails: ['EF Core', 'PricingCalculatorService', 'Costos y precios', 'Imágenes'],
         services: 'Servicios externos',
-        serviceDetails: ['Stripe', 'Facebook OAuth'],
+        serviceDetails: ['Stripe', 'Mercado Pago', 'Google OAuth'],
       },
       flows: [
         {
@@ -598,7 +600,7 @@ export const vaultshopContent = {
         {
           title: 'Base de datos y cálculos',
           description:
-            'PostgreSQL guarda catálogo, usuarios, empresas, órdenes, costos y precios. Las views y triggers ayudan a centralizar totales y mantener sincronizados los valores usados por la calculadora.',
+            'PostgreSQL guarda catálogo, usuarios, empresas, órdenes, costos y precios. PricingCalculatorService centraliza los cálculos de costos y precios de forma portable y testeable.',
         },
       ],
     },
@@ -610,19 +612,19 @@ export const vaultshopContent = {
       items: [
         { layer: 'Interfaz', items: ['Tienda pública', 'Panel administrativo', 'Localización ES/EN'] },
         { layer: 'Aplicación', items: ['ASP.NET Core 8 MVC', 'Identity y roles', 'Reglas de precios'] },
-        { layer: 'Datos', items: ['Entity Framework Core', 'PostgreSQL', 'Views y triggers'] },
-        { layer: 'Servicios externos', items: ['Stripe', 'Facebook OAuth', 'DotNetEnv para secretos locales'] },
+        { layer: 'Datos', items: ['Entity Framework Core', 'PostgreSQL', 'PricingCalculatorService'] },
+        { layer: 'Servicios externos', items: ['Stripe', 'Mercado Pago', 'Google OAuth'] },
       ],
     },
     calculator: {
       eyebrow: 'Calculadora administrativa',
       title: 'Reglas de precio basadas en costos reales',
       description: 'La calculadora convierte materiales, costos fijos, costos porcentuales y márgenes en precios sugeridos para decisiones administrativas.',
-      proofTitle: 'Por qué es el proof point diferencial',
+      proofTitle: 'Por qué es el diferencial',
       proofItems: [
         { title: 'Inputs de costo', description: 'Materiales, packaging, costos fijos y comisiones alimentan el cálculo desde datos administrables.' },
         { title: 'Reglas de negocio', description: 'Los márgenes mayoristas y minoristas se aplican como criterios explícitos, no como decisiones sueltas en una planilla.' },
-        { title: 'Soporte SQL', description: 'Views y triggers ayudan a mantener totales y precios calculados consistentes.' },
+        { title: 'Cálculo centralizado', description: 'PricingCalculatorService + EF Core centraliza los cálculos de forma portable y testeable, sin depender de vistas o triggers del motor de base de datos.' },
         { title: 'Resultado admin', description: 'El administrador compara costos, precios actuales y precios sugeridos antes de decidir cambios comerciales.' },
       ],
       finalTitle: 'Dashboard de precios finales',
@@ -654,7 +656,7 @@ export const vaultshopContent = {
         flows: [
           ['Catálogo y carrito', 'Pedidos', 'Operación administrativa'],
           ['Cuentas y empresas', 'Pedidos', 'Roles y permisos'],
-          ['Insumos de costo', 'SQL views', 'Precios calculados'],
+          ['Insumos de costo', 'PricingCalculatorService', 'Precios calculados'],
         ],
       },
       groups: [
@@ -670,8 +672,7 @@ export const vaultshopContent = {
             'FixedCost',
             'PercentageCost',
             'PercentageProfit',
-            'CostByProductView',
-            'FinalPriceView',
+            'PricingCalculatorService',
           ],
         },
       ],
@@ -687,9 +688,9 @@ export const vaultshopContent = {
         { title: 'ASP.NET Core MVC para tienda y admin', description: 'Un monolito MVC mantiene cerca las vistas, controladores y reglas del dominio sin introducir complejidad distribuida innecesaria.' },
         { title: 'EF Core + PostgreSQL para persistencia relacional', description: 'El modelo conecta catálogo, usuarios, órdenes, costos y precios en una base consistente para la operación.' },
         { title: 'Identity roles para flujos protegidos', description: 'Clientes, compañías, empleados y administradores pueden tener permisos distintos sin exponer acciones sensibles en la demo pública.' },
-        { title: 'SQL views para pricing y costos', description: 'Las views centralizan cálculos de costos por producto y precios finales para que la UI no replique lógica crítica.' },
-        { title: 'SQL triggers para consistencia de totales', description: 'Los triggers ayudan a mantener valores derivados sincronizados cuando cambian cantidades o precios de insumos.' },
-        { title: 'Stripe y Facebook OAuth como integraciones externas', description: 'Pagos y autenticación social se integran como servicios acotados alrededor del flujo principal de compra.' },
+        { title: 'PricingCalculatorService para pricing y costos', description: 'El servicio centraliza cálculos de costos por producto y precios finales de forma portable y testeable con EF Core, sin depender de vistas o triggers del motor de base de datos.' },
+        { title: 'Stripe, Mercado Pago y transferencia bancaria como integraciones de pago', description: 'Tres proveedores de pago integrados como servicios modulares con webhooks firmados y verificación server-side, alrededor del flujo principal de compra.' },
+        { title: 'Google OAuth para autenticación social', description: 'Autenticación externa integrada como servicio acotado alrededor del flujo principal, con Identity roles para separar permisos.' },
         { title: 'Localización ES/EN para contenido público', description: 'La interfaz bilingüe permite validar navegación y contenido visible en español e inglés desde el mismo sistema.' },
       ],
       detailsTitle: 'Detalles técnicos secundarios',
@@ -701,19 +702,19 @@ export const vaultshopContent = {
       highlights: [
         'Modelo multi-compañía para separar usuarios y operaciones asociadas a empresas sin mezclar responsabilidades.',
         'Identity y roles para diferenciar permisos de clientes, compañías, empleados y administradores.',
-        'SQL views para centralizar costos fijos, costos porcentuales, costos por producto y precios finales calculados.',
-        'SQL triggers para mantener totales consistentes cuando cambian cantidades o precios de insumos.',
-        'Migraciones, seed data y reparación inicial para asegurar que la calculadora tenga filas base válidas.',
+        'PricingCalculatorService para centralizar costos, márgenes y precios calculados de forma portable y testeable.',
+        'Webhooks firmados y verificación server-side para pagos con Stripe, Mercado Pago y transferencia bancaria.',
+        'Migraciones, seed data y configuración para asegurar que la calculadora tenga filas base válidas.',
       ],
       stack: [
         'ASP.NET Core 8 MVC',
-        'Entity Framework Core',
-        'PostgreSQL',
+        'Entity Framework Core + PostgreSQL',
         'ASP.NET Core Identity',
-        'Facebook OAuth',
-        'Stripe',
+        'Stripe + Mercado Pago + Transferencia bancaria',
+        'Google OAuth',
+        'MinIO / S3 storage',
+        'Docker Compose + Nginx',
         'Localización ES/EN',
-        'DotNetEnv',
       ],
     },
     lessonsLearned: {
@@ -722,9 +723,9 @@ export const vaultshopContent = {
       description:
         'Lo que resultó más complejo de lo esperado, qué cambiaría en una segunda versión y qué faltaría para producción real.',
       items: [
-        'La calculadora fue más difícil de diseñar de lo esperado: modelar costos variables, márgenes y triggers para mantener totales consistentes requirió varias iteraciones.',
-        'Docker simplificó el deploy pero el monitoreo sigue siendo básico: en producción agregaría health checks, logs centralizados y alertas.',
-        'La demo pública fue clave para mostrar valor sin abrir permisos sensibles, pero un sistema real necesita despliegue automatizado, backups automatizados y observabilidad.',
+        'La calculadora fue más difícil de diseñar de lo esperado: migrar de SQL views/triggers a PricingCalculatorService + EF Core requirió varias iteraciones para mantener portabilidad y testeabilidad.',
+        'Docker simplificó el deploy y los health checks (/health/live, /health/ready) dan visibilidad básica, pero en producción agregaría logs centralizados y alertas.',
+        'La demo pública fue clave para mostrar valor sin abrir permisos sensibles. Los backups están automatizados pero los restore drills siguen siendo manuales.',
       ],
     },
     infrastructure: {
@@ -749,6 +750,8 @@ export const vaultshopContent = {
         { label: 'HTTPS', value: 'Certificado Let\'s Encrypt, renovación automática' },
         { label: 'Backup', value: 'pg_dump + MinIO, restauración verificada' },
         { label: 'Deploy', value: 'Docker Compose, actualización manual' },
+        { label: 'Health', value: '/health/live + /health/ready (DB + storage)' },
+        { label: 'Seguridad', value: 'Rate limiting + lockout + 404/500 branded' },
       ],
     },
     limitations: {
@@ -761,8 +764,9 @@ export const vaultshopContent = {
         'Un solo VPS, sin redundancia ni balanceo de carga.',
         'Datos demo, no clientes reales.',
         'Sin despliegue automático a producción: el deploy es manual.',
-        'Sin stack de observabilidad: no hay Grafana, logs centralizados ni métricas.',
-        'Stripe en modo test, no en producción real.',
+        'Stock/inventario no rastreado aún: posible oversell hasta que se implementen guards.',
+        'Backups automatizados pero restore drills manuales.',
+        'Observabilidad básica: health checks y logs, sin Grafana ni métricas centralizadas.',
       ],
     },
     media: {
@@ -796,9 +800,9 @@ export const vaultshopContent = {
         },
         {
           src: '/projects/vaultshop/payment-gate.webp',
-          alt: 'Integración Stripe en VaultShop',
-          title: 'Integración Stripe',
-          description: 'Procesamiento de pagos con Stripe Checkout y webhooks firmados.',
+          alt: 'Integración de pagos en VaultShop',
+          title: 'Integraciones de pago',
+          description: 'Procesamiento de pagos con Stripe, Mercado Pago y webhooks firmados.',
         },
         {
           src: '/projects/vaultshop/final-prices.webp',
@@ -819,7 +823,7 @@ export const vaultshopContent = {
     meta: {
       title: 'VaultShop Case Study - ASP.NET Core, PostgreSQL and e-commerce',
       description:
-        'Case study for VaultShop, an e-commerce application deployed on a real VPS with ASP.NET Core 8 MVC, Entity Framework Core, PostgreSQL, Docker Compose, MinIO, Stripe, Identity roles, and Nginx HTTPS.',
+        'Case study for VaultShop, an e-commerce application deployed on a real VPS with ASP.NET Core 8 MVC, Entity Framework Core, PostgreSQL, Docker Compose, MinIO, Stripe, Mercado Pago, Google OAuth, and Nginx HTTPS.',
       image: '/projects/vaultshop/storefront.webp',
     },
     backHref: '/en/#projects',
@@ -827,7 +831,7 @@ export const vaultshopContent = {
     eyebrow: 'Case study · ASP.NET Core + PostgreSQL + VPS',
     title: 'VaultShop',
     intro:
-      'VaultShop is an ASP.NET Core 8 MVC application deployed on a real Ubuntu VPS with PostgreSQL, Docker Compose, MinIO for image storage, Stripe for payments, Identity roles for authentication, and Nginx HTTPS as reverse proxy.',
+      'VaultShop is the backend platform I built for Ukiyo Studio. It is an ASP.NET Core 8 MVC application deployed on a real Ubuntu VPS with PostgreSQL, Docker Compose, MinIO, Stripe, Mercado Pago, bank transfer, Identity + Google OAuth, and Nginx HTTPS.',
     buttons: {
       demo: 'View live store',
       code: 'View code on GitHub',
@@ -852,7 +856,7 @@ export const vaultshopContent = {
     metrics: [
       { label: 'Roles', value: 'Customer, Company, Employee, Admin' },
       { label: 'Pricing', value: 'Costs, margins, wholesale and retail' },
-      { label: 'Integrations', value: 'Stripe + Facebook OAuth + ES/EN' },
+      { label: 'Integrations', value: 'Stripe + Mercado Pago + Google OAuth + ES/EN' },
     ],
     whatBuilt: {
       eyebrow: 'What I built',
@@ -863,8 +867,8 @@ export const vaultshopContent = {
         'PostgreSQL data model for catalog, users, companies, orders, costs, and prices.',
         'ASP.NET Core MVC flows for storefront, cart, admin, orders, and pricing.',
         'Identity roles to separate customer, company, employee, and admin permissions.',
-        'Bounded integrations with Stripe, Facebook OAuth, and ES/EN localization.',
-        'Pricing calculator with costs, margins, SQL views/triggers, and admin review.',
+        'Scoped integrations with Stripe, Mercado Pago, bank transfer, Google OAuth, and ES/EN localization.',
+        'Pricing calculator with PricingCalculatorService + EF Core, costs, margins, and admin review.',
       ],
     },
     walkthrough: {
@@ -925,8 +929,8 @@ export const vaultshopContent = {
     solutionItems: [
       'Public store for catalog, favorites, cart, and purchase flow.',
       'Admin panel for products, companies, users, roles, and orders.',
-      'Calculator that connects costs, margins, and final prices over persisted data.',
-      'Integrations with Identity, Facebook OAuth, Stripe, and ES/EN localization.',
+      'Calculator that connects costs, margins, and final prices using persisted data.',
+      'Integrations with Identity, Google OAuth, Stripe, Mercado Pago, bank transfer, and ES/EN localization.',
     ],
     visualProof: {
       eyebrow: 'Implemented flow evidence',
@@ -970,9 +974,9 @@ export const vaultshopContent = {
         app: 'Docker + ASP.NET Core',
         appDetails: ['MVC', 'Identity + roles', 'Business rules', 'ES/EN'],
         data: 'PostgreSQL + MinIO',
-        dataDetails: ['EF Core', 'Views/triggers', 'Costs and prices', 'Images'],
+        dataDetails: ['EF Core', 'PricingCalculatorService', 'Costs and prices', 'Images'],
         services: 'External services',
-        serviceDetails: ['Stripe', 'Facebook OAuth'],
+        serviceDetails: ['Stripe', 'Mercado Pago', 'Google OAuth'],
       },
       flows: [
         {
@@ -988,7 +992,7 @@ export const vaultshopContent = {
         {
           title: 'Database and calculations',
           description:
-            'PostgreSQL stores catalog, users, companies, orders, costs, and prices. Views and triggers help centralize totals and keep values used by the calculator synchronized.',
+            'PostgreSQL stores catalog, users, companies, orders, costs, and prices. PricingCalculatorService centralizes cost and price calculations in a portable, testable way.',
         },
       ],
     },
@@ -1000,19 +1004,19 @@ export const vaultshopContent = {
       items: [
         { layer: 'Interface', items: ['Public store', 'Admin panel', 'ES/EN localization'] },
         { layer: 'Application', items: ['ASP.NET Core 8 MVC', 'Identity and roles', 'Pricing rules'] },
-        { layer: 'Data', items: ['Entity Framework Core', 'PostgreSQL', 'Views and triggers'] },
-        { layer: 'External services', items: ['Stripe', 'Facebook OAuth', 'DotNetEnv for local secrets'] },
+        { layer: 'Data', items: ['Entity Framework Core', 'PostgreSQL', 'PricingCalculatorService'] },
+        { layer: 'External services', items: ['Stripe', 'Mercado Pago', 'Google OAuth'] },
       ],
     },
     calculator: {
-      eyebrow: 'Admin calculator',
+      eyebrow: 'Pricing calculator',
       title: 'Pricing rules based on real costs',
       description: 'The calculator turns materials, fixed costs, percentage-based costs, and margins into suggested prices for administrative decisions.',
-      proofTitle: 'Why this is the differentiated proof point',
+      proofTitle: 'Why this is the key differentiator',
       proofItems: [
         { title: 'Cost inputs', description: 'Materials, packaging, fixed costs, and fees feed the calculation from admin-managed data.' },
         { title: 'Business rules', description: 'Wholesale and retail margins are applied as explicit criteria instead of isolated spreadsheet decisions.' },
-        { title: 'SQL support', description: 'Views and triggers help keep totals and calculated prices consistent.' },
+        { title: 'Centralized calculation', description: 'PricingCalculatorService + EF Core centralizes calculations in a portable, testable way without relying on database engine views or triggers.' },
         { title: 'Admin outcome', description: 'The admin compares costs, current prices, and suggested prices before making commercial changes.' },
       ],
       finalTitle: 'Final-price dashboard',
@@ -1044,7 +1048,7 @@ export const vaultshopContent = {
         flows: [
           ['Catalog and cart', 'Orders', 'Admin operations'],
           ['Accounts and companies', 'Orders', 'Roles and permissions'],
-          ['Cost inputs', 'SQL views', 'Calculated prices'],
+          ['Cost inputs', 'PricingCalculatorService', 'Calculated prices'],
         ],
       },
       groups: [
@@ -1060,8 +1064,7 @@ export const vaultshopContent = {
             'FixedCost',
             'PercentageCost',
             'PercentageProfit',
-            'CostByProductView',
-            'FinalPriceView',
+            'PricingCalculatorService',
           ],
         },
       ],
@@ -1074,12 +1077,12 @@ export const vaultshopContent = {
       stackTitle: 'Stack',
       stackAriaLabel: 'Technical stack for VaultShop',
       decisions: [
-        { title: 'ASP.NET Core MVC for store and admin', description: 'A MVC monolith keeps views, controllers, and domain rules close without adding unnecessary distributed complexity.' },
+        { title: 'ASP.NET Core MVC for store and admin', description: 'An MVC monolith keeps views, controllers, and domain rules close without adding unnecessary distributed complexity.' },
         { title: 'EF Core + PostgreSQL for relational persistence', description: 'The model connects catalog, users, orders, costs, and prices in one consistent operational database.' },
         { title: 'Identity roles for protected flows', description: 'Customers, companies, employees, and admins can have distinct permissions without exposing sensitive actions in the public demo.' },
-        { title: 'SQL views for pricing and costs', description: 'Views centralize cost-by-product and final-price calculations so the UI does not duplicate critical logic.' },
-        { title: 'SQL triggers for total consistency', description: 'Triggers help keep derived values synchronized when input quantities or prices change.' },
-        { title: 'Stripe and Facebook OAuth as external integrations', description: 'Payments and social authentication are integrated as bounded services around the main purchase flow.' },
+        { title: 'PricingCalculatorService for pricing and costs', description: 'The service centralizes cost-by-product and final-price calculations in a portable, testable way with EF Core, without relying on database engine views or triggers.' },
+        { title: 'Stripe, Mercado Pago, and bank transfer as payment integrations', description: 'Three payment providers integrated as scoped services with signed webhooks and server-side verification around the main purchase flow.' },
+        { title: 'Google OAuth for social authentication', description: 'External authentication integrated as a scoped service around the main flow, with Identity roles for permission separation.' },
         { title: 'ES/EN localization for public content', description: 'The bilingual interface validates navigation and visible content in Spanish and English from the same system.' },
       ],
       detailsTitle: 'Secondary technical details',
@@ -1091,19 +1094,19 @@ export const vaultshopContent = {
       highlights: [
         'Multi-company model to separate users and company operations without mixing responsibilities.',
         'Identity and roles to distinguish permissions for customers, companies, employees, and admins.',
-        'SQL views to centralize fixed costs, percentage costs, product costs, and calculated final prices.',
-        'SQL triggers to keep totals consistent when input quantities or prices change.',
-        'Migrations, seed data, and startup repair flows to ensure the calculator has valid base rows.',
+        'PricingCalculatorService to centralize costs, margins, and calculated prices in a portable, testable way.',
+        'Signed webhooks and server-side verification for payments with Stripe, Mercado Pago, and bank transfer.',
+        'Migrations, seed data, and configuration to ensure the calculator has valid base rows.',
       ],
       stack: [
         'ASP.NET Core 8 MVC',
         'Entity Framework Core + PostgreSQL',
         'ASP.NET Core Identity',
-        'Stripe Checkout + webhooks',
+        'Stripe + Mercado Pago + Bank Transfer',
+        'Google OAuth',
         'MinIO / S3 storage',
-        'Docker Compose',
-        'Nginx HTTPS',
-        'Ubuntu VPS',
+        'Docker Compose + Nginx',
+        'ES/EN localization',
       ],
     },
     lessonsLearned: {
@@ -1112,9 +1115,9 @@ export const vaultshopContent = {
       description:
         'What was harder than expected, what I would change in a second version, and what production would require.',
       items: [
-        'The calculator was harder to design than expected: modeling variable costs, margins, and triggers to keep totals consistent required several iterations.',
-        'Docker simplified deployment but monitoring remains basic: in production I would add health checks, centralized logging, and alerts.',
-        'The public demo was key to showing value without opening sensitive permissions, but a real system needs automated deployment, automated backups, and observability.',
+        'The calculator was harder to design than expected: migrating from SQL views/triggers to PricingCalculatorService + EF Core required several iterations to maintain portability and testability.',
+        'Docker simplified deployment and health checks (/health/live, /health/ready) provide basic visibility, but in production I would add centralized logging and alerts.',
+        'The public demo was key to showing value without opening sensitive permissions. Backups are automated but restore drills remain manual.',
       ],
     },
     infrastructure: {
@@ -1139,6 +1142,8 @@ export const vaultshopContent = {
         { label: 'HTTPS', value: 'Let\'s Encrypt certificate, auto-renewal' },
         { label: 'Backup', value: 'pg_dump + MinIO, restore verified' },
         { label: 'Deploy', value: 'Docker Compose, manual update' },
+        { label: 'Health', value: '/health/live + /health/ready (DB + storage)' },
+        { label: 'Security', value: 'Rate limiting + lockout + branded 404/500' },
       ],
     },
     limitations: {
@@ -1151,8 +1156,9 @@ export const vaultshopContent = {
         'Single VPS, no redundancy or load balancing.',
         'Demo data, not real customers.',
         'No automated production deployment: deployment is manual.',
-        'No observability stack: no Grafana, centralized logging, or metrics.',
-        'Stripe in test mode, not real production.',
+        'Stock/inventory not yet tracked: oversell possible until guards are implemented.',
+        'Backups automated; restore drills remain manual.',
+        'Basic observability: health checks and logs, no Grafana or centralized metrics.',
       ],
     },
     media: {
@@ -1186,9 +1192,9 @@ export const vaultshopContent = {
         },
         {
           src: '/projects/vaultshop/payment-gate.webp',
-          alt: 'VaultShop Stripe payment integration',
-          title: 'Stripe integration',
-          description: 'Payment processing with Stripe Checkout and signed webhooks.',
+          alt: 'VaultShop payment integration',
+          title: 'Payment integrations',
+          description: 'Payment processing with Stripe, Mercado Pago, and signed webhooks.',
         },
         {
           src: '/projects/vaultshop/final-prices.webp',
