@@ -181,7 +181,7 @@ export const homeContent = {
             'Theme configurable, admin order guards, PWA manifest dinámico.',
           ],
           metrics: [
-            { value: '10', label: 'tecnologías' },
+            { value: '8+', label: 'tecnologías' },
             { value: '3', label: 'métodos de pago' },
             { value: '159', label: 'tests' },
             { value: 'GitHub Actions', label: 'CI/CD' },
@@ -355,7 +355,7 @@ export const homeContent = {
             'Configurable theme, admin order guards, dynamic PWA manifest.',
           ],
           metrics: [
-            { value: '10', label: 'technologies' },
+            { value: '8+', label: 'technologies' },
             { value: '3', label: 'payment methods' },
             { value: '159', label: 'tests' },
             { value: 'GitHub Actions', label: 'CI/CD' },
