@@ -177,13 +177,13 @@ export const homeContent = {
           highlights: [
             'Self-hosted en Oracle Cloud VPS con Docker Compose y Nginx HTTPS reverse proxy.',
             'Backup/restore validado para PostgreSQL y MinIO. Health checks y rate limiting.',
-            'CI con GitHub Actions: restore, build y 159 tests en cada push a main.',
+            'CI con GitHub Actions: restore, build y 373 tests en cada push a main.',
             'Theme configurable, admin order guards, PWA manifest dinámico.',
           ],
           metrics: [
             { value: '8+', label: 'tecnologías' },
             { value: '3', label: 'métodos de pago' },
-            { value: '159', label: 'tests' },
+            { value: '373', label: 'tests' },
             { value: 'GitHub Actions', label: 'CI/CD' },
             { value: 'Ubuntu 24.04', label: 'VPS' },
           ],
@@ -195,7 +195,7 @@ export const homeContent = {
           tags: ['CSharp', 'GitHub', 'PostgreSQL'],
         },
         {
-          title: 'Proyecto final C# QUARK Academy',
+          title: 'Cotizador Express para Tienda de Ropa',
           description:
             'Aplicación C# Windows Forms que modela lógica de cotización, historial, restricciones de stock y manejo de errores para una tienda de ropa.',
           link: '',
@@ -351,13 +351,13 @@ export const homeContent = {
           highlights: [
             'Self-hosted on Oracle Cloud VPS with Docker Compose and Nginx HTTPS reverse proxy.',
             'Backup/restore validated for PostgreSQL and MinIO. Health checks and rate limiting.',
-            'CI with GitHub Actions: restore, build, and 159 tests on every push to main.',
+            'CI with GitHub Actions: restore, build, and 373 tests on every push to main.',
             'Configurable theme, admin order guards, dynamic PWA manifest.',
           ],
           metrics: [
             { value: '8+', label: 'technologies' },
             { value: '3', label: 'payment methods' },
-            { value: '159', label: 'tests' },
+            { value: '373', label: 'tests' },
             { value: 'GitHub Actions', label: 'CI/CD' },
             { value: 'Ubuntu 24.04', label: 'VPS' },
           ],
@@ -369,7 +369,7 @@ export const homeContent = {
           tags: ['CSharp', 'GitHub', 'PostgreSQL'],
         },
         {
-          title: 'C# QUARK Academy final project',
+          title: 'Express Quote Calculator for Clothing Store',
           description:
             'C# Windows Forms application that models quotation logic, quote history, stock restrictions, and error handling for a clothing store.',
           link: '',
@@ -451,6 +451,7 @@ export const vaultshopContent = {
         { label: 'Seguridad de conexión', value: '🔒 HTTPS' },
         { label: 'Estado de respaldo', value: '✓ Backup tested' },
         { label: 'Despliegue', value: '● Docker Compose' },
+        { label: 'Tests automatizados', value: '✓ 373 tests' },
       ],
     },
     heroImageAlt: 'Captura real de VaultShop con catálogo de productos',
@@ -536,7 +537,7 @@ export const vaultshopContent = {
     ],
     solutionItems: [
       'Tienda pública para catálogo, favoritos, carrito y flujo de compra.',
-      'Panel administrativo para productos, compañías, usuarios, roles y órdenes.',
+        'Panel administrativo para productos, compañías, usuarios, roles, órdenes, retiro por sucursal y resumen PDF del pedido.',
       'Calculadora que conecta costos, márgenes y precios finales sobre datos persistidos.',
       'Integraciones con Identity, Google OAuth, Stripe, Mercado Pago, transferencia bancaria y localización ES/EN.',
     ],
@@ -630,6 +631,7 @@ export const vaultshopContent = {
       finalTitle: 'Dashboard de precios finales',
       finalDescription:
         'El dashboard permite comparar precios vigentes contra valores calculados, detectar productos que requieren revisión y mantener la decisión comercial final en manos del administrador.',
+      inputsTitle: 'Ver variables de costo',
       inputs: [
         'Materiales, telas, herrajes y packaging por producto o categoría.',
         'Costos fijos como impuestos, alquiler, servicios, herramientas y gastos operativos.',
@@ -689,9 +691,9 @@ export const vaultshopContent = {
         { title: 'EF Core + PostgreSQL para persistencia relacional', description: 'El modelo conecta catálogo, usuarios, órdenes, costos y precios en una base consistente para la operación.' },
         { title: 'Identity roles para flujos protegidos', description: 'Clientes, compañías, empleados y administradores pueden tener permisos distintos sin exponer acciones sensibles en la demo pública.' },
         { title: 'PricingCalculatorService para pricing y costos', description: 'El servicio centraliza cálculos de costos por producto y precios finales de forma portable y testeable con EF Core, sin depender de vistas o triggers del motor de base de datos.' },
-        { title: 'Stripe, Mercado Pago y transferencia bancaria como integraciones de pago', description: 'Tres proveedores de pago integrados como servicios modulares con webhooks firmados y verificación server-side, alrededor del flujo principal de compra.' },
+        { title: 'Stripe, Mercado Pago y transferencia bancaria como integraciones de pago', description: 'Tres proveedores de pago integrados como servicios modulares con webhooks firmados, verificación server-side, reconciliación de sesiones pendientes y refunds al cancelar, alrededor del flujo principal de compra.' },
         { title: 'Google OAuth para autenticación social', description: 'Autenticación externa integrada como servicio acotado alrededor del flujo principal, con Identity roles para separar permisos.' },
-        { title: 'Localización ES/EN para contenido público', description: 'La interfaz bilingüe permite validar navegación y contenido visible en español e inglés desde el mismo sistema.' },
+        { title: 'Stock transaccional con guards anti-oversell', description: 'StockQuantity con guards en carrito/checkout, decremento atómico en transacción EF Core y badge Sin stock en tienda. Scope: instancia única, sin test de carga distribuida.' },
       ],
       detailsTitle: 'Detalles técnicos secundarios',
       detailsDescription:
@@ -748,7 +750,7 @@ export const vaultshopContent = {
       items: [
         { label: 'Demo', value: 'En vivo en vaultshop.evaldez.ar' },
         { label: 'HTTPS', value: 'Certificado Let\'s Encrypt, renovación automática' },
-        { label: 'Backup', value: 'pg_dump + MinIO, restauración verificada' },
+        { label: 'Backup', value: 'pg_dump + MinIO auto, restore manual verificado' },
         { label: 'Deploy', value: 'Docker Compose, actualización manual' },
         { label: 'Health', value: '/health/live + /health/ready (DB + storage)' },
         { label: 'Seguridad', value: 'Rate limiting + lockout + 404/500 branded' },
@@ -760,13 +762,10 @@ export const vaultshopContent = {
       description:
         'Un caso de estudio backend con despliegue real, no un sistema empresarial en producción.',
       items: [
-        'Monolito MVC, no microservicios: suficiente para el alcance actual pero no escalable horizontalmente.',
-        'Un solo VPS, sin redundancia ni balanceo de carga.',
-        'Datos demo, no clientes reales.',
-        'Sin despliegue automático a producción: el deploy es manual.',
-        'Stock/inventario no rastreado aún: posible oversell hasta que se implementen guards.',
-        'Backups automatizados pero restore drills manuales.',
-        'Observabilidad básica: health checks y logs, sin Grafana ni métricas centralizadas.',
+        'Monolito MVC en un solo VPS: suficiente para el alcance actual, sin redundancia ni escalado horizontal.',
+        'Datos demo y deploy manual, no clientes reales en producción.',
+        'Stock con guards y decremento atómico en instancia única; pendiente test de carga concurrente y lock distribuido.',
+        'Backups automatizados con restore manual; observabilidad básica con health checks y logs.',
       ],
     },
     media: {
@@ -843,6 +842,7 @@ export const vaultshopContent = {
         { label: 'Connection security', value: '🔒 HTTPS' },
         { label: 'Backup status', value: '✓ Backup tested' },
         { label: 'Deployment', value: '● Docker Compose' },
+        { label: 'Automated tests', value: '✓ 373 tests' },
       ],
     },
     heroImageAlt: 'Real screenshot of VaultShop with product catalog',
@@ -928,7 +928,7 @@ export const vaultshopContent = {
     ],
     solutionItems: [
       'Public store for catalog, favorites, cart, and purchase flow.',
-      'Admin panel for products, companies, users, roles, and orders.',
+      'Admin panel for products, companies, users, roles, orders, branch pickup, and order PDF summary.',
       'Calculator that connects costs, margins, and final prices using persisted data.',
       'Integrations with Identity, Google OAuth, Stripe, Mercado Pago, bank transfer, and ES/EN localization.',
     ],
@@ -1022,6 +1022,7 @@ export const vaultshopContent = {
       finalTitle: 'Final-price dashboard',
       finalDescription:
         'The dashboard compares current prices against calculated values, highlights products that need review, and keeps the final commercial decision in the admin\'s hands.',
+      inputsTitle: 'View cost variables',
       inputs: [
         'Materials, fabrics, hardware, and packaging by product or category.',
         'Fixed costs such as taxes, rent, utilities, tools, and operating expenses.',
@@ -1081,9 +1082,9 @@ export const vaultshopContent = {
         { title: 'EF Core + PostgreSQL for relational persistence', description: 'The model connects catalog, users, orders, costs, and prices in one consistent operational database.' },
         { title: 'Identity roles for protected flows', description: 'Customers, companies, employees, and admins can have distinct permissions without exposing sensitive actions in the public demo.' },
         { title: 'PricingCalculatorService for pricing and costs', description: 'The service centralizes cost-by-product and final-price calculations in a portable, testable way with EF Core, without relying on database engine views or triggers.' },
-        { title: 'Stripe, Mercado Pago, and bank transfer as payment integrations', description: 'Three payment providers integrated as scoped services with signed webhooks and server-side verification around the main purchase flow.' },
+        { title: 'Stripe, Mercado Pago, and bank transfer as payment integrations', description: 'Three payment providers integrated as scoped services with signed webhooks, server-side verification, stale-session reconciliation, and refunds on cancellation around the main purchase flow.' },
         { title: 'Google OAuth for social authentication', description: 'External authentication integrated as a scoped service around the main flow, with Identity roles for permission separation.' },
-        { title: 'ES/EN localization for public content', description: 'The bilingual interface validates navigation and visible content in Spanish and English from the same system.' },
+        { title: 'Transactional stock with anti-oversell guards', description: 'StockQuantity with cart/checkout guards, atomic decrement inside an EF Core transaction, and an out-of-stock badge on the storefront. Scope: single instance, no distributed load test yet.' },
       ],
       detailsTitle: 'Secondary technical details',
       detailsDescription:
@@ -1140,7 +1141,7 @@ export const vaultshopContent = {
       items: [
         { label: 'Demo', value: 'Live at vaultshop.evaldez.ar' },
         { label: 'HTTPS', value: 'Let\'s Encrypt certificate, auto-renewal' },
-        { label: 'Backup', value: 'pg_dump + MinIO, restore verified' },
+        { label: 'Backup', value: 'pg_dump + MinIO auto, manual restore verified' },
         { label: 'Deploy', value: 'Docker Compose, manual update' },
         { label: 'Health', value: '/health/live + /health/ready (DB + storage)' },
         { label: 'Security', value: 'Rate limiting + lockout + branded 404/500' },
@@ -1152,13 +1153,10 @@ export const vaultshopContent = {
       description:
         'A backend case study with real deployment, not an enterprise production system.',
       items: [
-        'MVC monolith, not microservices: sufficient for current scope but not horizontally scalable.',
-        'Single VPS, no redundancy or load balancing.',
-        'Demo data, not real customers.',
-        'No automated production deployment: deployment is manual.',
-        'Stock/inventory not yet tracked: oversell possible until guards are implemented.',
-        'Backups automated; restore drills remain manual.',
-        'Basic observability: health checks and logs, no Grafana or centralized metrics.',
+        'MVC monolith on a single VPS: enough for the current scope, no redundancy or horizontal scaling.',
+        'Demo data and manual deployment, no real production customers.',
+        'Stock with guards and atomic decrement on a single instance; concurrent load test and distributed lock still pending.',
+        'Automated backups with manual restore; basic observability with health checks and logs.',
       ],
     },
     media: {
