@@ -25,6 +25,7 @@ const lessonsItems = content.lessonsLearned.items;
 const infraItems = content.infrastructure.items;
 const operationalItems = content.operationalProof.items;
 const limitationItems = content.limitations.items;
+const faqItems = content.faq.items;
 const screenshots = content.media.screenshots;
 const pricingScreenshot = screenshots[4];
 const mediaGroups = content.media.groups.map((group) => ({
@@ -603,6 +604,25 @@ const lightboxLabels = locale === 'es'
               ))}
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section class="mt-10 rounded-3xl border border-white/10 bg-white/[0.03] p-5 sm:mt-14 sm:p-6 md:p-8">
+        <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-amber-300/80 sm:text-sm sm:tracking-[0.24em]">{content.faq.eyebrow}</p>
+        <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">{content.faq.title}</h2>
+        <p class="mt-3 text-sm leading-6 text-gray-400 sm:text-base sm:leading-7">{content.faq.description}</p>
+        <div class="mt-6 space-y-4">
+          {faqItems.map((faq) => (
+            <details class="group rounded-2xl border border-white/10 bg-slate-950/60 p-4 open:border-blue-400/15 sm:p-5">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 marker:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300">
+                <span class="text-base font-semibold text-white sm:text-lg">{faq.question}</span>
+                <span class="shrink-0 text-xl leading-none text-amber-300/80 transition group-open:rotate-45" aria-hidden="true">+</span>
+              </summary>
+              <div class="mt-3 text-sm leading-6 text-gray-300 sm:text-base sm:leading-7">
+                {faq.answer}
+              </div>
+            </details>
+          ))}
         </div>
       </section>
 

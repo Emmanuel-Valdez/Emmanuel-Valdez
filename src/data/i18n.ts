@@ -774,6 +774,29 @@ export const vaultshopContent = {
         'Backups automatizados con restore manual; observabilidad básica con health checks y logs.',
       ],
     },
+    faq: {
+      eyebrow: 'FAQ',
+      title: 'Preguntas frecuentes',
+      description: 'Respuestas directas sobre el proyecto para hiring managers.',
+      items: [
+        {
+          question: '¿VaultShop es un proyecto real o un demo?',
+          answer: 'Es un proyecto real desplegado en un VPS con datos demo. Uso datos de prueba para no exponer información sensible de clientes reales.',
+        },
+        {
+          question: '¿Qué tan escalable es la arquitectura?',
+          answer: 'Es un monolito MVC en un solo VPS, suficiente para el alcance actual. Para escala horizontal se necesitaría separar servicios y agregar redundancia.',
+        },
+        {
+          question: '¿Cómo manejan los pagos y la seguridad?',
+          answer: 'Stripe y Mercado Pago con webhooks firmados, verificación server-side, rate limiting y lockout. Los pagos nunca tocan el servidor directamente.',
+        },
+        {
+          question: '¿El código está disponible en GitHub?',
+          answer: 'Sí, el repositorio está público en github.com/Emmanuel-Valdez/VaultShop con README, screenshots y documentación técnica.',
+        },
+      ],
+    },
     media: {
       eyebrow: 'Evidencia adicional',
       title: 'Capturas técnicas complementarias',
@@ -1167,6 +1190,29 @@ export const vaultshopContent = {
         'Demo data and manual deployment, no real production customers.',
         'Stock with guards and atomic decrement on a single instance; concurrent load test and distributed lock still pending.',
         'Automated backups with manual restore; basic observability with health checks and logs.',
+      ],
+    },
+    faq: {
+      eyebrow: 'FAQ',
+      title: 'Frequently asked questions',
+      description: 'Direct answers about the project for hiring managers.',
+      items: [
+        {
+          question: 'Is VaultShop a real project or a demo?',
+          answer: 'It is a real project deployed on a VPS with demo data. I use test data to avoid exposing sensitive customer information.',
+        },
+        {
+          question: 'How scalable is the architecture?',
+          answer: 'It is an MVC monolith on a single VPS, sufficient for the current scope. Horizontal scaling would require service separation and redundancy.',
+        },
+        {
+          question: 'How do you handle payments and security?',
+          answer: 'Stripe and Mercado Pago with signed webhooks, server-side verification, rate limiting, and lockout. Payments never touch the server directly.',
+        },
+        {
+          question: 'Is the code available on GitHub?',
+          answer: 'Yes, the repository is public at github.com/Emmanuel-Valdez/VaultShop with README, screenshots, and technical documentation.',
+        },
       ],
     },
     media: {

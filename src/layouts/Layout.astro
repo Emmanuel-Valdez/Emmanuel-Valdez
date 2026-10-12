@@ -15,6 +15,23 @@ const alternateUrl = Astro.site && alternatePath ? new URL(alternatePath, Astro.
 const socialImageUrl = Astro.site ? new URL(image, Astro.site).toString() : undefined;
 const ogLocale = locale === 'es' ? 'es_AR' : 'en_US';
 const alternateOgLocale = locale === 'es' ? 'en_US' : 'es_AR';
+const jsonLdPerson = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Emmanuel Valdez',
+  url: 'https://evaldez.ar/',
+  jobTitle: 'Backend .NET Developer',
+  description: 'Backend developer specializing in ASP.NET Core, C#, PostgreSQL, EF Core, authentication, payments, and business systems.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Mendoza',
+    addressCountry: 'AR',
+  },
+  sameAs: [
+    'https://github.com/Emmanuel-Valdez',
+    'https://www.linkedin.com/in/emmanuel-valdez-0a6a5b233/',
+  ],
+};
 import '@fontsource-variable/onest';
 
 import Header from '../components/Header.astro';
@@ -52,6 +69,7 @@ const copy = common[locale];
     <meta name="twitter:description" content={description} />
     {socialImageUrl && <meta name="twitter:image" content={socialImageUrl} />}
     <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdPerson)}></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">{copy.skipLink}</a>
