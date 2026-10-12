@@ -8,6 +8,7 @@ interface Props {
     text: string;
     emailLabel: string;
     cvLabel: string;
+    responseTime?: string;
     cv: {
       href: string;
       download: string;
@@ -32,4 +33,7 @@ const { content } = Astro.props;
       ><DownloadIcon class="size-4 md:size-6" />{content.cvLabel}
     </LinkButton>
   </div>
+  {content.responseTime && (
+    <p class="mt-4 text-sm text-gray-400">{content.responseTime}</p>
+  )}
 </div>

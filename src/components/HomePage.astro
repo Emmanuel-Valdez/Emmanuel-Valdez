@@ -63,5 +63,42 @@ const { content, locale, alternatePath } = Astro.props;
       </h2>
       <Contact content={content.contact} />
     </SectionContainer>
+
+    <SectionContainer id="proof">
+      <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-amber-300/80 sm:text-sm sm:tracking-[0.24em]">{content.proofOfWork.eyebrow}</p>
+      <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">{content.proofOfWork.title}</h2>
+      <p class="mt-3 text-sm leading-6 text-gray-400 sm:text-base sm:leading-7">{content.proofOfWork.description}</p>
+      <div class="mt-6 grid gap-3 sm:grid-cols-2">
+        {content.proofOfWork.items.map((item) => (
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:border-amber-300/30 hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
+          >
+            <div class="min-w-0">
+              <p class="text-xs font-medium text-gray-500">{item.label}</p>
+              <p class="mt-1 truncate text-sm font-semibold text-white">{item.value}</p>
+            </div>
+            <span class="shrink-0 text-amber-300/80 transition group-hover:translate-x-0.5" aria-hidden="true">→</span>
+          </a>
+        ))}
+      </div>
+    </SectionContainer>
+
+    <SectionContainer id="plan">
+      <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-amber-300/80 sm:text-sm sm:tracking-[0.24em]">{content.plan306090.eyebrow}</p>
+      <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">{content.plan306090.title}</h2>
+      <p class="mt-3 text-sm leading-6 text-gray-400 sm:text-base sm:leading-7">{content.plan306090.description}</p>
+      <div class="mt-6 grid gap-4 md:grid-cols-3">
+        {content.plan306090.items.map((item) => (
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <p class="text-xs font-semibold uppercase tracking-wider text-amber-300/80">{item.period}</p>
+            <h3 class="mt-2 text-base font-bold text-white">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-400">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </SectionContainer>
   </main>
 </Layout>

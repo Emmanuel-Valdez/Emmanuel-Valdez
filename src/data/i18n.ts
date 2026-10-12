@@ -248,7 +248,41 @@ export const homeContent = {
       text: '¿Buscás un desarrollador backend .NET para sistemas internos, e-commerce o aplicaciones con lógica de negocio real? Escribime por email o descargá mi CV.',
       emailLabel: 'Escribirme por email',
       cvLabel: 'Descargar CV en PDF',
+      responseTime: 'Respondo en 24-48 hs',
       cv: cvFiles.es,
+    },
+    proofOfWork: {
+      eyebrow: 'Evidencia rápida',
+      title: 'Proof of work',
+      description: 'Links verificables para hiring managers.',
+      items: [
+        { label: 'Demo en vivo', value: 'vaultshop.evaldez.ar', href: 'https://vaultshop.evaldez.ar' },
+        { label: 'GitHub', value: 'github.com/Emmanuel-Valdez/VaultShop', href: 'https://github.com/Emmanuel-Valdez/VaultShop' },
+        { label: 'CI', value: 'GitHub Actions — 373 tests', href: 'https://github.com/Emmanuel-Valdez/VaultShop/actions' },
+        { label: 'Commit history', value: '200+ commits', href: 'https://github.com/Emmanuel-Valdez/VaultShop/commits/main' },
+      ],
+    },
+    plan306090: {
+      eyebrow: 'Plan de trabajo',
+      title: 'Qué puedo hacer en 30/60/90 días',
+      description: 'Si me sumás a tu equipo, este es mi plan de aporte.',
+      items: [
+        {
+          period: '30 días',
+          title: 'Onboarding y primeras contribuciones',
+          description: 'Entender el dominio, el stack y los procesos del equipo. Primeros PRs con bugfixes y mejoras pequeñas. Documentar decisiones técnicas.',
+        },
+        {
+          period: '60 días',
+          title: 'Autonomía en features',
+          description: 'Tomar features end-to-end con supervisión ligera. Mejorar tests, CI/CD y observabilidad. Proponer mejoras de arquitectura.',
+        },
+        {
+          period: '90 días',
+          title: 'Impacto real',
+          description: 'Liderar un feature o mejora de principio a fin. Mentorizar juniors si aplica. Dejar el codebase mejor que lo encontré.',
+        },
+      ],
     },
   },
   en: {
@@ -423,7 +457,41 @@ export const homeContent = {
       text: 'Looking for a .NET backend developer for internal systems, e-commerce, or applications with real business logic? Email me or download my CV.',
       emailLabel: 'Email me',
       cvLabel: 'Download CV as PDF',
+      responseTime: 'I respond within 24-48 hours',
       cv: cvFiles.en,
+    },
+    proofOfWork: {
+      eyebrow: 'Quick evidence',
+      title: 'Proof of work',
+      description: 'Verifiable links for hiring managers.',
+      items: [
+        { label: 'Live demo', value: 'vaultshop.evaldez.ar', href: 'https://vaultshop.evaldez.ar' },
+        { label: 'GitHub', value: 'github.com/Emmanuel-Valdez/VaultShop', href: 'https://github.com/Emmanuel-Valdez/VaultShop' },
+        { label: 'CI', value: 'GitHub Actions — 373 tests', href: 'https://github.com/Emmanuel-Valdez/VaultShop/actions' },
+        { label: 'Commit history', value: '200+ commits', href: 'https://github.com/Emmanuel-Valdez/VaultShop/commits/main' },
+      ],
+    },
+    plan306090: {
+      eyebrow: 'Work plan',
+      title: 'What I can do in 30/60/90 days',
+      description: 'If you bring me onto your team, this is my contribution plan.',
+      items: [
+        {
+          period: '30 days',
+          title: 'Onboarding and first contributions',
+          description: 'Understand the domain, stack, and team processes. First PRs with bugfixes and small improvements. Document technical decisions.',
+        },
+        {
+          period: '60 days',
+          title: 'Feature autonomy',
+          description: 'Take end-to-end features with light supervision. Improve tests, CI/CD, and observability. Propose architecture improvements.',
+        },
+        {
+          period: '90 days',
+          title: 'Real impact',
+          description: 'Lead a feature or improvement from start to finish. Mentor juniors if applicable. Leave the codebase better than I found it.',
+        },
+      ],
     },
   },
 } as const;
@@ -530,6 +598,52 @@ export const vaultshopContent = {
       paragraphs: [
         'VaultShop nace para ordenar dos necesidades del negocio: vender productos físicos desde una tienda pública y calcular precios con criterios más consistentes que una planilla.',
         'La aplicación concentra tienda, administración y pricing en un sistema ASP.NET Core donde PostgreSQL persiste datos operativos y sostiene reglas de cálculo.',
+      ],
+    },
+    beforeAfter: {
+      eyebrow: 'Antes / Después',
+      title: 'De Excel a sistema web',
+      description: 'El cambio principal: de planillas manuales a un sistema con datos persistentes, roles y reglas centralizadas.',
+      before: {
+        title: 'Antes',
+        items: [
+          'Precios calculados en Excel manualmente.',
+          'Costos y márgenes dispersos en distintas planillas.',
+          'Sin histórico de cambios ni auditoría.',
+          'Errores de fórmula y versiones desactualizadas.',
+        ],
+      },
+      after: {
+        title: 'Después',
+        items: [
+          'PricingCalculatorService centraliza cálculos con EF Core.',
+          'Costos, márgenes y precios persistidos en PostgreSQL.',
+          'Historial de cambios y revisión administrativa.',
+          'Precios consistentes y auditables en toda la operación.',
+        ],
+      },
+    },
+    challengesOvercome: {
+      eyebrow: 'Desafíos',
+      title: 'Desafíos técnicos resueltos',
+      description: 'Los problemas más complejos de resolver y cómo los abordé.',
+      items: [
+        {
+          title: 'Migración de SQL views a servicio portable',
+          description: 'La calculadora original usaba vistas y triggers del motor de SQL. Migré la lógica a PricingCalculatorService + EF Core para que sea testeable, portable y sin dependencias del engine.',
+        },
+        {
+          title: 'Stock transaccional sin oversell',
+          description: 'Implementé guards en carrito/checkout, decremento atómico en transacción EF Core y badge Sin stock en tienda. El desafío fue consistencia sin distributed lock en instancia única.',
+        },
+        {
+          title: 'Multi-store con aislamiento',
+          description: 'VaultShop + UkiyoStudio comparten codebase pero necesitan DB, MinIO y credenciales aisladas. Resuelto con configuración por store y Docker Compose separado.',
+        },
+        {
+          title: 'Webhooks firmados y reconciliación',
+          description: 'Los pagos requieren verificación server-side y reconciliación de sesiones pendientes. Implementé verificación de firma, retry y refunds al cancelar.',
+        },
       ],
     },
     problemTitle: 'Problema',
@@ -948,6 +1062,52 @@ export const vaultshopContent = {
       paragraphs: [
         'VaultShop was built to organize two business needs: selling physical products through a public store and calculating prices with more consistent criteria than a spreadsheet.',
         'The application brings storefront, administration, and pricing into an ASP.NET Core system where PostgreSQL persists operational data and supports calculation rules.',
+      ],
+    },
+    beforeAfter: {
+      eyebrow: 'Before / After',
+      title: 'From Excel to a web system',
+      description: 'The main change: from manual spreadsheets to a system with persistent data, roles, and centralized rules.',
+      before: {
+        title: 'Before',
+        items: [
+          'Prices calculated manually in Excel.',
+          'Costs and margins scattered across different spreadsheets.',
+          'No change history or audit trail.',
+          'Formula errors and outdated versions.',
+        ],
+      },
+      after: {
+        title: 'After',
+        items: [
+          'PricingCalculatorService centralizes calculations with EF Core.',
+          'Costs, margins, and prices persisted in PostgreSQL.',
+          'Change history and administrative review.',
+          'Consistent and auditable prices across the operation.',
+        ],
+      },
+    },
+    challengesOvercome: {
+      eyebrow: 'Challenges',
+      title: 'Technical challenges overcome',
+      description: 'The most complex problems to solve and how I approached them.',
+      items: [
+        {
+          title: 'Migration from SQL views to portable service',
+          description: 'The original calculator used SQL views and triggers. I migrated the logic to PricingCalculatorService + EF Core to make it testable, portable, and engine-independent.',
+        },
+        {
+          title: 'Transactional stock without oversell',
+          description: 'Implemented cart/checkout guards, atomic decrement in EF Core transaction, and out-of-stock badge on storefront. The challenge was consistency without a distributed lock on a single instance.',
+        },
+        {
+          title: 'Multi-store with isolation',
+          description: 'VaultShop + UkiyoStudio share codebase but need isolated DB, MinIO, and credentials. Solved with per-store configuration and separate Docker Compose.',
+        },
+        {
+          title: 'Signed webhooks and reconciliation',
+          description: 'Payments require server-side verification and pending session reconciliation. Implemented signature verification, retry, and refunds on cancellation.',
+        },
       ],
     },
     problemTitle: 'Problem',

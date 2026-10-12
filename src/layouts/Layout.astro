@@ -56,6 +56,10 @@ const copy = common[locale];
     {locale === 'es' && canonicalUrl && <link rel="alternate" hreflang="x-default" href={canonicalUrl} />}
     {locale === 'en' && alternateUrl && <link rel="alternate" hreflang="x-default" href={alternateUrl} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://github.com" />
+    <link rel="preload" as="image" href="/projects/vaultshop/storefront.webp" type="image/webp" />
     <meta name="generator" content={Astro.generator} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={ogLocale} />
