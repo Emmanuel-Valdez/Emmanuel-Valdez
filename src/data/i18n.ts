@@ -176,7 +176,8 @@ export const homeContent = {
           ],
           highlights: [
             'Self-hosted en Oracle Cloud VPS con Docker Compose y Nginx HTTPS reverse proxy.',
-            'Backup/restore validado para PostgreSQL y MinIO. Health checks y rate limiting.',
+            'Multi-store platform: VaultShop + UkiyoStudio comparten codebase con DB/MinIO aislados por store.',
+            'Backups automatizados (cron pg_dump + MinIO mirror) con restore verificado. Health checks y rate limiting.',
             'CI con GitHub Actions: restore, build y 373 tests en cada push a main.',
             'Theme configurable, admin order guards, PWA manifest dinámico.',
           ],
@@ -350,7 +351,8 @@ export const homeContent = {
           ],
           highlights: [
             'Self-hosted on Oracle Cloud VPS with Docker Compose and Nginx HTTPS reverse proxy.',
-            'Backup/restore validated for PostgreSQL and MinIO. Health checks and rate limiting.',
+            'Multi-store platform: VaultShop + UkiyoStudio share codebase with per-store isolated DB/MinIO.',
+            'Automated backups (cron pg_dump + MinIO mirror) with verified restore. Health checks and rate limiting.',
             'CI with GitHub Actions: restore, build, and 373 tests on every push to main.',
             'Configurable theme, admin order guards, dynamic PWA manifest.',
           ],
@@ -478,6 +480,8 @@ export const vaultshopContent = {
         'Identity roles para separar cliente, compañía, empleado y administrador.',
         'Integraciones modulares con Stripe, Mercado Pago, transferencia bancaria, Google OAuth y localización ES/EN.',
         'Calculadora de precios con PricingCalculatorService + EF Core, costos, márgenes y revisión administrativa.',
+        'Retiro por sucursal con cascada provincia→localidad→sucursal y freeze post-envío.',
+        'Resumen de pedido en PDF (QuestPDF) para clientes Company con snapshot fiscal.',
       ],
     },
     walkthrough: {
@@ -737,6 +741,8 @@ export const vaultshopContent = {
         'El despliegue usa Docker Compose para aislamiento de servicios, Nginx como reverse proxy con HTTPS, y un VPS Ubuntu real para control total del entorno.',
       items: [
         { title: 'Docker Compose', description: 'Tres servicios aislados: ASP.NET Core, PostgreSQL y MinIO. Un solo comando para levantar todo el entorno.' },
+        { title: 'Multi-store platform', description: 'VaultShop + UkiyoStudio comparten el mismo codebase con DB, bucket MinIO y credenciales aisladas por store.' },
+        { title: 'Backups automatizados', description: 'Cron semanal/diario con pg_dump + mc mirror, chequeos de frescura y disco.' },
         { title: 'Nginx HTTPS', description: 'Terminación SSL con Let\'s Encrypt y reverse proxy hacia el contenedor de la aplicación.' },
         { title: 'MinIO', description: 'Almacenamiento de imágenes compatible con S3, autoalojado para no depender de servicios externos.' },
         { title: 'VPS Ubuntu', description: 'Control total del entorno de ejecución, administración real de servidores y despliegue manual.' },
@@ -869,6 +875,8 @@ export const vaultshopContent = {
         'Identity roles to separate customer, company, employee, and admin permissions.',
         'Scoped integrations with Stripe, Mercado Pago, bank transfer, Google OAuth, and ES/EN localization.',
         'Pricing calculator with PricingCalculatorService + EF Core, costs, margins, and admin review.',
+        'Branch pickup with province→locality→branch cascade and post-ship freeze.',
+        'Order PDF summary (QuestPDF) for Company customers with fiscal snapshot.',
       ],
     },
     walkthrough: {
@@ -1128,6 +1136,8 @@ export const vaultshopContent = {
         'Deployment uses Docker Compose for service isolation, Nginx as reverse proxy with HTTPS, and a real Ubuntu VPS for full environment control.',
       items: [
         { title: 'Docker Compose', description: 'Three isolated services: ASP.NET Core, PostgreSQL, and MinIO. One command to bring up the entire environment.' },
+        { title: 'Multi-store platform', description: 'VaultShop + UkiyoStudio share the same codebase with per-store isolated DB, MinIO bucket, and scoped credentials.' },
+        { title: 'Automated backups', description: 'Weekly/daily cron with pg_dump + mc mirror, freshness and disk checks.' },
         { title: 'Nginx HTTPS', description: 'SSL termination with Let\'s Encrypt and reverse proxy to the application container.' },
         { title: 'MinIO', description: 'S3-compatible image storage, self-hosted to avoid external service dependencies.' },
         { title: 'Ubuntu VPS', description: 'Full control of the runtime environment, real server administration, and manual deployment.' },
