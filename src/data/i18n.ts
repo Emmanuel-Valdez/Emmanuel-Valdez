@@ -255,11 +255,16 @@ export const homeContent = {
       eyebrow: 'Evidencia rápida',
       title: 'Proof of work',
       description: 'Links verificables para hiring managers.',
+      updatedLabel: 'Evidencia actualizada el',
+      statusOk: 'En vivo',
+      statusFail: 'Sin respuesta',
       items: [
         { label: 'Demo en vivo', value: 'vaultshop.evaldez.ar', href: 'https://vaultshop.evaldez.ar' },
         { label: 'GitHub', value: 'github.com/Emmanuel-Valdez/VaultShop', href: 'https://github.com/Emmanuel-Valdez/VaultShop' },
         { label: 'CI', value: 'GitHub Actions — 373 tests', href: 'https://github.com/Emmanuel-Valdez/VaultShop/actions' },
         { label: 'Commit history', value: '200+ commits', href: 'https://github.com/Emmanuel-Valdez/VaultShop/commits/main' },
+        { label: 'Runbook', value: 'docs/operations/runbook.md', href: 'https://github.com/Emmanuel-Valdez/VaultShop/blob/main/docs/operations/runbook.md' },
+        { label: 'Arquitectura', value: 'docs/architecture.md', href: 'https://github.com/Emmanuel-Valdez/VaultShop/blob/main/docs/architecture.md' },
       ],
     },
     plan306090: {
@@ -464,11 +469,16 @@ export const homeContent = {
       eyebrow: 'Quick evidence',
       title: 'Proof of work',
       description: 'Verifiable links for hiring managers.',
+      updatedLabel: 'Evidence updated',
+      statusOk: 'Live',
+      statusFail: 'Unreachable',
       items: [
         { label: 'Live demo', value: 'vaultshop.evaldez.ar', href: 'https://vaultshop.evaldez.ar' },
         { label: 'GitHub', value: 'github.com/Emmanuel-Valdez/VaultShop', href: 'https://github.com/Emmanuel-Valdez/VaultShop' },
         { label: 'CI', value: 'GitHub Actions — 373 tests', href: 'https://github.com/Emmanuel-Valdez/VaultShop/actions' },
         { label: 'Commit history', value: '200+ commits', href: 'https://github.com/Emmanuel-Valdez/VaultShop/commits/main' },
+        { label: 'Runbook', value: 'docs/operations/runbook.md', href: 'https://github.com/Emmanuel-Valdez/VaultShop/blob/main/docs/operations/runbook.md' },
+        { label: 'Architecture', value: 'docs/architecture.md', href: 'https://github.com/Emmanuel-Valdez/VaultShop/blob/main/docs/architecture.md' },
       ],
     },
     plan306090: {

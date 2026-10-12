@@ -18,6 +18,8 @@ interface Props {
   alternatePath: string;
 }
 
+// ponytail: build-time date, no CI changes needed (SSG prerenders on deploy)
+const buildDate = new Date().toISOString().slice(0, 10);
 const { content, locale, alternatePath } = Astro.props;
 ---
 
@@ -84,6 +86,24 @@ const { content, locale, alternatePath } = Astro.props;
           </a>
         ))}
       </div>
+      <p class="mt-4 text-xs text-gray-500">
+        {content.proofOfWork.updatedLabel} {buildDate} · <a
+          class="underline decoration-dotted underline-offset-2 hover:text-gray-300"
+          href="https://vaultshop.evaldez.ar/health/live"
+          target="_blank"
+          rel="noopener noreferrer">health/live</a
+        >
+        <span id="vs-health" aria-live="polite" data-ok={content.proofOfWork.statusOk} data-fail={content.proofOfWork.statusFail}>○</span>
+      </p>
+      <script is:inline>
+        fetch('https://vaultshop.evaldez.ar/health/live').then(function (r) { return r.json(); }).then(function (j) {
+          var el = document.getElementById('vs-health');
+          if (!el) return;
+          var ok = j && j.status === 'Healthy';
+          el.textContent = '● ' + (ok ? el.dataset.ok : el.dataset.fail);
+          el.style.color = ok ? '#6ee7b7' : '#fca5a5';
+        }).catch(function () { var el = document.getElementById('vs-health'); if (el) el.textContent = ''; });
+      </script>
     </SectionContainer>
 
     <SectionContainer id="plan">

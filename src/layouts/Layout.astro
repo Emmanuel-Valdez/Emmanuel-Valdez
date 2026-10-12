@@ -74,6 +74,8 @@ const copy = common[locale];
     {socialImageUrl && <meta name="twitter:image" content={socialImageUrl} />}
     <title>{title}</title>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdPerson)}></script>
+    <!-- ponytail: Plausible privacy-friendly analytics, no cookie banner; create account for evaldez.ar to see data -->
+    <script defer data-domain="evaldez.ar" src="https://plausible.io/js/script.outbound-links.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">{copy.skipLink}</a>
