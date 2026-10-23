@@ -295,7 +295,7 @@
       function enterScene(scene, start, hold = 3.1) {
         fromToIf(scene, { opacity: 0, filter: "blur(14px)", scale: 1 }, { opacity: 1, filter: "blur(0px)", scale: 1, duration: 0.45, ease: "power2.out" }, start + 0.08);
         fromToIf(`${scene} .eyebrow`, { x: -34, opacity: 0 }, { x: 0, opacity: 1, duration: 0.36, ease: "power3.out" }, start + 0.2);
-        fromToIf(`${scene} h1`, { y: 48, opacity: 0, letterSpacing: "-0.01em" }, { y: 0, opacity: 1, letterSpacing: "-0.035em", duration: 0.52, ease: "expo.out" }, start + 0.3);
+        fromToIf(`${scene} h1`, { y: 48, opacity: 0 }, { y: 0, opacity: 1, duration: 0.52, ease: "expo.out" }, start + 0.3);
         fromToIf(`${scene} p`, { x: -24, opacity: 0 }, { x: 0, opacity: 1, duration: 0.42, ease: "sine.out" }, start + 0.46);
         fromToIf(`${scene} .proof-card`, { y: 30, opacity: 0, scale: 0.94 }, { y: 0, opacity: 1, scale: 1, duration: 0.42, stagger: 0.07, ease: "back.out(1.4)" }, start + 0.58);
         fromToIf(`${scene} .browser.primary`, { x: 28, opacity: 0, rotateY: -16, scale: 0.94 }, { x: 0, opacity: 1, rotateY: -7, scale: 1, duration: 0.58, ease: "power4.out" }, start + 0.22);
