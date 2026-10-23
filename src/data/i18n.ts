@@ -78,35 +78,38 @@ export const common = {
 export const homeContent = {
   es: {
     meta: {
-      title: 'Emmanuel Valdez | Desarrollador Backend .NET',
+      title: 'Emmanuel Valdez | Desarrollador Full-Stack de aplicaciones web',
       description:
-        'Portfolio de Emmanuel Valdez, Desarrollador Backend .NET enfocado en ASP.NET Core, C#, PostgreSQL, EF Core, autenticación, pagos y sistemas de negocio.',
+        'Portfolio de Emmanuel Valdez, Desarrollador Full-Stack de aplicaciones web con una base fuerte en backend: ASP.NET Core, C# y PostgreSQL, junto con Astro, TypeScript y Tailwind CSS.',
     },
     sections: {
-      experience: 'Experiencia Laboral',
+      experience: 'Experiencia y trabajo para clientes',
       projects: 'Proyectos',
       about: 'Sobre mí',
       contact: 'Hablemos',
     },
     hero: {
       name: 'Emmanuel Valdez',
-      brandLine: 'evaldez.ar · Portfolio backend .NET',
-      title: 'Backend .NET Developer enfocado en sistemas de negocio, datos y lógica operativa',
+      brandLine: 'evaldez.ar · Desarrollo de software y aplicaciones web',
+      title: 'Desarrollador Full-Stack enfocado en aplicaciones web, con una base fuerte en backend',
       lines: [
         {
-          text: 'Convierto procesos operativos -costos, stock, órdenes y precios- en software usable y mantenible para negocios reales.',
+          text: 'Construyo aplicaciones web usables para necesidades reales, con una base fuerte en backend.',
         },
         {
-          text: ' Construí y desplegué VaultShop: ASP.NET Core 8 MVC, PostgreSQL, Docker, MinIO, Stripe, Mercado Pago, Identity + OAuth, Nginx HTTPS — en un VPS real.',
+          text: ' VaultShop es mi ejemplo más profundo de backend y sistemas: ASP.NET Core, PostgreSQL, Docker y pagos en un VPS real.',
           class: 'text-blue-200/90',
+        },
+        {
+          text: ' También entregué sitios con Astro y TypeScript para clientes, con foco en la experiencia de cara al público.',
         },
         {
           text: ' Desde Mendoza, Argentina.',
           class: 'text-red-200/90',
         },
       ],
-      stackAriaLabel: 'Competencias backend demostradas',
-      stack: ['ASP.NET Core 8', 'C#', 'EF Core', 'PostgreSQL', 'Identity', 'Docker', 'Stripe', 'Mercado Pago', 'Nginx', 'Ubuntu'],
+      stackAriaLabel: 'Tecnologías principales',
+      stack: ['ASP.NET Core', 'C#', 'PostgreSQL', 'TypeScript', 'Astro', 'Tailwind CSS', 'Docker', 'CI/CD'],
       availabilityLabel: 'Disponible para trabajar',
       ctas: {
         ariaLabel: 'Acciones principales',
@@ -121,10 +124,10 @@ export const homeContent = {
         title: 'Perfil rápido',
         ariaLabel: 'Resumen profesional rápido',
         items: [
-          { label: 'Stack', value: '.NET, C#, PostgreSQL' },
+          { label: 'Stack', value: 'C#, ASP.NET Core, PostgreSQL, TypeScript' },
           { label: 'Ubicación', value: 'Mendoza, Argentina' },
           { label: 'Modalidad', value: 'Remoto / híbrido' },
-          { label: 'Roles objetivo', value: 'Backend .NET, Fullstack .NET' },
+          { label: 'Roles objetivo', value: 'Desarrollador Full-Stack / Desarrollador de Software' },
           { label: 'Idioma', value: 'Español / Inglés' },
         ],
       },
@@ -147,6 +150,39 @@ export const homeContent = {
         tagsAriaLabel: 'Áreas de experiencia',
         link: 'https://ukiyostudio.evaldez.ar',
         linkLabel: 'Ukiyo Studio',
+      },
+      {
+        date: '2026',
+        title: 'Desarrollo web freelance',
+        company: 'Pastelería Ivanna',
+        description:
+          'Desarrollé el sitio de la pastelería como trabajo freelance: catálogo de productos y contenido en Astro Content Collections, imágenes optimizadas y consultas o pedidos derivados a WhatsApp como único canal de contacto. El despliegue es automático con CI/CD.',
+        highlights: [
+          'Sitio Astro + TypeScript con catálogo y contenido organizado en Content Collections.',
+          'WhatsApp como único canal de pedidos y consultas, sin backend propio.',
+          'Imágenes optimizadas con astro:assets y despliegue CI/CD automatizado.',
+        ],
+        tags: ['Freelance', 'Astro', 'TypeScript', 'Tailwind CSS', 'CI/CD'],
+        tagsAriaLabel: 'Áreas de experiencia',
+        link: 'https://pasteleriaivanna.evaldez.ar',
+        linkLabel: 'Ver sitio',
+      },
+      {
+        date: '2026',
+        title: 'Desarrollo web full-stack',
+        company: 'Proyecto por encargo',
+        description:
+          'Construí por encargo una invitación digital interactiva para un evento privado, con confirmación de asistencia (RSVP), playlist colaborativa y concurso votado por los invitados. Stack: Astro SSR, TypeScript, Tailwind 4, SQLite con Drizzle, Docker y CI/CD.',
+        highlights: [
+          'RSVP, playlist colaborativa y concurso votado por invitados en una sola experiencia.',
+          'Astro SSR con TypeScript, Tailwind 4, SQLite/Drizzle y Docker.',
+          'CI/CD automatizado y verificación con build/check antes de desplegar.',
+          'Trabajo guiado por OpenSpec y agentes de código, con revisión humana y verificación técnica.',
+        ],
+        tags: ['Full-Stack', 'Astro SSR', 'TypeScript', 'SQLite', 'OpenSpec'],
+        tagsAriaLabel: 'Áreas de experiencia',
+        link: 'https://juli30.evaldez.ar',
+        linkLabel: 'Ver demo',
       },
     ],
     projects: {
@@ -207,14 +243,14 @@ export const homeContent = {
           tags: ['CSharp', 'GitHub'],
         },
         {
-          title: 'Funko shop',
+          title: 'Tarjeta de invitación: cumpleaños temático de disfraces',
           description:
-            'Aplicación web Node.js, Express y MySQL que muestra CRUD, carrito, paginación y autenticación fuera del stack .NET principal.',
-          link: 'https://fullstackproject-backend.vercel.app/',
-          github: 'https://github.com/Emmanuel-Valdez/fullstackproject-backend',
-          image: '/projects/funko_shopWeb.webp',
-          imageAlt: 'Captura de la tienda virtual Funko shop',
-          tags: ['NodeJS', 'Express', 'MySQL', 'GitHub'],
+            'Invitación digital interactiva desarrollada por encargo para un evento privado: RSVP, playlist colaborativa y concurso votado por los invitados. Astro SSR, TypeScript, Tailwind 4, SQLite/Drizzle, Docker y CI/CD, con OpenSpec y agentes de código bajo revisión humana.',
+          link: 'https://juli30.evaldez.ar',
+          github: '',
+          image: '/projects/tarjeta-cumple.svg',
+          imageAlt: 'Portada ilustrativa de la tarjeta de cumpleaños temático de disfraces: composición abstracta con motivo de cine, no es una captura del sitio',
+          tags: ['Astro', 'TypeScript', 'Tailwind', 'SQLite', 'OpenSpec'],
         },
       ],
     },
@@ -229,16 +265,17 @@ export const homeContent = {
           description: 'E-commerce, costos, precios, inventario, órdenes, usuarios y decisiones administrativas.',
         },
         {
-          title: 'Dirección técnica',
-          description: 'Arquitectura, mantenibilidad y sistemas backend con reglas de negocio claras.',
+          title: 'Entrega y SDD',
+          description: 'Requisitos, criterios de aceptación y tareas acotadas antes de implementar; revisión humana y verificación con check/build y comportamiento renderizado.',
         },
       ],
       intro:
-        'Soy Emmanuel Valdez, desarrollador backend .NET enfocado en aplicaciones donde la lógica de negocio, los datos y la operación importan tanto como la interfaz.',
-      strong: 'desarrollo backend con .NET, C# y SQL',
+        'Soy Emmanuel Valdez, desarrollador de software y aplicaciones web. Trabajo de punta a punta, con una base fuerte en backend:',
+      strong: 'C#, ASP.NET Core, PostgreSQL, Astro y TypeScript.',
       paragraphs: [
         'Vengo de una base técnica en producción industrial y automatización, por eso tiendo a pensar el software como una herramienta para ordenar procesos reales: costos, inventario, ventas, logística, usuarios y decisiones administrativas.',
-        'Esa mirada se refleja en VaultShop, el caso de estudio que construí, despliegé y documenté en detalle — desde el modelo de datos relacional hasta la calculadora de precios administrativa.',
+        'Esa mirada se refleja en VaultShop, el caso de estudio que construí, despliegé y documenté en detalle — desde el modelo de datos relacional hasta la calculadora de precios administrativa. También entregué sitios para clientes con Astro y TypeScript, donde la experiencia de cara al público y los detalles de contenido importan.',
+        'Trabajo con Spec-Driven Development: antes de implementar, defino requisitos, criterios de aceptación y tareas acotadas. OpenSpec registra la propuesta, la especificación y las tareas; los agentes de código implementan tareas acotadas, y yo tomo las decisiones y reviso el resultado con checks, build y comportamiento renderizado. Eso reduce la ambigüedad y acelera las iteraciones, sin reemplazar la revisión humana.',
         'Actualmente estoy consolidando el portfolio alrededor de evidencia verificable: sistemas desplegados, datos relacionales, pagos, roles, infraestructura y documentación operativa.',
       ],
       closing:
@@ -246,7 +283,7 @@ export const homeContent = {
       imageAlt: 'Retrato de Emmanuel Valdez',
     },
     contact: {
-      text: '¿Buscás un desarrollador backend .NET para sistemas internos, e-commerce o aplicaciones con lógica de negocio real? Escribime por email o descargá mi CV.',
+      text: '¿Buscás un desarrollador full-stack o de software para aplicaciones web, sistemas internos o e-commerce? Estoy abierto a roles full-stack y backend, con una base fuerte en backend y entrega de punta a punta, en modalidad remota o híbrida desde Mendoza. Escribime por email o descargá mi CV.',
       emailLabel: 'Escribirme por email',
       cvLabel: 'Descargar CV en PDF',
       responseTime: 'Respondo en 24-48 hs',
@@ -293,35 +330,38 @@ export const homeContent = {
   },
   en: {
     meta: {
-      title: 'Emmanuel Valdez | Backend .NET Developer',
+      title: 'Emmanuel Valdez | Full-Stack Software Developer — Web Applications',
       description:
-        'Portfolio of Emmanuel Valdez, Backend .NET Developer focused on ASP.NET Core, C#, PostgreSQL, EF Core, authentication, payments, and business systems.',
+        'Portfolio of Emmanuel Valdez, a Full-Stack Software Developer building web applications with a strong backend foundation in ASP.NET Core, C#, and PostgreSQL, plus Astro, TypeScript, and Tailwind CSS.',
     },
     sections: {
-      experience: 'Work Experience',
+      experience: 'Experience & Client Work',
       projects: 'Projects',
       about: 'About Me',
       contact: 'Let\'s Talk',
     },
     hero: {
       name: 'Emmanuel Valdez',
-      brandLine: 'evaldez.ar · .NET backend portfolio',
-      title: '.NET Backend Developer focused on business systems, data, and operational logic',
+      brandLine: 'evaldez.ar · Software and web application development',
+      title: 'Full-Stack Software Developer building web applications, with a strong backend foundation',
       lines: [
         {
-          text: 'I turn operational workflows - costs, stock, orders, and pricing - into usable, maintainable software for real businesses.',
+          text: 'I build usable web applications for real needs, with a strong backend foundation.',
         },
         {
-          text: ' I built and deployed VaultShop: ASP.NET Core 8 MVC, PostgreSQL, Docker, MinIO, Stripe, Mercado Pago, Identity + OAuth, Nginx HTTPS — on a real VPS.',
+          text: ' VaultShop is my deepest backend and systems example: ASP.NET Core, PostgreSQL, Docker, and payments on a real VPS.',
           class: 'text-blue-200/90',
+        },
+        {
+          text: ' I have also delivered Astro and TypeScript sites for clients, focused on the public-facing experience.',
         },
         {
           text: ' Based in Mendoza, Argentina.',
           class: 'text-red-200/90',
         },
       ],
-      stackAriaLabel: 'Demonstrated backend competencies',
-      stack: ['ASP.NET Core 8', 'C#', 'EF Core', 'PostgreSQL', 'Identity', 'Docker', 'Stripe', 'Mercado Pago', 'Nginx', 'Ubuntu'],
+      stackAriaLabel: 'Core technologies',
+      stack: ['ASP.NET Core', 'C#', 'PostgreSQL', 'TypeScript', 'Astro', 'Tailwind CSS', 'Docker', 'CI/CD'],
       availabilityLabel: 'Available for work',
       ctas: {
         ariaLabel: 'Primary actions',
@@ -336,10 +376,10 @@ export const homeContent = {
         title: 'Quick profile',
         ariaLabel: 'Quick professional summary',
         items: [
-          { label: 'Stack', value: '.NET, C#, PostgreSQL' },
+          { label: 'Stack', value: 'C#, ASP.NET Core, PostgreSQL, TypeScript' },
           { label: 'Location', value: 'Mendoza, Argentina' },
           { label: 'Work mode', value: 'Remote / hybrid' },
-          { label: 'Target roles', value: '.NET Backend, .NET Fullstack' },
+          { label: 'Target roles', value: 'Full-Stack Developer / Software Developer' },
           { label: 'Languages', value: 'Spanish / English' },
         ],
       },
@@ -362,6 +402,39 @@ export const homeContent = {
         tagsAriaLabel: 'Experience areas',
         link: 'https://ukiyostudio.evaldez.ar',
         linkLabel: 'Ukiyo Studio',
+      },
+      {
+        date: '2026',
+        title: 'Freelance Web Developer',
+        company: 'Pastelería Ivanna',
+        description:
+          'I built the bakery\'s website as freelance work: product catalog and content in Astro Content Collections, optimized imagery, and all inquiries and orders routed through WhatsApp as the only contact channel. Deployment runs automatically with CI/CD.',
+        highlights: [
+          'Astro + TypeScript site with catalog and content organized in Content Collections.',
+          'WhatsApp as the only ordering and inquiry channel, with no custom backend.',
+          'Optimized imagery with astro:assets and automated CI/CD deployment.',
+        ],
+        tags: ['Freelance', 'Astro', 'TypeScript', 'Tailwind CSS', 'CI/CD'],
+        tagsAriaLabel: 'Experience areas',
+        link: 'https://pasteleriaivanna.evaldez.ar',
+        linkLabel: 'View website',
+      },
+      {
+        date: '2026',
+        title: 'Full-Stack Web Development',
+        company: 'Commissioned project',
+        description:
+          'I built an interactive digital invitation for a private event on commission, with RSVP, a collaborative playlist, and a guest-voted contest. Stack: Astro SSR, TypeScript, Tailwind 4, SQLite with Drizzle, Docker, and CI/CD.',
+        highlights: [
+          'RSVP, collaborative playlist, and a guest-voted contest in a single experience.',
+          'Astro SSR with TypeScript, Tailwind 4, SQLite/Drizzle, and Docker.',
+          'Automated CI/CD with build/check verification before deploy.',
+          'Delivered with OpenSpec and coding agents, with human review and technical verification.',
+        ],
+        tags: ['Full-Stack', 'Astro SSR', 'TypeScript', 'SQLite', 'OpenSpec'],
+        tagsAriaLabel: 'Experience areas',
+        link: 'https://juli30.evaldez.ar',
+        linkLabel: 'View demo',
       },
     ],
     projects: {
@@ -422,14 +495,14 @@ export const homeContent = {
           tags: ['CSharp', 'GitHub'],
         },
         {
-          title: 'Funko shop',
+          title: 'Invitation card: costume-themed birthday party',
           description:
-            'Node.js, Express, and MySQL web application showing CRUD, cart, pagination, and authentication outside the main .NET stack.',
-          link: 'https://fullstackproject-backend.vercel.app/',
-          github: 'https://github.com/Emmanuel-Valdez/fullstackproject-backend',
-          image: '/projects/funko_shopWeb.webp',
-          imageAlt: 'Screenshot of the Funko shop online store',
-          tags: ['NodeJS', 'Express', 'MySQL', 'GitHub'],
+            'Interactive digital invitation commissioned for a private event: RSVP, collaborative playlist, and a guest-voted contest. Astro SSR, TypeScript, Tailwind 4, SQLite/Drizzle, Docker, and CI/CD, built with OpenSpec and coding agents under human review.',
+          link: 'https://juli30.evaldez.ar',
+          github: '',
+          image: '/projects/tarjeta-cumple.svg',
+          imageAlt: 'Illustrative cover for the costume-themed birthday invitation: an abstract cinema-themed composition, not a screenshot of the site',
+          tags: ['Astro', 'TypeScript', 'Tailwind', 'SQLite', 'OpenSpec'],
         },
       ],
     },
@@ -444,16 +517,17 @@ export const homeContent = {
           description: 'E-commerce, costs, prices, inventory, orders, users, and administrative decisions.',
         },
         {
-          title: 'Technical direction',
-          description: 'Architecture, maintainability, and backend systems with clear business rules.',
+          title: 'Delivery and SDD',
+          description: 'Requirements, acceptance criteria, and scoped tasks before implementation; human review plus check/build and rendered-behavior verification.',
         },
       ],
       intro:
-        'I am Emmanuel Valdez, a .NET backend developer focused on applications where business logic, data, and operations matter as much as the interface.',
-      strong: 'backend development with .NET, C#, and SQL',
+        'I am Emmanuel Valdez, a software and web application developer. I work end to end, with a strong backend foundation:',
+      strong: 'C#, ASP.NET Core, PostgreSQL, Astro, and TypeScript.',
       paragraphs: [
         'I come from a technical background in industrial production and automation, so I tend to think of software as a tool for organizing real processes: costs, inventory, sales, logistics, users, and administrative decisions.',
-        'That perspective is reflected in VaultShop, the case study I built, deployed, and documented in detail — from the relational data model to the admin pricing calculator.',
+        'That perspective is reflected in VaultShop, the case study I built, deployed, and documented in detail — from the relational data model to the admin pricing calculator. I have also delivered Astro and TypeScript sites for clients, where the public-facing experience and content details matter.',
+        'I work with Spec-Driven Development: before implementing, I define requirements, acceptance criteria, and scoped tasks. OpenSpec records the proposal, specification, and tasks; coding agents implement scoped tasks, and I own the decisions and review the result with checks, build, and rendered behavior. This reduces ambiguity and speeds up iterations without replacing human review.',
         'I am currently consolidating the portfolio around verifiable evidence: deployed systems, relational data, payments, roles, infrastructure, and operational documentation.',
       ],
       closing:
@@ -461,7 +535,7 @@ export const homeContent = {
       imageAlt: 'Portrait of Emmanuel Valdez',
     },
     contact: {
-      text: 'Looking for a .NET backend developer for internal systems, e-commerce, or applications with real business logic? Email me or download my CV.',
+      text: 'Looking for a full-stack or software developer for web applications, internal systems, or e-commerce? I am open to full-stack and backend roles, with a strong backend foundation and end-to-end delivery, remote or hybrid from Mendoza. Email me or download my CV.',
       emailLabel: 'Email me',
       cvLabel: 'Download CV as PDF',
       responseTime: 'I respond within 24-48 hours',

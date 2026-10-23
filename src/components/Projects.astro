@@ -8,6 +8,12 @@ import LinkButton from './LinkButton.astro';
 import WebIcon from '@/icons/Web.astro';
 import MSSQLIcon from '@/icons/techIcons/MSSQL.astro';
 
+interface Tag {
+  name: string;
+  class: string;
+  icon?: typeof NodeJSIcon;
+}
+
 const TAGS = {
   NodeJS: {
     name: 'Node.js',
@@ -44,7 +50,27 @@ const TAGS = {
     class: 'bg-[#336791] text-white',
     icon: MSSQLIcon,
   },
-};
+  Astro: {
+    name: 'Astro',
+    class: 'bg-black text-white',
+  },
+  TypeScript: {
+    name: 'TypeScript',
+    class: 'bg-[#3178c6] text-white',
+  },
+  Tailwind: {
+    name: 'Tailwind CSS',
+    class: 'bg-[#0f172a] text-sky-200',
+  },
+  SQLite: {
+    name: 'SQLite',
+    class: 'bg-[#003b57] text-white',
+  },
+  OpenSpec: {
+    name: 'OpenSpec',
+    class: 'bg-[#1e293b] text-amber-200',
+  },
+} satisfies Record<string, Tag>;
 type TagKey = keyof typeof TAGS;
 
 interface Project {
@@ -173,18 +199,25 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
         <footer class="mt-6 flex flex-wrap items-center gap-4">
           <LinkButton
             href={content.featuredStudyHref}
+            aria-label={`${content.featuredStudyLabel}: ${FEATURED_PROJECT.title}`}
             class="border-amber-300/70 bg-amber-300/10 text-amber-100 shadow-lg shadow-amber-950/30 hover:border-amber-200 hover:bg-amber-300/20 hover:text-white focus:ring-amber-300/30"
           >
             {content.featuredStudyLabel}
           </LinkButton>
           {FEATURED_PROJECT.link && (
-            <LinkButton href={FEATURED_PROJECT.link}>
+            <LinkButton
+              href={FEATURED_PROJECT.link}
+              aria-label={`${content.buttons.preview}: ${FEATURED_PROJECT.title}`}
+            >
               <WebIcon class="size-5" />
               {content.buttons.preview}
             </LinkButton>
           )}
           {FEATURED_PROJECT.github && (
-            <LinkButton href={FEATURED_PROJECT.github}>
+            <LinkButton
+              href={FEATURED_PROJECT.github}
+              aria-label={`${content.buttons.code}: ${FEATURED_PROJECT.title}`}
+            >
               <GitHubIcon class="size-5" />
               {content.buttons.code}
             </LinkButton>
@@ -215,11 +248,11 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
               <h3 class="text-xl font-bold text-gray-100">{title}</h3>
               <ul class="mt-3 flex flex-wrap gap-2">
                 {tags.map((tagKey) => {
-                  const tag = TAGS[tagKey];
+                  const tag: Tag = TAGS[tagKey];
                   return (
                   <li>
                     <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} px-2 py-1`}>
-                      <tag.icon class="size-4" />
+                      {tag.icon && <tag.icon class="size-4" />}
                       {tag.name}
                     </span>
                   </li>
@@ -230,13 +263,13 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
               <p class="mt-4 text-sm text-gray-400">{description}</p>
               <footer class="mt-5 flex flex-wrap items-center gap-3">
                 {github && (
-                  <LinkButton href={github}>
+                  <LinkButton href={github} aria-label={`${content.buttons.code}: ${title}`}>
                     <GitHubIcon class="size-5" />
                     {content.buttons.code}
                   </LinkButton>
                 )}
                 {link && (
-                  <LinkButton href={link}>
+                  <LinkButton href={link} aria-label={`${content.buttons.preview}: ${title}`}>
                     <WebIcon class="size-5" />
                     {content.buttons.preview}
                   </LinkButton>

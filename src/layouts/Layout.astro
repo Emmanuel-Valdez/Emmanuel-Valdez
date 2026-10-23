@@ -20,8 +20,11 @@ const jsonLdPerson = {
   '@type': 'Person',
   name: 'Emmanuel Valdez',
   url: 'https://evaldez.ar/',
-  jobTitle: 'Backend .NET Developer',
-  description: 'Backend developer specializing in ASP.NET Core, C#, PostgreSQL, EF Core, authentication, payments, and business systems.',
+  jobTitle: locale === 'es' ? 'Desarrollador Full-Stack de aplicaciones web' : 'Full-Stack Software Developer',
+  description:
+    locale === 'es'
+      ? 'Desarrollador de software con una base fuerte en backend: ASP.NET Core, C#, PostgreSQL, Astro, TypeScript y Tailwind CSS.'
+      : 'Software developer with a strong backend foundation: ASP.NET Core, C#, PostgreSQL, Astro, TypeScript, and Tailwind CSS.',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Mendoza',
