@@ -1,0 +1,71 @@
+---
+import { common, type Locale } from '@/data/i18n';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'es' } = Astro.props;
+const copy = common[locale].theme;
+---
+
+<button
+  type="button"
+  data-theme-toggle
+  data-label-light={copy.toLight}
+  data-label-dark={copy.toDark}
+  aria-label={copy.toLight}
+  class="theme-toggle ml-0.5 inline-flex min-h-8 min-w-8 sm:min-h-9 sm:min-w-9 items-center justify-center rounded-full border border-line-strong bg-surface text-body transition hover:bg-elevated hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+>
+  <svg class="icon-sun size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"></path>
+  </svg>
+  <svg class="icon-moon size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+  </svg>
+</button>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
+  const root = document.documentElement;
+  const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+
+  const canvasColor = () =>
+    getComputedStyle(root).getPropertyValue('--color-canvas').trim() || '#020617';
+
+  const sync = () => {
+    if (!button) return;
+    const isLight = root.dataset.theme === 'light';
+    button.setAttribute(
+      'aria-label',
+      isLight ? button.dataset.labelDark ?? '' : button.dataset.labelLight ?? '',
+    );
+    meta?.setAttribute('content', canvasColor());
+  };
+
+  sync();
+
+  button?.addEventListener('click', () => {
+    const next = root.dataset.theme === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem('theme', next);
+    } catch {
+      /* ponytail: storage blocked, theme still applies for this visit */
+    }
+    sync();
+  });
+</script>
+
+<style>
+  .icon-sun {
+    display: none;
+  }
+  :global(html[data-theme='light']) .icon-sun {
+    display: block;
+  }
+  :global(html[data-theme='light']) .icon-moon {
+    display: none;
+  }
+</style>

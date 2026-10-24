@@ -17,46 +17,46 @@ interface Tag {
 const TAGS = {
   NodeJS: {
     name: 'Node.js',
-    class: 'bg-black text-white',
+    class: 'bg-black text-[#fafafa]',
     icon: NodeJSIcon,
   },
   CSharp: {
     name: 'C#',
-    class: 'bg-black text-white',
+    class: 'bg-black text-[#fafafa]',
     icon: CSharpIcon,
   },
   Express: {
     name: 'Express',
-    class: 'bg-black text-white',
+    class: 'bg-black text-[#fafafa]',
     icon: ExpressIcon,
   },
   MySQL: {
     name: 'MySQL',
-    class: 'bg-black text-white',
+    class: 'bg-black text-[#fafafa]',
     icon: MySQLIcon,
   },
   GitHub: {
     name: 'GitHub',
-    class: 'bg-black text-white',
+    class: 'bg-black text-[#fafafa]',
     icon: GitHubIcon,
   },
   MSSQL: {
     name: 'MS SQL',
-    class: 'bg-black text-white',
+    class: 'bg-black text-[#fafafa]',
     icon: MSSQLIcon,
   },
   PostgreSQL: {
     name: 'PostgreSQL',
-    class: 'bg-[#336791] text-white',
+    class: 'bg-[#336791] text-[#fafafa]',
     icon: MSSQLIcon,
   },
   Astro: {
     name: 'Astro',
-    class: 'bg-black text-white',
+    class: 'bg-black text-[#fafafa]',
   },
   TypeScript: {
     name: 'TypeScript',
-    class: 'bg-[#3178c6] text-white',
+    class: 'bg-[#3178c6] text-[#fafafa]',
   },
   Tailwind: {
     name: 'Tailwind CSS',
@@ -64,11 +64,11 @@ const TAGS = {
   },
   SQLite: {
     name: 'SQLite',
-    class: 'bg-[#003b57] text-white',
+    class: 'bg-[#003b57] text-[#fafafa]',
   },
   OpenSpec: {
     name: 'OpenSpec',
-    class: 'bg-[#1e293b] text-amber-200',
+    class: 'bg-[#1e293b] text-[#fde68a]',
   },
 } satisfies Record<string, Tag>;
 type TagKey = keyof typeof TAGS;
@@ -116,12 +116,12 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
 ---
 
 <div class="flex flex-col gap-y-12">
-  <article class="group relative overflow-hidden rounded-3xl border border-blue-400/15 bg-slate-950/80 shadow-2xl shadow-black/30">
-    <div class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-amber-300/80 to-transparent" aria-hidden="true"></div>
+  <article class="group relative overflow-hidden rounded-3xl border border-line bg-panel shadow-2xl shadow-umbra/30">
+    <div class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-accent to-transparent" aria-hidden="true"></div>
     <div class="grid gap-8 p-5 md:grid-cols-[1.05fr_0.95fr] md:p-7 lg:p-8">
-      <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-black/30">
+      <div class="relative overflow-hidden rounded-2xl border border-line bg-media">
         <a
-          class="block h-full w-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
+          class="block h-full w-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           href={FEATURED_PROJECT.imageMobile ?? FEATURED_PROJECT.image}
           target="_blank"
           rel="noopener noreferrer"
@@ -153,25 +153,25 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
       </div>
 
       <div class="flex flex-col justify-center">
-        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-amber-300/80">
+        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-accent">
           {FEATURED_PROJECT.eyebrow}
         </p>
-        <h3 class="text-3xl font-bold text-white md:text-4xl">
+        <h3 class="text-3xl font-bold text-ink md:text-4xl">
           {FEATURED_PROJECT.title}
         </h3>
-        <p class="mt-4 text-pretty text-gray-300">
+        <p class="mt-4 text-pretty text-body">
           {FEATURED_PROJECT.description}
         </p>
 
         <ul class="mt-5 flex flex-wrap gap-2" aria-label={`${content.stackAriaPrefix} ${FEATURED_PROJECT.title}`}>
           {FEATURED_STACK.map((item) => (
-            <li class="rounded-full border border-blue-400/15 bg-blue-400/10 px-2.5 py-1 text-xs font-medium text-slate-100">
+            <li class="rounded-full border border-line bg-info-soft px-2.5 py-1 text-xs font-medium text-ink">
               {item}
             </li>
           ))}
         </ul>
 
-        <ul class="mt-5 space-y-3 text-sm text-gray-200">
+        <ul class="mt-5 space-y-3 text-sm text-ink">
           {FEATURED_HIGHLIGHTS.map((highlight) => (
             <li class="flex gap-x-3">
               <span class="mt-2 size-1.5 shrink-0 rounded-full bg-amber-400" aria-hidden="true" />
@@ -182,13 +182,13 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
 
         {FEATURED_METRICS.length > 0 && (
           <ul
-            class="mt-6 grid grid-cols-2 gap-2 border-y border-white/10 py-4 sm:grid-cols-3"
+            class="mt-6 grid grid-cols-2 gap-2 border-y border-line py-4 sm:grid-cols-3"
             aria-label={`${content.metricsAriaPrefix} ${FEATURED_PROJECT.title}`}
           >
             {FEATURED_METRICS.map((metric) => (
-              <li class="rounded-2xl border border-blue-400/15 bg-slate-900/70 px-3 py-3 shadow-inner shadow-black/20 transition duration-300 hover:border-amber-300/35 hover:bg-amber-300/10">
-                <span class="block text-lg font-bold leading-none text-amber-100">{metric.value}</span>
-                <span class="mt-1 block text-[0.68rem] font-medium uppercase leading-tight tracking-[0.08em] text-gray-400">
+              <li class="rounded-2xl border border-line bg-panel-2 px-3 py-3 shadow-inner shadow-umbra/20 transition duration-300 hover:border-accent-line hover:bg-accent-soft">
+                <span class="block text-lg font-bold leading-none text-accent">{metric.value}</span>
+                <span class="mt-1 block text-[0.68rem] font-medium uppercase leading-tight tracking-[0.08em] text-muted">
                   {metric.label}
                 </span>
               </li>
@@ -200,7 +200,7 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
           <LinkButton
             href={content.featuredStudyHref}
             aria-label={`${content.featuredStudyLabel}: ${FEATURED_PROJECT.title}`}
-            class="border-amber-300/70 bg-amber-300/10 text-amber-100 shadow-lg shadow-amber-950/30 hover:border-amber-200 hover:bg-amber-300/20 hover:text-white focus:ring-amber-300/30"
+            class="border-accent-line bg-accent-soft text-accent shadow-lg shadow-amber-950/30 hover:border-accent-line hover:bg-accent-soft hover:text-ink focus:ring-accent-ring"
           >
             {content.featuredStudyLabel}
           </LinkButton>
@@ -228,14 +228,14 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
   </article>
 
   <div>
-    <p class="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-gray-400">
+    <p class="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-muted">
       {content.supportingLabel}
     </p>
     <div class="grid gap-6 md:grid-cols-2">
       {
         SUPPORTING_PROJECTS.map(({ image, imageAlt, title, description, tags, link, github }) => (
-          <article class="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition duration-300 hover:border-amber-300/30 hover:bg-white/[0.06]">
-            <div class="overflow-hidden border-b border-white/10">
+          <article class="group overflow-hidden rounded-2xl border border-line bg-surface transition duration-300 hover:border-accent-line hover:bg-surface-2">
+            <div class="overflow-hidden border-b border-line">
               <img
                 alt={imageAlt}
                 class="h-48 w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
@@ -245,7 +245,7 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
             </div>
 
             <div class="p-5">
-              <h3 class="text-xl font-bold text-gray-100">{title}</h3>
+              <h3 class="text-xl font-bold text-ink">{title}</h3>
               <ul class="mt-3 flex flex-wrap gap-2">
                 {tags.map((tagKey) => {
                   const tag: Tag = TAGS[tagKey];
@@ -260,7 +260,7 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
                 })}
               </ul>
 
-              <p class="mt-4 text-sm text-gray-400">{description}</p>
+              <p class="mt-4 text-sm text-muted">{description}</p>
               <footer class="mt-5 flex flex-wrap items-center gap-3">
                 {github && (
                   <LinkButton href={github} aria-label={`${content.buttons.code}: ${title}`}>

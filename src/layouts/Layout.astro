@@ -54,6 +54,25 @@ const copy = common[locale];
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Emmanuel Valdez" />
     <meta name="theme-color" content="#020617" />
+    <script is:inline>
+      (function () {
+        document.documentElement.classList.add('js-theme');
+        try {
+          var stored = localStorage.getItem('theme');
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark';
+          document.documentElement.dataset.theme = theme;
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', theme === 'light' ? '#f6f3ea' : '#020617');
+        } catch (error) {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      })();
+    </script>
     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     {alternateUrl && <link rel="alternate" hreflang={locale === 'es' ? 'en' : 'es'} href={alternateUrl} />}
     {canonicalUrl && <link rel="alternate" hreflang={locale} href={canonicalUrl} />}
@@ -85,7 +104,7 @@ const copy = common[locale];
     <a class="skip-link" href="#main-content">{copy.skipLink}</a>
     <div
       aria-hidden="true"
-      class="absolute top-0 z-[-2] h-screen w-full bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(212,160,23,0.14),rgba(15,23,42,0))]"
+      class="ambient-glow absolute top-0 z-[-2] h-screen w-full"
     >
     </div>
     <Header locale={locale} alternatePath={alternatePath} />
@@ -94,12 +113,6 @@ const copy = common[locale];
   </body>
 </html>
 <style is:global>
-  :root {
-    color-scheme: dark;
-    --accent-primary: #d4a017;
-    --accent-secondary: #94a3b8;
-  }
-
   html {
     font-family: 'Onest Variable', system-ui, sans-serif;
     scroll-behavior: smooth;
@@ -109,11 +122,11 @@ const copy = common[locale];
     flex-direction: column;
     min-height: 100vh;
     overscroll-behavior: none;
-    background: #020617;
-    color: rgba(255, 255, 255, 0.9);
+    background: var(--color-canvas);
+    color: var(--color-body);
   }
   :focus-visible {
-    outline: 2px solid var(--accent-primary);
+    outline: 2px solid var(--color-accent);
     outline-offset: 4px;
     scroll-margin-top: 6rem;
     scroll-margin-bottom: 2rem;
@@ -125,8 +138,8 @@ const copy = common[locale];
     z-index: 50;
     transform: translateY(-200%);
     border-radius: 9999px;
-    background: #020617;
-    color: #ffffff;
+    background: var(--color-canvas);
+    color: var(--color-ink);
     padding: 0.5rem 1rem;
     transition: transform 150ms ease;
   }

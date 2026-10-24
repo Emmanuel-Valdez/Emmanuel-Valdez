@@ -42,6 +42,10 @@ export const common = {
       alternate: 'EN',
       alternateHref: routes.en.home,
     },
+    theme: {
+      toLight: 'Activar tema claro',
+      toDark: 'Activar tema oscuro',
+    },
     footer: {
       brand: 'Emmanuel Valdez · evaldez.ar',
       about: 'Sobre mí',
@@ -66,6 +70,10 @@ export const common = {
       current: 'EN',
       alternate: 'ES',
       alternateHref: routes.es.home,
+    },
+    theme: {
+      toLight: 'Switch to light theme',
+      toDark: 'Switch to dark theme',
     },
     footer: {
       brand: 'Emmanuel Valdez · evaldez.ar',
@@ -98,14 +106,14 @@ export const homeContent = {
         },
         {
           text: ' VaultShop es mi ejemplo más profundo de backend y sistemas: ASP.NET Core, PostgreSQL, Docker y pagos en un VPS real.',
-          class: 'text-blue-200/90',
+          class: 'text-note-blue',
         },
         {
           text: ' También entregué sitios con Astro y TypeScript para clientes, con foco en la experiencia de cara al público.',
         },
         {
           text: ' Desde Mendoza, Argentina.',
-          class: 'text-red-200/90',
+          class: 'text-note-red',
         },
       ],
       stackAriaLabel: 'Tecnologías principales',
@@ -350,14 +358,14 @@ export const homeContent = {
         },
         {
           text: ' VaultShop is my deepest backend and systems example: ASP.NET Core, PostgreSQL, Docker, and payments on a real VPS.',
-          class: 'text-blue-200/90',
+          class: 'text-note-blue',
         },
         {
           text: ' I have also delivered Astro and TypeScript sites for clients, focused on the public-facing experience.',
         },
         {
           text: ' Based in Mendoza, Argentina.',
-          class: 'text-red-200/90',
+          class: 'text-note-red',
         },
       ],
       stackAriaLabel: 'Core technologies',
