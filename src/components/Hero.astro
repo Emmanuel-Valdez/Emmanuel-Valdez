@@ -1,7 +1,6 @@
 ---
 import LinkedInIcon from '@/icons/LinkedInIcon.astro';
 import GitHubIcon from '@/icons/GitHubIcon.astro';
-import MailIcon from '@/icons/MailIcon.astro';
 import SocialPill from '@/components/SocialPill.astro';
 import Avatar from '@/components/Avatar.astro';
 import DownloadIcon from '@/icons/Download.astro';
@@ -23,6 +22,7 @@ interface Props {
       project: string;
       projectHref: string;
       contact: string;
+      contactPrefix: string;
       contactHref: string;
       cv: string;
       cvFile: {
@@ -60,9 +60,9 @@ const { content } = Astro.props;
   <p class="mt-4 max-w-[620px] text-2xl font-semibold leading-tight text-ink md:text-3xl">
     {content.title}
   </p>
-  <h2 class="mt-6 text-xl lg:text-2xl text-wrap max-w-[560px]">
+  <p class="mt-6 text-xl lg:text-2xl text-wrap max-w-[560px]">
     {content.lines.map((line) => <span class={line.class}>{line.text}</span>)}
-  </h2>
+  </p>
   <ul class="mt-5 flex flex-wrap gap-2" aria-label={content.stackAriaLabel}>
     {
       content.stack.map((item) => (
@@ -87,14 +87,16 @@ const { content } = Astro.props;
       <DownloadIcon class="size-4 md:size-6" />
       {content.ctas.cv}
     </a>
+  </nav>
+  <p class="mt-4 text-sm text-muted">
+    {content.ctas.contactPrefix}{' '}
     <a
-      class="inline-flex items-center justify-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-medium text-body transition hover:-translate-y-0.5 hover:border-line-strong hover:bg-surface-2 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent md:px-5 md:py-2.5 md:text-base"
+      class="font-medium text-ink underline decoration-dotted underline-offset-4 transition hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
       href={content.ctas.contactHref}
     >
-      <MailIcon class="size-4 md:size-6" />
       {content.ctas.contact}
     </a>
-  </nav>
+  </p>
   <aside
     class="mt-8 border-y border-line bg-surface py-4"
     aria-label={content.recruiter.ariaLabel}
@@ -116,7 +118,7 @@ const { content } = Astro.props;
     </div>
   </aside>
   <nav class="flex gap-4 mt-8 flex-wrap" aria-label={content.socialAriaLabel}>
-    <SocialPill href="https://www.linkedin.com/in/emmanuelvaldezdev/">
+    <SocialPill href="https://www.linkedin.com/in/evaldezdev/">
       <LinkedInIcon class="size-4 md:size-6" />
       LinkedIn
     </SocialPill>

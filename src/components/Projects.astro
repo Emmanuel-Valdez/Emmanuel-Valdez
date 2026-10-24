@@ -96,6 +96,8 @@ interface Props {
     featuredStudyLabel: string;
     featuredStudyHref: string;
     supportingLabel: string;
+    moreProjectsLabel: string;
+    moreProjectsHref: string;
     stackAriaPrefix: string;
     metricsAriaPrefix: string;
     buttons: {
@@ -132,13 +134,13 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
                 alt={FEATURED_PROJECT.imageAlt}
                 class="h-full min-h-72 w-full object-cover object-top transition duration-500 md:group-hover:scale-[1.03] md:hidden"
                 loading="lazy"
-                src={FEATURED_PROJECT.image}
+                src={FEATURED_PROJECT.imageMobile}
               />
               <img
                 alt={FEATURED_PROJECT.imageAlt}
                 class="hidden h-full min-h-72 w-full object-cover object-top transition duration-500 md:block md:group-hover:scale-[1.03]"
                 loading="lazy"
-                src={FEATURED_PROJECT.imageMobile}
+                src={FEATURED_PROJECT.image}
               />
             </>
           ) : (
@@ -280,5 +282,15 @@ const FEATURED_METRICS = FEATURED_PROJECT.metrics ?? [];
         ))
       }
     </div>
+    <p class="mt-6 text-sm">
+      <a
+        class="font-medium text-ink underline decoration-dotted underline-offset-4 transition hover:text-accent"
+        href={content.moreProjectsHref}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {content.moreProjectsLabel} →
+      </a>
+    </p>
   </div>
 </div>
