@@ -1,9 +1,16 @@
-# Emmanuel Valdez
+# Emmanuel Valdez · `ev_`
 
-**Backend .NET Developer | C# | ASP.NET Core | SQL**
+**Software Engineer .NET** · C# · ASP.NET Core · EF Core · PostgreSQL · Docker
+Mendoza, Argentina · Remote / hybrid · Spanish / English
 
-I build production-style web applications from database to deployment. My main project is **VaultShop**, a deployed ASP.NET Core 8 e-commerce case study featuring PostgreSQL, Docker Compose, Stripe payments, RBAC, and Nginx HTTPS on an Ubuntu VPS.
+From Excel to e-commerce: I build software that keeps catalog, stock, orders, and payments in order. **VaultShop** is my main case study — an ASP.NET Core e-commerce platform with PostgreSQL, Docker, and Nginx HTTPS, Stripe and Mercado Pago payments, 821 tests, CI on every push, and my own deploy on an Ubuntu VPS.
 
-**Stack:** C# · ASP.NET Core MVC/Web API · EF Core · PostgreSQL · SQL Server · REST APIs · Identity · Stripe · Docker · Node.js · Express · Astro · Tailwind CSS
+I also ship frontend work with Astro and TypeScript. Case study and client work: [evaldez.ar](https://evaldez.ar).
 
-[Portfolio](https://evaldez.ar) · [VaultShop](https://vaultshop.evaldez.ar) · [LinkedIn](https://www.linkedin.com/in/evaldezdev/)
+Practices: REST APIs · automated testing · CI/CD.
+
+Growing toward software architecture, cloud infrastructure, and production-grade systems.
+
+**Demo:** [vaultshop.evaldez.ar](https://vaultshop.evaldez.ar) · **Portfolio:** [evaldez.ar](https://evaldez.ar) · **LinkedIn:** [in/evaldezdev](https://www.linkedin.com/in/evaldezdev/)
+
+**Stack:** C# · ASP.NET Core · EF Core · PostgreSQL · Docker · GitHub Actions · xUnit · Astro · TypeScript

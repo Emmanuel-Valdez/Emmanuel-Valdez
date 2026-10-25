@@ -1,6 +1,6 @@
-# Emmanuel Valdez - Backend .NET Developer Portfolio
+# Emmanuel Valdez - Software Engineer .NET Portfolio
 
-Personal developer portfolio for Emmanuel Valdez, a backend-focused .NET developer building and deploying real applications.
+Personal developer portfolio for Emmanuel Valdez, a Software Engineer .NET who builds, deploys, and operates real applications.
 
 ## Live Site
 
@@ -10,11 +10,11 @@ https://evaldez.ar
 
 ## Positioning
 
-Backend-focused developer who can take an ASP.NET Core application from local development to a real Linux VPS deployment. Built, deployed, and operates VaultShop as the primary case study.
+Software Engineer .NET who can take a web application from local development to a real Linux VPS deployment. Built, deployed, and operates VaultShop as the primary case study. Backend is the depth, not the whole identity.
 
 Primary focus areas:
 
-- Backend development with .NET, C#, ASP.NET Core, and PostgreSQL.
+- Software engineering with .NET, C#, ASP.NET Core, and PostgreSQL.
 - E-commerce systems, business logic, roles, payments, and operational workflows.
 - Deployment with Docker Compose, Nginx HTTPS, Ubuntu VPS, and MinIO object storage.
 - Database backup/restore, uptime monitoring, and production-style operations.
